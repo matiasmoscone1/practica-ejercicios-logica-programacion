@@ -1,30 +1,6 @@
 
 //1. Escribir un programa que lea un número entero y determine si es par o impar.
-/*
-export default function numeroParImpar(numero,btnParImpar){
-    
-    let resultado = "";
 
-    const $btn = document.querySelector(btnParImpar);
-    const $numero = document.querySelector(numero).value;
-
-
-    $btn.addEventListener("click", (e) => {
-        
-        if(e.target === btnParImpar){
-            
-            if(($numero % 2) === 0){
-                resultado = "par";
-            }else{
-                resultado = "impar"; 
-            }
-        
-        }
-        console.log(resultado);
-
-    });
-
-}*/
 
 export default function numeroParImpar(numero, btnParImpar, resultadoParImpar) {
     const $btn = document.querySelector(btnParImpar);
