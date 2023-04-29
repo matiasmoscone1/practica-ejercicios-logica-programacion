@@ -18,7 +18,7 @@ export default function numeroParImpar(numero, btnParImpar, resultadoParImpar) {
             resultado = "impar";
         }
 
-        console.log(resultado);
+        //console.log(resultado);
         $resultadoParImpar.textContent = `El numero ${$numero} es: ${resultado}`;
     });
   
