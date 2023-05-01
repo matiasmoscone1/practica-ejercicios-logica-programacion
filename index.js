@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     numeroPrimo(".numero-primo", ".btn-primo", ".resultado-primo");
     sumaNumeros(".numero-suma", ".btn-suma", ".resultado-suma");
     contarClicks(".btn-click-incrementar",".btn-click-resetear",".btn-click-decrementar", ".resultado-clicks");
-    determinarDigitos(".btn-digitos" ,".resultado-digitos");
+    determinarDigitos(".numero-digito", ".btn-digitos" ,".resultado-digitos");
 
 
 });

@@ -2,15 +2,16 @@
 
 //6. Escribir un programa que lea un número entero y determine cuántos dígitos tiene.
 
-export default function determinarDigitos(btn, resultado){
+export default function determinarDigitos(numero, btn, resultado){
 
     const $btnDigitos = document.querySelector(btn);
     const $resultadoDigitos = document.querySelector(resultado);
+    const $numeroDigito = document.querySelector(numero);
 
     let contadorDigitos = 0;
 
 
-    document.addEventListener("keyup", (e) => {
+    $numeroDigito.addEventListener("keyup", (e) => {
         
         //Expresion regular para verificar si la tecla presionada es un numero
         if(/\d/.test(e.key)){
