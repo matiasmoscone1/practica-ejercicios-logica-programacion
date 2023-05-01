@@ -10,6 +10,7 @@ export default function determinarDigitos(numero, btn, resultado){
 
     let contadorDigitos = 0;
 
+    let borrado = 0;
 
     $numeroDigito.addEventListener("keyup", (e) => {
         
@@ -17,11 +18,16 @@ export default function determinarDigitos(numero, btn, resultado){
         if(/\d/.test(e.key)){
             contadorDigitos++;
         }
+        if(e.key === "Backspace"){
+            borrado++;
+        }
+
+
     });
 
     $btnDigitos.addEventListener("click", () => {
 
-        $resultadoDigitos.textContent = `El numero tiene: ${contadorDigitos} digitos`;
+        $resultadoDigitos.textContent = `El numero tiene: ${(contadorDigitos-borrado)} digitos`;
 
     });
 
