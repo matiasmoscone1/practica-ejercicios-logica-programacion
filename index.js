@@ -4,7 +4,7 @@ import numeroPrimo from "./ejercicio-3.js";
 import sumaNumeros from "./ejercicio-4.js";
 import contarClicks from "./ejercicio-5.js";
 import determinarDigitos from "./ejercicio-6.js";
-
+import determinarPalabra from "./ejercicio-7.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -15,6 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     sumaNumeros(".numero-suma", ".btn-suma", ".resultado-suma");
     contarClicks(".btn-click-incrementar",".btn-click-resetear",".btn-click-decrementar", ".resultado-clicks");
     determinarDigitos(".numero-digito", ".btn-digitos" ,".resultado-digitos");
-
+    determinarPalabra(".palabra-letras", ".btn-palabra", ".resultado-palabra");
 
 });
