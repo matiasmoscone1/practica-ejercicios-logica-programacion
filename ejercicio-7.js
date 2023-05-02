@@ -1,5 +1,5 @@
 
-//7. Escribir un programa que determine la cantidad de letras de una palabra.
+//7. Escribir un programa que determine la cantidad de caracteres de una palabra.
 
 export default function determinarPalabra(palabra, btn, resultado){
 
@@ -13,7 +13,7 @@ export default function determinarPalabra(palabra, btn, resultado){
 
     $btn.addEventListener("click", () => {
 
-        $resultado.textContent = `La palabra tiene: ${$palabra.value.length} letras`;
+        $resultado.textContent = `La palabra tiene: ${$palabra.value.length} caracteres`;
 
     });
 
