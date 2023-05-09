@@ -12,15 +12,20 @@ export default function fizzBuzz(fizzBuzz){
 
     const $fizzBuzz = document.querySelector(fizzBuzz);
     let num = 0;
+    let multiple3 = 0;
 
     for(let i = 0; i < 100; i++){
         num++;
 
         if(num % 3 === 0){
-            $fizzBuzz.textContent = $fizzBuzz.textContent.replace(num - 1, "Fizz");
+            multiple3 = num;
+            $fizzBuzz.textContent += "Fizz, ";
+        }else if(num % 5 === 0){
+            $fizzBuzz.textContent += "Buzz, ";
+        }else{
+            $fizzBuzz.textContent += `${num}, `;
         }
-
-        $fizzBuzz.textContent += `${num}, `;
+        
     }
 
 
