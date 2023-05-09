@@ -10,6 +10,7 @@ export default function arrayMayorMenor(arrayMayorMenor, btnMayor, btnMenor){
     $array.textContent = `[${arrayDesordenado}]`;
 
     document.addEventListener("click", (e) => {
+        //Funcion array ordenado de mayor a menor
         if(e.target.matches(btnMayor)){
             for(let i = 0; i < arrayDesordenado.length; i++){
                 for(let j = 0; j < arrayDesordenado.length - 1; j++){
@@ -18,11 +19,10 @@ export default function arrayMayorMenor(arrayMayorMenor, btnMayor, btnMenor){
                         arrayDesordenado[j] = arrayDesordenado[j + 1];
                         arrayDesordenado[j + 1] = nuevoArray;
                     }
-
                 }
             }
         }
-    
+        //Funcion array ordenado de menor a mayor
         if(e.target.matches(btnMenor)){
             for(let f = 0; f < arrayDesordenado.length; f++){
                 for(let k = 0; k < arrayDesordenado.length - 1; k++){
