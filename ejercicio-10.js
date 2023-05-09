@@ -17,13 +17,14 @@ export default function fizzBuzz(fizzBuzz){
     for(let i = 0; i < 100; i++){
         num++;
 
-        if(num % 3 === 0){
+        if(num % 3 === 0 && num % 5 === 0){
+            $fizzBuzz.textContent += "FizzBuzz, ";
+        }
+        else if(num % 3 === 0){
             multiple3 = num;
             $fizzBuzz.textContent += "Fizz, ";
         }else if(num % 5 === 0){
             $fizzBuzz.textContent += "Buzz, ";
-        }else if(num % 3 === 0 && num % 5 === 0){
-            $fizzBuzz.textContent += "FizzBuzz, ";
         }
         else{
             $fizzBuzz.textContent += `${num}, `;
