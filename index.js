@@ -6,6 +6,8 @@ import contarClicks from "./ejercicio-5.js";
 import determinarDigitos from "./ejercicio-6.js";
 import determinarPalabra from "./ejercicio-7.js";
 import determinarOracion from "./ejercicio-8.js";
+import arrayMayorMenor from "./ejercicio-9.js";
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -18,4 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     determinarDigitos(".numero-digito", ".btn-digitos" ,".resultado-digitos");
     determinarPalabra(".palabra-letras", ".btn-palabra", ".resultado-palabra");
     determinarOracion(".palabra-oracion", ".btn-oracion", ".resultado-oracion");
+    arrayMayorMenor(".array-mayor-menor", ".btn-array-mayor", ".btn-array-menor");
+
 });
