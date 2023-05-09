@@ -7,6 +7,7 @@ import determinarDigitos from "./ejercicio-6.js";
 import determinarPalabra from "./ejercicio-7.js";
 import determinarOracion from "./ejercicio-8.js";
 import arrayMayorMenor from "./ejercicio-9.js";
+import fizzBuzz from "./ejercicio-10.js";
 
 
 
@@ -21,5 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
     determinarPalabra(".palabra-letras", ".btn-palabra", ".resultado-palabra");
     determinarOracion(".palabra-oracion", ".btn-oracion", ".resultado-oracion");
     arrayMayorMenor(".array-mayor-menor", ".btn-array-mayor", ".btn-array-menor");
+    fizzBuzz(".fizz-buzz");
 
 });
