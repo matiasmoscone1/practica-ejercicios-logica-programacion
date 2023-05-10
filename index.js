@@ -8,7 +8,7 @@ import determinarPalabra from "./ejercicio-7.js";
 import determinarOracion from "./ejercicio-8.js";
 import arrayMayorMenor from "./ejercicio-9.js";
 import fizzBuzz from "./ejercicio-10.js";
-
+import contarLetras from "./ejercicio-11.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
