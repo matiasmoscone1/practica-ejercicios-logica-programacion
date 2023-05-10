@@ -23,5 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
     determinarOracion(".palabra-oracion", ".btn-oracion", ".resultado-oracion");
     arrayMayorMenor(".array-mayor-menor", ".btn-array-mayor", ".btn-array-menor");
     fizzBuzz(".fizz-buzz");
+    contarLetras(".contar-letras", ".btn-contar-letras", ".resultado-contar-letras");
 
+
+    
 });
