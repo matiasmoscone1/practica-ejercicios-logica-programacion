@@ -16,8 +16,8 @@ export default function contarLetras(palabra, btn, resultado){
         const $palabra = document.querySelector(palabra).value;
         const arrayPalabra = $palabra.split('');
 
-        for(let i = 0; i < arrayPalabra.lenght; i++ ){
-            for(let j = 1; j < arrayPalabra.lenght; j++){
+        for(let i = 0; i < arrayPalabra.length; i++ ){
+            for(let j = i+1; j < arrayPalabra.length; j++){
                 if(arrayPalabra[i] === arrayPalabra[j]){
                     contador++;
                 }
