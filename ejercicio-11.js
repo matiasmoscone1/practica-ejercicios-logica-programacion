@@ -4,31 +4,38 @@
 
 export default function contarLetras(palabra, btn, resultado){
 
-
     const $btnLetras = document.querySelector(btn);
-
     const $resultado = document.querySelector(resultado);
-
-    let contador = 0;
 
     $btnLetras.addEventListener("click", () => {
 
         const $palabra = document.querySelector(palabra).value;
-        const arrayPalabra = $palabra.split('');
+        const letrasRepetidas = {};
 
-        for(let i = 0; i < arrayPalabra.length; i++ ){
-            for(let j = i+1; j < arrayPalabra.length; j++){
-                if(arrayPalabra[i] === arrayPalabra[j]){
-                    contador++;
-                }
+        let contador = 0;
+
+        for(let i = 0; i < $palabra.length; i++ ){
+            const letra = $palabra[i];
+            if(letrasRepetidas[letra]){
+                letrasRepetidas[letra] += 1;
+            } else {
+                letrasRepetidas[letra] = 1;
+            }
+        }
+
+        
+
+        for (const letra in letrasRepetidas) {
+            if (letrasRepetidas[letra] > 1) {
+                contador += letrasRepetidas[letra];
             }
         }
 
         $resultado.textContent = `La palabra tiene ${contador} letras repetidas`;
 
-     
     });
-
-
-
 }
+
+
+
+
