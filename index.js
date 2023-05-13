@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     arrayMayorMenor(".array-mayor-menor", ".btn-array-mayor", ".btn-array-menor");
     fizzBuzz(".fizz-buzz");
     contarLetras(".contar-letras", ".btn-contar-letras", ".resultado-contar-letras");
-    contarMayorMenor(".")
+    contarMayorMenor(".array-ej-12", ".btn-ej-12-mayor", ".btn-ej-12-menor", ".resultado-ej-12");
 
     
 });
