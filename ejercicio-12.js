@@ -14,11 +14,17 @@ export default function contarMayorMenor(array, btnMayor, btnMenor, resultado){
 
     document.addEventListener("click", (e) => {
 
+        let mayor = 0;
+
         if(e.target.matches(btnMayor)){
             console.log("Mayor");
-            
+            for(let i = 0; i < arrayNuevo.length; i++){
+                if(arrayNuevo[i] > arrayNuevo[i + 1]){
+                    mayor = arrayNuevo[i];
+                }
+            }
 
-            $resultado.textContent = `Mayor`;
+            $resultado.textContent = `${mayor}`;
         }
 
 
