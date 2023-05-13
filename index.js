@@ -9,7 +9,7 @@ import determinarOracion from "./ejercicio-8.js";
 import arrayMayorMenor from "./ejercicio-9.js";
 import fizzBuzz from "./ejercicio-10.js";
 import contarLetras from "./ejercicio-11.js";
-
+import contarMayorMenor from "./ejercicio-12.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     arrayMayorMenor(".array-mayor-menor", ".btn-array-mayor", ".btn-array-menor");
     fizzBuzz(".fizz-buzz");
     contarLetras(".contar-letras", ".btn-contar-letras", ".resultado-contar-letras");
-
+    contarMayorMenor(".")
 
     
 });
