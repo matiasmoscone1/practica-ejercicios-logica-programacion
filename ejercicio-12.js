@@ -10,7 +10,19 @@ export default function contarMayorMenor(array, btnMayor, btnMenor, resultado){
 
     $array.textContent = `[${arrayNuevo}]`;
 
-    
+    document.addEventListener("click", (e) => {
+
+        if(e.target.matches(btnMayor)){
+            console.log("Mayor");
+        }
+
+
+        if(e.target.matches(btnMenor)){
+            console.log("Menor");
+        }
+
+    });
+
 
 
 }
