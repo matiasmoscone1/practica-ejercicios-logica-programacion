@@ -10,6 +10,8 @@ import arrayMayorMenor from "./ejercicio-9.js";
 import fizzBuzz from "./ejercicio-10.js";
 import contarLetras from "./ejercicio-11.js";
 import contarMayorMenor from "./ejercicio-12.js";
+import calcularPromedio from "./ejercicio-13.js";
+
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -25,6 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     fizzBuzz(".fizz-buzz");
     contarLetras(".contar-letras", ".btn-contar-letras", ".resultado-contar-letras");
     contarMayorMenor(".array-ej-12", ".btn-ej-12-mayor", ".btn-ej-12-menor", ".resultado-ej-12");
-
+    calcularPromedio(".array-ej-13", ".btn-ej-13-promedio", ".resultado-ej-13");
     
 });
