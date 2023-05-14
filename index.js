@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     contarLetras(".contar-letras", ".btn-contar-letras", ".resultado-contar-letras");
     contarMayorMenor(".array-ej-12", ".btn-ej-12-mayor", ".btn-ej-12-menor", ".resultado-ej-12");
     calcularPromedio(".array-ej-13", ".btn-ej-13-promedio", ".resultado-ej-13");
-    determinarBisiesto(".input-ej-14", ".resultado-ej-14");
+    determinarBisiesto(".input-ej-14", ".btn-ej-14", ".resultado-ej-14");
 
 
 });
