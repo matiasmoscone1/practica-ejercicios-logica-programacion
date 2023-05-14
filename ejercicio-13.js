@@ -9,7 +9,7 @@ export default function calcularPromedio(array, btn, promedio){
 
     const $arrayPromedio = document.querySelector(array);
 
-    const arrayNuevo = [32,5,27,78,56,2,46,33,12,8];
+    const arrayNuevo = [32,5,27,78,56,2,46,33,12,7];
 
     const $resultado = document.querySelector(promedio);
 
@@ -17,8 +17,17 @@ export default function calcularPromedio(array, btn, promedio){
 
     $btnPromedio.addEventListener("click", () => {
 
-        let prom = 0;
+        let prom = 0
+        let acumulador = 0;
 
+
+        for(let i = 0; i < arrayNuevo.length; i++){
+            
+            acumulador += arrayNuevo[i];
+
+            prom = acumulador / arrayNuevo.length;
+
+        }
 
         $resultado.textContent = `El promedio del array es: ${prom}`;
 
