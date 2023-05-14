@@ -15,7 +15,7 @@ export default function contarMayorMenor(array, btnMayor, btnMenor, resultado){
     document.addEventListener("click", (e) => {
 
         let mayor = arrayNuevo[0];
-
+        let menor = arrayNuevo[0];
 
 
         if(e.target.matches(btnMayor)){
@@ -25,7 +25,18 @@ export default function contarMayorMenor(array, btnMayor, btnMenor, resultado){
                 }
             }
 
-            $resultado.textContent = ` ${mayor}`;
+            $resultado.textContent = ` El mayor es: ${mayor}`;
+
+        }
+
+        if(e.target.matches(btnMenor)){
+            for(let i = 0; i < arrayNuevo.length; i++){
+                if(menor > arrayNuevo[i]){
+                    menor = arrayNuevo[i];
+                }
+            }
+
+            $resultado.textContent = ` El menor es: ${menor}`;
 
         }
 
