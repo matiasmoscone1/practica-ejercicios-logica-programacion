@@ -12,6 +12,8 @@ import contarLetras from "./ejercicio-11.js";
 import contarMayorMenor from "./ejercicio-12.js";
 import calcularPromedio from "./ejercicio-13.js";
 import determinarBisiesto from "./ejercicio-14.js";
+import determinarDias from "./ejercicio-15.js";
+
 
 
 
