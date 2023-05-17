@@ -13,7 +13,7 @@ import contarMayorMenor from "./ejercicio-12.js";
 import calcularPromedio from "./ejercicio-13.js";
 import determinarBisiesto from "./ejercicio-14.js";
 import determinarDias from "./ejercicio-15.js";
-
+import cambiarTemperaturas from "./ejercicio-16.js";
 
 
 
@@ -34,5 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     calcularPromedio(".array-ej-13", ".btn-ej-13-promedio", ".resultado-ej-13");
     determinarBisiesto(".input-ej-14", ".btn-ej-14", ".resultado-ej-14");
     determinarDias(".fecha-inicial", ".fecha-final", ".btn-ej-15", ".resultado-ej-15");
+    cambiarTemperaturas();
 
 });
