@@ -21,7 +21,8 @@ export default function cambiarTemperaturas(celsius,btnCelsius,farenheit,btnFare
         //Captando click del boton de farenheit a celsius
         if(e.target.matches(btnFarenheit)){
             let res = ($gradosFarenheit - 32) * 5/9;
-            //Poniendo resultado en el DOM
+            //Poniendo resultado en el DOM => parseFloat(res.toFixed(1)) recorta el numero 
+            //desp de la coma para que no haya tantos decimales toFixed(1) significa q dejara 1 solo numero desp de la coma
             $resultado.textContent = `${$gradosFarenheit} F° = ${parseFloat(res.toFixed(1))} C°`;
         }
     })
