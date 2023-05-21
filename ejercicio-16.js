@@ -6,13 +6,14 @@
 
 export default function cambiarTemperaturas(celsius,btnCelsius,farenheit,btnFarenheit,resultado){
 
-    const $gradosCelsius = document.querySelector(celsius).value;
-
     const $gradosFarenheit = document.querySelector(farenheit).value;
 
     const $resultado = document.querySelector(resultado);
 
     document.addEventListener("click", (e) => {
+        const $gradosCelsius = document.querySelector(celsius).value;
+
+
 
         if(e.target.matches(btnCelsius)){
 
