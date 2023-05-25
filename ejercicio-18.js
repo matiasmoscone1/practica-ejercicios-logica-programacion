@@ -12,11 +12,10 @@ export default function ordenarPalabras(oracion, btn, resultado){
         const $oracion = document.querySelector(oracion).value;
         //console.log($oracion);
 
-        let arrayOracion = $oracion.split(" ").sort();
+        let arrayOracion = $oracion.split(" ").sort().join(" ");
         console.log(arrayOracion);
 
-        
-
+        $resultadoOrdenar.textContent = `La oracion ordenada es: "${arrayOracion}"`;
     })
 
 
