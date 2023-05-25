@@ -35,6 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
     determinarBisiesto(".input-ej-14", ".btn-ej-14", ".resultado-ej-14");
     determinarDias(".fecha-inicial", ".fecha-final", ".btn-ej-15", ".resultado-ej-15");
     cambiarTemperaturas(".celsius", ".btn-celsius", ".farenheit", ".btn-farenheit", ".resultado-ej-16");
-    factorial();
+    factorial(".input-factorial", ".btn-factorial", ".resultado-ej-17");
 
 });
