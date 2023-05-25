@@ -16,6 +16,7 @@ import determinarDias from "./ejercicio-15.js";
 import cambiarTemperaturas from "./ejercicio-16.js";
 import factorial from "./ejercicio-17.js";
 import ordenarPalabras from "./ejercicio-18.js";
+import fibonacci from "./ejercicio-19.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -37,6 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
     cambiarTemperaturas(".celsius", ".btn-celsius", ".farenheit", ".btn-farenheit", ".resultado-ej-16");
     factorial(".input-factorial", ".btn-factorial", ".resultado-ej-17");
     ordenarPalabras(".input-palabras-ordenadas", ".btn-palabras-ordenadas", ".resultado-ej-18");
-
+    fibonacci(".resultado-ej-19");
 
 });
