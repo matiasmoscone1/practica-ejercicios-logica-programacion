@@ -12,6 +12,16 @@ export default function eliminarDuplicados(arr, btn, resultado){
     const arrayNuevo = [1,2,2,3,4,4,5,8,8,11];
 
     $arrayMuestra.textContent = `[${arrayNuevo}]`;
+    
+    const $btnDuplicados = document.querySelector(btn);
+    const $resultadoDuplicados = document.querySelector(resultado);
+
+
+    $btnDuplicados.addEventListener("click", () => {
+        
+
+
+    });
 
 
 }
