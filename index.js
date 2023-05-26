@@ -38,6 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
     cambiarTemperaturas(".celsius", ".btn-celsius", ".farenheit", ".btn-farenheit", ".resultado-ej-16");
     factorial(".input-factorial", ".btn-factorial", ".resultado-ej-17");
     ordenarPalabras(".input-palabras-ordenadas", ".btn-palabras-ordenadas", ".resultado-ej-18");
-    fibonacci(".resultado-ej-19");
+    fibonacci(".btn-ej-19", ".resultado-ej-19");
 
 });
