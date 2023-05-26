@@ -19,7 +19,8 @@ export default function fibonacci(btn,resultado){
             
         }
         console.log(fib);
-        $resultadoFibonacci.textContent = `La suceccion fibonacci es: ${fib}`;
+        $resultadoFibonacci.textContent = `La suceccion fibonacci es: ${fib.join(", ")}`;
+        
     });
 
 
