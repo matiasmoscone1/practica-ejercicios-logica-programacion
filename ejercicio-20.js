@@ -19,7 +19,15 @@ export default function eliminarDuplicados(arr, btn, resultado){
 
     $btnDuplicados.addEventListener("click", () => {
         
+        for(let i = 0; i < arrayNuevo.length; i++){
+            for(let j = 0; j < arrayNuevo.length - 1; j++){
+                if(arrayNuevo[j] === arrayNuevo[j + 1]){
+                    arrayNuevo.shift(arrayNuevo[j]);
+                }
+            }
+        }
 
+        $resultadoDuplicados.textContent = `El array sin duplicados es: ${arrayNuevo}`;
 
     });
 
