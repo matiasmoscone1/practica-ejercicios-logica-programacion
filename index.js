@@ -18,6 +18,7 @@ import factorial from "./ejercicio-17.js";
 import ordenarPalabras from "./ejercicio-18.js";
 import fibonacci from "./ejercicio-19.js";
 import eliminarDuplicados from "./ejercicio-20.js";
+import contarVocales from "./ejercicio-21.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -41,5 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
     ordenarPalabras(".input-palabras-ordenadas", ".btn-palabras-ordenadas", ".resultado-ej-18");
     fibonacci(".btn-ej-19", ".resultado-ej-19");
     eliminarDuplicados(".array-ej-20",".btn-ej-20",".resultado-ej-20");
+    contarVocales(".input-vocales", ".btn-ej-21", ".resultado-ej-21");
 
 });
