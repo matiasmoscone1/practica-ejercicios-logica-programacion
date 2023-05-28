@@ -7,16 +7,20 @@
 
 export default function contarVocales(oracion, btn, resultado){
 
-
+    //Creando variables del DOM
     const $btnVocales = document.querySelector(btn);
     const $resultadoVocales = document.querySelector(resultado);
 
+    //Captando evento click del boton para contar vocales
     $btnVocales.addEventListener("click", () => {
+        //Creando variable contador que sumara cuando encuentre una vocal 
         let contador = 0;
+        //Creando variable del DOM y captando el valor que el usuario escribe por teclado en el input
         const $oracion = document.querySelector(oracion).value;
         
-        console.log($oracion);
+        //console.log($oracion);
 
+        //Recorriendo la oracion y comparando si hay vocales, suma el contador en 1.
         for(let i = 0; i < $oracion.length; i++){
             if($oracion[i] === "a" || $oracion[i] === "e" || $oracion[i] === "i" || $oracion[i] === "u" || $oracion[i] === "o"){
                 contador += 1;
@@ -26,7 +30,7 @@ export default function contarVocales(oracion, btn, resultado){
             }
         }
 
-
+        //Muestra el resultado por pantalla
         $resultadoVocales.textContent = `Las vocales repetidas son: ${contador}`;
     });
 
