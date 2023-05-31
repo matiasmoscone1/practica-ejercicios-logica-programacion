@@ -11,9 +11,10 @@ export default function invertirCadena(palabra, btn, resultado){
 
     $btnInvertir.addEventListener("click", () => {
         const $palabraInvertir = document.querySelector(palabra).value;
-
         
-        $resultadoInvertir.textContent = `La palabra invertida es: ${}`;
+        const nuevaPalabra = $palabraInvertir.split("").reverse().join("");
+
+        $resultadoInvertir.textContent = `La palabra invertida es: ${nuevaPalabra}`;
 
     });
 
