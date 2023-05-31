@@ -11,6 +11,18 @@ export default function palabrasAnagramas(palabras, btn, resultado){
 
     const $btnAnagramas = document.querySelector(btn);
 
+    const $resultadoAnagramas = document.querySelector(resultado);
+
+    $btnAnagramas.addEventListener("click", () => {
+
+        const $palabrasAnagramas = document.querySelector(palabras).value;
+
+        console.log($palabrasAnagramas);
+
+
+        
+    });
+
 
 
 
