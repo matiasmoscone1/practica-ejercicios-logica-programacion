@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fibonacci(".btn-ej-19", ".resultado-ej-19");
     eliminarDuplicados(".array-ej-20",".btn-ej-20",".resultado-ej-20");
     contarVocales(".input-vocales", ".btn-ej-21", ".resultado-ej-21");
-    palabrasAnagramas(".input-anagramas", ".btn-ej-22", ".resultado-ej-22");
+    palabrasAnagramas(".input-anagramas-1", ".input-anagramas-2", ".btn-ej-22", ".resultado-ej-22");
 
 
 });

@@ -7,7 +7,7 @@
 //son anagramas.
 
 
-export default function palabrasAnagramas(palabras, btn, resultado){
+export default function palabrasAnagramas(palabra1, palabra2, btn, resultado){
 
     const $btnAnagramas = document.querySelector(btn);
 
@@ -15,12 +15,11 @@ export default function palabrasAnagramas(palabras, btn, resultado){
 
     $btnAnagramas.addEventListener("click", () => {
 
-        const $palabrasAnagramas = document.querySelector(palabras).value;
-
-        console.log($palabrasAnagramas);
-
+        const $palabra1Anagramas = document.querySelector(palabra1).value;
+        const $palabra2Anagramas = document.querySelector(palabra2).value;
 
         
+
     });
 
 
