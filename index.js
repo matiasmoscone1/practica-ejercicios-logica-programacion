@@ -20,6 +20,7 @@ import fibonacci from "./ejercicio-19.js";
 import eliminarDuplicados from "./ejercicio-20.js";
 import contarVocales from "./ejercicio-21.js";
 import palabrasAnagramas from "./ejercicio-22.js";
+import invertirCadena from "./ejercicio-23.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -45,6 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
     eliminarDuplicados(".array-ej-20",".btn-ej-20",".resultado-ej-20");
     contarVocales(".input-vocales", ".btn-ej-21", ".resultado-ej-21");
     palabrasAnagramas(".input-anagrama-1", ".input-anagrama-2", ".btn-ej-22", ".resultado-ej-22");
-
+    invertirCadena(".input-invertir-cadena", ".btn-ej-23", ".resultado-ej-23");
 
 });
