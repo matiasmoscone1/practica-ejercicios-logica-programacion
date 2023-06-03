@@ -16,7 +16,7 @@ export default function palabraLarga(oracion, btn, resultado){
         
         const arrayPalabraLarga = $oracionPalabraLarga.split(" ");
 
-        console.log(arrayPalabraLarga);
+        //console.log(arrayPalabraLarga);
 
         let palabraLarga = "";
 
@@ -26,7 +26,9 @@ export default function palabraLarga(oracion, btn, resultado){
             }
         }
         
-        console.log(palabraLarga);
+        $resultadoPalabraLarga.textContent = `La palabra mas larga es: ${palabraLarga}`;
+
+        //console.log(palabraLarga);
     });
 
 
