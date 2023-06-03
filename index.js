@@ -21,6 +21,7 @@ import eliminarDuplicados from "./ejercicio-20.js";
 import contarVocales from "./ejercicio-21.js";
 import palabrasAnagramas from "./ejercicio-22.js";
 import invertirCadena from "./ejercicio-23.js";
+import palabraLarga from "./ejercicio-24.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -47,5 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
     contarVocales(".input-vocales", ".btn-ej-21", ".resultado-ej-21");
     palabrasAnagramas(".input-anagrama-1", ".input-anagrama-2", ".btn-ej-22", ".resultado-ej-22");
     invertirCadena(".input-invertir-cadena", ".btn-ej-23", ".resultado-ej-23");
+    palabraLarga(".input-palabra-larga", ".btn-ej-24", ".resultado-ej-24");
 
 });
