@@ -13,9 +13,12 @@ export default function palabraLarga(oracion, btn, resultado){
 
         const $oracionPalabraLarga = document.querySelector(oracion).value;
 
-        console.log($oracionPalabraLarga);
-
         
+        const arrayPalabraLarga = $oracionPalabraLarga.split(" ");
+
+        console.log(arrayPalabraLarga);
+
+
     });
 
 
