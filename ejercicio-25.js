@@ -18,10 +18,10 @@ export default function convertirNumeros(numero, btn, resultado){
         let numeroNuevo = $numeroConvertir.split("").reverse().join("");
 
         for(let i = 0; i < numeroNuevo.length; i++){
-            numDecimal = numDecimal + numeroNuevo[i] * 2 ** numeroNuevo.length - 1;
+            numDecimal = numDecimal + numeroNuevo[i] * 2 ** (numeroNuevo.length - 1 - i);
         }
 
-        console.log(numDecimal);
+        //console.log(numDecimal);
 
         $resultadoConversor.textContent = `El decimal es: ${numDecimal}`;
         //console.log(numeroNuevo);
