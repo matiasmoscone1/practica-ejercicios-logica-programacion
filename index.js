@@ -23,6 +23,7 @@ import palabrasAnagramas from "./ejercicio-22.js";
 import invertirCadena from "./ejercicio-23.js";
 import palabraLarga from "./ejercicio-24.js";
 import convertirNumeros from "./ejercicio-25.js";
+import numeroPerfecto from "./ejercicio-26.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -51,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     invertirCadena(".input-invertir-cadena", ".btn-ej-23", ".resultado-ej-23");
     palabraLarga(".input-palabra-larga", ".btn-ej-24", ".resultado-ej-24");
     convertirNumeros(".input-binario-decimal", ".btn-ej-25", ".resultado-ej-25");
-    
+    numeroPerfecto(".input-numero-perfecto", ".btn-ej-26", ".btn-ej-27");
 
 
 });
