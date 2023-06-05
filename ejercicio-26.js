@@ -18,10 +18,22 @@ export default function numeroPerfecto(numero, btn, resultado){
         const $numeroInput = document.querySelector(numero).value;
 
         
-        let numeroPerfecto = (2 ** ($numeroInput - 1)) * ((2 ** $numeroInput) - 1); 
+        // numeroPerfecto = (2 ** ($numeroInput - 1)) * ((2 ** $numeroInput) - 1); 
 
-        
-        console.log(numeroPerfecto);
+        let sumaDivisores = 0;
+
+        for(let i = 1; i <= $numeroInput/2; i++){
+            if($numeroInput % i === 0){
+                sumaDivisores += i;
+            }
+        }
+        if(sumaDivisores === $numeroInput){
+            console.log("es perfecto");
+        }else{
+            console.log("no es perfecto");
+        }
+
+        console.log(sumaDivisores);
 
 
     });
