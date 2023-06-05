@@ -27,17 +27,15 @@ export default function numeroPerfecto(numero, btn, resultado){
                 sumaDivisores += i;
             }
         }
-        if(sumaDivisores === $numeroInput){
-            console.log("es perfecto");
-        }else{
-            console.log("no es perfecto");
-        }
+        
+        (sumaDivisores === Number($numeroInput)) 
+        ? $resultadoNumeroPerfecto.textContent = `"${$numeroInput}" Es un numero perfecto` 
+        : $resultadoNumeroPerfecto.textContent = `"${$numeroInput}" No es un numero perfecto`;
 
-        console.log(sumaDivisores);
-
+       
+        //console.log(sumaDivisores);
 
     });
-
 
 
 }

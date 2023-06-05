@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     invertirCadena(".input-invertir-cadena", ".btn-ej-23", ".resultado-ej-23");
     palabraLarga(".input-palabra-larga", ".btn-ej-24", ".resultado-ej-24");
     convertirNumeros(".input-binario-decimal", ".btn-ej-25", ".resultado-ej-25");
-    numeroPerfecto(".input-numero-perfecto", ".btn-ej-26", ".btn-ej-27");
+    numeroPerfecto(".input-numero-perfecto", ".btn-ej-26", ".resultado-ej-26");
 
 
 });
