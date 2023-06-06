@@ -4,9 +4,11 @@
 //asteriscos en forma de triángulo o cuadrado.
 
 
-export default function generarPatron(){
+export default function generarPatron(triangulo, cuadrado, resultado){
 
+    const $btnTriangulo = document.querySelector(triangulo);
 
+    const $btnCuadrado = document.querySelector(cuadrado);
 
 
 
