@@ -33,6 +33,25 @@ export default function generarPatron(triangulo, cuadrado, resultado){
         //se le reemplaza por un <br>  
         $resultadoForma.innerHTML = patron.replace(/\n/g, "<br>");
         
-    })
+    });
+ 
     
+    $btnCuadrado.addEventListener("click", () => {
+        let numFilas = 3; 
+        let patron = "";
+        
+        for (let i = 1; i <= numFilas; i++) {
+            let linea = '';
+            for (let j = 1; j <= numFilas; j++) {
+              linea += '*';
+            }
+        
+            patron += linea + "\n";
+        }
+
+        $resultadoForma.innerHTML = patron.replace(/\n/g, "<br>");
+
+    });
+
+
 }
