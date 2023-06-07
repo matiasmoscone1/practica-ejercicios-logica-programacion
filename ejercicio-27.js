@@ -15,16 +15,17 @@ export default function generarPatron(triangulo, cuadrado, resultado){
     $btnTriangulo.addEventListener("click", () => {
 
         let numFilas = 5; 
-
+        let patron = "";
         for (let i = 1; i <= numFilas; i++) {
             let linea = '';
             for (let j = 1; j <= i; j++) {
               linea += '*';
             }
             console.log(linea);
-          }
+            patron += linea + "\n";
+        }
         
-        
+        $resultadoForma.innerHTML = patron.replace(/\n/g, "<br>");
         
     })
     
