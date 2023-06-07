@@ -36,20 +36,23 @@ export default function generarPatron(triangulo, cuadrado, limpiar, resultado){
         
     });
  
-    
+    //Captando evento del boton Cuadrado
     $btnCuadrado.addEventListener("click", () => {
+        //Creando variables para la creacion del patron
         let numFilas = 3; 
         let patron = "";
-        
+
+        //Ciclos for que recorren iguales y se agrega asteriscos en una variable
         for (let i = 1; i <= numFilas; i++) {
             let linea = '';
             for (let j = 1; j <= numFilas; j++) {
               linea += '*';
             }
-        
+            //Se le agrega al patron los asteriscos de la variable con un salto de linea
             patron += linea + "\n";
         }
-
+        //Mostrando por DOM el contenido del patron y por cada salto de linea se le 
+        //reemplaza por un <br>
         $resultadoForma.innerHTML = patron.replace(/\n/g, "<br>");
 
     });
