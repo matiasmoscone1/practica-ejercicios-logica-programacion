@@ -54,6 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
     palabraLarga(".input-palabra-larga", ".btn-ej-24", ".resultado-ej-24");
     convertirNumeros(".input-binario-decimal", ".btn-ej-25", ".resultado-ej-25");
     numeroPerfecto(".input-numero-perfecto", ".btn-ej-26", ".resultado-ej-26");
-    generarPatron(".generar-triangulo", ".generar-cuadrado", ".resultado-ej-27");
+    generarPatron(".generar-triangulo", ".generar-cuadrado", ".limpiar-patron", ".resultado-ej-27");
 
 });

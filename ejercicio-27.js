@@ -4,12 +4,13 @@
 //asteriscos en forma de triángulo o cuadrado.
 
 
-export default function generarPatron(triangulo, cuadrado, resultado){
+export default function generarPatron(triangulo, cuadrado, limpiar, resultado){
 
     //Asignando variables para manipular el DOM
     const $btnTriangulo = document.querySelector(triangulo);
     const $btnCuadrado = document.querySelector(cuadrado);
     const $resultadoForma = document.querySelector(resultado);
+    const $btnLimpiar = document.querySelector(limpiar);
 
     //Captando evento click del boton Triangulo
     $btnTriangulo.addEventListener("click", () => {
@@ -50,6 +51,13 @@ export default function generarPatron(triangulo, cuadrado, resultado){
         }
 
         $resultadoForma.innerHTML = patron.replace(/\n/g, "<br>");
+
+    });
+
+
+    $btnLimpiar.addEventListener("click", () => {
+
+        $resultadoForma.innerHTML = "";
 
     });
 
