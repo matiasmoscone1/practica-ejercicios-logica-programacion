@@ -31,6 +31,10 @@ export default function patronNumAscendentes(btnGenerar, btnLimpiar, resultado){
 
     });
 
-    
+    $btnLimpiar.addEventListener("click", () => {
+
+        $resultadoPatron.innerHTML = "";
+
+    });
 
 }
