@@ -58,4 +58,5 @@ document.addEventListener("DOMContentLoaded", () => {
     generarPatron(".generar-triangulo", ".generar-cuadrado", ".limpiar-patron", ".resultado-ej-27");
     patronNumAscendentes(".generar-patron-num-ascendente", ".limpiar-patron-ej-28", ".resultado-ej-28");
 
+    
 });
