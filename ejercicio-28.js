@@ -25,10 +25,12 @@ export default function patronNumAscendentes(btnGenerar, btnLimpiar, resultado){
             patron += linea + '\n';
         }
         
-        console.log(patron);
+        //console.log(patron);
+
+        $resultadoPatron.innerHTML = patron.replace(/\n/g, "<br>");
 
     });
 
-
     
+
 }
