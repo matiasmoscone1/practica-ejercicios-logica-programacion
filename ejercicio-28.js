@@ -18,10 +18,11 @@ export default function patronNumAscendentes(btnGenerar, btnLimpiar, resultado){
         let patron = "";
 
         for(let i = 1; i <= numFila; i++){
-            let numero = i;
+            let linea = '';
             for(let j = 1; j <= i; j++){
-                patron += numero; 
+                linea += i;
             }
+            patron += linea + '\n';
         }
         
         console.log(patron);
