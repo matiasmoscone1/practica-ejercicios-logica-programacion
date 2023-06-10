@@ -12,9 +12,9 @@ export default function generarPatronEspiral(btn, btnLimpiar, resultado){
     const $btnLimpiar = document.querySelector(btnLimpiar);
     const $resultadoPatronEspiral = document.querySelector(resultado);
 
-    $btnGenerar.addEventListner("click", () => {
+    $btnGenerar.addEventListener("click", () => {
         const n = 5;
-
+        
         //primero debo crear una matriz con dos ciclos que recorra mientras que sea menor o
         //igual a n (n)
 
