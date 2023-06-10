@@ -27,6 +27,7 @@ import numeroPerfecto from "./ejercicio-26.js";
 import generarPatron from "./ejercicio-27.js";
 import patronNumAscendentes from "./ejercicio-28.js";
 import generarPatronEspiral from "./ejercicio-29.js";
+import generarNumerosPrimos from "./ejercicio-30.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -59,6 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
     generarPatron(".generar-triangulo", ".generar-cuadrado", ".limpiar-patron", ".resultado-ej-27");
     patronNumAscendentes(".generar-patron-num-ascendente", ".limpiar-patron-ej-28", ".resultado-ej-28");
     generarPatronEspiral(".generar-patron-num-espiral", ".limpiar-patron-ej-29", ".resultado-ej-29");
-    
+    generarNumerosPrimos(".generar-numeros-primos", ".btn-generar-numeros-primos", ".limpiar-ej-30", ".resultado-ej-30");
     
 });

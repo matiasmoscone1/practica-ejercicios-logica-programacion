@@ -25,7 +25,7 @@ export default function generarPatronEspiral(btn, btnLimpiar, resultado){
 
         //creo un ciclo while de valor = 1 mientras que sea menor o igual que n * n
 
-        
+        //creo 4 ciclos for dentro del while
 
     });
 
