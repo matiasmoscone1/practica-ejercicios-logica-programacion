@@ -28,6 +28,7 @@ import generarPatron from "./ejercicio-27.js";
 import patronNumAscendentes from "./ejercicio-28.js";
 import generarPatronEspiral from "./ejercicio-29.js";
 import generarNumerosPrimos from "./ejercicio-30.js";
+import conversionNumerosRomanos from "./ejercicio-31.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -61,5 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
     patronNumAscendentes(".generar-patron-num-ascendente", ".limpiar-patron-ej-28", ".resultado-ej-28");
     generarPatronEspiral(".generar-patron-num-espiral", ".limpiar-patron-ej-29", ".resultado-ej-29");
     generarNumerosPrimos(".generar-numeros-primos", ".btn-generar-numeros-primos", ".limpiar-ej-30", ".resultado-ej-30");
-    
+    conversionNumerosRomanos(".numeros-romanos", ".btn-numeros-romanos", ".limpiar-ej-31", ".resultado-ej-31");
+
 });
