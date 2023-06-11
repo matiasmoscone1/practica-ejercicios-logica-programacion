@@ -13,6 +13,7 @@ function esPrimo(numero){
             return false;
         }
     }
+    return true;
 }
 
 
@@ -23,18 +24,20 @@ export default function generarNumerosPrimos(inputNumeros, btnGenerar, btnLimpia
     const $resultadoGenNumerosPrimos = document.querySelector(resultado);
 
     $btnGenerar.addEventListener("click", () => {
-        const $inputNumeros = document.querySelector(inputNumeros).value;
+        const $inputNumeros = parseInt(document.querySelector(inputNumeros).value);
+
+        //console.log(esPrimo(1));
+        
         let arrayNumeros = [];
-        let contador = 2;
-        /*while(arrayNumeros.length < $inputNumeros){
-            if(esPrimo(contador)){
-                arrayNumeros.push(contador);
+
+        for(let j = 0; j <= $inputNumeros; j++){
+            if(esPrimo(j)){
+                arrayNumeros.push(j);
             }
-            contador++; 
-        }*/
+        }
 
         
-        //console.log(arrayNumeros);
+        console.log(arrayNumeros);
 
     });
 
