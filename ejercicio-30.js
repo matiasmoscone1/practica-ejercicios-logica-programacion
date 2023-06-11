@@ -26,8 +26,6 @@ export default function generarNumerosPrimos(inputNumeros, btnGenerar, btnLimpia
     $btnGenerar.addEventListener("click", () => {
         const $inputNumeros = parseInt(document.querySelector(inputNumeros).value);
 
-        //console.log(esPrimo(1));
-        
         let arrayNumeros = [];
 
         for(let j = 0; j <= $inputNumeros; j++){
@@ -35,12 +33,14 @@ export default function generarNumerosPrimos(inputNumeros, btnGenerar, btnLimpia
                 arrayNumeros.push(j);
             }
         }
-
+        //console.log(arrayNumeros);
         
-        console.log(arrayNumeros);
+        $resultadoGenNumerosPrimos.textContent = `Los numeros primos generados son: ${arrayNumeros.toString()}`;        
 
     });
 
-
+    $btnLimpiar.addEventListener("click", () => {
+        $resultadoGenNumerosPrimos.innerHTML = "";
+    });
 
 }
