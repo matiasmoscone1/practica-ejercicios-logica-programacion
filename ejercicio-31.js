@@ -23,9 +23,12 @@ export default function conversionNumerosRomanos(inputRomanos, btnConvertir, btn
         let acumulador = 0;
 
 
-        for(let i = 0; i <= cadenaRomanos.length; i++){
+        for(let i = 0; i < cadenaRomanos.length; i++){
             
-            switch(cadenaRomanos[i]){
+            let valorActual = cadenaRomanos[i];
+            let valorSiguiente = cadenaRomanos[i+1];
+
+            switch(valorActual){
                 case "I": acumulador += 1;
                 break;
                 case "V": acumulador += 5;
@@ -42,6 +45,13 @@ export default function conversionNumerosRomanos(inputRomanos, btnConvertir, btn
                 break;
             }
             
+            if(valorSiguiente && valorActual < valorSiguiente){
+                acumulador -= valorActual;
+            }else{
+                acumulador += valorActual;
+            }
+
+
         }
 
         console.log(acumulador);
