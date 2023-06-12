@@ -26,15 +26,22 @@ export default function conversionNumerosRomanos(inputRomanos, btnConvertir, btn
         for(let i = 0; i <= cadenaRomanos.length; i++){
             
             switch(cadenaRomanos[i]){
-                case "I": 1;
-                case "V": 5;
-                case "X": 10;
-                case "L": 50;
-                case "C": 100;
-                case "D": 500;
-                case "M": 1000;
+                case "I": acumulador += 1;
+                break;
+                case "V": acumulador += 5;
+                break;
+                case "X": acumulador += 10;
+                break;
+                case "L": acumulador += 50;
+                break;
+                case "C": acumulador += 100;
+                break;
+                case "D": acumulador += 500;
+                break;
+                case "M": acumulador += 1000;
+                break;
             }
-            acumulador+= i;
+            
         }
 
         console.log(acumulador);
