@@ -36,43 +36,22 @@ export default function conversionNumerosRomanos(inputRomanos, btnConvertir, btn
             
             let valorActual = valoresRomanos[cadenaRomanos[i]];
             let valorSiguiente = valoresRomanos[cadenaRomanos[i+1]];
-            /*
-            let valorActual = cadenaRomanos[i];
-            let valorSiguiente = cadenaRomanos[i+1];
-
-            switch(valorActual){
-                case "I": acumulador += 1;
-                break;
-                case "V": acumulador += 5;
-                break;
-                case "X": acumulador += 10;
-                break;
-                case "L": acumulador += 50;
-                break;
-                case "C": acumulador += 100;
-                break;
-                case "D": acumulador += 500;
-                break;
-                case "M": acumulador += 1000;
-                break;
-            }
-            console.log(valorActual);
-            console.log(valorSiguiente);
-            */
+            
             if(valorSiguiente && valorActual < valorSiguiente){
                 acumulador += valorActual;
             }else{
                 acumulador -= valorActual;
             }
-
-
         }
 
-        console.log(acumulador);
+        console.log(-acumulador);
         
-
+        $resultadoNumerosRomanos.innerHTML = `El resultado en decimal es: ${-acumulador}`;
        
+    });
 
+    $btnLimpiar.addEventListener("click", () => {
+        $resultadoNumerosRomanos.innerHTML = "";
     });
 
 }
