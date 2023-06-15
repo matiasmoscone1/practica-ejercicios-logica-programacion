@@ -29,10 +29,15 @@ export default function generarContrasenia(inputContrasenia ,btnGenerador, btnLi
             contrasenia += obj[Math.floor(generadorContrasenia)];
         }
 
-        console.log(contrasenia);
+        //console.log(contrasenia);
 
+        $resultadoGenerarContrasenia.textContent = `La contraseña generada es: ${contrasenia}`;
+        
     });
 
+    $btnLimpair.addEventListener("click", () => {
+        $resultadoGenerarContrasenia.innerHTML = "";
+    });
 
 }
 
