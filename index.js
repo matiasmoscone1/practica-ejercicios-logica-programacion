@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     generarNumerosPrimos(".generar-numeros-primos", ".btn-generar-numeros-primos", ".limpiar-ej-30", ".resultado-ej-30");
     conversionNumerosRomanos(".numeros-romanos", ".btn-numeros-romanos", ".limpiar-ej-31", ".resultado-ej-31");
     generarContrasenia(".input-generador-contrasenia",".btn-generar-contrasenia", ".limpiar-ej-32", ".resultado-ej-32");
-    contadorPulsaciones();
+    contadorPulsaciones(".contador-ej-33", ".limpiar-ej-33", ".resultado-ej-33");
 
+    
 });
