@@ -8,23 +8,23 @@
 
 
 
-export default function generarContrasenia(btnGenerador, btnLimpiar, resultado){
+export default function generarContrasenia(inputContrasenia ,btnGenerador, btnLimpiar, resultado){
 
     const $btnGenerar = document.querySelector(btnGenerador);
     const $btnLimpair = document.querySelector(btnLimpiar);
     const $resultadoGenerarContrasenia = document.querySelector(resultado);
 
+
     $btnGenerar.addEventListener("click", () => {
-        
+        const $longitudContrasenia = document.querySelector(inputContrasenia).value;    
         let contrasenia = "";
         
-
         let obj = ["0","1","2","3","4","5","6","7","8","9","-","_","!","@","#","$","%","&","/",
         "(",")","=","?","¡","¿","|","°","{","}","^","]","[",".","<",">","~","A","B","C","D","E",
         "F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","W","X","Y","Z","a","b","c",
         "d","e","f","g","h","i","j","k","l","m","n","o","p","q","s","t","r","x","w","y","z"];
         
-        for(let i = 0; i < 11; i++){
+        for(let i = 0; i < $longitudContrasenia; i++){
             let generadorContrasenia = Math.random(0, obj.length) * obj.length;
             contrasenia += obj[Math.floor(generadorContrasenia)];
         }
