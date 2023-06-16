@@ -10,14 +10,19 @@ export default function contadorPulsaciones(btnMostrar, btnLimpiar, resultado){
     const $resultadoPulsaciones = document.querySelector(resultado);
 
     let contador = 0;
+
     document.addEventListener("keyup", (e) => {
         if(e.key === "Enter"){
             contador += 1;
         }
 
+        console.log(contador);
     });
 
-    console.log(contador);
+    $btnMostrar.addEventListener("click", () => {
+        $resultadoPulsaciones.innerHTML = `La cantidad de veces pulsadas enter son: ${contador}`;
+
+    });
 
 
 }
