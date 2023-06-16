@@ -21,9 +21,11 @@ export default function contadorPulsaciones(btnMostrar, btnLimpiar, resultado){
 
     $btnMostrar.addEventListener("click", () => {
         $resultadoPulsaciones.innerHTML = `La cantidad de veces pulsadas enter son: ${contador}`;
-
     });
 
+    $btnLimpiar.addEventListener("click", () => {
+        $resultadoPulsaciones.innerHTML = "";
+    });
 
 }
 
