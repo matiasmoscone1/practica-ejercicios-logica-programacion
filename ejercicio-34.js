@@ -10,10 +10,19 @@ export default function contadorVocalesTeclado(btnMostrar, btnLimpiar, resultado
 
     const $btnMostrar = document.querySelector(btnMostrar);
     const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $resultadoVocales = document.querySelector(resultado);
+    let contador = 0;
 
+    document.addEventListener("keyup", (e) => {
+        if(e.key === "a" || e.key === "e" || e.key === "i" || e.key === "o" || e.key === "u"){
+            contador += 1;
+        }
+        
+    });
 
-
-
+    $btnMostrar.addEventListener("click", () => {
+        console.log(contador);
+    });
 
     
 }
