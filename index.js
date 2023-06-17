@@ -32,6 +32,7 @@ import conversionNumerosRomanos from "./ejercicio-31.js";
 import generarContrasenia from "./ejercicio-32.js";
 import contadorPulsaciones from "./ejercicio-33.js";
 import contadorVocalesTeclado from "./ejercicio-34.js";
+import adivinaLaTecla from "./ejercicio-35.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -70,6 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
     generarContrasenia(".input-generador-contrasenia",".btn-generar-contrasenia", ".limpiar-ej-32", ".resultado-ej-32");
     contadorPulsaciones(".contador-ej-33", ".limpiar-ej-33", ".resultado-ej-33");
     contadorVocalesTeclado(".contador-ej-34", ".limpiar-ej-33", ".resultado-ej-34");
-
+    adivinaLaTecla(".generador-de-letra", ".mostrador-de-letra",".limpiar-ej-35", ".resultado-ej-35");
     
 });
