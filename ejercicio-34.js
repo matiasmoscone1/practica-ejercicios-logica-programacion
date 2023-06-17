@@ -5,7 +5,6 @@
 //la cantidad de veces que se han pulsado las vocales (a, e, i, o, u) en cualquier orden.
 
 
-
 export default function contadorVocalesTeclado(btnMostrar, btnLimpiar, resultado){
 
     const $btnMostrar = document.querySelector(btnMostrar);
@@ -17,13 +16,12 @@ export default function contadorVocalesTeclado(btnMostrar, btnLimpiar, resultado
         if(e.key === "a"|| e.key === "e" || e.key === "i" || e.key === "o" || e.key === "u" ||
         e.key === "A"|| e.key === "E" || e.key === "I" || e.key === "O" || e.key === "U"){
             contador += 1;
-        }
-        
+        }        
     });
 
     $btnMostrar.addEventListener("click", () => {
-        console.log(contador);
-
+        //console.log(contador);
+        $resultadoVocales.innerHTML = `Las vocales presionadas fueron: ${contador}`;
     });
 
     $btnLimpiar.addEventListener("click", () => {
