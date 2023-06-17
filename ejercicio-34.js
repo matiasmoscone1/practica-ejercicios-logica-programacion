@@ -14,7 +14,8 @@ export default function contadorVocalesTeclado(btnMostrar, btnLimpiar, resultado
     let contador = 0;
 
     document.addEventListener("keyup", (e) => {
-        if(e.key === "a" || e.key === "e" || e.key === "i" || e.key === "o" || e.key === "u"){
+        if(e.key === "a"|| e.key === "e" || e.key === "i" || e.key === "o" || e.key === "u" ||
+        e.key === "A"|| e.key === "E" || e.key === "I" || e.key === "O" || e.key === "U"){
             contador += 1;
         }
         
@@ -22,8 +23,12 @@ export default function contadorVocalesTeclado(btnMostrar, btnLimpiar, resultado
 
     $btnMostrar.addEventListener("click", () => {
         console.log(contador);
+
     });
 
+    $btnLimpiar.addEventListener("click", () => {
+        $resultadoVocales.innerHTML = "";
+    });
     
 }
 
