@@ -8,12 +8,12 @@
 //en la consola si la tecla ingresada es correcta o incorrecta.
 
 
-export default function adivinaLaTecla(generador, btnMostrar, btnLimpiar, resultado){
+export default function adivinaLaTecla(generador, btnMostrar, btnLimpiar, mostrarLetra, resultado){
 
     const $btnGenerador = document.querySelector(generador);
-    const $btnMostrar = document.querySelector(btnMostrar);
-    const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $mostrarLetra = document.querySelector(mostrarLetra);
     const $resultadoTecla = document.querySelector(resultado);
+
 
     let letraGenerada = "";
 
@@ -31,10 +31,16 @@ export default function adivinaLaTecla(generador, btnMostrar, btnLimpiar, result
         : $resultadoTecla.innerHTML = `El usuario NO ADIVINO la letra`;
     });
 
-    $btnMostrar.addEventListener("click", () => {
+    document.addEventListener("click", (e) => {
+        if(e.target.matches(btnMostrar)){
+            $mostrarLetra.textContent = `La letra es: ${letraGenerada}`;
+        }
+        if(e.target.matches(btnLimpiar)){
+            $resultadoTecla.innerHTML = "";
+            $mostrarLetra.textContent = "";
+        }
 
     });
-
 
 }
 
