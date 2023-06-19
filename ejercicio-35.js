@@ -25,6 +25,15 @@ export default function adivinaLaTecla(generador, btnMostrar, btnLimpiar, result
         console.log(letraGenerada);
     });
     
+    document.addEventListener("keyup", (e) => {
+        e.key === letraGenerada 
+        ? $resultadoTecla.innerHTML = `El usuario ADIVINO la letra`
+        : $resultadoTecla.innerHTML = `El usuario NO ADIVINO la letra`;
+    });
+
+    $btnMostrar.addEventListener("click", () => {
+
+    });
 
 
 }
