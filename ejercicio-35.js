@@ -8,11 +8,14 @@
 //en la consola si la tecla ingresada es correcta o incorrecta.
 
 
-export default function adivinaLaTecla(){
-
+export default function adivinaLaTecla(generador, btnMostrar, btnLimpiar, resultado){
 
     
+
+
 }
+
+    
 
 
 
