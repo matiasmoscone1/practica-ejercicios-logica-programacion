@@ -34,6 +34,7 @@ import contadorPulsaciones from "./ejercicio-33.js";
 import contadorVocalesTeclado from "./ejercicio-34.js";
 import adivinaLaTecla from "./ejercicio-35.js";
 import bloqueadorDeTeclas from "./ejercicio-36.js";
+import moverPelota from "./ejercicio-37.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -74,6 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
     contadorVocalesTeclado(".contador-ej-34", ".limpiar-ej-33", ".resultado-ej-34");
     adivinaLaTecla(".generador-de-letra", ".mostrador-de-letra",".limpiar-ej-35", ".mostrar-letra-ej-35",".resultado-ej-35");
     bloqueadorDeTeclas(".jugar-ej-36", ".stop-ej-36", ".letras-bloqueadas", ".input-ej-36", ".limpiar-input-ej-36");
-
+    moverPelota();
 
 });
