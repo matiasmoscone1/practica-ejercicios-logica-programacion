@@ -6,24 +6,28 @@
 //Cada vez que se presione una tecla de dirección, el objeto debe moverse en la dirección 
 //correspondiente.
 
-let x = 0, y = 0;
-export default function moverPelota(bola){
+
+export default function moverPelota(stage,bola){
     
+    const $stage = document.querySelector(stage);
     const $moverBola = document.querySelector(bola);
 
     document.addEventListener("keydown", (e) => {
-
+        const ballStyle = getComputedStyle($moverBola); 
+        const ballTop = parseInt(ballStyle.top); 
+        const ballLeft = parseInt(ballStyle.left);
+    
         if(e.key === "ArrowUp"){
-            y--;
+            $moverBola.style.top = `${ballTop - 2}px`; 
         }
         if(e.key === "ArrowLeft"){
-            x--;
+            $moverBola.style.left = `${ballLeft - 2}px`; 
         }
         if(e.key === "ArrowDown"){
-            y++;
+            $moverBola.style.top = `${ballTop + 2}px`;
         }
         if(e.key === "ArrowRight"){
-            x++;
+            $moverBola.style.left = `${ballLeft + 2}px`; 
         }
 
     });
