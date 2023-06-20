@@ -27,36 +27,44 @@ export default function moverPelota(btnJugar,btnStop,stage,bola){
         const ballStyle = getComputedStyle($moverBola); 
         const ballTop = parseInt(ballStyle.top); 
         const ballLeft = parseInt(ballStyle.left);
-  
+        const stageRect = $stage.getBoundingClientRect();
+
+        const stageTop = stageRect.top;
+        const stageLeft = stageRect.left;
+        const stageBottom = stageRect.bottom - $moverBola.offsetHeight;
+        const stageRight = stageRect.right - $moverBola.offsetWidth;
+        
+        //console.log(ballTop);
+        //console.log(ballLeft);
+
+        console.log(ballTop);
+        console.log(stageTop);
         if(condicionalJuego){
             switch(e.key){
-                case "ArrowUp": $moverBola.style.top = `${ballTop - 2}px`;
-                break;
-                case "ArrowLeft": $moverBola.style.left = `${ballLeft - 2}px`; 
-                break;
-                case "ArrowDown": $moverBola.style.top = `${ballTop + 2}px`;
-                break;
-                case "ArrowRight":$moverBola.style.left = `${ballLeft + 2}px`; 
-                break;
+                case "ArrowUp": 
+                    if(ballTop > stageTop && ballTop > 4346){
+                        $moverBola.style.top = `${ballTop - 2}px`;
+                    }
+                    break;
+                case "ArrowLeft": 
+                    if(ballLeft > stageLeft){
+                        $moverBola.style.left = `${ballLeft - 2}px`; 
+                    }
+                    break;
+                case "ArrowDown": 
+                    if(ballTop > stageBottom && ballTop < 4476){
+                        $moverBola.style.top = `${ballTop + 2}px`;
+                    }
+                    break;
+                case "ArrowRight":
+                    if(ballLeft < stageRight){
+                        $moverBola.style.left = `${ballLeft + 2}px`; 
+                    }
+                    break;
             }
-            /*
-            if(e.key === "ArrowUp"){
-                $moverBola.style.top = `${ballTop - 2}px`; 
-            }
-            if(e.key === "ArrowLeft"){
-                $moverBola.style.left = `${ballLeft - 2}px`; 
-            }
-            if(e.key === "ArrowDown"){
-                $moverBola.style.top = `${ballTop + 2}px`;
-            }
-            if(e.key === "ArrowRight"){
-                $moverBola.style.left = `${ballLeft + 2}px`; 
-            }*/
+            
         }
     });
-
-
-    
 }
 
 
