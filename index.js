@@ -75,6 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
     contadorVocalesTeclado(".contador-ej-34", ".limpiar-ej-33", ".resultado-ej-34");
     adivinaLaTecla(".generador-de-letra", ".mostrador-de-letra",".limpiar-ej-35", ".mostrar-letra-ej-35",".resultado-ej-35");
     bloqueadorDeTeclas(".jugar-ej-36", ".stop-ej-36", ".letras-bloqueadas", ".input-ej-36", ".limpiar-input-ej-36");
-    moverPelota(".stage-ej-37",".bola-ej-37");
+    moverPelota(".btn-jugar-ej-37",".btn-stop-ej-37",".stage-ej-37",".bola-ej-37");
 
 });
