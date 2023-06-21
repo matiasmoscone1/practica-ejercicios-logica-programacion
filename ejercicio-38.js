@@ -9,7 +9,7 @@ export default function contadorTeclado(btnJugar, btnStop, resultado){
     const $btnJugar = document.querySelector(btnJugar);
     const $btnStop = document.querySelector(btnStop);
     const $resultado = document.querySelector(resultado);
-    const bloqActivo = false;
+    let bloqActivo = false;
     let contador = 0;
 
     $btnJugar.addEventListener("click", () => {
@@ -23,15 +23,17 @@ export default function contadorTeclado(btnJugar, btnStop, resultado){
                 if(e.key === "ArrowDown"){
                     contador -= 1;
                 }
+                
+                $resultado.textContent = `${contador}`;
             });
 
         }
     });
 
     $btnStop.addEventListener("click", () => {
-        
+        bloqActivo = false;
+        $resultado.textContent = "";
     });
-
 
 }
 
