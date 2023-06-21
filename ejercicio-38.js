@@ -3,7 +3,6 @@
 //38. Contador con flecha hacia arriba sube, flecha hacia abajo resta, 
 //apretando otra tecla resetea contador.
 
-
 export default function contadorTeclado(btnJugar, btnStop, resultado){
 
     const $btnJugar = document.querySelector(btnJugar);
@@ -24,7 +23,7 @@ export default function contadorTeclado(btnJugar, btnStop, resultado){
                     contador -= 1;
                 }
                 
-                $resultado.textContent = `${contador}`;
+                $resultado.textContent = `Contador: ${contador}`;
             });
 
         }

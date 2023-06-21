@@ -38,8 +38,8 @@ export default function moverPelota(btnJugar,btnStop,stage,bola){
         //console.log(ballTop);
         //console.log(ballLeft);
 
-        console.log(ballTop);
-        console.log(stageTop);
+        //console.log(ballTop);
+        //console.log(stageTop);
         if(condicionalJuego){
             e.preventDefault();
             switch(e.key){
