@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     bloqueadorDeTeclas(".jugar-ej-36", ".stop-ej-36", ".letras-bloqueadas", ".input-ej-36", ".limpiar-input-ej-36");
     moverPelota(".btn-jugar-ej-37",".btn-stop-ej-37",".stage-ej-37",".bola-ej-37");
     contadorTeclado(".btn-jugar-ej-38", ".btn-stop-ej-38", ".resultado-ej-38");
-    formTeclado(".form-ej-39", ".input-ej-39");
+    formTeclado(".form-ej-39", ".input-ej-39", ".resultado-ej-39");
 
     
 });
