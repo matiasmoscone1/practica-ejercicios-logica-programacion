@@ -7,11 +7,16 @@
 export default function formTeclado(formulario, input){
 
     const $input = document.querySelector(input);
+    const $formulario = document.querySelector(formulario);
 
-    document.addEventListener("keydown", (e) => {
+    $formulario.addEventListener("submit", (e) => {
+        e.preventDefault();
+
         
 
     });
+
+    
 
 
 }
