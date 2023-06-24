@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
     moverPelota(".btn-jugar-ej-37",".btn-stop-ej-37",".stage-ej-37",".bola-ej-37");
     contadorTeclado(".btn-jugar-ej-38", ".btn-stop-ej-38", ".resultado-ej-38");
     formTeclado(".form-ej-39", ".input-ej-39", ".resultado-ej-39");
-    simonSays();
+    simonSays(".btn-jugar-ej-40", ".btn-stop-ej-40", "");
     
     
 });
