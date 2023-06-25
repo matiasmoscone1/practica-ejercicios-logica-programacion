@@ -19,14 +19,23 @@ export default function simonSays(btnJugar, btnStop, letraSimon){
 
         let letraGenerada = Math.random(0, contenedorLetras.length) * contenedorLetras.length;
         if(juegoActivo){
+            letraGenerada = contenedorLetras[Math.floor(letraGenerada)];
             setInterval(() => {
                 $letraSimon.textContent = "";    
             }, 3000);
-            //setTimeout()
-            letraGenerada = contenedorLetras[Math.floor(letraGenerada)];
+        
+            document.addEventListener("keydown", (e) => {
+                if(e.key === letraGenerada){
+                    $letraSimon.textContent = `BIEN`;
+                }else{
+                    $letraSimon.textContent = `Letra equivocada`;
+                }
+            });
             console.log(letraGenerada);
             $letraSimon.textContent = `${letraGenerada}`;
 
+            
+            
         }
 
     });
