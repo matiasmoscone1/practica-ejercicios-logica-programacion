@@ -33,17 +33,15 @@ export default function simonSays(btnJugar, btnStop, letraSimon){
             });
             console.log(letraGenerada);
             $letraSimon.textContent = `${letraGenerada}`;
-
-            
             
         }
 
     });
     
-    
-
-
-
+    $btnStop.addEventListener("click", () => {
+        juegoActivo = false;
+        $letraSimon.innerHTML = "";
+    });  
 
     
 }
