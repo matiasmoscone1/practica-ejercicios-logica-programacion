@@ -21,6 +21,7 @@ export default function simonSays(btnJugar, btnStop, contadorSimonSays, letraSim
         let letraGenerada = Math.random(0, contenedorLetras.length) * contenedorLetras.length;
         if(juegoActivo){
             let contador = 0;
+            
             letraGenerada = contenedorLetras[Math.floor(letraGenerada)];
             
             setInterval(() => {
@@ -32,16 +33,17 @@ export default function simonSays(btnJugar, btnStop, contadorSimonSays, letraSim
                     $letraSimon.textContent = `BIEN`;
                     contador += 1;
                     $resultadoContador.textContent = `Puntaje: ${contador}`;
-
+                    letraGenerada = contenedorLetras[Math.floor(letraGenerada)];
+                    $letraSimon.textContent = `${letraGenerada}`;
                 }else{
                     $letraSimon.textContent = `Letra equivocada`;
                     contador = 0;
                     $resultadoContador.textContent = `Puntaje: ${contador}`;
                 }
+               
             });
             console.log(letraGenerada);
             $letraSimon.textContent = `${letraGenerada}`;
-            
            
         }
 
