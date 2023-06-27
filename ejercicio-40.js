@@ -14,13 +14,14 @@ export default function simonSays(btnJugar, btnStop, contadorSimonSays, letraSim
 
     $btnJugar.addEventListener("click", () => {
         juegoActivo = true;
-        
         const contenedorLetras = ["A","B","C","D","E","F","G","H","I","J","K","M","N","L","O",
         "P","Q","R","S","T","X","Y","W","Z"];
 
         let letraGenerada = Math.random(0, contenedorLetras.length) * contenedorLetras.length;
-        if(juegoActivo){
+       
+         if(juegoActivo){
             let contador = 0;
+            
             
             letraGenerada = contenedorLetras[Math.floor(letraGenerada)];
             
@@ -35,6 +36,7 @@ export default function simonSays(btnJugar, btnStop, contadorSimonSays, letraSim
                     $resultadoContador.textContent = `Puntaje: ${contador}`;
                     letraGenerada = contenedorLetras[Math.floor(letraGenerada)];
                     $letraSimon.textContent = `${letraGenerada}`;
+                    console.log(letraGenerada);
                 }else{
                     $letraSimon.textContent = `Letra equivocada`;
                     contador = 0;
