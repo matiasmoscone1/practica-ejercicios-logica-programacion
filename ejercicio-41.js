@@ -8,12 +8,16 @@
 
 export default function textoEnVivo(texto, resultado){
 
+    //Inicializando variables del DOM
     const $textoArea = document.querySelector(texto);
     const $resultadoArea = document.querySelector(resultado);
 
+    //Captando evento de tecla presionada en el text-area 
     $textoArea.addEventListener("keydown", (e) => {
+        //Concatenando todas las teclas apretadas en el text-area y mostrandolas en el DOM
+        
         $resultadoArea.innerHTML += `${e.key}`;
-        console.log(e);
+        //console.log(e);
     });
 }
 
