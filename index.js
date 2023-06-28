@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     contadorTeclado(".btn-jugar-ej-38", ".btn-stop-ej-38", ".resultado-ej-38");
     formTeclado(".form-ej-39", ".input-ej-39", ".resultado-ej-39");
     simonSays(".btn-jugar-ej-40", ".btn-stop-ej-40", ".contador-simon-says",".simon-says");
-    textoEnVivo();
-    
+    textoEnVivo(".text-area-ej-41", ".resultado-ej-41");
+
     
 });
