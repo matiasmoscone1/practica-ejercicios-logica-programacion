@@ -39,6 +39,7 @@ import contadorTeclado from "./ejercicio-38.js";
 import formTeclado from "./ejercicio-39.js";
 import simonSays from "./ejercicio-40.js";
 import textoEnVivo from "./ejercicio-41.js";
+import taskList from "./ejercicio-42.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -84,6 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
     formTeclado(".form-ej-39", ".input-ej-39", ".resultado-ej-39");
     simonSays(".btn-jugar-ej-40", ".btn-stop-ej-40", ".contador-simon-says",".simon-says");
     textoEnVivo(".text-area-ej-41", ".resultado-ej-41");
-
+    taskList(".btn-empezar-ej-42", ".btn-terminar-ej-42", ".resultado-ej-42");
     
 });
