@@ -38,6 +38,7 @@ import moverPelota from "./ejercicio-37.js";
 import contadorTeclado from "./ejercicio-38.js";
 import formTeclado from "./ejercicio-39.js";
 import simonSays from "./ejercicio-40.js";
+import textoEnVivo from "./ejercicio-41.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -82,6 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     contadorTeclado(".btn-jugar-ej-38", ".btn-stop-ej-38", ".resultado-ej-38");
     formTeclado(".form-ej-39", ".input-ej-39", ".resultado-ej-39");
     simonSays(".btn-jugar-ej-40", ".btn-stop-ej-40", ".contador-simon-says",".simon-says");
+    textoEnVivo();
     
     
 });
