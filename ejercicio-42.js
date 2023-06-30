@@ -23,6 +23,8 @@ export default function taskList(btnEmpezar, btnTerminar, btnLimpiar, resultado)
             document.addEventListener("keydown", (e) => {
                 if(e.code === "Space"){
                     console.log("ASDASD");
+                    document.querySelector(".check-1").checked = true;
+
                 }
             });
         }    
