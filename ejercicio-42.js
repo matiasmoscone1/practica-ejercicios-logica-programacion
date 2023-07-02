@@ -23,7 +23,7 @@ export default function taskList(btnEmpezar, btnTerminar, btnLimpiar, resultado)
             document.addEventListener("keydown", (e) => {
                 if(e.code === "Space"){
                     console.log("ASDASD");
-                    const check = document.querySelector(`check-${index}`);
+                    const check = document.querySelector(`.check-${index}`);
                     if(check){
                         check.checked = true; 
                         index++;
