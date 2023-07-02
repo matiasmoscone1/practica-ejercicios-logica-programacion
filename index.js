@@ -87,4 +87,5 @@ document.addEventListener("DOMContentLoaded", () => {
     textoEnVivo(".text-area-ej-41", ".resultado-ej-41");
     taskList(".btn-empezar-ej-42", ".btn-terminar-ej-42", ".btn-limpiar-ej-42",".resultado-ej-42");
     
+    
 });

@@ -24,6 +24,13 @@ export default function taskList(btnEmpezar, btnTerminar, btnLimpiar, resultado)
                 if(e.code === "Space"){
                     console.log("ASDASD");
                     document.querySelector(".check-1").checked = true;
+                    if(document.querySelector(".check-1").checked){
+                        document.querySelector(".check-2").checked = true;   
+                    }
+                    //document.querySelector(".check-2").checked = true;
+                    //document.querySelector(".check-3").checked = true;
+                    //document.querySelector(".check-4").checked = true;
+                    //document.querySelector(".check-5").checked = true;
 
                 }
             });
