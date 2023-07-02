@@ -14,7 +14,7 @@ export default function taskList(btnEmpezar, btnTerminar, btnLimpiar, resultado)
     const $btnLimpiar = document.querySelector(btnLimpiar);
     const $resultadoTaskList = document.querySelector(resultado);
     let bloqTaskList = false;
-
+    let index = 1;
     
 
     $btnEmpezar.addEventListener("click", () => {
@@ -23,15 +23,11 @@ export default function taskList(btnEmpezar, btnTerminar, btnLimpiar, resultado)
             document.addEventListener("keydown", (e) => {
                 if(e.code === "Space"){
                     console.log("ASDASD");
-                    document.querySelector(".check-1").checked = true;
-                    if(document.querySelector(".check-1").checked){
-                        document.querySelector(".check-2").checked = true;   
+                    const check = document.querySelector(`check-${index}`);
+                    if(check){
+                        check.checked = true; 
+                        index++;
                     }
-                    //document.querySelector(".check-2").checked = true;
-                    //document.querySelector(".check-3").checked = true;
-                    //document.querySelector(".check-4").checked = true;
-                    //document.querySelector(".check-5").checked = true;
-
                 }
             });
         }    
