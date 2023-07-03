@@ -21,13 +21,14 @@ export default function taskList(btnEmpezar, btnTerminar, btnLimpiar, resultado)
         bloqTaskList = true;
         if(bloqTaskList){
             document.addEventListener("keydown", (e) => {
-                if(e.code === "Space"){
-                    console.log("ASDASD");
+                if(e.code === "Space"){// && e.repeat
+                    //console.log("ASDASD") 
                     const check = document.querySelector(`.check-${index}`);
                     if(check){
                         check.checked = true; 
                         index++;
                     }
+                 
                 }
             });
         }    
