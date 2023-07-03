@@ -27,11 +27,21 @@ export default function taskList(btnEmpezar, btnTerminar, btnLimpiar, resultado)
                     if(check){
                         check.checked = true; 
                         index++;
+                        console.log(index);
                     }
-                 
                 }
             });
         }    
+    });
+
+    $btnLimpiar.addEventListener("click", () => {
+        for(let j = 1; j < index; j++){
+            const check = document.querySelector(`.check-${j}`);
+        if(check){
+            check.checked = false;
+        }
+        }
+    index = 1;
     });
 
 
