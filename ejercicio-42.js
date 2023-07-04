@@ -1,16 +1,12 @@
 
 
-
-
-
 //42. Diseña un programa que permita al usuario ingresar una lista de tareas y 
 //marcarlas como completadas utilizando la tecla "Espacio".
 
 
-export default function taskList(btnEmpezar, btnTerminar, btnLimpiar){
+export default function taskList(btnEmpezar, btnLimpiar){
 
     const $btnEmpezar = document.querySelector(btnEmpezar);
-    const $btnTerminar = document.querySelector(btnTerminar);
     const $btnLimpiar = document.querySelector(btnLimpiar);
     let bloqTaskList = false;
     let index = 1;

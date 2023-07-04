@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     formTeclado(".form-ej-39", ".input-ej-39", ".resultado-ej-39");
     simonSays(".btn-jugar-ej-40", ".btn-stop-ej-40", ".contador-simon-says",".simon-says");
     textoEnVivo(".text-area-ej-41", ".resultado-ej-41");
-    taskList(".btn-empezar-ej-42", ".btn-terminar-ej-42", ".btn-limpiar-ej-42");
+    taskList(".btn-empezar-ej-42", ".btn-limpiar-ej-42");
     
     
 });
