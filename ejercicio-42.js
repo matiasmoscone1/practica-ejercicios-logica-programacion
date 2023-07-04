@@ -7,41 +7,43 @@
 //marcarlas como completadas utilizando la tecla "Espacio".
 
 
-export default function taskList(btnEmpezar, btnTerminar, btnLimpiar, resultado){
+export default function taskList(btnEmpezar, btnTerminar, btnLimpiar){
 
     const $btnEmpezar = document.querySelector(btnEmpezar);
     const $btnTerminar = document.querySelector(btnTerminar);
     const $btnLimpiar = document.querySelector(btnLimpiar);
-    const $resultadoTaskList = document.querySelector(resultado);
     let bloqTaskList = false;
     let index = 1;
     
 
+    const keyUpHandler = (e) => {
+        if(e.code === "Space" && !e.repeat){
+            //console.log("ASDASD") 
+            const check = document.querySelector(`.check-${index}`);
+            if(check){
+                check.checked = true; 
+                index++;
+                console.log(index);
+            }
+        }
+    };
+
+
     $btnEmpezar.addEventListener("click", () => {
         bloqTaskList = true;
-        if(bloqTaskList){
-            document.addEventListener("keydown", (e) => {
-                if(e.code === "Space" && !e.repeat){
-                    //console.log("ASDASD") 
-                    const check = document.querySelector(`.check-${index}`);
-                    if(check){
-                        check.checked = true; 
-                        index++;
-                        console.log(index);
-                    }
-                }
-            });
-        }    
+        document.addEventListener("keyup", keyUpHandler);
     });
 
-    $btnLimpiar.addEventListener("click", () => {
+
+    $btnLimpiar.addEventListener("click", (e) => {
         for(let j = 1; j < index; j++){
             const check = document.querySelector(`.check-${j}`);
         if(check){
             check.checked = false;
         }
         }
-    index = 1;
+        index = 1;
+        e.preventDefault()
     });
 
 
