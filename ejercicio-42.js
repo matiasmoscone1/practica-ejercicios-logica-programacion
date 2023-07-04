@@ -31,7 +31,6 @@ export default function taskList(btnEmpezar, btnLimpiar){
                 index++;
             }
         }
- 
     };
 
     //captando evento click del boton empezar, pone la variable bloqTaskList en true
