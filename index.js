@@ -87,6 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
     simonSays(".btn-jugar-ej-40", ".btn-stop-ej-40", ".contador-simon-says",".simon-says");
     textoEnVivo(".text-area-ej-41", ".resultado-ej-41");
     taskList(".btn-empezar-ej-42", ".btn-limpiar-ej-42");
-    relojDigital(".btn-mostrar-ej-43", ".btn-mostrar-ej-43", ".reloj-digita-ej-43")
+    relojDigital(".btn-mostrar-ej-43", ".btn-ocultar-ej-43", ".reloj-digita-ej-43")
     
 });
