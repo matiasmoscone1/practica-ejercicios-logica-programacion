@@ -11,9 +11,16 @@ export default function relojDigital(btnMostrar, btnOcultar, relojDigital){
 
     let nuevaFecha = new Date();
 
-    console.log(nuevaFecha);
+    //console.log(nuevaFecha);
 
-    
+
+    let segundos = nuevaFecha.getSeconds();
+    let minutos = nuevaFecha.getMinutes();
+    let horas = nuevaFecha.getHours();
+
+    console.log(segundos);
+    console.log(minutos);
+    console.log(horas);
 }
 
 
