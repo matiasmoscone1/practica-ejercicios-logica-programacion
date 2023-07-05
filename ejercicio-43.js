@@ -21,6 +21,10 @@ export default function relojDigital(btnMostrar, btnOcultar, relojDigital){
     console.log(segundos);
     console.log(minutos);
     console.log(horas);
+
+    $btnMostrar.addEventListener("click", () => {
+        $relojDigital.innerHTML = `${horas} : ${minutos} : ${segundos}`;
+    });
 }
 
 
