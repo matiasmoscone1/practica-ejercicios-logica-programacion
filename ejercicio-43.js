@@ -9,18 +9,22 @@ export default function relojDigital(btnMostrar, btnOcultar, relojDigital){
     const $btnOcultar = document.querySelector(btnOcultar);
     const $relojDigital = document.querySelector(relojDigital);
 
+    let idIntervalo;
    
     //console.log(nuevaFecha);
 
 
     const actualizarReloj = () => {
         
-        setInterval(() => {
+        idIntervalo = setInterval(() => {
             let nuevaFecha = new Date();
 
             let segundos = nuevaFecha.getSeconds();
             let minutos = nuevaFecha.getMinutes();
             let horas = nuevaFecha.getHours();
+            if(segundos < 10){
+                segundos = `0${segundos}`;
+            }
             $relojDigital.innerHTML = `${horas} : ${minutos} : ${segundos}`;
 
         }, 1000);
@@ -38,6 +42,7 @@ export default function relojDigital(btnMostrar, btnOcultar, relojDigital){
 
     $btnOcultar.addEventListener("click", () => {
         $relojDigital.innerHTML = "";
+        clearInterval(idIntervalo);
     })
 
 }
