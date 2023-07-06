@@ -41,6 +41,7 @@ import simonSays from "./ejercicio-40.js";
 import textoEnVivo from "./ejercicio-41.js";
 import taskList from "./ejercicio-42.js";
 import relojDigital from "./ejercicio-43.js";
+import filtrarPalabrasCincoLetras from "./ejercicio-44.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -88,6 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
     textoEnVivo(".text-area-ej-41", ".resultado-ej-41");
     taskList(".btn-empezar-ej-42", ".btn-limpiar-ej-42");
     relojDigital(".btn-mostrar-ej-43", ".btn-ocultar-ej-43", ".reloj-digita-ej-43")
-    
-    
+    filtrarPalabrasCincoLetras(".btn-filtrar-ej-44", ".btn-limpiar-ej-44", ".textarea-ej-44", ".resultado-ej-44");
+
 });

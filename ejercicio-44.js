@@ -5,7 +5,17 @@
 
 
 
+export default function filtrarPalabrasCincoLetras(btnFiltrar, btnLimpiar, textArea, resultado){
 
+    const $btnFiltrar = document.querySelector(btnFiltrar);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $textArea = document.querySelector(textArea);
+    const $resultado = document.querySelector(resultado);
+
+
+
+
+}
 
 
 
