@@ -89,4 +89,5 @@ document.addEventListener("DOMContentLoaded", () => {
     taskList(".btn-empezar-ej-42", ".btn-limpiar-ej-42");
     relojDigital(".btn-mostrar-ej-43", ".btn-ocultar-ej-43", ".reloj-digita-ej-43")
     
+    
 });
