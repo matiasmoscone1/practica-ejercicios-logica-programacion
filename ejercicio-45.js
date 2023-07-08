@@ -8,8 +8,10 @@ export default function personaJovenYMayor(personas, btnMayor, btnMenor, btnLimp
 
 
     const $personas = document.querySelector(personas);
-
-
+    const $btnMayor = document.querySelector(btnMayor);
+    const $btnMenor = document.querySelector(btnMenor);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $resultado = document.querySelector(resultado);
 
 
     const arrayPersonas = [{
@@ -36,14 +38,30 @@ export default function personaJovenYMayor(personas, btnMayor, btnMenor, btnLimp
         nombre: "Lionel",
         apellido: "Scaloni",
         edad: 44
-    },
+    }
 ];
 
     $personas.innerHTML = `${JSON.stringify(arrayPersonas)}`;
+    let mayor = arrayPersonas[0];
+    let menor = arrayPersonas[0];
+
+    console.log(arrayPersonas);
+
+    for(let i = 0; i < arrayPersonas.length; i++){
+        if(arrayPersonas[i].edad > mayor.edad){
+            mayor = arrayPersonas[i];
+        }
+    }
+
+    //console.log(btnMayor);
 
 
+    document.addEventListener("click", (e) => {
+        if(e.target.matches(btnMayor)){
+            console.log(mayor);            
+        }
 
-
+    });
 
 
 }
