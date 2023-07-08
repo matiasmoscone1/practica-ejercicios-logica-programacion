@@ -62,11 +62,14 @@ export default function personaJovenYMayor(personas, btnMayor, btnMenor, btnLimp
     document.addEventListener("click", (e) => {
         if(e.target.matches(btnMayor)){
             $resultado.innerHTML = `El mayor es: ${mayor.nombre} ${mayor.apellido} con ${mayor.edad} años`;
-            console.log(mayor);            
+            //console.log(mayor);            
         }
         if(e.target.matches(btnMenor)){
-            $resultado.innerHTML = `El mayor es: ${menor}`;               
-            console.log(menor);
+            $resultado.innerHTML = `El menor es: ${menor.nombre} ${menor.apellido} con ${menor.edad} años`;               
+            //console.log(menor);
+        }
+        if(e.target.matches(btnLimpiar)){
+            $resultado.innerHTML = "";
         }
 
     });
