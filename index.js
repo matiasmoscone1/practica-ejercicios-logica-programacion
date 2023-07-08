@@ -91,6 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
     taskList(".btn-empezar-ej-42", ".btn-limpiar-ej-42");
     relojDigital(".btn-mostrar-ej-43", ".btn-ocultar-ej-43", ".reloj-digita-ej-43")
     filtrarPalabrasCincoLetras(".btn-filtrar-ej-44", ".btn-limpiar-ej-44", ".textarea-ej-44", ".resultado-ej-44");
-    personaJovenYMayor();
+    personaJovenYMayor(".personas-ej-45", ".btn-mayor-ej-45", ".btn-menor-ej-45", ".btn-limpiar-ej-45", ".resultado-ej-45");
 
 });
