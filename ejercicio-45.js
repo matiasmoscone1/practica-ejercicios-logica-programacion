@@ -8,9 +8,9 @@ export default function personaJovenYMayor(personas, btnMayor, btnMenor, btnLimp
 
 
     const $personas = document.querySelector(personas);
-    const $btnMayor = document.querySelector(btnMayor);
-    const $btnMenor = document.querySelector(btnMenor);
-    const $btnLimpiar = document.querySelector(btnLimpiar);
+    //const $btnMayor = document.querySelector(btnMayor);
+    //const $btnMenor = document.querySelector(btnMenor);
+    //const $btnLimpiar = document.querySelector(btnLimpiar);
     const $resultado = document.querySelector(resultado);
 
 
@@ -51,6 +51,9 @@ export default function personaJovenYMayor(personas, btnMayor, btnMenor, btnLimp
         if(arrayPersonas[i].edad > mayor.edad){
             mayor = arrayPersonas[i];
         }
+        if(arrayPersonas[i].edad < menor.edad){
+            menor = arrayPersonas[i];
+        }
     }
 
     //console.log(btnMayor);
@@ -58,7 +61,12 @@ export default function personaJovenYMayor(personas, btnMayor, btnMenor, btnLimp
 
     document.addEventListener("click", (e) => {
         if(e.target.matches(btnMayor)){
+            $resultado.innerHTML = `El mayor es: ${mayor.nombre} ${mayor.apellido} con ${mayor.edad} años`;
             console.log(mayor);            
+        }
+        if(e.target.matches(btnMenor)){
+            $resultado.innerHTML = `El mayor es: ${menor}`;               
+            console.log(menor);
         }
 
     });
