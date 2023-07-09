@@ -18,7 +18,7 @@ export default function convertirDecimalABinario(inputNumero, btnConvertir, btnL
         let decimal = $inputNumero;
         let binario = "";
 
-        console.log($inputNumero);
+        //console.log($inputNumero);
 
         while(decimal > 0){
             let residuo = decimal % 2;
@@ -28,7 +28,10 @@ export default function convertirDecimalABinario(inputNumero, btnConvertir, btnL
 
         binario.split("").reverse().join("");
 
-        console.log(binario);
+        //console.log(binario);
+
+        $resultado.innerHTML = `El binario es: ${binario}`;
+
 
     });
 
