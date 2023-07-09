@@ -15,7 +15,20 @@ export default function convertirDecimalABinario(inputNumero, btnConvertir, btnL
     $btnConvertir.addEventListener("click", () => {
         const $inputNumero = document.querySelector(inputNumero).value;
     
+        let decimal = $inputNumero;
+        let binario = "";
+
         console.log($inputNumero);
+
+        while(decimal > 0){
+            let residuo = decimal % 2;
+            binario += residuo;
+            decimal = Math.floor(decimal / 2);
+        }
+
+        binario.split("").reverse().join("");
+
+        console.log(binario);
 
     });
 
