@@ -32,7 +32,9 @@ export default function convertirDecimalABinario(inputNumero, btnConvertir, btnL
 
     });
 
-
+    $btnLimpiar.addEventListener("click", () => {
+        $resultado.innerHTML = "";
+    });
 
 
 }
