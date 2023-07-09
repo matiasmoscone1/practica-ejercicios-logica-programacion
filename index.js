@@ -43,6 +43,7 @@ import taskList from "./ejercicio-42.js";
 import relojDigital from "./ejercicio-43.js";
 import filtrarPalabrasCincoLetras from "./ejercicio-44.js";
 import personaJovenYMayor from "./ejercicio-45.js";
+import convertirDecimalABinario from "./ejercicio-46.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -92,5 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
     relojDigital(".btn-mostrar-ej-43", ".btn-ocultar-ej-43", ".reloj-digita-ej-43")
     filtrarPalabrasCincoLetras(".btn-filtrar-ej-44", ".btn-limpiar-ej-44", ".textarea-ej-44", ".resultado-ej-44");
     personaJovenYMayor(".personas-ej-45", ".btn-mayor-ej-45", ".btn-menor-ej-45", ".btn-limpiar-ej-45", ".resultado-ej-45");
+    convertirDecimalABinario(".input-decimal-binario-ej-46", ".btn-ej-46", ".btn-limpiar-ej-46", ".resultado-ej-46");
+
 
 });
