@@ -7,11 +7,18 @@
 //aparece esa palabra en la oración ingresada y mostrar el resultado.
 
 
-export default function buscarPalabra(){
+export default function buscarPalabra(textArea, inputPalabra, btnBuscar, btnLimpiar, resultado){
+
+    const $textArea = document.querySelector(textArea).value;
+    const $inputPalabra = document.querySelector(inputPalabra);
+
+    const $btnBuscar = document.querySelector(btnBuscar);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
 
 
-
-
+    $btnBuscar.addEventListener("click", () => {
+        
+    });
     
 }
 
