@@ -29,11 +29,14 @@ export default function buscarPalabra(textArea, inputPalabra, btnBuscar, btnLimp
             }
         }
         //console.log(contador);
-
         $resultado.textContent = `La palabra "${$inputPalabra}" se repite: ${contador} veces`;
 
+    });
 
-
+    $btnLimpiar.addEventListener("click", () => {
+        document.querySelector(textArea).value = "";
+        document.querySelector(inputPalabra).value = "";
+        $resultado.textContent = "";
     });
     
 }
