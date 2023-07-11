@@ -45,6 +45,7 @@ import filtrarPalabrasCincoLetras from "./ejercicio-44.js";
 import personaJovenYMayor from "./ejercicio-45.js";
 import convertirDecimalABinario from "./ejercicio-46.js";
 import buscarPalabra from "./ejercicio-47.js";
+import validacionFecha from "./ejercicio-48.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -96,5 +97,8 @@ document.addEventListener("DOMContentLoaded", () => {
     personaJovenYMayor(".personas-ej-45", ".btn-mayor-ej-45", ".btn-menor-ej-45", ".btn-limpiar-ej-45", ".resultado-ej-45");
     convertirDecimalABinario(".input-decimal-binario-ej-46", ".btn-ej-46", ".btn-limpiar-ej-46", ".resultado-ej-46");
     buscarPalabra(".text-area-ej-47", ".input-ej-47", ".btn-buscar-ej-47", ".btn-limpiar-ej-47", ".resultado-ej-47");
+    validacionFecha(".input-ej-48", ".btn-validar-ej-48", ".btn-limpiar-ej-48", ".resultado-ej-48");
+
+
 
 });
