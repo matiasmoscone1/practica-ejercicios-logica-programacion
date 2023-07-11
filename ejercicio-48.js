@@ -9,6 +9,7 @@ export default function validacionFecha(inputFecha, btnValidar, btnLimpiar, resu
 
     const $btnValidar = document.querySelector(btnValidar);
     const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $resultado = document.querySelector(resultado);
 
     let formatoFecha = /^\d{2}\/\d{2}\/\d{4}$/;
 
@@ -26,15 +27,23 @@ export default function validacionFecha(inputFecha, btnValidar, btnLimpiar, resu
             let anio = parseInt(divFecha[2], 10);
         
             if(dia >= 1 && dia <= 31 && mes >= 1 && mes <= 12 && anio >= 1900 && anio <= 2050){
-                console.log("FECHA VALIDA");
+                //console.log("FECHA VALIDA");
+                $resultado.textContent = `${$inputFecha} es una fecha VALIDA`;
             }else{
-                console.log("FECHA INVALIDA");
+                //console.log("FECHA INVALIDA");
+                $resultado.textContent = `${$inputFecha} es una fecha INVALIDA`;    
             }
         }else{
-            console.log("EL FORMATO NO COINCIDE");
+            //console.log("EL FORMATO NO COINCIDE");
+            $resultado.textContent = `El formato de ${inputFecha} NO es el indicado`;
         }
 
-        
+        $btnLimpiar.addEventListener("click", () => {
+            $resultado.textContent = "";
+            document.querySelector(inputFecha).value = "";
+        });
+
+
 
 
 
