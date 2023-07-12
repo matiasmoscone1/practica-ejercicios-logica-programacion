@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
     convertirDecimalABinario(".input-decimal-binario-ej-46", ".btn-ej-46", ".btn-limpiar-ej-46", ".resultado-ej-46");
     buscarPalabra(".text-area-ej-47", ".input-ej-47", ".btn-buscar-ej-47", ".btn-limpiar-ej-47", ".resultado-ej-47");
     validacionFecha(".input-ej-48", ".btn-validar-ej-48", ".btn-limpiar-ej-48", ".resultado-ej-48");
-    convertirMetros();
+    convertirMetros(".input-ej-49", ".btn-kilometros-ej-49", ".btn-centimetros-ej-49", ".btn-millas-ej-49", ".resultado-ej-49");
     
 
 
