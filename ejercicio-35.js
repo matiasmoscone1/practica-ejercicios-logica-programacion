@@ -32,7 +32,7 @@ export default function adivinaLaTecla(generador, btnMostrar, btnLimpiar, mostra
     
     //Captando evento de letra presionada para ver si coincide con la letra generada
     document.addEventListener("keyup", (e) => {
-        e.key === letraGenerada 
+        e.key.toUpperCase() === letraGenerada 
         ? $resultadoTecla.innerHTML = `El usuario ADIVINO la letra`
         : $resultadoTecla.innerHTML = `El usuario NO ADIVINO la letra`;
     });
