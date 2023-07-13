@@ -18,15 +18,18 @@ export default function convertirMetros(inputMetros, btnKilometros, btnCentimetr
 
         if(e.target.matches(btnKilometros)){
             calculo = $inputMetros / 1000;
-            console.log(calculo);    
+            $resultado.textContent = `${$inputMetros} metros = ${calculo} kilometros`;
+            //console.log(calculo);    
         }
         if(e.target.matches(btnCentimetros)){
             calculo = $inputMetros * 100;
-            console.log(calculo);
+            $resultado.textContent = `${$inputMetros} metros = ${calculo} centimetros`;
+            //console.log(calculo);
         }
         if(e.target.matches(btnMillas)){
             calculo = $inputMetros / 1609;
-            console.log(calculo);
+            $resultado.textContent = `${$inputMetros} metros = ${calculo} millas`;
+            //console.log(calculo);
         }
 
     });
