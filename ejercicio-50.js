@@ -13,10 +13,31 @@ export default function adivinaElNumero(btnGenerar, btnLimpiar, formulario, inpu
     const $btnLimpiar = document.querySelector(btnLimpiar);
 
     const $formulario = document.querySelector(formulario);
+    const $resultado = document.querySelector(resultado);
 
+    let generarNum = 0;
+
+    $btnGenerar.addEventListener("click", () => {
+        let generarNum = parseInt(Math.random(0, 10) * 10);
+        console.log(generarNum);
+
+        /*if($inputForm === generarNum){
+            console.log("HAS ADIVINADO EL NUMERO!");
+        }else{
+            console.log("NO ADIVINASTE EL NUMERO");
+        }*/
+
+    });
 
     $formulario.addEventListener("submit", (e) => {
         e.preventDefault();
+        const $inputForm = document.querySelector(inputForm).value;
+        if($inputForm === generarNum){
+            console.log("HAS ADIVINADO EL NUMERO!");
+        }else{
+            console.log("NO ADIVINASTE EL NUMERO");
+        }
+
     });
 
 
