@@ -7,9 +7,17 @@
 //y permitir al usuario seguir intentando hasta adivinar correctamente.
 
 
-export default function adivinaElNumero(){
+export default function adivinaElNumero(btnGenerar, btnLimpiar, formulario, inputForm, resultado){
 
-    
+    const $btnGenerar = document.querySelector(btnGenerar);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
+
+    const $formulario = document.querySelector(formulario);
+
+
+    $formulario.addEventListener("submit", (e) => {
+        e.preventDefault();
+    });
 
 
 }
