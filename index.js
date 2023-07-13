@@ -47,6 +47,7 @@ import convertirDecimalABinario from "./ejercicio-46.js";
 import buscarPalabra from "./ejercicio-47.js";
 import validacionFecha from "./ejercicio-48.js";
 import convertirMetros from "./ejercicio-49.js";
+import adivinaElNumero from "./ejercicio-50.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -100,6 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     buscarPalabra(".text-area-ej-47", ".input-ej-47", ".btn-buscar-ej-47", ".btn-limpiar-ej-47", ".resultado-ej-47");
     validacionFecha(".input-ej-48", ".btn-validar-ej-48", ".btn-limpiar-ej-48", ".resultado-ej-48");
     convertirMetros(".input-ej-49", ".btn-kilometros-ej-49", ".btn-centimetros-ej-49", ".btn-millas-ej-49", ".resultado-ej-49");
+    adivinaElNumero();
     
 
 
