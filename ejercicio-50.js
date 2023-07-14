@@ -15,10 +15,10 @@ export default function adivinaElNumero(btnGenerar, btnLimpiar, formulario, inpu
     const $formulario = document.querySelector(formulario);
     const $resultado = document.querySelector(resultado);
 
-    let generarNum = 0;
+    let generarNum = "";
 
     $btnGenerar.addEventListener("click", () => {
-        let generarNum = parseInt(Math.random(0, 10) * 10);
+        generarNum = parseInt(Math.random(0, 10) * 10);
         console.log(generarNum);
 
         /*if($inputForm === generarNum){
@@ -32,7 +32,8 @@ export default function adivinaElNumero(btnGenerar, btnLimpiar, formulario, inpu
     $formulario.addEventListener("submit", (e) => {
         e.preventDefault();
         const $inputForm = document.querySelector(inputForm).value;
-        if($inputForm === generarNum){
+        console.log(generarNum);
+        if(generarNum === $inputForm){
             console.log("HAS ADIVINADO EL NUMERO!");
         }else{
             console.log("NO ADIVINASTE EL NUMERO");
