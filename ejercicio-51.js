@@ -33,7 +33,7 @@ export default function calculoEdad(inputFecha, btnCalcular, btnLimpiar, resulta
         let diffMeses = mes - mesHoy;
         let diffAnios = anioHoy - anio;
 
-        /*
+        /* //Para que siempre de positivo (Igual se resuelve con Math.abs() => da el valor absoluto del numero)
         if(diffDias < 0){
             diffDias = -diffDias;
         };
@@ -43,10 +43,14 @@ export default function calculoEdad(inputFecha, btnCalcular, btnLimpiar, resulta
 
         let resultado = `Dia: ${Math.abs(diffDias)} \nMes: ${Math.abs(diffMeses)} \nAño: ${diffAnios}`;
 
-        console.log(resultado);
+        //console.log(resultado);
 
     });
 
+    $btnLimpiar.addEventListener("click", () => {
+        document.querySelector(inputFecha) = "";
+        $resultado.textContent = "";
+    });
 
 
 }
