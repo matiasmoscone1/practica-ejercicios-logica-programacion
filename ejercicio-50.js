@@ -19,26 +19,32 @@ export default function adivinaElNumero(btnGenerar, btnLimpiar, formulario, inpu
 
     $btnGenerar.addEventListener("click", () => {
         generarNum = parseInt(Math.random(0, 10) * 10);
-        console.log(generarNum);
-
-
+        //console.log(generarNum);
     });
 
     $formulario.addEventListener("submit", (e) => {
         e.preventDefault();
         const $inputForm = document.querySelector(inputForm).value;
-        console.log($inputForm);
-        console.log(generarNum);
+        //console.log($inputForm);
+        //console.log(generarNum);
         if(parseInt($inputForm) === generarNum){
             console.log("HAS ADIVINADO EL NUMERO!");
+            $resultado.textContent = "HAS ADIVINADO EL NUMERO!";
         }else{
             console.log("NO ADIVINASTE EL NUMERO");
+            $resultado.textContent = "NO ADIVINASTE EL NUMERO";
         }
+    });
 
+    $btnLimpiar.addEventListener("click", () => {
+        document.querySelector(inputForm).value = "";
+        $resultado.textContent = "";
+        console.clear();
     });
 
 
 }
+
 
 
 
