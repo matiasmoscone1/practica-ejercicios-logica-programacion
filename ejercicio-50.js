@@ -21,19 +21,15 @@ export default function adivinaElNumero(btnGenerar, btnLimpiar, formulario, inpu
         generarNum = parseInt(Math.random(0, 10) * 10);
         console.log(generarNum);
 
-        /*if($inputForm === generarNum){
-            console.log("HAS ADIVINADO EL NUMERO!");
-        }else{
-            console.log("NO ADIVINASTE EL NUMERO");
-        }*/
 
     });
 
     $formulario.addEventListener("submit", (e) => {
         e.preventDefault();
         const $inputForm = document.querySelector(inputForm).value;
+        console.log($inputForm);
         console.log(generarNum);
-        if(generarNum === $inputForm){
+        if(parseInt($inputForm) === generarNum){
             console.log("HAS ADIVINADO EL NUMERO!");
         }else{
             console.log("NO ADIVINASTE EL NUMERO");
