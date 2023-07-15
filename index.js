@@ -48,6 +48,7 @@ import buscarPalabra from "./ejercicio-47.js";
 import validacionFecha from "./ejercicio-48.js";
 import convertirMetros from "./ejercicio-49.js";
 import adivinaElNumero from "./ejercicio-50.js";
+import calculoEdad from "./ejercicio-51.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -102,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     validacionFecha(".input-ej-48", ".btn-validar-ej-48", ".btn-limpiar-ej-48", ".resultado-ej-48");
     convertirMetros(".input-ej-49", ".btn-kilometros-ej-49", ".btn-centimetros-ej-49", ".btn-millas-ej-49", ".resultado-ej-49");
     adivinaElNumero(".btn-generar-ej-50", ".btn-limpiar-ej-50", ".form-ej-50", ".input-ej-50", ".resultado-ej-50");
-
+    calculoEdad(".input-ej-51", ".btn-calcular-ej-51", ".btn-limpiar-ej-51", ".resultado-ej-51");
 
 
 });
