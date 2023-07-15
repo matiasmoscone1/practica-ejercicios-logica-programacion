@@ -15,19 +15,24 @@ export default function calculoEdad(inputFecha, btnCalcular, btnLimpiar, resulta
     $btnCalcular.addEventListener("click", () => {
         const $inputFecha = document.querySelector(inputFecha).value;
         let arrayFecha = $inputFecha.split("-");
-        console.log(arrayFecha);
+        //console.log(arrayFecha);
 
         let anio = parseInt(arrayFecha[0]);
         let mes = parseInt(arrayFecha[1]);
         let dia = parseInt(arrayFecha[2]); 
 
-        console.log(dia, mes, anio);
+        //console.log(dia, mes, anio);
 
         const fechaHoy = new Date();
 
-        console.log(fechaHoy.getMonth() + 1);//Mes
-        console.log(fechaHoy.getDate());//Dia
-        console.log(fechaHoy.getFullYear());//Año
+        let mesHoy = parseInt(fechaHoy.getMonth() + 1);
+        let diaHoy = parseInt(fechaHoy.getDate());
+        let anioHoy = parseInt(fechaHoy.getFullYear());
+
+        let resultado = `Dia: ${dia - diaHoy} \nMes: ${mes - mesHoy} \nAño: ${anioHoy - anio}`;
+
+        console.log(resultado);
+
     });
 
 
