@@ -29,7 +29,7 @@ export default function calculoEdad(inputFecha, btnCalcular, btnLimpiar, resulta
         let diaHoy = parseInt(fechaHoy.getDate());
         let anioHoy = parseInt(fechaHoy.getFullYear());
 
-        let diffDias = diaHoy - dia;
+        let diffDias = 31 - dia;
         let diffMeses = mes - mesHoy;
         let diffAnios = anioHoy - anio;
 
@@ -41,8 +41,9 @@ export default function calculoEdad(inputFecha, btnCalcular, btnLimpiar, resulta
             diffMeses = -diffMeses;
         };*/
 
-        let resultado = `Dia: ${Math.abs(diffDias)} \nMes: ${Math.abs(diffMeses)} \nAño: ${diffAnios}`;
+        $resultado.innerHTML = `Dia: ${Math.abs(diffDias)} <br> Mes: ${Math.abs(diffMeses)} <br> Año: ${diffAnios}`;
 
+        
         //console.log(resultado);
 
     });
