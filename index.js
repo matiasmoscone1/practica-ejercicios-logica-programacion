@@ -105,6 +105,6 @@ document.addEventListener("DOMContentLoaded", () => {
     convertirMetros(".input-ej-49", ".btn-kilometros-ej-49", ".btn-centimetros-ej-49", ".btn-millas-ej-49", ".resultado-ej-49");
     adivinaElNumero(".btn-generar-ej-50", ".btn-limpiar-ej-50", ".form-ej-50", ".input-ej-50", ".resultado-ej-50");
     calculoEdad(".input-ej-51", ".btn-calcular-ej-51", ".btn-limpiar-ej-51", ".resultado-ej-51");
-    calculadoraMatematica(".btn-suma-ej-52", ".btn-resta-ej-52", ".btn-multiplicar-ej-52", ".btn-dividir-ej-52", ".input1-ej-52", ".input2-ej-52", ".resultado-ej-52");
+    calculadoraMatematica(".btn-suma-ej-52", ".btn-resta-ej-52", ".btn-multiplicar-ej-52", ".btn-dividir-ej-52", ".btn-limpiar-ej-52", ".input1-ej-52", ".input2-ej-52", ".resultado-ej-52");
 
 });

@@ -6,7 +6,7 @@
 //52. Calculadora de expresiones matemáticas: Crea una calculadora que pueda evaluar y resolver 
 //expresiones matemáticas básicas, como sumas, restas, multiplicaciones y divisiones.
 
-export default function calculadoraMatematica(btnSuma, btnResta, btnMult, btnDivi, input1, input2, resultado){
+export default function calculadoraMatematica(btnSuma, btnResta, btnMult, btnDivi, btnLimpiar, input1, input2, resultado){
 
     const $resultado = document.querySelector(resultado);
     const $contenedor = document.querySelector(".container-ej-52");
@@ -28,7 +28,13 @@ export default function calculadoraMatematica(btnSuma, btnResta, btnMult, btnDiv
             result = $input1 / $input2;
         }
         $resultado.textContent = `El resultado es: ${result}`;
+        if(e.target.matches(btnLimpiar)){
+            $resultado.textContent = "";
+            document.querySelector(input1).value = "";
+            document.querySelector(input2).value = "";
+        }        
     });
+
 
 }
 
