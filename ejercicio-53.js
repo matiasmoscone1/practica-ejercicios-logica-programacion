@@ -5,8 +5,29 @@
 //mayúscula, al menos un número, etc.).
 
 
-export default function validarContrasenia(){
+export default function validarContrasenia(inputContra, btnValidar, btnLimpiar, resultado){
 
+    const $btnValidar = document.querySelector(btnValidar);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
+
+    const letra = /[a-zA-Z]+/;
+    const numero = /[0-9]+/;
+    const simbolo = /[\W_]+/;
+
+    $btnValidar.addEventListener("click", () => {
+        const $inputContra = document.querySelector(inputContra).value;
+
+        const arrayInput = $inputContra.split("");
+
+        console.log(arrayInput);
+        
+        for(let i = 0; i <= $inputContra.length; i++){
+            if($inputContra[i].includes(letra)){
+                console.log("hola");
+            }
+        }
+
+    });
     
 
 

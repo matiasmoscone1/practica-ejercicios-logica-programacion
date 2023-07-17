@@ -50,6 +50,7 @@ import convertirMetros from "./ejercicio-49.js";
 import adivinaElNumero from "./ejercicio-50.js";
 import calculoEdad from "./ejercicio-51.js";
 import calculadoraMatematica from "./ejercicio-52.js";
+import validarContrasenia from "./ejercicio-53.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -106,5 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
     adivinaElNumero(".btn-generar-ej-50", ".btn-limpiar-ej-50", ".form-ej-50", ".input-ej-50", ".resultado-ej-50");
     calculoEdad(".input-ej-51", ".btn-calcular-ej-51", ".btn-limpiar-ej-51", ".resultado-ej-51");
     calculadoraMatematica(".btn-suma-ej-52", ".btn-resta-ej-52", ".btn-multiplicar-ej-52", ".btn-dividir-ej-52", ".btn-limpiar-ej-52", ".input1-ej-52", ".input2-ej-52", ".resultado-ej-52");
+    validarContrasenia(".input-ej-53", ".btn-validar-ej-53", ".btn-limpiar-ej-53", ".resultado-ej-53");
 
 });
