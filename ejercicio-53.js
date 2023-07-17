@@ -9,6 +9,7 @@ export default function validarContrasenia(inputContra, btnValidar, btnLimpiar, 
 
     const $btnValidar = document.querySelector(btnValidar);
     const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $resultado = document.querySelector(resultado);
 
     const letra = /[a-zA-Z]+/;
     const numero = /[0-9]+/;
@@ -20,9 +21,11 @@ export default function validarContrasenia(inputContra, btnValidar, btnLimpiar, 
         
         if(letra.test($inputContra) && numero.test($inputContra) && 
         simbolo.test($inputContra) && $inputContra.length > 8){
-            console.log("asd");
+            //console.log("asd");
+            $resultado.textContent = `Contraseña VALIDA`;
         }else{
-            console.log("none");
+            //console.log("none");
+            $resultado.textContent = `Contraseña INVALIDA (debe tener mas de 8 caracteres y contener letras, numeros y simbolos)`;
         }
         
         /* A diferencia de test() que devuelve un booleano, el metodo search() devuelve el indice 
@@ -32,6 +35,10 @@ export default function validarContrasenia(inputContra, btnValidar, btnLimpiar, 
         */
     });
     
+    $btnLimpiar.addEventListener("click", () => {
+        $resultado.textContent = "";
+        document.querySelector(inputContra).value = "";
+    });
 
 
 }
