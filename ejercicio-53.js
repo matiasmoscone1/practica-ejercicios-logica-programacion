@@ -22,8 +22,8 @@ export default function validarContrasenia(inputContra, btnValidar, btnLimpiar, 
         console.log(arrayInput);
         
         for(let i = 0; i <= $inputContra.length; i++){
-            if($inputContra[i].includes(letra)){
-                console.log("hola");
+            if(letra.test($inputContra[i])){
+                console.log("hola");    
             }
         }
 
