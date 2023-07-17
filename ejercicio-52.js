@@ -39,7 +39,6 @@ export default function calculadoraMatematica(btnSuma, btnResta, btnMult, btnDiv
         }        
     });
 
-
 }
 
 
