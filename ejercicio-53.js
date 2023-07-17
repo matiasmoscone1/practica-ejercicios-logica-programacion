@@ -17,16 +17,18 @@ export default function validarContrasenia(inputContra, btnValidar, btnLimpiar, 
     $btnValidar.addEventListener("click", () => {
         const $inputContra = document.querySelector(inputContra).value;
 
-        const arrayInput = $inputContra.split("");
-
-        console.log(arrayInput);
         
-        for(let i = 0; i <= $inputContra.length; i++){
-            if(letra.test($inputContra[i])){
-                console.log("hola");    
-            }
+        if(letra.test($inputContra) && numero.test($inputContra) && simbolo.test($inputContra)){
+            console.log("asd");
+        }else{
+            console.log("none");
         }
-
+        
+        /* A diferencia de test() que devuelve un booleano, el metodo search() devuelve el indice 
+        de la coincidencia y si no la encuentra devuelve -1.
+        let asd = $inputContra.search(letra);
+        console.log(asd)
+        */
     });
     
 
