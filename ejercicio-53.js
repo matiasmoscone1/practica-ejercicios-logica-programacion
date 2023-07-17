@@ -18,7 +18,8 @@ export default function validarContrasenia(inputContra, btnValidar, btnLimpiar, 
         const $inputContra = document.querySelector(inputContra).value;
 
         
-        if(letra.test($inputContra) && numero.test($inputContra) && simbolo.test($inputContra)){
+        if(letra.test($inputContra) && numero.test($inputContra) && 
+        simbolo.test($inputContra) && $inputContra.length > 8){
             console.log("asd");
         }else{
             console.log("none");
