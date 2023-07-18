@@ -13,11 +13,15 @@ export default function generadorTarjetasCredito(btnGenerar, btnLimpiar, resulta
         let numeroTarjeta = "";
 
         for(let i = 0; i < 16; i++){
+            if(i === 4 || i === 8 || i === 12){
+                numeroTarjeta += " ";
+            }
             numeroTarjeta += Math.floor(Math.random() * 9);
         }
 
         console.log(numeroTarjeta);
-
+        
+        
     });
 
 
