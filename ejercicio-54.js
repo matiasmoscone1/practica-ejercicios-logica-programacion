@@ -9,15 +9,14 @@ export default function generadorTarjetasCredito(btnGenerar, btnLimpiar, resulta
     const $btnGenerar = document.querySelector(btnGenerar);
     const $btnLimpiar = document.querySelector(btnLimpiar);
 
-    const arrNumeros =  ["0","1","2","3","4","5","6","7","8","9"];
-
     $btnGenerar.addEventListener("click", () => {
         let numeroTarjeta = "";
 
-        for(let i = 0; i < 16, i++){
-            
+        for(let i = 0; i < 16; i++){
+            numeroTarjeta += Math.floor(Math.random() * 9);
         }
 
+        console.log(numeroTarjeta);
 
     });
 
