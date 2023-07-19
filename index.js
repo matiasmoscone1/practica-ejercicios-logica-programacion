@@ -52,6 +52,7 @@ import calculoEdad from "./ejercicio-51.js";
 import calculadoraMatematica from "./ejercicio-52.js";
 import validarContrasenia from "./ejercicio-53.js";
 import generadorTarjetasCredito from "./ejercicio-54.js";
+import calculadoraPropinas from "./ejercicio-55.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -110,5 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
     calculadoraMatematica(".btn-suma-ej-52", ".btn-resta-ej-52", ".btn-multiplicar-ej-52", ".btn-dividir-ej-52", ".btn-limpiar-ej-52", ".input1-ej-52", ".input2-ej-52", ".resultado-ej-52");
     validarContrasenia(".input-ej-53", ".btn-validar-ej-53", ".btn-limpiar-ej-53", ".resultado-ej-53");
     generadorTarjetasCredito(".btn-generar-ej-54", ".btn-limpiar-ej-54", ".resultado-ej-54");
+    calculadoraPropinas(".input-monto-ej-55", ".input-porcentaje-ej-55", ".btn-calcular-ej-55", ".btn-limpiar-ej-55", ".resultado-ej-55");
+
 
 });
