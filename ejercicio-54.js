@@ -8,6 +8,8 @@ export default function generadorTarjetasCredito(btnGenerar, btnLimpiar, resulta
 
     const $btnGenerar = document.querySelector(btnGenerar);
     const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $resultado = document.querySelector(resultado);
+
 
     $btnGenerar.addEventListener("click", () => {
         let numeroTarjeta = "";
@@ -19,7 +21,8 @@ export default function generadorTarjetasCredito(btnGenerar, btnLimpiar, resulta
             numeroTarjeta += Math.floor(Math.random() * 9);
         }
 
-        console.log(numeroTarjeta);
+        $resultado.textContent = `El numero de la tarjeta generado es: ${numeroTarjeta}`;
+        //console.log(numeroTarjeta);
         
         
     });
