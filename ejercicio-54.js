@@ -23,11 +23,12 @@ export default function generadorTarjetasCredito(btnGenerar, btnLimpiar, resulta
 
         $resultado.textContent = `El numero de la tarjeta generado es: ${numeroTarjeta}`;
         //console.log(numeroTarjeta);
-        
-        
     });
 
 
+    $btnLimpiar.addEventListener("click", () => {
+        $resultado.textContent = "";
+    });
 
 }
 
