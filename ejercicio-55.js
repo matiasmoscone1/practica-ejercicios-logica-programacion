@@ -13,7 +13,16 @@ export default function calculadoraPropinas(inputMonto, inputPorcentaje, btnCalc
 
     $btnCalcular.addEventListener("click", () => {
 
-        
+        const $inputMonto = document.querySelector(inputMonto).value;
+        const $inputPorcentaje = document.querySelector(inputPorcentaje).value;
+        let propina = 0;
+
+        propina = $inputPorcentaje * $inputMonto / 100;
+
+        console.log(propina);
+
+        $resultado.textContent = `La propina debe ser: $${propina}`
+        //console.log($inputMonto, $inputPorcentaje);
 
     });
 
