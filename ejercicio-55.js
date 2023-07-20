@@ -26,6 +26,10 @@ export default function calculadoraPropinas(inputMonto, inputPorcentaje, btnCalc
 
     });
 
+    $btnLimpiar.addEventListener("click", () => {
+        $resultado.textContent = "";
+    });
+
 
 }
 
