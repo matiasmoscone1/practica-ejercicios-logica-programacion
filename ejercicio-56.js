@@ -12,7 +12,26 @@ export default function codigoWhatsapp(btnGenerar, btnLimpiar, timer, resultado)
     const $btnLimpiar = document.querySelector(btnLimpiar);
     const $resultado = document.querySelector(resultado);
 
-    const reloj = new Date();
+    //const reloj = new Date();
+    let tiempo = () => {
+        let segundos = 59;
+        let minuto = 1;
+        $resultado.textContent = "";
+        $resultado.textContent = `${minuto}:${segundos}`;
+        
+        //console.clear();
+        //console.log(`${minuto}:${segundos}`);
+        segundos--;
+        if(segundos < 10){
+            segundos = `0${segundos}`;
+        }
+        if(segundos === "00"){
+            minuto = 0;
+            segundos = 59;
+        }
+
+    };
+
 
     $btnGenerar.addEventListener("click", () => {
         /*let tiempo = setInterval(() => {
@@ -27,25 +46,31 @@ export default function codigoWhatsapp(btnGenerar, btnLimpiar, timer, resultado)
                 }
             }, 1000);
         }, 200000);*/
-        let segundos = 59;
+        /*let segundos = 59;
             let minuto = 1;
-            setInterval(() => {
-                console.clear();
-                console.log(`${minuto}:${segundos}`);
+            let timer = setInterval(() => {
+                $resultado.textContent = "";
+                $resultado.textContent = `${minuto}:${segundos}`;
+                
+                //console.clear();
+                //console.log(`${minuto}:${segundos}`);
                 segundos--;
                 if(segundos < 10){
                     segundos = `0${segundos}`;
                 }
-                if(segundos === 0){
+                if(segundos === "00"){
                     minuto = 0;
                     segundos = 59;
                 }
-                
-            }, 1000);
 
-        
+            }, 1000);*/
+            setInterval(tiempo, 1000);
+
     });
 
+    $btnLimpiar.addEventListener("click", () => {
+        clearInterval(tiempo);
+    });
 
 }
 
