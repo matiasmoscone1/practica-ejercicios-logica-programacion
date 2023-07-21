@@ -8,7 +8,15 @@
 export default function codigoWhatsapp(btnGenerar, btnLimpiar, timer, resultado){
 
 
-    const $
+    const $btnGenerar = document.querySelector(btnGenerar);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
+
+    $btnGenerar.addEventListener("click", () => {
+        let tiempo = setInterval(() => {
+            console.log("asd");
+        }, 200000);
+
+    });
 
 
 }
