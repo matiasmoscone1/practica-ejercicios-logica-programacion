@@ -10,10 +10,22 @@ export default function codigoWhatsapp(btnGenerar, btnLimpiar, timer, resultado)
 
     const $btnGenerar = document.querySelector(btnGenerar);
     const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $resultado = document.querySelector(resultado);
+
+    const reloj = new Date();
 
     $btnGenerar.addEventListener("click", () => {
         let tiempo = setInterval(() => {
-            console.log("asd");
+            let segundos = 59;
+            let minuto = 1;
+            setInterval(() => {
+                console.log(`${minuto}:${segundos}`);
+                segundos--;
+                if(segundos === 0){
+                    minuto = 0;
+                    segundos = 59;
+                }
+            }, 1000);
         }, 200000);
 
     });
