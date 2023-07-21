@@ -5,9 +5,10 @@
 //cuando pedis el numero para vincualr y te nmandan un codigo por 2 minutos
 
 
-export default function codigoRegresivo(){
+export default function codigoWhatsapp(btnGenerar, btnLimpiar, timer, resultado){
 
-    
+
+    const $
 
 
 }
