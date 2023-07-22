@@ -51,6 +51,10 @@ export default function codigoWhatsapp(btnGenerar, btnLimpiar, timer, resultado)
             
             $resultado.textContent = "";
             $resultado.textContent = `${minuto}:${segundos}`;
+            if(segundos < 10){
+                $resultado.textContent = "";
+                $resultado.textContent = `${minuto}:0${segundos}`;    
+            }
         }, 1000);
     
         
