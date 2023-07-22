@@ -13,6 +13,7 @@ export default function codigoWhatsapp(btnGenerar, btnLimpiar, timer, resultado)
     const $resultado = document.querySelector(resultado);
 
     //const reloj = new Date();
+    /*
     let tiempo = () => {
         let segundos = 59;
         let minuto = 1;
@@ -30,46 +31,53 @@ export default function codigoWhatsapp(btnGenerar, btnLimpiar, timer, resultado)
             segundos = 59;
         }
 
-    };
+    };*/
 
 
     $btnGenerar.addEventListener("click", () => {
-        /*let tiempo = setInterval(() => {
-            let segundos = 59;
-            let minuto = 1;
-            setInterval(() => {
-                console.log(`${minuto}:${segundos}`);
-                segundos--;
-                if(segundos === 0){
-                    minuto = 0;
+      
+        let segundos = 59;
+        let minuto = 1;
+        setInterval(() => {
+            console.log(`${minuto}:${segundos}`);
+            segundos--;
+            if(segundos === 0){
+                minuto = 0;
+                segundos = 59;
+                if(minuto === 0 && segundos === 0){
+                    minuto = 1;
                     segundos = 59;
                 }
-            }, 1000);
-        }, 200000);*/
-        /*let segundos = 59;
-            let minuto = 1;
-            let timer = setInterval(() => {
-                $resultado.textContent = "";
-                $resultado.textContent = `${minuto}:${segundos}`;
+            }
+            
+            $resultado.textContent = "";
+            $resultado.textContent = `${minuto}:${segundos}`;
+        }, 1000);
+    
+        
+   /*
+        setInterval(() => {
+            $resultado.textContent = "";
+            $resultado.textContent = `${minuto}:${segundos}`;
                 
-                //console.clear();
-                //console.log(`${minuto}:${segundos}`);
-                segundos--;
-                if(segundos < 10){
-                    segundos = `0${segundos}`;
-                }
-                if(segundos === "00"){
-                    minuto = 0;
-                    segundos = 59;
-                }
+            //console.clear();
+            //console.log(`${minuto}:${segundos}`);
+            segundos--;
+            if(segundos < 10){
+                segundos = `0${segundos}`;
+            }
+            if(segundos === "00"){
+                minuto = 0;
+                segundos = 59;
+            }
 
-            }, 1000);*/
-            setInterval(tiempo, 1000);
+        }, 1000);
+        //setInterval(tiempo, 1000);*/
 
     });
 
     $btnLimpiar.addEventListener("click", () => {
-        clearInterval(tiempo);
+        //clearInterval(tiempo);
     });
 
 }
