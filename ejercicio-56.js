@@ -41,13 +41,12 @@ export default function codigoWhatsapp(btnGenerar, btnLimpiar, timer, resultado)
         setInterval(() => {
             console.log(`${minuto}:${segundos}`);
             segundos--;
+            if(minuto === 0 && segundos === 0){
+                minuto = 1;        
+            }
             if(segundos === 0){
                 minuto = 0;
                 segundos = 59;
-                if(minuto === 0 && segundos === 0){
-                    minuto = 1;
-                    segundos = 59;
-                }
             }
             
             $resultado.textContent = "";
