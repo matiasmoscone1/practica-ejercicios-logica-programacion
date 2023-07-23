@@ -40,9 +40,18 @@ export default function codigoWhatsapp(btnGenerar, btnLimpiar, timer, codigo){
         let segundos = 59;
         let minuto = 1;
         let generarCodigo = "";
+        
+        /*const generarNuevoCodigo = () => {
+            for(let i = 0; i <= 6; i++){
+            generarCodigo += Math.floor(Math.random() * 9);
+            }
+        }*/
         for(let i = 0; i <= 6; i++){
             generarCodigo += Math.floor(Math.random() * 9);
         }
+
+
+
         const actualizarContador = () => {
             
             console.log(generarCodigo);
@@ -52,12 +61,15 @@ export default function codigoWhatsapp(btnGenerar, btnLimpiar, timer, codigo){
             //console.log(`${minuto}:${segundos}`);
             segundos--;
             if(minuto === 0 && segundos === 0){
+                $codigo.textContent = ``;
+                generarCodigo = "";
                 minuto = 1;
                 segundos = 59;
+                //generarNuevoCodigo();
                 for(let i = 0; i <= 6; i++){
                     generarCodigo += Math.floor(Math.random() * 9);
                 }
-                $codigo.textContent = " ";
+                
             }
             else if(segundos === 0){
                 minuto--;
@@ -73,6 +85,7 @@ export default function codigoWhatsapp(btnGenerar, btnLimpiar, timer, codigo){
             }
         }
     
+        //generarNuevoCodigo();
         actualizarContador();
 
         const tiempo = setInterval(actualizarContador, 1000);
