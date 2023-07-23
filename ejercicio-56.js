@@ -13,39 +13,15 @@ export default function codigoWhatsapp(btnGenerar, btnLimpiar, timer, codigo){
     const $resultado = document.querySelector(timer);
     const $codigo = document.querySelector(codigo);
 
-    //const reloj = new Date();
-    /*
-    let tiempo = () => {
-        let segundos = 59;
-        let minuto = 1;
-        $resultado.textContent = "";
-        $resultado.textContent = `${minuto}:${segundos}`;
-        
-        //console.clear();
-        //console.log(`${minuto}:${segundos}`);
-        segundos--;
-        if(segundos < 10){
-            segundos = `0${segundos}`;
-        }
-        if(segundos === "00"){
-            minuto = 0;
-            segundos = 59;
-        }
-
-    };*/
-
-
+    let tiempo = "";
+    
     $btnGenerar.addEventListener("click", () => {
       
         let segundos = 59;
         let minuto = 1;
         let generarCodigo = "";
         
-        /*const generarNuevoCodigo = () => {
-            for(let i = 0; i <= 6; i++){
-            generarCodigo += Math.floor(Math.random() * 9);
-            }
-        }*/
+        
         for(let i = 0; i <= 6; i++){
             generarCodigo += Math.floor(Math.random() * 9);
         }
@@ -87,26 +63,8 @@ export default function codigoWhatsapp(btnGenerar, btnLimpiar, timer, codigo){
         //generarNuevoCodigo();
         actualizarContador();
 
-        const tiempo = setInterval(actualizarContador, 1000);
-   /*
-        setInterval(() => {
-            $resultado.textContent = "";
-            $resultado.textContent = `${minuto}:${segundos}`;
-                
-            //console.clear();
-            //console.log(`${minuto}:${segundos}`);
-            segundos--;
-            if(segundos < 10){
-                segundos = `0${segundos}`;
-            }
-            if(segundos === "00"){
-                minuto = 0;
-                segundos = 59;
-            }
-
-        }, 1000);
-        //setInterval(tiempo, 1000);*/
-
+        tiempo = setInterval(actualizarContador, 1000);
+    
     });
 
     $btnLimpiar.addEventListener("click", () => {
