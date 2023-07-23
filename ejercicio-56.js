@@ -54,10 +54,9 @@ export default function codigoWhatsapp(btnGenerar, btnLimpiar, timer, codigo){
 
         const actualizarContador = () => {
             
-            console.log(generarCodigo);
+            //console.log(generarCodigo);
 
             
-
             //console.log(`${minuto}:${segundos}`);
             segundos--;
             if(minuto === 0 && segundos === 0){
@@ -111,6 +110,8 @@ export default function codigoWhatsapp(btnGenerar, btnLimpiar, timer, codigo){
     });
 
     $btnLimpiar.addEventListener("click", () => {
+        $codigo.textContent = "";
+        $resultado.textContent = "";
         clearInterval(tiempo);
     });
 
