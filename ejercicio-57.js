@@ -14,9 +14,21 @@ export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpia
     const $check3 = document.querySelector(check3);
     
 
-    
+    const preguntasFacil = ["¿Que pais esta entre Peru y Colombia?", "¿Cual es la capital de Chile?",
+        "¿En que año se descubrio America?", "¿Cuanto tiempo dura un partido de futbol?",
+        "¿Cuantos centimetros son 1 metro?"];
+
+    const preguntasDificil = [];
+
+    $btnFacil.addEventListener("click", () => {
+        let eligeAleatorio = Math.floor(Math.random() * 5);
+        
+        $pregunta.textContent = `${preguntasFacil[eligeAleatorio]}`;
+
+    });
 
 }
+
 
 
 
