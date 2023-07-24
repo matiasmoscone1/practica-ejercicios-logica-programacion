@@ -30,7 +30,7 @@ export default function codigoWhatsapp(btnGenerar, btnLimpiar, timer, codigo){
         
         //Ciclo for que genera el primer codigo, itera 6 veces y almacena (concatena)
         //un numero distinto por cada iteracion
-        for(let i = 0; i <= 6; i++){
+        for(let i = 0; i < 6; i++){
             generarCodigo += Math.floor(Math.random() * 9);
         }
 
@@ -54,7 +54,7 @@ export default function codigoWhatsapp(btnGenerar, btnLimpiar, timer, codigo){
                 segundos = 59;
                 //generarNuevoCodigo();
                 //Genera nuevo codigo de 6 digitos
-                for(let i = 0; i <= 6; i++){
+                for(let i = 0; i < 6; i++){
                     generarCodigo += Math.floor(Math.random() * 9);
                 }
             }
