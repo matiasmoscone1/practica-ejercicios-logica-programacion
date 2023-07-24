@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
     generadorTarjetasCredito(".btn-generar-ej-54", ".btn-limpiar-ej-54", ".resultado-ej-54");
     calculadoraPropinas(".input-monto-ej-55", ".input-porcentaje-ej-55", ".btn-calcular-ej-55", ".btn-limpiar-ej-55", ".resultado-ej-55");
     codigoWhatsapp(".btn-generar-ej-56", ".btn-limpiar-ej-56", ".timer-ej-56", ".codigo-ej-56");
-    juegoPreguntasRespuestas();
-    
+    juegoPreguntasRespuestas(".btn-facil-ej-57", ".btn-dificil-ej-57", ".btn-limpiar-ej-57", ".pregunta-ej-57", ".check-a", ".check-b", ".check-c");
+
 
 });
