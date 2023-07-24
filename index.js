@@ -54,6 +54,7 @@ import validarContrasenia from "./ejercicio-53.js";
 import generadorTarjetasCredito from "./ejercicio-54.js";
 import calculadoraPropinas from "./ejercicio-55.js";
 import codigoWhatsapp from "./ejercicio-56.js";
+import juegoPreguntasRespuestas from "./ejercicio-57.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -114,6 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
     generadorTarjetasCredito(".btn-generar-ej-54", ".btn-limpiar-ej-54", ".resultado-ej-54");
     calculadoraPropinas(".input-monto-ej-55", ".input-porcentaje-ej-55", ".btn-calcular-ej-55", ".btn-limpiar-ej-55", ".resultado-ej-55");
     codigoWhatsapp(".btn-generar-ej-56", ".btn-limpiar-ej-56", ".timer-ej-56", ".codigo-ej-56");
-
+    juegoPreguntasRespuestas();
+    
 
 });
