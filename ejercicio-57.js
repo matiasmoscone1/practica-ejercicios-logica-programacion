@@ -32,24 +32,24 @@ export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpia
                 document.getElementById("check-c").textContent = "C. Ecuador";  
                 break;
             case 1: 
-                $check1.textContent = "A. Antofagasta";
-                $check2.textContent = "B. Santiago de Chile";
-                $check3.textContent = "C. Concepción";   
+                document.getElementById("check-a").textContent = "A. Antofagasta";
+                document.getElementById("check-b").textContent = "B. Santiago de Chile";
+                document.getElementById("check-c").textContent = "C. Concepción";
                 break;
             case 2: 
-                $check1.textContent = "A. 1502";
-                $check2.textContent = "B. 1492";
-                $check3.textContent = "C. 1488";   
+                document.getElementById("check-a").textContent = "A. 1502";
+                document.getElementById("check-b").textContent = "B. 1492";
+                document.getElementById("check-c").textContent = "C. 1488";
                 break;
             case 3: 
-                $check1.textContent = "A. 85'";
-                $check2.textContent = "B. 100'";
-                $check3.textContent = "C. 90'";   
+                document.getElementById("check-a").textContent = "A. 85'";
+                document.getElementById("check-b").textContent = "B. 100'";
+                document.getElementById("check-c").textContent = "C. 90'";
                 break;
             case 4: 
-                $check1.textContent = "A. 100";
-                $check2.textContent = "B. 1000";
-                $check3.textContent = "C. 10";   
+                document.getElementById("check-a").textContent = "A. 100";
+                document.getElementById("check-b").textContent = "B. 1000";
+                document.getElementById("check-c").textContent = "C. 10";
                 break;
         }
 
