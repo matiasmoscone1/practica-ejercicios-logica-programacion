@@ -22,8 +22,9 @@ export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpia
 
     $btnFacil.addEventListener("click", () => {
         let eligeAleatorio = Math.floor(Math.random() * 5);
-        
+    
         $pregunta.textContent = `${preguntasFacil[eligeAleatorio]}`;
+
 
         switch(eligeAleatorio){
             case 0: 
@@ -52,6 +53,8 @@ export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpia
                 document.getElementById("check-c").textContent = "C. 10";
                 break;
         }
+
+        
 
     });
 
