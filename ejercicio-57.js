@@ -23,12 +23,12 @@ export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpia
         "¿A qué grupo musical pertenece la canción 'Master of Puppets'?"];
 
     let ultimoAleatorio = 0;
-
+    let eligeAleatorio;
     $btnFacil.addEventListener("click", () => {
         
         //let eligeAleatorio = Math.floor(Math.random() * 5);
           
-        let eligeAleatorio;
+        
 
         do{
             eligeAleatorio = Math.floor(Math.random() * 5);
@@ -69,6 +69,15 @@ export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpia
                 break;
         }
     });
+
+
+    $check3.addEventListener("click", () => {
+        if(eligeAleatorio === 0){
+            if($check3.checked){
+                console.log("ACERTADO!");
+            }  
+        }
+    })
 
 
     $btnDificil.addEventListener("click", () => {
