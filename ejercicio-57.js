@@ -79,29 +79,29 @@ export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpia
 
         switch(eligeAleatorio){
             case 0: 
-                document.getElementById("check-a").textContent = "A. Argentina";
-                document.getElementById("check-b").textContent = "B. Bolivia";
-                document.getElementById("check-c").textContent = "C. Ecuador";  
+                document.getElementById("check-a").textContent = "A. Mongolia y China";
+                document.getElementById("check-b").textContent = "B. Nepal y China";
+                document.getElementById("check-c").textContent = "C. Italia y Suiza";  
                 break;
             case 1: 
-                document.getElementById("check-a").textContent = "A. Antofagasta";
-                document.getElementById("check-b").textContent = "B. Santiago de Chile";
-                document.getElementById("check-c").textContent = "C. Concepción";
+                document.getElementById("check-a").textContent = "A. Miguel Ángel";
+                document.getElementById("check-b").textContent = "B. Leonardo da Vinci";
+                document.getElementById("check-c").textContent = "C. Donatello";
                 break;
             case 2: 
-                document.getElementById("check-a").textContent = "A. 1502";
-                document.getElementById("check-b").textContent = "B. 1492";
-                document.getElementById("check-c").textContent = "C. 1488";
+                document.getElementById("check-a").textContent = "A. Enero";
+                document.getElementById("check-b").textContent = "B. Diciembre";
+                document.getElementById("check-c").textContent = "C. Julio";
                 break;
             case 3: 
-                document.getElementById("check-a").textContent = "A. 85'";
-                document.getElementById("check-b").textContent = "B. 100'";
-                document.getElementById("check-c").textContent = "C. 90'";
+                document.getElementById("check-a").textContent = "A. Alemania";
+                document.getElementById("check-b").textContent = "B. Italia";
+                document.getElementById("check-c").textContent = "C. Brasil";
                 break;
             case 4: 
-                document.getElementById("check-a").textContent = "A. 100";
-                document.getElementById("check-b").textContent = "B. 1000";
-                document.getElementById("check-c").textContent = "C. 10";
+                document.getElementById("check-a").textContent = "A. Metallica";
+                document.getElementById("check-b").textContent = "B. Iron Maiden";
+                document.getElementById("check-c").textContent = "C. Megadeth";
                 break;
         }
     });
