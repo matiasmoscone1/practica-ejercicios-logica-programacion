@@ -70,7 +70,20 @@ export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpia
         }
     });
 
-
+    $check1.addEventListener("click", () => {
+        if(eligeAleatorio === 0){
+            if($check1.checked){
+                console.log("RESPUESTA INCORRECTA");
+            }  
+        }
+    });
+    $check2.addEventListener("click", () => {
+        if(eligeAleatorio === 0){
+            if($check2.checked){
+                console.log("RESPUESTA INCORRECTA");
+            }  
+        }
+    });
     $check3.addEventListener("click", () => {
         if(eligeAleatorio === 0){
             if($check3.checked){
