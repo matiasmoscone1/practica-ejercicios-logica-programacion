@@ -3,7 +3,7 @@
 //57. Juego de Preguntas y Respuestas: Crea un juego de preguntas y respuestas 
 //con una variedad de categorías y niveles de dificultad.
 
-export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpiar, pregunta, check1, check2, check3){
+export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpiar, pregunta, resultado, check1, check2, check3){
 
     const $btnFacil = document.querySelector(btnFacil);
     const $btnDificil = document.querySelector(btnDificil);
@@ -12,6 +12,7 @@ export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpia
     const $check1 = document.querySelector(check1);
     const $check2 = document.querySelector(check2);
     const $check3 = document.querySelector(check3);
+    const $resultado = document.querySelector(resultado);
     
     const preguntasFacil = ["¿Que pais esta entre Peru y Colombia?", "¿Cual es la capital de Chile?",
         "¿En que año se descubrio America?", "¿Cuanto tiempo dura un partido de futbol?",
@@ -40,7 +41,11 @@ export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpia
             case 0: 
                 document.getElementById("check-a").textContent = "A. Argentina";
                 document.getElementById("check-b").textContent = "B. Bolivia";
-                document.getElementById("check-c").textContent = "C. Ecuador";  
+                document.getElementById("check-c").textContent = "C. Ecuador";
+                if($check3.checked){
+                    console.log("ACERTADO!");
+                    //$resultado.textContent = "MUY BIEN, ACERTADO";
+                }  
                 break;
             case 1: 
                 document.getElementById("check-a").textContent = "A. Antofagasta";
