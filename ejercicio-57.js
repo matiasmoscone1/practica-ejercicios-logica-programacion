@@ -17,7 +17,9 @@ export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpia
         "¿En que año se descubrio America?", "¿Cuanto tiempo dura un partido de futbol?",
         "¿Cuantos centimetros son 1 metro?"];
 
-    const preguntasDificil = [];
+    const preguntasDificil = ["¿En qué países se encuentra el Everest?", "¿Quién pintó la Capilla Sixtina?",
+        "¿En qué mes el Sol está más cerca de la Tierra?", "¿Qué selección ha ganado más mundiales de fútbol?",
+        "¿A qué grupo musical pertenece la canción 'Master of Puppets'?"];
 
     let ultimoAleatorio = 0;
 
@@ -61,10 +63,50 @@ export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpia
                 document.getElementById("check-c").textContent = "C. 10";
                 break;
         }
-
-        
-
     });
+
+
+    $btnDificil.addEventListener("click", () => {
+     
+        let eligeAleatorio;
+
+        do{
+            eligeAleatorio = Math.floor(Math.random() * 5);
+        }while(eligeAleatorio === ultimoAleatorio);
+        $pregunta.textContent = `${preguntasDificil[eligeAleatorio]}`;
+
+        ultimoAleatorio = eligeAleatorio;
+
+        switch(eligeAleatorio){
+            case 0: 
+                document.getElementById("check-a").textContent = "A. Argentina";
+                document.getElementById("check-b").textContent = "B. Bolivia";
+                document.getElementById("check-c").textContent = "C. Ecuador";  
+                break;
+            case 1: 
+                document.getElementById("check-a").textContent = "A. Antofagasta";
+                document.getElementById("check-b").textContent = "B. Santiago de Chile";
+                document.getElementById("check-c").textContent = "C. Concepción";
+                break;
+            case 2: 
+                document.getElementById("check-a").textContent = "A. 1502";
+                document.getElementById("check-b").textContent = "B. 1492";
+                document.getElementById("check-c").textContent = "C. 1488";
+                break;
+            case 3: 
+                document.getElementById("check-a").textContent = "A. 85'";
+                document.getElementById("check-b").textContent = "B. 100'";
+                document.getElementById("check-c").textContent = "C. 90'";
+                break;
+            case 4: 
+                document.getElementById("check-a").textContent = "A. 100";
+                document.getElementById("check-b").textContent = "B. 1000";
+                document.getElementById("check-c").textContent = "C. 10";
+                break;
+        }
+    });
+
+
 
 }
 
