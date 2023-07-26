@@ -19,11 +19,20 @@ export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpia
 
     const preguntasDificil = [];
 
+    let ultimoAleatorio = 0;
+
     $btnFacil.addEventListener("click", () => {
-        let eligeAleatorio = Math.floor(Math.random() * 5);
-        let nuevoNum = eligeAleatorio;    
+        
+        //let eligeAleatorio = Math.floor(Math.random() * 5);
+          
+        let eligeAleatorio;
+
+        do{
+            eligeAleatorio = Math.floor(Math.random() * 5);
+        }while(eligeAleatorio === ultimoAleatorio);
         $pregunta.textContent = `${preguntasFacil[eligeAleatorio]}`;
 
+        ultimoAleatorio = eligeAleatorio;
 
         switch(eligeAleatorio){
             case 0: 
