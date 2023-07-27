@@ -27,7 +27,7 @@ export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpia
     $btnFacil.addEventListener("click", () => {
         
         //let eligeAleatorio = Math.floor(Math.random() * 5);
-          
+
         
 
         do{
@@ -76,6 +76,11 @@ export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpia
                 console.log("RESPUESTA INCORRECTA");
             }  
         }
+        if(eligeAleatorio === 1){
+            if($check1.checked){
+                console.log("RESPUESTA INCORRECTA");
+            }
+        }
     });
     $check2.addEventListener("click", () => {
         if(eligeAleatorio === 0){
@@ -83,12 +88,22 @@ export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpia
                 console.log("RESPUESTA INCORRECTA");
             }  
         }
+        if(eligeAleatorio === 1){
+            if($check2.checked){
+                console.log("ACERTADO");
+            }
+        }
     });
     $check3.addEventListener("click", () => {
         if(eligeAleatorio === 0){
             if($check3.checked){
                 console.log("ACERTADO!");
             }  
+        }
+        if(eligeAleatorio === 1){
+            if($check3.checked){
+                console.log("RESPUESTA INCORRECTA!");
+            }
         }
     })
 
