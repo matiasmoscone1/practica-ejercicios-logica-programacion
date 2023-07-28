@@ -67,6 +67,20 @@ export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpia
     });
 
 
+    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+        checkbox.addEventListener("click", () => {
+          if (checkbox.checked) {
+            // Desmarca los otros checkboxes cuando se hace clic en uno de ellos
+            document.querySelectorAll('input[type="checkbox"]').forEach(otherCheckbox => {
+              if (otherCheckbox !== checkbox) {
+                otherCheckbox.checked = false;
+              }
+            });
+          }
+        });
+      });
+
+
     $check1.addEventListener("click", () => {
         if(eligeAleatorio === 0){
             if($check1.checked){
@@ -76,6 +90,21 @@ export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpia
         if(eligeAleatorio === 1){
             if($check1.checked){
                 console.log("RESPUESTA INCORRECTA");
+            }
+        }
+        if(eligeAleatorio === 2){
+            if($check1.checked){
+                console.log("RESPUESTA INCORRECTA");
+            }
+        }
+        if(eligeAleatorio === 3){
+            if($check1.checked){
+                console.log("RESPUESTA INCORRECTA");
+            }
+        }
+        if(eligeAleatorio === 4){
+            if($check1.checked){
+                console.log("ACERTADO");
             }
         }
     });
@@ -90,6 +119,21 @@ export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpia
                 console.log("ACERTADO");
             }
         }
+        if(eligeAleatorio === 2){
+            if($check2.checked){
+                console.log("ACERTADO");
+            }
+        }
+        if(eligeAleatorio === 3){
+            if($check2.checked){
+                console.log("RESPUESTA INCORRECTA");
+            }
+        }
+        if(eligeAleatorio === 4){
+            if($check2.checked){
+                console.log("RESPUESTA INCORRECTA");
+            }
+        }
     });
     $check3.addEventListener("click", () => {
         if(eligeAleatorio === 0){
@@ -102,7 +146,25 @@ export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpia
                 console.log("RESPUESTA INCORRECTA!");
             }
         }
+        if(eligeAleatorio === 2){
+            if($check3.checked){
+                console.log("RESPUESTA INCORRECTA");
+            }
+        }
+        if(eligeAleatorio === 3){
+            if($check3.checked){
+                console.log("ACERTADO");
+            }
+        }
+        if(eligeAleatorio === 4){
+            if($check3.checked){
+                console.log("RESPUESTA INCORRECTA");
+            }
+        }
     })
+
+
+
 
 
     $btnDificil.addEventListener("click", () => {
