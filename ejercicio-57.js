@@ -41,11 +41,7 @@ export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpia
             case 0: 
                 document.getElementById("check-a").textContent = "A. Argentina";
                 document.getElementById("check-b").textContent = "B. Bolivia";
-                document.getElementById("check-c").textContent = "C. Ecuador";
-                if($check3.checked){
-                    console.log("ACERTADO!");
-                    //$resultado.textContent = "MUY BIEN, ACERTADO";
-                }  
+                document.getElementById("check-c").textContent = "C. Ecuador"; 
                 break;
             case 1: 
                 document.getElementById("check-a").textContent = "A. Antofagasta";
@@ -69,6 +65,7 @@ export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpia
                 break;
         }
     });
+
 
     $check1.addEventListener("click", () => {
         if(eligeAleatorio === 0){
