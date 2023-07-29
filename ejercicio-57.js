@@ -220,8 +220,109 @@ export default function juegoPreguntasRespuestas(btnFacil, btnDificil, btnLimpia
                 document.getElementById("check-c").textContent = "C. Megadeth";
                 break;
         }
+
+
+        $check1.addEventListener("click", () => {
+            if(eligeAleatorio === 0){
+                if($check1.checked){
+                    //console.log("RESPUESTA INCORRECTA");
+                    $resultado.textContent = "RESPUESTA INCORRECTA";
+                }  
+            }
+            if(eligeAleatorio === 1){
+                if($check1.checked){
+                    //console.log("RESPUESTA INCORRECTA");
+                    $resultado.textContent = "ACERTADO";
+                }
+            }
+            if(eligeAleatorio === 2){
+                if($check1.checked){
+                    //console.log("RESPUESTA INCORRECTA");
+                    $resultado.textContent = "ACERTADO";
+                }
+            }
+            if(eligeAleatorio === 3){
+                if($check1.checked){
+                    //console.log("RESPUESTA INCORRECTA");
+                    $resultado.textContent = "RESPUESTA INCORRECTA";
+                }
+            }
+            if(eligeAleatorio === 4){
+                if($check1.checked){
+                    //console.log("ACERTADO");
+                    $resultado.textContent = "ACERTADO!";
+                }
+            }
+        });
+        $check2.addEventListener("click", () => {
+            if(eligeAleatorio === 0){
+                if($check2.checked){
+                    //console.log("RESPUESTA INCORRECTA");
+                    $resultado.textContent = "ACERTADO";
+                }  
+            }
+            if(eligeAleatorio === 1){
+                if($check2.checked){
+                    //console.log("ACERTADO");
+                    $resultado.textContent = "RESPUESTA INCORRECTA";
+                }
+            }
+            if(eligeAleatorio === 2){
+                if($check2.checked){
+                    //console.log("ACERTADO");
+                    $resultado.textContent = "RESPUESTA INCORRECTA";
+                }
+            }
+            if(eligeAleatorio === 3){
+                if($check2.checked){
+                    //console.log("RESPUESTA INCORRECTA");
+                    $resultado.textContent = "RESPUESTA INCORRECTA";
+                }
+            }
+            if(eligeAleatorio === 4){
+                if($check2.checked){
+                    //console.log("RESPUESTA INCORRECTA");
+                    $resultado.textContent = "RESPUESTA INCORRECTA";
+                }
+            }
+        });
+        $check3.addEventListener("click", () => {
+            if(eligeAleatorio === 0){
+                if($check3.checked){
+                    //console.log("ACERTADO!");
+                    $resultado.textContent = "RESPUESTA INCORRECTA";
+                }  
+            }
+            if(eligeAleatorio === 1){
+                if($check3.checked){
+                    //console.log("RESPUESTA INCORRECTA!");
+                    $resultado.textContent = "RESPUESTA INCORRECTA";
+                }
+            }
+            if(eligeAleatorio === 2){
+                if($check3.checked){
+                    //console.log("RESPUESTA INCORRECTA");
+                    $resultado.textContent = "RESPUESTA INCORRECTA";
+                }
+            }
+            if(eligeAleatorio === 3){
+                if($check3.checked){
+                    //console.log("ACERTADO");
+                    $resultado.textContent = "ACERTADO!";
+                }
+            }
+            if(eligeAleatorio === 4){
+                if($check3.checked){
+                    //console.log("RESPUESTA INCORRECTA");
+                    $resultado.textContent = "RESPUESTA INCORRECTA";
+                }
+            }
+        })
+
     });
 
+
+    
 
 
 }
