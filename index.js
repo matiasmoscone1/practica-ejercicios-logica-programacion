@@ -55,6 +55,7 @@ import generadorTarjetasCredito from "./ejercicio-54.js";
 import calculadoraPropinas from "./ejercicio-55.js";
 import codigoWhatsapp from "./ejercicio-56.js";
 import juegoPreguntasRespuestas from "./ejercicio-57.js";
+import carritoCompras from "./ejercicio-58.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -116,6 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
     calculadoraPropinas(".input-monto-ej-55", ".input-porcentaje-ej-55", ".btn-calcular-ej-55", ".btn-limpiar-ej-55", ".resultado-ej-55");
     codigoWhatsapp(".btn-generar-ej-56", ".btn-limpiar-ej-56", ".timer-ej-56", ".codigo-ej-56");
     juegoPreguntasRespuestas(".btn-facil-ej-57", ".btn-dificil-ej-57", ".btn-limpiar-ej-57", ".pregunta-ej-57", ".resultado-ej-57",".check-a", ".check-b", ".check-c");
-
+    carritoCompras();
+    
 
 });
