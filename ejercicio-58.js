@@ -3,7 +3,7 @@
 //58. Simulador de carrito de compras: Crea un simulador de carrito de compras donde el 
 //usuario pueda agregar productos, ver el total, aplicar descuentos
 
-export default function carritoCompras(btnAgregar1, btnAgregar2, btnAgregar3, btnDescuento1, btnDescuento2, btnDescuento3, resultado){
+export default function carritoCompras(btnAgregar1, btnAgregar2, btnAgregar3, btnDescuento1, btnDescuento2, btnDescuento3, resultado, btnLimpiar){
 
     const $resultado = document.querySelector(resultado);
 
@@ -48,6 +48,13 @@ export default function carritoCompras(btnAgregar1, btnAgregar2, btnAgregar3, bt
 
         $resultado.textContent = `El total es: $${total}`;
 
+        if(e.target.matches(btnLimpiar)){
+            $resultado.textContent = " ";
+            document.querySelector(".cantidad-ej-58").textContent = " ";
+            total = 0;
+            cantidad = 0;
+            calculoDesc = 0;
+        }
 
     });
 
