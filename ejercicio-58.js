@@ -26,7 +26,9 @@ export default function carritoCompras(btnAgregar1, btnAgregar2, btnAgregar3, bt
             cantidad++;
         }
 
-        console.log(total);
+        document.querySelector(".cantidad-ej-58").textContent = `${cantidad}`;
+
+        //console.log(total);
         //console.log(cantidad);
         if(e.target.matches(btnDescuento1)){
             calculoDesc = total * 10 / 100;
@@ -43,6 +45,9 @@ export default function carritoCompras(btnAgregar1, btnAgregar2, btnAgregar3, bt
             total = total - calculoDesc;
             //console.log(total);
         }
+
+        $resultado.textContent = `El total es: $${total}`;
+
 
     });
 
