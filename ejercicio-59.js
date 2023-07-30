@@ -5,9 +5,10 @@
 //utilizando el algoritmo de Luhn.
 
 
-export default function validacionTarjetaCredito(){
+export default function validacionTarjetaCredito(inputNro, btnValidar, btnLimpiar, resultado){
 
     
+
 
 }
 
