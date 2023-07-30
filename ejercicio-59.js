@@ -18,12 +18,15 @@ export default function validacionTarjetaCredito(inputNro, btnValidar, btnLimpia
 
         const $inputNro = document.querySelector(inputNro).value;
 
-        console.log($inputNro);
+
+        //console.log($inputNro);
 
         if(formato.test($inputNro)){
-            console.log("ASD");
+            //console.log("ASD");
+            $resultado.textContent = "Formato Valido!";
         }else{
-            console.log("AAAAAAAAAA");
+            //console.log("AAAAAAAAAA");
+            $resultado.textContent = "Formato Invalido";
         }
 
     });
