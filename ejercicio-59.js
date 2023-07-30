@@ -20,6 +20,12 @@ export default function validacionTarjetaCredito(inputNro, btnValidar, btnLimpia
 
         console.log($inputNro);
 
+        if(formato.test($inputNro)){
+            console.log("ASD");
+        }else{
+            console.log("AAAAAAAAAA");
+        }
+
     });
 
 }
