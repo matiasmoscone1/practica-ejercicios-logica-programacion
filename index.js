@@ -57,6 +57,7 @@ import codigoWhatsapp from "./ejercicio-56.js";
 import juegoPreguntasRespuestas from "./ejercicio-57.js";
 import carritoCompras from "./ejercicio-58.js";
 import validacionTarjetaCredito from "./ejercicio-59.js";
+import generadorContraseniaAvanzado from "./ejercicio-60.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -120,7 +121,8 @@ document.addEventListener("DOMContentLoaded", () => {
     juegoPreguntasRespuestas(".btn-facil-ej-57", ".btn-dificil-ej-57", ".btn-limpiar-ej-57", ".pregunta-ej-57", ".resultado-ej-57",".check-a", ".check-b", ".check-c");
     carritoCompras(".btn-agregar-1-ej-58", ".btn-agregar-2-ej-58", ".btn-agregar-3-ej-58", ".btn-descuento-1-ej-58", ".btn-descuento-2-ej-58", ".btn-descuento-3-ej-58", ".resultado-ej-58", ".btn-limpiar-ej-58");
     validacionTarjetaCredito(".input-ej-59", ".button-validar-ej-59", ".button-limpiar-ej-59", ".resultado-ej-59");
-
+    generadorContraseniaAvanzado();
+    
     
 
 });
