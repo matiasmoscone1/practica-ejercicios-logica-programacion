@@ -9,7 +9,18 @@ export default function validacionTarjetaCredito(inputNro, btnValidar, btnLimpia
 
     const formato = /^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$/
 
-    
+    const $btnValidar = document.querySelector(btnValidar);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $resultado = document.querySelector(resultado);
+
+
+    $btnValidar.addEventListener("click", () => {
+
+        const $inputNro = document.querySelector(inputNro).value;
+
+        console.log($inputNro);
+
+    });
 
 }
 
