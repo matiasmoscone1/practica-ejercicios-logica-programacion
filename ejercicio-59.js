@@ -31,6 +31,12 @@ export default function validacionTarjetaCredito(inputNro, btnValidar, btnLimpia
 
     });
 
+    $btnLimpiar.addEventListener("click", () => {
+        $resultado.textContent = " ";
+        document.querySelector(inputNro).value = " ";
+    });
+
+
 }
 
 
