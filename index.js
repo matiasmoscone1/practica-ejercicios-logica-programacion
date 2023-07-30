@@ -121,8 +121,8 @@ document.addEventListener("DOMContentLoaded", () => {
     juegoPreguntasRespuestas(".btn-facil-ej-57", ".btn-dificil-ej-57", ".btn-limpiar-ej-57", ".pregunta-ej-57", ".resultado-ej-57",".check-a", ".check-b", ".check-c");
     carritoCompras(".btn-agregar-1-ej-58", ".btn-agregar-2-ej-58", ".btn-agregar-3-ej-58", ".btn-descuento-1-ej-58", ".btn-descuento-2-ej-58", ".btn-descuento-3-ej-58", ".resultado-ej-58", ".btn-limpiar-ej-58");
     validacionTarjetaCredito(".input-ej-59", ".button-validar-ej-59", ".button-limpiar-ej-59", ".resultado-ej-59");
-    generadorContraseniaAvanzado();
-    
+    generadorContraseniaAvanzado(".button-generar-ej-60", ".button-limpiar-ej-60", ".resultado-ej-60");
+
     
 
 });
