@@ -7,8 +7,9 @@
 
 export default function validacionTarjetaCredito(inputNro, btnValidar, btnLimpiar, resultado){
 
-    
+    const formato = /^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$/
 
+    
 
 }
 
