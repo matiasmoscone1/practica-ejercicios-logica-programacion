@@ -70,12 +70,18 @@ export default function generadorContraseniaAvanzado(btnGenerar, btnLimpiar, res
 
         }
 
-        console.log(caracteresUtilizados);
+        //console.log(caracteresUtilizados);
 
-        console.log(contrasenia);
+        //console.log(contrasenia);
         
+        $resultado.textContent = `La contraseña creada es: ${contrasenia}`;
+
     });
 
+
+    $btnLimpiar.addEventListener("click", () => {
+        $resultado.textContent = " ";
+    });
 
 }
 
