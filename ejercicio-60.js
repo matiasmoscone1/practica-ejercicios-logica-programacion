@@ -3,7 +3,8 @@
 
 //60. Generador de contraseñas seguras (Complejidad especifica): Crea una función que 
 //genere contraseñas seguras con una longitud y complejidad específicas.
-
+//- No debe tener caracteres repetidos
+//- No debe tener el mismo tipo de caracter consecutivo
 
 export default function generadorContraseniaAvanzado(btnGenerar, btnLimpiar, resultado){
 
@@ -15,11 +16,11 @@ export default function generadorContraseniaAvanzado(btnGenerar, btnLimpiar, res
     const letra = /[a-zA-Z]+/;
     const simbolo = /[\W_]+/;
 
+    let contrasenia = "";
 
     $btnGnerar.addEventListener("click", () => {
-        let contrasenia = "";
-
-        for(let i = 0; i < 9; i++){
+        
+        for(let i = 0; i < 13; i++){
             
         }
 
