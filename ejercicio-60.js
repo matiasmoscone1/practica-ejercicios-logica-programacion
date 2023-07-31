@@ -26,6 +26,7 @@ export default function generadorContraseniaAvanzado(btnGenerar, btnLimpiar, res
 
     $btnGnerar.addEventListener("click", () => {
         let nuevoIterador = "";
+        const caracteresUtilizados = new Set();
 
         for(let i = 0; i < 12; i++){
             let iterador = tipo[Math.floor(Math.random() * tipo.length)];
@@ -48,10 +49,28 @@ export default function generadorContraseniaAvanzado(btnGenerar, btnLimpiar, res
                     break;    
             }
             
+            while(caracteresUtilizados.has(caracterAleatorio)){
+                switch(iterador){
+                    case "numero":
+                        caracterAleatorio = objeto.numero[Math.floor(Math.random() * 10)];
+                        break;
+                    case "letra":
+                        caracterAleatorio = objeto.letra[Math.floor(Math.random() * 48)];
+                        break;
+                    case "simbolo":
+                        caracterAleatorio = objeto.simbolo[Math.floor(Math.random() * 18)];
+                        break;    
+                }  
+            }
+
             contrasenia += caracterAleatorio;
             nuevoIterador = iterador;
 
+            caracteresUtilizados.add(caracterAleatorio);
+
         }
+
+        console.log(caracteresUtilizados);
 
         console.log(contrasenia);
         
