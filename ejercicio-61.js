@@ -21,12 +21,18 @@ export default function cifradoCesar(btnCifrar, btnLimpiar, textArea, resultado)
 
         const $textArea = document.querySelector(textArea).value.toUpperCase();
 
-        console.log($textArea);
+        const arrayArea = $textArea.split("");
 
-        
+        console.log(arrayArea);
+
+        for(let i = 0; i < arrayArea.length; i++){
+            let indice = alfabeto.indexOf(arrayArea[i])
+            console.log(indice);
+            textoCifrado += alfabeto[indice +5]; 
+        }
 
 
-
+        console.log(textoCifrado);
 
 
     });
