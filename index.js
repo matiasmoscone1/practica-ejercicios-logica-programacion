@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
     carritoCompras(".btn-agregar-1-ej-58", ".btn-agregar-2-ej-58", ".btn-agregar-3-ej-58", ".btn-descuento-1-ej-58", ".btn-descuento-2-ej-58", ".btn-descuento-3-ej-58", ".resultado-ej-58", ".btn-limpiar-ej-58");
     validacionTarjetaCredito(".input-ej-59", ".button-validar-ej-59", ".button-limpiar-ej-59", ".resultado-ej-59");
     generadorContraseniaAvanzado(".button-generar-ej-60", ".button-limpiar-ej-60", ".resultado-ej-60");
-    cifradoCesar();
+    cifradoCesar(".btn-generar-ej-61", ".btn-limpiar-ej-61", ".textarea-ej-61", ".resultado-ej-61");
     
 
 });

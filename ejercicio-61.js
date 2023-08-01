@@ -5,10 +5,20 @@
 //un número fijo de posiciones en el alfabeto.
 
 
-export default function cifradoCesar(){
+export default function cifradoCesar(btnGenerar, btnLimpiar, textArea, resultado){
 
 
-    
+    const $btnGenerar = document.querySelector(btnGenerar);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
+
+    $btnGenerar.addEventListener("click", () => {
+
+        
+    });
+
+
+
+
 }
 
 
