@@ -58,6 +58,7 @@ import juegoPreguntasRespuestas from "./ejercicio-57.js";
 import carritoCompras from "./ejercicio-58.js";
 import validacionTarjetaCredito from "./ejercicio-59.js";
 import generadorContraseniaAvanzado from "./ejercicio-60.js";
+import cifradoCesar from "./ejercicio-61.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -122,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
     carritoCompras(".btn-agregar-1-ej-58", ".btn-agregar-2-ej-58", ".btn-agregar-3-ej-58", ".btn-descuento-1-ej-58", ".btn-descuento-2-ej-58", ".btn-descuento-3-ej-58", ".resultado-ej-58", ".btn-limpiar-ej-58");
     validacionTarjetaCredito(".input-ej-59", ".button-validar-ej-59", ".button-limpiar-ej-59", ".resultado-ej-59");
     generadorContraseniaAvanzado(".button-generar-ej-60", ".button-limpiar-ej-60", ".resultado-ej-60");
-
+    cifradoCesar();
     
 
 });
