@@ -11,6 +11,7 @@ export default function cifradoCesar(btnCifrar, btnLimpiar, textArea, resultado)
 
     const $btnCifrar = document.querySelector(btnCifrar);
     const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $resultado = document.querySelector(resultado);
 
     let textoCifrado = "";
 
@@ -24,11 +25,11 @@ export default function cifradoCesar(btnCifrar, btnLimpiar, textArea, resultado)
         const arrayArea = $textArea.split("");
 
         textoCifrado = "";
-        console.log(arrayArea);
+        //console.log(arrayArea);
 
         for(let i = 0; i < arrayArea.length; i++){
             let indice = alfabeto.indexOf(arrayArea[i])
-            console.log(indice);
+            //console.log(indice);
             
             switch(indice){
                 case 19: 
@@ -51,13 +52,15 @@ export default function cifradoCesar(btnCifrar, btnLimpiar, textArea, resultado)
              
         }
 
-
-        console.log(textoCifrado);
-
+        $resultado.textContent = `El texto cifrado es: ${textoCifrado}`;
+        //console.log(textoCifrado);
 
     });
 
-
+    $btnLimpiar.addEventListener("click", () => {
+        document.querySelector(textArea).value = " ";
+        $resultado.textContent = " ";
+    });  
 
 
 }
