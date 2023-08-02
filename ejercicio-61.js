@@ -28,7 +28,26 @@ export default function cifradoCesar(btnCifrar, btnLimpiar, textArea, resultado)
         for(let i = 0; i < arrayArea.length; i++){
             let indice = alfabeto.indexOf(arrayArea[i])
             console.log(indice);
-            textoCifrado += alfabeto[indice +5]; 
+            
+            switch(indice){
+                case 19: 
+                    indice = -5;
+                    break;
+                case 20: 
+                    indice = -4;
+                    break;    
+                case 21: 
+                    indice = -3;
+                    break;
+                case 22: 
+                    indice = -2;
+                    break;
+                case 23: 
+                    indice = -1;
+                    break;    
+            }
+            textoCifrado += alfabeto[indice +5];
+             
         }
 
 
