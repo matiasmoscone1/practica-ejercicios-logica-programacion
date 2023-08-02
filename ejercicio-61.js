@@ -23,6 +23,7 @@ export default function cifradoCesar(btnCifrar, btnLimpiar, textArea, resultado)
 
         const arrayArea = $textArea.split("");
 
+        textoCifrado = "";
         console.log(arrayArea);
 
         for(let i = 0; i < arrayArea.length; i++){
