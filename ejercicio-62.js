@@ -15,17 +15,29 @@ export default function validarFormulario(btnValidar, btnLimpiar, nombre, apelli
     const simbolo = /[\W_]+/;
 
     const validarNombre = (nom) => {
-        if(numero.test(nom) || numero.test(simbolo)){
+        if(numero.test(nom) || simbolo.test(nom) || nom.length < 3){
             console.log("Ingrese un nombre valido (solo letras)...");
         }else{
             console.log("Nombre valido!");
         }
     }
+    
+    const validarApellido = (ape) => {
+        if(numero.test(ape) || simbolo.test(ape) || ape.length < 3){
+            console.log("Ingrese un Apellido valido (solo letras)...");
+        }else{
+            console.log("Apellido valido!");
+        }
+    }
 
 
     $btnValidar.addEventListener("click", () => {
+        const $nombre = document.querySelector(nombre).value;
+        const $apellido = document.querySelector(apellido).value;
 
-        validarNombre(document.querySelector(nombre).value);
+
+        validarNombre($nombre);
+        validarApellido($apellido);
 
 
 
