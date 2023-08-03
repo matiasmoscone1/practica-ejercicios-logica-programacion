@@ -59,6 +59,7 @@ import carritoCompras from "./ejercicio-58.js";
 import validacionTarjetaCredito from "./ejercicio-59.js";
 import generadorContraseniaAvanzado from "./ejercicio-60.js";
 import cifradoCesar from "./ejercicio-61.js";
+import validarFormulario from "./ejercicio-62.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -124,6 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
     validacionTarjetaCredito(".input-ej-59", ".button-validar-ej-59", ".button-limpiar-ej-59", ".resultado-ej-59");
     generadorContraseniaAvanzado(".button-generar-ej-60", ".button-limpiar-ej-60", ".resultado-ej-60");
     cifradoCesar(".btn-cifrar-ej-61", ".btn-limpiar-ej-61", ".textarea-ej-61", ".resultado-ej-61");
-    
+    validarFormulario();
 
+    
 });
