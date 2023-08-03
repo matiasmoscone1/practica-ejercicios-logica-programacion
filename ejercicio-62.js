@@ -10,11 +10,11 @@ export default function validarFormulario(btnValidar, btnLimpiar, nombre, apelli
     const $btnValidar = document.querySelector(btnValidar);
     const $btnLimpiar = document.querySelector(btnLimpiar);
 
-    const letra = /[a-zA-Z]+/;
+
     const numero = /[0-9]+/;
     const simbolo = /[\W_]+/;
     const regEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z-.]+\.[a-zA-Z]{3}$/;
-
+    const regFecha = /^\d{4}-\d{2}-\d{2}$/;
     
     
     const validarNombre = (nom) => {
@@ -39,7 +39,15 @@ export default function validarFormulario(btnValidar, btnLimpiar, nombre, apelli
         }else{
             console.log("Ingrese un email valido (xxxx@xxxx.xxx)");
         }
-
+    };
+    
+    const validarFecha = (fecha) => {
+        console.log(fecha);
+        if(regFecha.test(fecha)){
+            console.log("Fecha valida");
+        }else{
+            console.log("Ingrese una fecha valida (xx/xx/xxxx)");
+        }
     };
 
 
@@ -47,10 +55,12 @@ export default function validarFormulario(btnValidar, btnLimpiar, nombre, apelli
         const $nombre = document.querySelector(nombre).value;
         const $apellido = document.querySelector(apellido).value;
         const $email = document.querySelector(email).value;
+        const $fecha = document.querySelector(fechaNac).value;
 
         validarNombre($nombre);
         validarApellido($apellido);
         validarEmail($email);
+        validarFecha($fecha);
 
 
     });
