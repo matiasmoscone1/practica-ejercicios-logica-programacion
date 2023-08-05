@@ -41,7 +41,11 @@ export default function calcularEnvio(btnCalcular, btnLimpiar, peso, tamano, dis
             mitad: 700,
             lejos: 1100
         };
-        
+
+
+        console.log($peso);
+        console.log($tamano);
+        console.log($distancia);
 
 
     });
