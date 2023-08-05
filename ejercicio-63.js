@@ -16,7 +16,7 @@
 // 50km > $1100
 
 
-export default function calcularEnvio(){
+export default function calcularEnvio(btnCalcular, btnLimpiar, peso, tamano, distancia, resultado){
 
 
 
