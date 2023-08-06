@@ -20,6 +20,7 @@ export default function calcularEnvio(btnCalcular, btnLimpiar, peso, tamano, dis
 
     const $btnCalcular = document.querySelector(btnCalcular);
     const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $resultado = document.querySelector(resultado);
 
     $btnCalcular.addEventListener("click", () => {
         const $peso = document.querySelector(peso).value;
@@ -42,6 +43,13 @@ export default function calcularEnvio(btnCalcular, btnLimpiar, peso, tamano, dis
             lejos: 1100
         };
 
+        const costoPeso = objPeso[$peso];
+        const costoTamano = objTamano[$tamano];
+        const costoDistancia = objDistancia[$distancia];
+
+        let costoTotal = costoPeso + costoTamano + costoDistancia;
+
+        
 
         console.log($peso);
         console.log($tamano);
