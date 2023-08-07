@@ -5,12 +5,13 @@
 //de presentación personalizadas a partir de la información proporcionada por el 
 //usuario, como nombre, ocupación, información de contacto, etc.
 
-export default function tarjetaPresentacion(){
-
-
+export default function tarjetaPresentacion(btnGenerar, btnLimpiar, inputNombre, inputApellido, inputTelefono, inputEmail, inputOcupacion, resultado){
 
 
     
+
+
+
 }
 
 

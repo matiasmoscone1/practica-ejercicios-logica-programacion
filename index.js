@@ -129,6 +129,6 @@ document.addEventListener("DOMContentLoaded", () => {
     cifradoCesar(".btn-cifrar-ej-61", ".btn-limpiar-ej-61", ".textarea-ej-61", ".resultado-ej-61");
     validarFormulario(".btn-validar-ej-62", ".btn-limpiar-ej-62", ".nombre-validar-ej-62", ".apellido-validar-ej-62", ".email-validar-ej-62", ".fecha-validar-ej-62", ".resultado-nombre-ej-62", ".resultado-apellido-ej-62", ".resultado-email-ej-62", ".resultado-fecha-ej-62");
     calcularEnvio(".btn-calcular-ej-63", ".btn-limpiar-ej-63", ".peso-ej-63", ".tamano-ej-63", ".destino-ej-63", ".resultado-ej-63");
-    tarjetaPresentacion();
-    
+    tarjetaPresentacion(".btn-generar-ej-64", ".btn-limpiar-ej-64", ".input-nombre-ej-64", ".input-apellido-ej-64", ".input-telefono-ej-64", ".input-email-ej-64", ".input-ocupacion-ej-64", ".resultado-ej-64");
+
 });
