@@ -52,14 +52,19 @@ export default function calcularEnvio(btnCalcular, btnLimpiar, peso, tamano, dis
         $resultado.textContent = `El costo total del envio es: $${costoTotal}`;
 
 
-        console.log($peso);
-        console.log($tamano);
-        console.log($distancia);
-        console.log(costoTotal);
+        //console.log($peso);
+        //console.log($tamano);
+        //console.log($distancia);
+        //console.log(costoTotal);
 
     });
 
-
+    $btnLimpiar.addEventListener("click", () => {
+        $resultado.textContent = " ";
+        document.querySelector(peso).value = " ";
+        document.querySelector(tamano).value = " ";
+        document.querySelector(distancia) = " ";
+    });
 
 
 
