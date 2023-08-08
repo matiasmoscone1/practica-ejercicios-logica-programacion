@@ -14,8 +14,8 @@ export default function teclaAccesoRapido(btnHabilitar, btnLimpiar, resultado){
 
 
     $btnHabilitar.addEventListener("click", () => {
-        document.addEventListener("keypress", (e) => {
-            if(e.key === "Control" && e.key === "Alt" && e.key === "H"){
+        document.addEventListener("keydown", (e) => {
+            if(e.ctrlKey  && e.altKey && e.code === "KeyH"){
                 console.log("Hola buenos dias!");
             }
             console.log(e);
