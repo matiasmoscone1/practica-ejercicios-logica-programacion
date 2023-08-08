@@ -21,10 +21,21 @@ export default function tarjetaPresentacion(btnGenerar, btnLimpiar, inputNombre,
         const $inputOcupacion = document.querySelector(inputOcupacion).value;        
 
 
+        $resultado.innerHTML = `Hola soy ${$inputNombre} ${$inputApellido}, me dedico a 
+        ${$inputOcupacion}. Me pueden contactar a traves de mi mail: ${$inputEmail} o a traves
+        de mi telefono: ${$inputTelefono}. Saludos cordiales!`;
         
-
-
     });
+
+    $btnLimpiar.addEventListener("click", () => {
+        document.querySelector(inputNombre).value = " ";
+        document.querySelector(inputApellido).value = " ";
+        document.querySelector(inputTelefono).value = " ";
+        document.querySelector(inputEmail).value = " ";
+        document.querySelector(inputOcupacion).value = " ";   
+        $resultado.innerHTML = " ";        
+    });
+
 
 }
 
