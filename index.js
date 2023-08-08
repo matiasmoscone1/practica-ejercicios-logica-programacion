@@ -62,6 +62,7 @@ import cifradoCesar from "./ejercicio-61.js";
 import validarFormulario from "./ejercicio-62.js";
 import calcularEnvio from "./ejercicio-63.js";
 import tarjetaPresentacion from "./ejercicio-64.js";
+import teclaAccesoRapido from "./ejercicio-65.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -130,5 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
     validarFormulario(".btn-validar-ej-62", ".btn-limpiar-ej-62", ".nombre-validar-ej-62", ".apellido-validar-ej-62", ".email-validar-ej-62", ".fecha-validar-ej-62", ".resultado-nombre-ej-62", ".resultado-apellido-ej-62", ".resultado-email-ej-62", ".resultado-fecha-ej-62");
     calcularEnvio(".btn-calcular-ej-63", ".btn-limpiar-ej-63", ".peso-ej-63", ".tamano-ej-63", ".destino-ej-63", ".resultado-ej-63");
     tarjetaPresentacion(".btn-generar-ej-64", ".btn-limpiar-ej-64", ".input-nombre-ej-64", ".input-apellido-ej-64", ".input-telefono-ej-64", ".input-email-ej-64", ".input-ocupacion-ej-64", ".resultado-ej-64");
+    teclaAccesoRapido(".btn-habilitar-ej-65", ".btn-limpiar-ej-65", ".resultado-ej-65");
+
 
 });
