@@ -12,5 +12,23 @@
     border-radius: 50%;
     background-color: aqua;
 }
+.div-ej-66{
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+}
+
+.div-uno-ej-66{
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+}
+.div-dos-ej-66{
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+}
+
+
 
 

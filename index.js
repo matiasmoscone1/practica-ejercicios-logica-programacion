@@ -63,6 +63,7 @@ import validarFormulario from "./ejercicio-62.js";
 import calcularEnvio from "./ejercicio-63.js";
 import tarjetaPresentacion from "./ejercicio-64.js";
 import teclaAccesoRapido from "./ejercicio-65.js";
+import dragAndDrop from "./ejercicio-66.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -132,6 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
     calcularEnvio(".btn-calcular-ej-63", ".btn-limpiar-ej-63", ".peso-ej-63", ".tamano-ej-63", ".destino-ej-63", ".resultado-ej-63");
     tarjetaPresentacion(".btn-generar-ej-64", ".btn-limpiar-ej-64", ".input-nombre-ej-64", ".input-apellido-ej-64", ".input-telefono-ej-64", ".input-email-ej-64", ".input-ocupacion-ej-64", ".resultado-ej-64");
     teclaAccesoRapido(".btn-habilitar-ej-65", ".btn-limpiar-ej-65", ".resultado-ej-65");
+    dragAndDrop(".div-uno-ej-66", ".div-dos-ej-66");
 
 
 });
