@@ -7,8 +7,15 @@
 //proceso se ha completado.
 
 
-export default function dragAndDrop(){
+export default function dragAndDrop(div1, div2){
 
+    const $div1 = document.querySelector(div1);
+    const $div2 = document.querySelector(div2);
+
+    $div1.addEventListener("dragstart", (e) => {
+        e.dataTransfer.setData("text/plain", $div1.id);
+        console.log($div1);
+    });
 
     
 }
