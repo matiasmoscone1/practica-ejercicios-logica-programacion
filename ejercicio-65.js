@@ -15,24 +15,26 @@ export default function teclaAccesoRapido(btnHabilitar, btnLimpiar, resultado){
 
     $btnHabilitar.addEventListener("click", () => {
         document.addEventListener("keydown", (e) => {
-            if(e.ctrlKey  && e.altKey && e.code === "KeyH"){
+            if(e.ctrlKey  && e.altKey && e.code === "KeyB"){
                 console.log("Hola buenos dias!");
             }
-            console.log(e);
+            //console.log(e);
         });
 
         document.addEventListener("keydown", (e) => {
             if(e.ctrlKey  && e.altKey && e.code === "KeyC"){
                 console.log("Chau buenas noches!");
             }
-            console.log(e);
+            //console.log(e);
         });
 
         document.addEventListener("keydown", (e) => {
-            if(e.ctrlKey  && e.altKey && e.code === "KeyR"){
-                //insertar reloj digital
+            if(e.ctrlKey  && e.altKey && e.code === "KeyH"){
+                //
+                const horaLocal = new Date();
+                console.log(`${horaLocal.getHours()}:${horaLocal.getMinutes()}:${horaLocal.getSeconds()}`);
             }
-            console.log(e);
+            //console.log(e);
         });
     });
 
