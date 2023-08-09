@@ -21,7 +21,19 @@ export default function teclaAccesoRapido(btnHabilitar, btnLimpiar, resultado){
             console.log(e);
         });
 
+        document.addEventListener("keydown", (e) => {
+            if(e.ctrlKey  && e.altKey && e.code === "KeyC"){
+                console.log("Chau buenas noches!");
+            }
+            console.log(e);
+        });
 
+        document.addEventListener("keydown", (e) => {
+            if(e.ctrlKey  && e.altKey && e.code === "KeyR"){
+                //insertar reloj digital
+            }
+            console.log(e);
+        });
     });
 
 
