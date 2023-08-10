@@ -64,6 +64,7 @@ import calcularEnvio from "./ejercicio-63.js";
 import tarjetaPresentacion from "./ejercicio-64.js";
 import teclaAccesoRapido from "./ejercicio-65.js";
 import dragAndDrop from "./ejercicio-66.js";
+import cambiaImagen from "./ejercicio-67.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -134,6 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
     tarjetaPresentacion(".btn-generar-ej-64", ".btn-limpiar-ej-64", ".input-nombre-ej-64", ".input-apellido-ej-64", ".input-telefono-ej-64", ".input-email-ej-64", ".input-ocupacion-ej-64", ".resultado-ej-64");
     teclaAccesoRapido(".btn-habilitar-ej-65", ".btn-limpiar-ej-65", ".resultado-ej-65");
     dragAndDrop(".div-uno-ej-66", ".div-dos-ej-66");
-
+    cambiaImagen();
+    
 
 });
