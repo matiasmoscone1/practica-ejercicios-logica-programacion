@@ -5,7 +5,7 @@
 //clic en los botones numéricos y operadores para realizar cálculos. Muestra los 
 //resultados en tiempo real.
 
-export default function calculadoraInteractiva(divCalc ,suma, resta, multi, divi, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, cero, resultado){
+export default function calculadoraInteractiva(divCalc ,suma, resta, multi, divi, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, cero, calcular, limpiar, resultado){
     const $divCalc = document.querySelector(divCalc);
     const $resultado = document.querySelector(resultado);
 /*
@@ -17,10 +17,10 @@ export default function calculadoraInteractiva(divCalc ,suma, resta, multi, divi
    
     let primerNum = "0";
     let segundoNum = "0";
+    let resultadoFinal = 0;
 
     $divCalc.addEventListener("click", (e) => {
 
-        
         if(e.target.matches(uno)){
             primerNum += 1;
             parseInt(primerNum);
@@ -49,6 +49,8 @@ export default function calculadoraInteractiva(divCalc ,suma, resta, multi, divi
                 });
             }
             $resultado.textContent = `${primerNum} + ${segundoNum}`;
+            resultadoFinal = parseInt(primerNum) + parseInt(segundoNum);
+            console.log(resultadoFinal);
         }
 
 
