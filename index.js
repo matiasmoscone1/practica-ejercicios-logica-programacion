@@ -66,6 +66,7 @@ import teclaAccesoRapido from "./ejercicio-65.js";
 import dragAndDrop from "./ejercicio-66.js";
 import cambiaImagen from "./ejercicio-67.js";
 import calculadoraInteractiva from "./ejercicio-68.js";
+import mostrarCoordenadasMouse from "./ejercicio-69.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -138,5 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
     dragAndDrop(".div-uno-ej-66", ".div-dos-ej-66");
     cambiaImagen(".img1-ej-67", ".img2-ej-67", ".img3-ej-67", ".img4-ej-67");
     calculadoraInteractiva(".calculadora-ej-68",".btn-calcular-ej-68", ".btn-limpiar-ej-68", ".resultado-ej-68");
+    mostrarCoordenadasMouse();
+    
 
 });
