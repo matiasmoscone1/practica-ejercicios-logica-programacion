@@ -6,14 +6,16 @@
 //resultados en tiempo real.
 
 export default function calculadoraInteractiva(divCalc ,suma, resta, multi, divi, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, cero, calcular, limpiar, resultado){
+    /*
+    
     const $divCalc = document.querySelector(divCalc);
     const $resultado = document.querySelector(resultado);
-/*
+
     const $suma = document.querySelector(suma);
     const $resta = document.querySelector(resta);
     const $multi = document.querySelector(multi);
     const $divi = document.querySelector(divi);
-*/
+
    
     let primerNum = "0";
     let segundoNum = "0";
@@ -55,8 +57,36 @@ export default function calculadoraInteractiva(divCalc ,suma, resta, multi, divi
 
 
     });
+*/
+  
+    let primerNum = "";
+    let segundoNum = "";
+    let operador = /[+\-*\/]/;
 
-   
+    const $divCalc = document.querySelector(divCalc);
+
+    const $btnCalcular = document.querySelector(calcular);
+    const $btnLimpiar = document.querySelector(limpiar);
+    const $resultado = document.querySelector(resultado);
+
+    $divCalc.addEventListener("click", (e) => {
+        if(!operador.test(e.target.matches)){
+            primerNum += e.srcElement.innerHTML;
+        }
+        if(operador.test(e.target.matches)){
+            segundoNum += e.srcElement.innerHTML;
+        }
+
+        console.log(primerNum);
+        console.log(segundoNum);
+
+
+    });
+
+
+
+
+
 
 
 
