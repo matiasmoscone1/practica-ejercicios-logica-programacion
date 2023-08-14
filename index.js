@@ -137,9 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
     teclaAccesoRapido(".btn-habilitar-ej-65", ".btn-limpiar-ej-65", ".resultado-ej-65");
     dragAndDrop(".div-uno-ej-66", ".div-dos-ej-66");
     cambiaImagen(".img1-ej-67", ".img2-ej-67", ".img3-ej-67", ".img4-ej-67");
-    calculadoraInteractiva(".calculadora-ej-68",".btn-suma-ej-68", ".btn-resta-ej-68", ".btn-multi-ej-68", ".btn-divi-ej-68",
-    ".btn-uno-ej-68", ".btn-dos-ej-68", ".btn-tres-ej-68", ".btn-cuatro-ej-68", ".btn-cinco-ej-68",
-    ".btn-seis-ej-68", ".btn-siete-ej-68", ".btn-ocho-ej-68", ".btn-nueve-ej-68", ".btn-cero-ej-68", 
-    ".btn-calcular-ej-68", ".btn-limpiar-ej-68", ".resultado-ej-68");
+    calculadoraInteractiva(".calculadora-ej-68",".btn-calcular-ej-68", ".btn-limpiar-ej-68", ".resultado-ej-68");
 
 });
