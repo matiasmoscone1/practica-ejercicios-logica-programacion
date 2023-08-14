@@ -62,6 +62,7 @@ export default function calculadoraInteractiva(divCalc ,suma, resta, multi, divi
     let primerNum = "";
     let segundoNum = "";
     let operador = /[+\-*\/]/;
+    //let res = "";
 
     const $divCalc = document.querySelector(divCalc);
 
@@ -79,10 +80,29 @@ export default function calculadoraInteractiva(divCalc ,suma, resta, multi, divi
 
         console.log(primerNum);
         console.log(segundoNum);
-
-
     });
 
+    $btnCalcular.addEventListener("click", () => {
+        let res;
+
+        switch(operador){
+            case "+":
+                res = parseInt(primerNum) + parseInt(segundoNum);
+                break;
+            case "-":
+                res = parseInt(primerNum) - parseInt(segundoNum);
+                break;
+            case "*":
+                res = parseInt(primerNum) * parseInt(segundoNum);
+                break;
+            case "/":
+                res = parseInt(primerNum) / parseInt(segundoNum);
+                break;
+        }
+        
+        console.log(res);
+
+    });
 
 
 
