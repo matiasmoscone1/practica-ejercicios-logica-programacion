@@ -62,7 +62,8 @@ export default function calculadoraInteractiva(divCalc ,suma, resta, multi, divi
     let primerNum = "";
     let segundoNum = "";
     let operador = /[+\-*\/]/;
-    //let res = "";
+    let ope = "";
+    let res = 0;
 
     const $divCalc = document.querySelector(divCalc);
 
@@ -71,21 +72,50 @@ export default function calculadoraInteractiva(divCalc ,suma, resta, multi, divi
     const $resultado = document.querySelector(resultado);
 
     $divCalc.addEventListener("click", (e) => {
-        if(!operador.test(e.target.matches)){
-            primerNum += e.srcElement.innerHTML;
+        if(e.target.matches("button")){
+            const contenido = e.target.textContent;
+            if(!operador.test(contenido)){
+                if(ope === ""){
+                    primerNum += contenido;
+                }else{
+                    segundoNum += contenido;
+                }
+            }else{
+                ope = contenido;
+            }
         }
-        if(operador.test(e.target.matches)){
-            segundoNum += e.srcElement.innerHTML;
-        }
-
         console.log(primerNum);
         console.log(segundoNum);
+        console.log(ope);
+
     });
 
     $btnCalcular.addEventListener("click", () => {
-        let res;
 
-        switch(operador){
+        switch(ope){
+            case "+":
+                res = parseInt(primerNum) + parseInt(segundoNum);
+                break;
+            case "-":
+                res = parseInt(primerNum) - parseInt(segundoNum);
+                break;
+            case "*":
+                res = parseInt(primerNum) * parseInt(segundoNum);
+                break;
+            case "/":
+                res = parseInt(primerNum) / parseInt(segundoNum);
+                break;
+        }
+    
+        console.log(res);
+    });
+
+
+
+    /*
+    $btnCalcular.addEventListener("click", () => {
+
+        switch(ope){
             case "+":
                 res = parseInt(primerNum) + parseInt(segundoNum);
                 break;
@@ -102,7 +132,7 @@ export default function calculadoraInteractiva(divCalc ,suma, resta, multi, divi
         
         console.log(res);
 
-    });
+    });*/
 
 
 
