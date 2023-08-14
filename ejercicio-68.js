@@ -57,38 +57,16 @@ export default function calculadoraInteractiva(divCalc, calcular, limpiar, resul
         }
     
         console.log(res);
-        
+        $resultado.textContent = `${primerNum} ${ope} ${segundoNum} = ${res}`;
     });
 
-
-
-    /*
-    $btnCalcular.addEventListener("click", () => {
-
-        switch(ope){
-            case "+":
-                res = parseInt(primerNum) + parseInt(segundoNum);
-                break;
-            case "-":
-                res = parseInt(primerNum) - parseInt(segundoNum);
-                break;
-            case "*":
-                res = parseInt(primerNum) * parseInt(segundoNum);
-                break;
-            case "/":
-                res = parseInt(primerNum) / parseInt(segundoNum);
-                break;
-        }
-        
-        console.log(res);
-
-    });*/
-
-
-
-
-
-
+    $btnLimpiar.addEventListener("click", () => {
+        primerNum = "";
+        segundoNum = "";
+        ope = "";
+        res = 0;
+        $resultado.textContent = " ";
+    });
 
 
 }
