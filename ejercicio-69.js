@@ -10,20 +10,28 @@ export default function mostrarCoordenadasMouse(btnMostrar, btnOcultar, resultad
     const $btnOcultar = document.querySelector(btnOcultar);
     const $resultadoX = document.querySelector(resultadoX);
     const $resultadoY = document.querySelector(resultadoY);
-    
+    let moverMouse = null;
+
     $btnMostrar.addEventListener("click", () => {
 
-        document.addEventListener("mousemove", (e) => {
+        moverMouse = (e) => {
+            $resultadoX.textContent = `X: ${e.clientX}`;
+            $resultadoY.textContent = `Y: ${e.clientY}`;
+            //console.log(e.clientX);
+            //console.log(e.clientY);
+        }
 
-            console.log(e.clientX);
-            console.log(e.clientY);
-        });
-        
-
+        document.addEventListener("mousemove", moverMouse);
 
     });
 
-
+    $btnOcultar.addEventListener("click", () => {
+        if(moverMouse){
+            document.removeEventListener("mousemove", moverMouse);
+        }
+        $resultadoX.textContent = " ";
+        $resultadoY.textContent = " ";
+    });
 
 }
 
