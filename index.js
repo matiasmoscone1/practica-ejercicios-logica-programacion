@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
     dragAndDrop(".div-uno-ej-66", ".div-dos-ej-66");
     cambiaImagen(".img1-ej-67", ".img2-ej-67", ".img3-ej-67", ".img4-ej-67");
     calculadoraInteractiva(".calculadora-ej-68",".btn-calcular-ej-68", ".btn-limpiar-ej-68", ".resultado-ej-68");
-    mostrarCoordenadasMouse(".btn-mostrar-ej-69", ".btn-ocultar-ej-69");
+    mostrarCoordenadasMouse(".btn-mostrar-ej-69", ".btn-ocultar-ej-69", ".resultadoX-ej-69", ".resultadoY-ej-69");
 
 
 });
