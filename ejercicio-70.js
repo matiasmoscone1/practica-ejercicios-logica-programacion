@@ -50,12 +50,29 @@ export default function autocompletar(texto, lista){
         valorTexto += e.target.value;
         console.log(valorTexto);
 
-        const prueba = filtarOpciones(valorTexto);
-        console.log(prueba);
+        $lista.innerHTML = "";
 
-        const provinciaSeleccionada = document.createElement("li", prueba);
+        if (valorTexto.length === 0) {
+            // No mostrar opciones si el texto está vacío
+            return; 
+        }
 
-        $lista.appendChild(provinciaSeleccionada).textContent = prueba;
+        const opcFiltradas = filtarOpciones(valorTexto);
+        //console.log(opcFiltradas);
+
+        opcFiltradas.forEach(opcion => {
+            const provinciaSeleccionada = document.createElement("li");
+            provinciaSeleccionada.textContent = opcion;
+       
+        
+            provinciaSeleccionada.addEventListener("click", () => {
+                $texto.value = opcion;
+                $lista.innerHTML = "";
+            });
+
+    
+            $lista.appendChild(provinciaSeleccionada);
+        });
 
     });
 
