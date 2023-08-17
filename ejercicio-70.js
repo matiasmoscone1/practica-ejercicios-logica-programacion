@@ -10,11 +10,11 @@ export default function autocompletar(texto){
     const $texto = document.querySelector(texto);
 
 
-    $texto.addEventListener("onchange", (e) => {
+    $texto.addEventListener("keyup", (e) => {
 
         let valorTexto = "";
-        valorTexto = e.target.value;
-        console.log(e);
+        valorTexto += e.target.value;
+        console.log(valorTexto);
 
 
     });
