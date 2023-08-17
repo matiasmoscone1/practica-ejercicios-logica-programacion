@@ -4,10 +4,11 @@
 //de opciones. A medida que el usuario escriba en el cuadro de búsqueda, muestra 
 //las opciones coincidentes en una lista desplegable debajo.
 
-export default function autocompletar(texto){
+export default function autocompletar(texto, lista){
 
 
     const $texto = document.querySelector(texto);
+    const $lista = document.querySelector(lista);
 
     const provincias = ["Buenos Aires",
     "Ciudad Autónoma de Buenos Aires",
@@ -52,6 +53,9 @@ export default function autocompletar(texto){
         const prueba = filtarOpciones(valorTexto);
         console.log(prueba);
 
+        const provinciaSeleccionada = document.createElement("li", prueba);
+
+        $lista.appendChild(provinciaSeleccionada).textContent = prueba;
 
     });
 
