@@ -36,7 +36,10 @@ export default function autocompletar(texto){
 
 
     const filtarOpciones = (cadenaTexto) => {
-        return provincias.filter(provincia => provincia.toLowerCase().startsWith(cadenaTexto.toLowerCase()));
+        return provincias.filter(provincia => {
+            const provinciaSinDiacriticos = provincia.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            return provinciaSinDiacriticos.toLowerCase().startsWith(cadenaTexto.toLowerCase());
+        });
     }
 
 
@@ -48,8 +51,6 @@ export default function autocompletar(texto){
 
         const prueba = filtarOpciones(valorTexto);
         console.log(prueba);
-
-        
 
 
     });
