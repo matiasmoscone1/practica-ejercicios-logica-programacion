@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
     calculadoraInteractiva(".calculadora-ej-68",".btn-calcular-ej-68", ".btn-limpiar-ej-68", ".resultado-ej-68");
     mostrarCoordenadasMouse(".btn-mostrar-ej-69", ".btn-ocultar-ej-69", ".resultadoX-ej-69", ".resultadoY-ej-69");
     autocompletar(".input-ej-70", ".lista-ej-70");
-    temporizadorRegresivo(".btn-inicio-ej-71", ".btn-limpiar-ej-71", ".input-ej-71", ".resultado-ej-71");
+    temporizadorRegresivo(".btn-inicio-ej-71", ".btn-limpiar-ej-71", ".input-minutos-ej-71", ".input-segundos-ej-71", ".resultado-ej-71");
 
 
 });
