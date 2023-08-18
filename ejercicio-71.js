@@ -38,6 +38,7 @@ export default function temporizadorRegresivo(btnInicio, btnLimpiar, inputMin, i
             console.log("Minutos:", Math.floor(minutos));
             console.log("Segundos:", segundos);
 
+            
         }
 
         const intervalo = () => {
@@ -45,11 +46,17 @@ export default function temporizadorRegresivo(btnInicio, btnLimpiar, inputMin, i
 
             actualizarCronometro(tiempoTotal);
             console.log(tiempoTotal);
+            if(tiempoTotal === 0){
+                clearInterval(tempIntervalo);
+                console.log("CRONOMETRO TERMINADO");
+            }
         }
 
 
-        setInterval(intervalo, 1000);
+        const tempIntervalo = setInterval(intervalo, 1000);
 
+        
+       
 
 
     });
