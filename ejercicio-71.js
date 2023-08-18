@@ -30,10 +30,10 @@ export default function temporizadorRegresivo(btnInicio, btnLimpiar, inputMin, i
             let minutos = tiempo / 60;
             let parteDecimalMinutos = minutos - Math.floor(minutos);
             console.log(parteDecimalMinutos);
-            let segundos = parteDecimalMinutos * 60;
+            let segundos = Math.round(parteDecimalMinutos * 60);
 
             console.log("Minutos:", Math.floor(minutos));
-            console.log("Segundos:", Math.floor(segundos));
+            console.log("Segundos:", segundos);
 
         }
 
