@@ -55,13 +55,17 @@ export default function temporizadorRegresivo(btnInicio, btnLimpiar, inputMin, i
 
 
         const tempIntervalo = setInterval(intervalo, 1000);
+        $btnLimpiar.addEventListener("click", () => {
+            clearInterval(tempIntervalo);
+            document.querySelector(inputMin).value = " ";
+            document.querySelector(inputSeg).value = " ";
+            $resultado.textContent = " ";
+        });
 
     });
 
 
-    $btnLimpiar.addEventListener("click", () => {
-
-    });
+    
 
 
 }
