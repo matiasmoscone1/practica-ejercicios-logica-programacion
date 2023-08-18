@@ -20,6 +20,13 @@ export default function temporizadorRegresivo(btnInicio, btnLimpiar, inputMin, i
         //console.log($inputMin, $inputSeg);
         console.log(tiempoTotal);
 
+        const intervalo = () => {
+            tiempoTotal--;
+            console.log(tiempoTotal);
+        }
+
+        setInterval(intervalo, 1000);
+
 
 
     });
