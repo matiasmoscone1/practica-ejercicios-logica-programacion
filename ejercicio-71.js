@@ -32,6 +32,9 @@ export default function temporizadorRegresivo(btnInicio, btnLimpiar, inputMin, i
             console.log(parteDecimalMinutos);
             let segundos = Math.round(parteDecimalMinutos * 60);
 
+            if(segundos < 10){
+                segundos = `0${segundos}`;
+            }
             console.log("Minutos:", Math.floor(minutos));
             console.log("Segundos:", segundos);
 
