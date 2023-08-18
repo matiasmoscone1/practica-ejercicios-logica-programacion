@@ -19,11 +19,31 @@ export default function temporizadorRegresivo(btnInicio, btnLimpiar, inputMin, i
 
         //console.log($inputMin, $inputSeg);
         console.log(tiempoTotal);
+        /*
+        let minutos = tiempoTotal / 60;
+        let decimalMinutos = minutos - Math.floor(minutos);
+        let segundos = decimalMinutos * 60;
+        */
+
+        const actualizarCronometro = (tiempo) => {
+            
+            let minutos = tiempo / 60;
+            let parteDecimalMinutos = minutos - Math.floor(minutos);
+            console.log(parteDecimalMinutos);
+            let segundos = parteDecimalMinutos * 60;
+
+            console.log("Minutos:", Math.floor(minutos));
+            console.log("Segundos:", Math.floor(segundos));
+
+        }
 
         const intervalo = () => {
             tiempoTotal--;
+
+            actualizarCronometro(tiempoTotal);
             console.log(tiempoTotal);
         }
+
 
         setInterval(intervalo, 1000);
 
