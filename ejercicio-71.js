@@ -9,7 +9,7 @@ export default function temporizadorRegresivo(btnInicio, btnLimpiar, inputMin, i
 
     const $btnInicio = document.querySelector(btnInicio);
     const $btnLimpiar = document.querySelector(btnLimpiar);
-    
+    const $resultado = document.querySelector(resultado);
 
     $btnInicio.addEventListener("click", () => {
         const $inputMin = document.querySelector(inputMin).value;
@@ -38,6 +38,7 @@ export default function temporizadorRegresivo(btnInicio, btnLimpiar, inputMin, i
             console.log("Minutos:", Math.floor(minutos));
             console.log("Segundos:", segundos);
 
+            $resultado.textContent = `${Math.floor(minutos)}:${segundos}`;
             
         }
 
@@ -55,11 +56,13 @@ export default function temporizadorRegresivo(btnInicio, btnLimpiar, inputMin, i
 
         const tempIntervalo = setInterval(intervalo, 1000);
 
-        
-       
+    });
 
+
+    $btnLimpiar.addEventListener("click", () => {
 
     });
+
 
 }
 
