@@ -7,29 +7,35 @@
 
 export default function temporizadorRegresivo(btnInicio, btnLimpiar, inputMin, inputSeg, resultado){
 
+    //creando variables referenciales al DOM
     const $btnInicio = document.querySelector(btnInicio);
     const $btnLimpiar = document.querySelector(btnLimpiar);
     const $resultado = document.querySelector(resultado);
 
+    //captando evento click del boton inicio
     $btnInicio.addEventListener("click", () => {
+        //tomando el valor de los inputs
         const $inputMin = document.querySelector(inputMin).value;
         const $inputSeg = document.querySelector(inputSeg).value;
 
+        //calculando el tiempo total ingresado en segundos
         let tiempoTotal = parseInt(($inputMin * 60)) + parseInt($inputSeg);
 
         //console.log($inputMin, $inputSeg);
-        console.log(tiempoTotal);
+        //console.log(tiempoTotal);
         /*
         let minutos = tiempoTotal / 60;
         let decimalMinutos = minutos - Math.floor(minutos);
         let segundos = decimalMinutos * 60;
         */
 
+        //creando funcion callback que le pasa por parametro el tiempo total en segundos
         const actualizarCronometro = (tiempo) => {
-            
+
+            //
             let minutos = tiempo / 60;
             let parteDecimalMinutos = minutos - Math.floor(minutos);
-            console.log(parteDecimalMinutos);
+            //console.log(parteDecimalMinutos);
             let segundos = Math.round(parteDecimalMinutos * 60);
 
             if(segundos < 10){
