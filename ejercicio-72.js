@@ -15,6 +15,13 @@ export default function cambiarValores(objeto ,btnCambiar, btnLimpiar){
         profesion: "Desarrollador"
     };
 
+    const arrayInicial = [objetoInicial.nombre, objetoInicial.apellido, objetoInicial.edad,
+    objetoInicial.profesion];
+
+
+    const obtenerRandom = () => {
+        return Math.floor(Math.random() * 4);
+    }
 
     const $objeto = document.querySelector(objeto);
     const $btnCambiar = document.querySelector(btnCambiar);
@@ -25,7 +32,15 @@ export default function cambiarValores(objeto ,btnCambiar, btnLimpiar){
 
     console.log(objetoInicial);
 
+    console.log(arrayInicial);
+
+
+
+
     $btnCambiar.addEventListener("click", () => {
+
+        console.log(obtenerRandom());
+
 
     });
 
