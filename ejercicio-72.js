@@ -20,9 +20,10 @@ export default function cambiarValores(objeto ,btnCambiar, btnLimpiar){
     const $btnCambiar = document.querySelector(btnCambiar);
     const $btnLimpiar = document.querySelector(btnLimpiar);
 
-    $objeto.innerHTML = `${objetoInicial.value}`;
+    $objeto.innerHTML = `Nombre: ${objetoInicial.nombre} <br> Apellido: ${objetoInicial.apellido} 
+    <br> Edad: ${objetoInicial.edad} <br> Profesion: ${objetoInicial.profesion}`;
 
-    console.log($objeto);
+    console.log(objetoInicial);
 
     $btnCambiar.addEventListener("click", () => {
 
