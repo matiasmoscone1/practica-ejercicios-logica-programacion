@@ -6,10 +6,27 @@
 //claves y valores intercambiados.
 
 
-export default function cambiarApellidos(objeto ,btnCambiar, btnLimpiar){
+export default function cambiarValores(objeto ,btnCambiar, btnLimpiar){
+
+    const objetoInicial = {
+        nombre: "Matias",
+        apellido: "Moscone",
+        edad: 27,
+        profesion: "Desarrollador"
+    };
 
 
-    
+    const $objeto = document.querySelector(objeto);
+    const $btnCambiar = document.querySelector(btnCambiar);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
+
+    $objeto.innerHTML = `${objetoInicial.value}`;
+
+    console.log($objeto);
+
+    $btnCambiar.addEventListener("click", () => {
+
+    });
 
 
     
