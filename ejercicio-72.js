@@ -6,8 +6,10 @@
 //claves y valores intercambiados.
 
 
-export default function cambiarApellidos(){
+export default function cambiarApellidos(objeto ,btnCambiar, btnLimpiar){
 
+
+    
 
 
     

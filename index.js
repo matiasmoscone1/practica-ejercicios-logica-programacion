@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
     mostrarCoordenadasMouse(".btn-mostrar-ej-69", ".btn-ocultar-ej-69", ".resultadoX-ej-69", ".resultadoY-ej-69");
     autocompletar(".input-ej-70", ".lista-ej-70");
     temporizadorRegresivo(".btn-inicio-ej-71", ".btn-limpiar-ej-71", ".input-minutos-ej-71", ".input-segundos-ej-71", ".resultado-ej-71");
-    cambiarApellidos();
+    cambiarApellidos(".div-objeto-ej-72", ".btn-cambiar-ej-72", ".btn-limpiar-ej-72");
 
 
 
