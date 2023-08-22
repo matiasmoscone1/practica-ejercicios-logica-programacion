@@ -64,10 +64,10 @@ export default function cambiarValores(objeto ,btnCambiar, btnLimpiar){
         }
 
 
-        nuevoObjeto.nombre = arrayInicial[obtenerRandom()];
-        nuevoObjeto.apellido = arrayInicial[obtenerRandom()];
-        nuevoObjeto.edad = arrayInicial[obtenerRandom()];
-        nuevoObjeto.profesion = arrayInicial[obtenerRandom()];
+        nuevoObjeto.nombre = arrayInicial[obtenerIndiceNoRepetido()];
+        nuevoObjeto.apellido = arrayInicial[obtenerIndiceNoRepetido()];
+        nuevoObjeto.edad = arrayInicial[obtenerIndiceNoRepetido()];
+        nuevoObjeto.profesion = arrayInicial[obtenerIndiceNoRepetido()];
     
         console.log(nuevoObjeto);
     
