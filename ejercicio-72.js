@@ -18,7 +18,6 @@ export default function cambiarValores(objeto ,btnCambiar, btnLimpiar){
     const arrayInicial = [objetoInicial.nombre, objetoInicial.apellido, objetoInicial.edad,
     objetoInicial.profesion];
 
-
     const obtenerRandom = () => {
         return Math.floor(Math.random() * 4);
     }
@@ -29,6 +28,8 @@ export default function cambiarValores(objeto ,btnCambiar, btnLimpiar){
 
     $objeto.innerHTML = `Nombre: ${objetoInicial.nombre} <br> Apellido: ${objetoInicial.apellido} 
     <br> Edad: ${objetoInicial.edad} <br> Profesion: ${objetoInicial.profesion}`;
+
+
 
     console.log(objetoInicial);
 
@@ -42,6 +43,19 @@ export default function cambiarValores(objeto ,btnCambiar, btnLimpiar){
         console.log(obtenerRandom());
 
 
+        //crear nuevo objeto 
+        //y crear un ciclo para meter de acuerdo al numero random 
+        //con las mismas propiedades y con el numero random que haya tocado
+
+        const nuevoObjeto = {nombre: "", apellido: "", edad: "", profesion: ""};
+
+        nuevoObjeto.nombre = arrayInicial[obtenerRandom()];
+        nuevoObjeto.apellido = arrayInicial[obtenerRandom()];
+        nuevoObjeto.edad = arrayInicial[obtenerRandom()];
+        nuevoObjeto.profesion = arrayInicial[obtenerRandom()];
+    
+        console.log(nuevoObjeto);
+    
     });
 
 
