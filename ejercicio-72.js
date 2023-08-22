@@ -49,6 +49,21 @@ export default function cambiarValores(objeto ,btnCambiar, btnLimpiar){
 
         const nuevoObjeto = {nombre: "", apellido: "", edad: "", profesion: ""};
 
+        const indicesUsados = new Set();
+
+        const obtenerIndiceNoRepetido = () => {
+
+            let indiceAleatorio;
+
+            do{
+                indiceAleatorio = obtenerRandom();
+            }while(indicesUsados.has(indiceAleatorio));
+            indicesUsados.add(indiceAleatorio);
+            return indiceAleatorio;
+
+        }
+
+
         nuevoObjeto.nombre = arrayInicial[obtenerRandom()];
         nuevoObjeto.apellido = arrayInicial[obtenerRandom()];
         nuevoObjeto.edad = arrayInicial[obtenerRandom()];
