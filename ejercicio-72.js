@@ -8,6 +8,8 @@
 
 export default function cambiarValores(objeto ,btnCambiar, btnLimpiar){
 
+
+    //creando objeto inicial con valores iniciales
     const objetoInicial = {
         nombre: "Matias",
         apellido: "Moscone",
@@ -15,32 +17,36 @@ export default function cambiarValores(objeto ,btnCambiar, btnLimpiar){
         profesion: "Desarrollador"
     };
 
+    //guardando valores del objeto creado en un array
     const arrayInicial = [objetoInicial.nombre, objetoInicial.apellido, objetoInicial.edad,
     objetoInicial.profesion];
 
+    //obtiene un numero entre 0 y 3
     const obtenerRandom = () => {
         return Math.floor(Math.random() * 4);
     }
 
+    //creando variables referenciales al DOM
     const $objeto = document.querySelector(objeto);
     const $btnCambiar = document.querySelector(btnCambiar);
     const $btnLimpiar = document.querySelector(btnLimpiar);
 
+    //
     $objeto.innerHTML = `Nombre: ${objetoInicial.nombre} <br> Apellido: ${objetoInicial.apellido} 
     <br> Edad: ${objetoInicial.edad} <br> Profesion: ${objetoInicial.profesion}`;
 
 
 
-    console.log(objetoInicial);
+    //console.log(objetoInicial);
 
-    console.log(arrayInicial);
+    //console.log(arrayInicial);
 
 
 
 
     $btnCambiar.addEventListener("click", () => {
 
-        console.log(obtenerRandom());
+        //console.log(obtenerRandom());
 
 
         //crear nuevo objeto 
@@ -60,7 +66,6 @@ export default function cambiarValores(objeto ,btnCambiar, btnLimpiar){
             }while(indicesUsados.has(indiceAleatorio));
             indicesUsados.add(indiceAleatorio);
             return indiceAleatorio;
-
         }
 
 
@@ -69,11 +74,19 @@ export default function cambiarValores(objeto ,btnCambiar, btnLimpiar){
         nuevoObjeto.edad = arrayInicial[obtenerIndiceNoRepetido()];
         nuevoObjeto.profesion = arrayInicial[obtenerIndiceNoRepetido()];
     
-        console.log(nuevoObjeto);
+        //console.log(nuevoObjeto);
     
+        $objeto.innerHTML = `Nombre: ${nuevoObjeto.nombre} <br> Apellido: ${nuevoObjeto.apellido} 
+        <br> Edad: ${nuevoObjeto.edad} <br> Profesion: ${nuevoObjeto.profesion}`;
+
     });
 
 
+    $btnLimpiar.addEventListener("click", () => {
+
+
+
+    });
     
 }
 
