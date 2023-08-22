@@ -83,9 +83,8 @@ export default function cambiarValores(objeto ,btnCambiar, btnLimpiar){
 
 
     $btnLimpiar.addEventListener("click", () => {
-
-
-
+        $objeto.innerHTML = `Nombre:  <br> Apellido: 
+        <br> Edad: <br> Profesion: `;
     });
     
 }
