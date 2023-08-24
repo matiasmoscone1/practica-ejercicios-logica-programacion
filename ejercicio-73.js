@@ -13,23 +13,20 @@ export default function valorInputs(btnInicio, btnFinalizar){
 
         let guardaCaracteres = "";
 
-        document.addEventListener("keyup", (e) => {
-            
-            //console.log(e.key.value);
-
+        const keyUp = (e) => {
             if(e.target.tagName === "INPUT" && e.target.type === "password"){
                 //console.log("HOLA!");
                 guardaCaracteres += e.target.value;
             }
-            
             console.log(guardaCaracteres);
+        }
 
-        });
-
+        document.addEventListener("keyup", keyUp);
+        
     });
 
     $btnFinalizar.addEventListener("click", () => {
-        
+        document.removeEventListener("keyup", keyUp);
 
     });
 
