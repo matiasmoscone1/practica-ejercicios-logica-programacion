@@ -1,6 +1,6 @@
 
 
-//73. Capta determinados tipos de inputs en el documento y los guarda en un conjunto.
+//73. Capta determinados tipos de inputs en el documento y los guarda en una variable.
 
 
 export default function valorInputs(btnInicio, btnFinalizar){
@@ -11,17 +11,25 @@ export default function valorInputs(btnInicio, btnFinalizar){
 
     $btnInicio.addEventListener("click", () => {
 
-        let guardaCaracteres;
+        let guardaCaracteres = "";
 
         document.addEventListener("keyup", (e) => {
             
-            console.log(e);
+            //console.log(e.key.value);
 
             if(e.target.tagName === "INPUT" && e.target.type === "password"){
-                console.log("HOLA!");
+                //console.log("HOLA!");
+                guardaCaracteres += e.target.value;
             }
             
+            console.log(guardaCaracteres);
+
         });
+
+    });
+
+    $btnFinalizar.addEventListener("click", () => {
+        
 
     });
 
