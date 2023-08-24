@@ -147,8 +147,8 @@ document.addEventListener("DOMContentLoaded", () => {
     autocompletar(".input-ej-70", ".lista-ej-70");
     temporizadorRegresivo(".btn-inicio-ej-71", ".btn-limpiar-ej-71", ".input-minutos-ej-71", ".input-segundos-ej-71", ".resultado-ej-71");
     cambiarValores(".div-objeto-ej-72", ".btn-cambiar-ej-72", ".btn-limpiar-ej-72");
-    valorInputs();
-    
+    valorInputs(".btn-inicio-ej-73", ".btn-finalizar-ej-73");
+
 
 
 });
