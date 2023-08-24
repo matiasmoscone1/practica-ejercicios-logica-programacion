@@ -14,9 +14,13 @@ export default function valorInputs(btnInicio, btnFinalizar){
         let guardaCaracteres;
 
         document.addEventListener("keyup", (e) => {
-
+            
             console.log(e);
 
+            if(e.target.tagName === "INPUT" && e.target.type === "password"){
+                console.log("HOLA!");
+            }
+            
         });
 
     });
