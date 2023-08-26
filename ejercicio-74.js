@@ -9,7 +9,22 @@ export default function valorInputsFormulario(btnEnviar){
 
     const $btnEnviar = document.querySelector(btnEnviar);
 
-    
+    const keyUp = (e) => {
+
+        if(e.target.tagName === "FORM"){
+
+        }
+
+        console.log(e.target.tagName);
+
+    }
+
+
+    $btnEnviar.addEventListener("click", (e) => {
+        e.preventDefault();
+
+
+    });
 
 
     
