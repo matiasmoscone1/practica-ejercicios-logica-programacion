@@ -25,14 +25,21 @@ export default function valorInputsFormulario(btnEnviar){
 
     $btnEnviar.addEventListener("click", (e) => {
         e.preventDefault();
-
         console.log(guardaCaracteres);
+
+        const borrarInputs = document.querySelectorAll("input");
+
+        borrarInputs.forEach((input) => {
+            input.value = "";
+        })
+
+        document.removeEventListener("keyup", keyUp);
+
+
     });
 
 
     document.addEventListener("keyup", keyUp);
-
-    
     
 }
 
