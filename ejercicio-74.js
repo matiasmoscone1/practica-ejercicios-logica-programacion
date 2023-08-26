@@ -11,10 +11,10 @@ export default function valorInputsFormulario(btnEnviar){
 
     const keyUp = (e) => {
 
-        //console.log(e);
+        console.log(e);
 
-        if(e.target.form.tagName === "form"){
-            console.log(e);
+        if(e.target.form.tagName === "FORM" && e.target.type === "password"){
+            console.log(e.target);
         }
 
     
