@@ -4,10 +4,13 @@
 //que guarde el valor del input de tipo contraseña. (no todas las letras presionadas)
 
 
-export default function valorInputsFormulario(btnInicio, btnFinalizar){
+export default function valorInputsFormulario(btnEnviar){
 
-    const $btnInicio = document.querySelector(btnInicio);
-    const $btnFinalizar = document.querySelector(btnFinalizar);
+
+    const $btnEnviar = document.querySelector(btnEnviar);
+
+    
+
 
     
     
