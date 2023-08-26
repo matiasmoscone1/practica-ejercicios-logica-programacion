@@ -11,11 +11,13 @@ export default function valorInputsFormulario(btnEnviar){
 
     const keyUp = (e) => {
 
-        if(e.target.tagName === "FORM"){
+        //console.log(e);
 
+        if(e.target.form.tagName === "form"){
+            console.log(e);
         }
 
-        console.log(e.target.tagName);
+    
 
     }
 
@@ -26,6 +28,8 @@ export default function valorInputsFormulario(btnEnviar){
 
     });
 
+
+    document.addEventListener("keyup", keyUp);
 
     
     
