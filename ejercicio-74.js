@@ -9,23 +9,24 @@ export default function valorInputsFormulario(btnEnviar){
 
     const $btnEnviar = document.querySelector(btnEnviar);
 
+    let guardaCaracteres = "";
+
+
     const keyUp = (e) => {
 
         console.log(e);
 
         if(e.target.form.tagName === "FORM" && e.target.type === "password"){
-            console.log(e.target);
+            guardaCaracteres = e.target.value;
+            //console.log(guardaCaracteres);
         }
-
-    
-
     }
 
 
     $btnEnviar.addEventListener("click", (e) => {
         e.preventDefault();
 
-
+        console.log(guardaCaracteres);
     });
 
 
