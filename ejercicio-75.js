@@ -29,7 +29,11 @@ export default function factRecursiva(btnCalcular, btnLimpiar, input, resultado)
 
     });
 
-
+    $btnLimpiar.addEventListener("click", () => {
+        document.querySelector(input).value = "";
+        $resultado.textContent = "";
+        console.clear();
+    });
 
     //console.log(factNum(5));
 
