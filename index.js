@@ -72,6 +72,7 @@ import temporizadorRegresivo from "./ejercicio-71.js";
 import cambiarValores from "./ejercicio-72.js";
 import valorInputs from "./ejercicio-73.js";
 import valorInputsFormulario from "./ejercicio-74.js";
+import factRecursiva from "./ejercicio-75.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -150,6 +151,8 @@ document.addEventListener("DOMContentLoaded", () => {
     cambiarValores(".div-objeto-ej-72", ".btn-cambiar-ej-72", ".btn-limpiar-ej-72");
     valorInputs(".btn-inicio-ej-73", ".btn-finalizar-ej-73");
     valorInputsFormulario(".btn-enviar-ej-74");
+    factRecursiva();
+
 
 
 
