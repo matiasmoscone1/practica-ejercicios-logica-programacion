@@ -73,6 +73,7 @@ import cambiarValores from "./ejercicio-72.js";
 import valorInputs from "./ejercicio-73.js";
 import valorInputsFormulario from "./ejercicio-74.js";
 import factRecursiva from "./ejercicio-75.js";
+import busquedaBinaria from "./ejercicio-76.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -152,7 +153,8 @@ document.addEventListener("DOMContentLoaded", () => {
     valorInputs(".btn-inicio-ej-73", ".btn-finalizar-ej-73");
     valorInputsFormulario(".btn-enviar-ej-74");
     factRecursiva(".btn-calcular-ej-75", ".btn-limpiar-ej-75", ".input-ej-75", ".resultado-ej-75");
-
+    busquedaBinaria();
+    
 
 
 
