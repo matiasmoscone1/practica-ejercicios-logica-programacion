@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cambiarValores(".div-objeto-ej-72", ".btn-cambiar-ej-72", ".btn-limpiar-ej-72");
     valorInputs(".btn-inicio-ej-73", ".btn-finalizar-ej-73");
     valorInputsFormulario(".btn-enviar-ej-74");
-    factRecursiva();
+    factRecursiva(".btn-calcular-ej-75", ".btn-limpiar-ej-75", ".input-ej-75", ".resultado-ej-75");
 
 
 
