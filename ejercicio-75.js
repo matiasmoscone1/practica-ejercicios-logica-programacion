@@ -7,11 +7,11 @@
 export default function factRecursiva(){
 
     const factNum = (num) => {
-        if(num === 0){
-            return 0;
+        if(num === 0 || num === 1){
+            return 1;
         }
         else{
-            return num *= factNum(num--);
+            return num *= factNum(num - 1);
         }
     }
 
