@@ -155,8 +155,8 @@ document.addEventListener("DOMContentLoaded", () => {
     valorInputsFormulario(".btn-enviar-ej-74");
     factRecursiva(".btn-calcular-ej-75", ".btn-limpiar-ej-75", ".input-ej-75", ".resultado-ej-75");
     busquedaBinaria(".btn-buscar-ej-76", ".btn-limpiar-ej-76", ".numero-ej-76", ".resultado-ej-76");
-    crearPersona();
-    
+    crearPersona(".btn-crear-ej-77", ".btn-limpiar-ej-77", ".nombre-ej-77", ".apellido-ej-77", ".edad-ej-77", ".resultado-ej-77");
+
 
 
 
