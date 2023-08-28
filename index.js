@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
     valorInputs(".btn-inicio-ej-73", ".btn-finalizar-ej-73");
     valorInputsFormulario(".btn-enviar-ej-74");
     factRecursiva(".btn-calcular-ej-75", ".btn-limpiar-ej-75", ".input-ej-75", ".resultado-ej-75");
-    busquedaBinaria();
+    busquedaBinaria(".btn-buscar-ej-76", ".btn-limpiar-ej-76", ".numero-ej-76", ".resultado-ej-76");
     
 
 
