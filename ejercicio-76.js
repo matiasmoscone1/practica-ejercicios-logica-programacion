@@ -24,7 +24,8 @@ export default function busquedaBinaria(btnBuscar, btnLimpiar, numero, resultado
             let medio = Math.floor((izquierda + derecha) / 2);
 
             if(arrayNum[medio] === $numero){
-                console.log(`El numero encontrado es: ${medio}`);
+                //console.log(`El numero encontrado es: ${medio}`);
+                $resultado.textContent = `El numero se encontro en la posicion: ${medio}`;
                 res = true;
                 break;
             }
@@ -36,14 +37,18 @@ export default function busquedaBinaria(btnBuscar, btnLimpiar, numero, resultado
         }
 
         if(!res){
-            console.log("No se encontro el numero");
+            //console.log("No se encontro el numero");
+            $resultado.textContent = "No se encontro el numero.";
         }
     
 
 
     });
 
-    
+    $btnLimpiar.addEventListener("click", () => {
+        document.querySelector(numero).value = "";
+        $resultado.textContent = "";
+    });
 
 
 }
