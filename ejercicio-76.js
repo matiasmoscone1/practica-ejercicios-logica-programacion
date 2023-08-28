@@ -19,13 +19,15 @@ export default function busquedaBinaria(btnBuscar, btnLimpiar, numero, resultado
         let izquierda = 0;
         let derecha = arrayNum.length - 1;
 
+        
         while(izquierda <= derecha){
             let medio = Math.floor((izquierda + derecha) / 2);
 
             if(arrayNum[medio] === $numero){
                 console.log(`El numero encontrado es: ${medio}`);
+                break;
             }
-            else if(arrayNum[medio] > $numero){
+            else if(arrayNum[medio] < $numero){
                 izquierda = medio + 1;    
             }else{
                 derecha = medio - 1;
