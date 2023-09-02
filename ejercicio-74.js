@@ -14,7 +14,7 @@ export default function valorInputsFormulario(btnEnviar){
 
     const keyUp = (e) => {
 
-        console.log(e);
+        //console.log(e);
 
         if(e.target.form.tagName === "FORM" && e.target.type === "password"){
             guardaCaracteres = e.target.value;

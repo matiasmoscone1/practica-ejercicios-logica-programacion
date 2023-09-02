@@ -8,6 +8,7 @@ export default function calcularArea(btnCalcular, btnLimpiar, ancho, alto, resul
 
     const $btnCalcular = document.querySelector(btnCalcular);
     const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $resultado = document.querySelector(resultado);
 
     $btnCalcular.addEventListener("click", () => {
         const $ancho = document.querySelector(ancho).value;
@@ -27,11 +28,17 @@ export default function calcularArea(btnCalcular, btnLimpiar, ancho, alto, resul
 
         const nuevoRectangulo = new Rectangulo($ancho, $alto);
 
-        console.log(nuevoRectangulo.calcularArea());
+        //console.log(nuevoRectangulo.calcularArea());
+        
+        $resultado.textContent = `El area es: ${nuevoRectangulo.calcularArea()}cm`;
 
     });
 
-
+    $btnLimpiar.addEventListener("click", () => {
+        $resultado.textContent = "";
+        document.querySelector(ancho).value = "";
+        document.querySelector(alto).value = "";
+    });
 
 
 }

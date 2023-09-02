@@ -20,7 +20,7 @@ export default function contadorPulsaciones(btnMostrar, btnLimpiar, resultado){
             contador += 1;
         }
 
-        console.log(contador);
+        //console.log(contador);
     });
 
     //captando evento click del boton mostrar para mostrar resultado en DOM
