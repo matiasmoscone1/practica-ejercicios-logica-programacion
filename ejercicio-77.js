@@ -9,7 +9,6 @@ export default function crearPersona(btnCrear, btnLimpiar, nombre, apellido, eda
     const $btnLimpiar = document.querySelector(btnLimpiar);
 
     class Persona{
-
         constructor(nombre, apellido, edad){
             this.nombre = nombre;
             this.apellido = apellido;
@@ -20,12 +19,17 @@ export default function crearPersona(btnCrear, btnLimpiar, nombre, apellido, eda
     
     $btnCrear.addEventListener("click", () => {
         const $nombre = document.querySelector(nombre).value;
+        const $apellido = document.querySelector(apellido).value;
+        const $edad = document.querySelector(edad).value;
 
-        console.log($nombre);
+        
+        const instanciaPersona = new Persona($nombre, $apellido, $edad);
+
+        console.log(instanciaPersona);
+
+        console.log($nombre, $apellido, $edad);
 
     });
-    const instanciaPersona = new Persona()
-
 
 
 
