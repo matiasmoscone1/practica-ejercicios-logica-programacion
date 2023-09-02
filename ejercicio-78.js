@@ -20,14 +20,14 @@ export default function calcularArea(btnCalcular, btnLimpiar, ancho, alto, resul
             }
 
             calcularArea(){
-                return(ancho * alto);
+                return(this.ancho * this.alto);
             }
 
         }
 
         const nuevoRectangulo = new Rectangulo($ancho, $alto);
 
-
+        console.log(nuevoRectangulo.calcularArea());
 
     });
 
