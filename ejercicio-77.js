@@ -7,6 +7,7 @@ export default function crearPersona(btnCrear, btnLimpiar, nombre, apellido, eda
 
     const $btnCrear = document.querySelector(btnCrear);
     const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $resultado = document.querySelector(resultado);
 
     class Persona{
         constructor(nombre, apellido, edad){
@@ -25,11 +26,21 @@ export default function crearPersona(btnCrear, btnLimpiar, nombre, apellido, eda
         
         const instanciaPersona = new Persona($nombre, $apellido, $edad);
 
-        console.log(instanciaPersona);
+        $resultado.innerHTML = `* Persona creada con exito * <br>
+         Nombre: ${instanciaPersona.nombre} <br>
+         Apellido: ${instanciaPersona.apellido} <br>
+         Edad: ${instanciaPersona.edad}`;
 
-        console.log($nombre, $apellido, $edad);
+
+        //console.log(instanciaPersona);
+
+        //console.log($nombre, $apellido, $edad);
 
     });
+
+
+
+
 
 
 
