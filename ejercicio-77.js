@@ -39,7 +39,12 @@ export default function crearPersona(btnCrear, btnLimpiar, nombre, apellido, eda
     });
 
 
-
+    $btnLimpiar.addEventListener("click", () => {
+        $resultado.innerHTML = "";
+        document.querySelector(nombre).value = "";
+        document.querySelector(apellido).value = "";
+        document.querySelector(edad).value = "";
+    });
 
 
 
