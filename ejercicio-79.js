@@ -7,6 +7,7 @@
 export default function depositarDinero(cuenta, input, btnDepositar, btnLimpiar){
 
     const $cuenta = document.querySelector(cuenta);
+    const $btnDepositar = document.querySelector(btnDepositar);
 
     $cuenta.textContent = `Cuenta: 0$`;
 
@@ -15,9 +16,25 @@ export default function depositarDinero(cuenta, input, btnDepositar, btnLimpiar)
             this.saldo = saldo;
         }
 
-        
+        depositarSaldo(nuevoSaldo){
+            saldo += nuevoSaldo;
+        }
+
 
     }
+
+    $btnDepositar.addEventListener("click", () => {
+
+        const $valorInput = document.querySelector(input).value;
+
+        const instanciaCuenta = new CuentaBancaria;
+
+
+
+
+    });
+
+    console.log();
 
 }
 
