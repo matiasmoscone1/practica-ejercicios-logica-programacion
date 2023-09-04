@@ -17,7 +17,7 @@ export default function depositarDinero(cuenta, input, btnDepositar, btnLimpiar)
         }
 
         depositarSaldo(nuevoSaldo){
-            saldo += nuevoSaldo;
+            return (this.saldo += nuevoSaldo);
         }
 
 
@@ -29,13 +29,14 @@ export default function depositarDinero(cuenta, input, btnDepositar, btnLimpiar)
 
         const instanciaCuenta = new CuentaBancaria;
 
+        instanciaCuenta.depositarSaldo($valorInput);
+
+        
+        console.log(instanciaCuenta.saldo);
 
 
 
     });
-
-    console.log();
-
 }
 
 
