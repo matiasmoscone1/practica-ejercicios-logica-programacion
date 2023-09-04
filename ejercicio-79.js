@@ -8,6 +8,7 @@ export default function depositarDinero(cuenta, input, btnDepositar, btnLimpiar)
 
     const $cuenta = document.querySelector(cuenta);
     const $btnDepositar = document.querySelector(btnDepositar);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
 
     $cuenta.textContent = `Cuenta: $0`;
 
@@ -36,6 +37,15 @@ export default function depositarDinero(cuenta, input, btnDepositar, btnLimpiar)
 
 
     });
+
+    $btnLimpiar.addEventListener("click", () => {
+        $cuenta.textContent = `Cuenta: $0`;
+        document.querySelector(input).value = "";
+    });
+
 }
+
+
+
 
 
