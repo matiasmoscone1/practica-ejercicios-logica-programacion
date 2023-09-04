@@ -9,7 +9,7 @@ export default function depositarDinero(cuenta, input, btnDepositar, btnLimpiar)
     const $cuenta = document.querySelector(cuenta);
     const $btnDepositar = document.querySelector(btnDepositar);
 
-    $cuenta.textContent = `Cuenta: 0$`;
+    $cuenta.textContent = `Cuenta: $0`;
 
     class CuentaBancaria{
         constructor(saldo){
@@ -17,7 +17,6 @@ export default function depositarDinero(cuenta, input, btnDepositar, btnLimpiar)
         }
 
         depositarSaldo(nuevoSaldo){
-
             this.saldo += parseFloat(nuevoSaldo);
             return (this.saldo);
         }
@@ -31,9 +30,9 @@ export default function depositarDinero(cuenta, input, btnDepositar, btnLimpiar)
 
         instanciaCuenta.depositarSaldo($valorInput);
 
-        
-        console.log(instanciaCuenta.saldo);
-
+        $cuenta.textContent = `Cuenta: $${instanciaCuenta.saldo}`;
+        //console.log(instanciaCuenta.saldo);
+        document.querySelector(input).value = "";
 
 
     });
