@@ -17,17 +17,17 @@ export default function depositarDinero(cuenta, input, btnDepositar, btnLimpiar)
         }
 
         depositarSaldo(nuevoSaldo){
-            return (this.saldo += nuevoSaldo);
+
+            this.saldo += parseFloat(nuevoSaldo);
+            return (this.saldo);
         }
-
-
     }
+
+    const instanciaCuenta = new CuentaBancaria(0);
 
     $btnDepositar.addEventListener("click", () => {
 
         const $valorInput = document.querySelector(input).value;
-
-        const instanciaCuenta = new CuentaBancaria;
 
         instanciaCuenta.depositarSaldo($valorInput);
 
