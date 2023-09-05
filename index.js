@@ -161,7 +161,8 @@ document.addEventListener("DOMContentLoaded", () => {
     crearPersona(".btn-crear-ej-77", ".btn-limpiar-ej-77", ".nombre-ej-77", ".apellido-ej-77", ".edad-ej-77", ".resultado-ej-77");
     calcularArea(".btn-calcular-ej-78", ".btn-limpiar-ej-78", ".ancho-ej-78", ".alto-ej-78", ".resultado-ej-78");
     depositarDinero(".cuenta-ej-79", ".input-ej-79", ".btn-depositar-ej-79", ".btn-limpiar-ej-79");
-    calculadoraClase();
+    calculadoraClase(".input1-ej-80", ".input2-ej-80", ".btn-sumar-ej-80", ".btn-restar-ej-80",
+    ".btn-multiplicar-ej-80", ".btn-dividir-ej-80");
     
 
 });
