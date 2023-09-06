@@ -15,6 +15,18 @@ export default function calculadoraClase(input1, input2, btnSuma, btnResta, btnM
             this.res = parseFloat(numero1) + parseFloat(numero2);
             return(console.log(this.res));
         }
+        restar(numero1, numero2){
+            this.res = parseFloat(numero1) - parseFloat(numero2);
+            return(console.log(this.res));
+        }
+        multiplicar(numero1, numero2){
+            this.res = parseFloat(numero1) * parseFloat(numero2);
+            return(console.log(this.res));
+        }
+        dividir(numero1, numero2){
+            this.res = parseFloat(numero1) / parseFloat(numero2);
+            return(console.log(this.res));
+        }
 
     }
 
