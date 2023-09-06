@@ -6,6 +6,8 @@
 export default function calculadoraClase(input1, input2, btnSuma, btnResta, btnMulti, btnDivi, resultado){
 
 
+    const $resultado = document.querySelector(resultado);
+    
     class Calculadora{
         constructor(res){
             this.res = res;
@@ -13,21 +15,24 @@ export default function calculadoraClase(input1, input2, btnSuma, btnResta, btnM
 
         sumar(numero1, numero2){
             this.res = parseFloat(numero1) + parseFloat(numero2);
-            return(console.log(this.res));
+            //return(console.log(this.res));
+            return($resultado.textContent = `Resultado: ${this.res}`);
         }
         restar(numero1, numero2){
             this.res = parseFloat(numero1) - parseFloat(numero2);
-            return(console.log(this.res));
+            //return(console.log(this.res));
+            return($resultado.textContent = `Resultado: ${this.res}`);
         }
         multiplicar(numero1, numero2){
             this.res = parseFloat(numero1) * parseFloat(numero2);
-            return(console.log(this.res));
+            //return(console.log(this.res));
+            return($resultado.textContent = `Resultado: ${this.res}`);
         }
         dividir(numero1, numero2){
             this.res = parseFloat(numero1) / parseFloat(numero2);
-            return(console.log(this.res));
+            //return(console.log(this.res));
+            return($resultado.textContent = `Resultado: ${this.res}`);
         }
-
     }
 
 
@@ -39,16 +44,16 @@ export default function calculadoraClase(input1, input2, btnSuma, btnResta, btnM
         const instancaiCalculadora = new Calculadora;
 
         if(e.target.matches(btnSuma)){
-            console.log("hola");
+            //console.log("hola");
             instancaiCalculadora.sumar($input1, $input2);
         }else if(e.target.matches(btnResta)){
-            console.log("resta");
+            //console.log("resta");
             instancaiCalculadora.restar($input1, $input2);
         }else if(e.target.matches(btnMulti)){
-            console.log("multi");
+            //console.log("multi");
             instancaiCalculadora.multiplicar($input1, $input2);
         }else if(e.target.matches(btnDivi)){
-            console.log("divi");
+            //console.log("divi");
             instancaiCalculadora.dividir($input1, $input2);
         }
 
