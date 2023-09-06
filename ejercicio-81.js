@@ -15,10 +15,8 @@ export default function modificarLibro(titulo, autor, anio, btnCrear, btnLimpiar
             this.anio = anio;
         }
 
-        crearLibro(tit, aut, an){
-            this.titulo = tit;
-            this.autor = aut;
-            this.anio = an;
+        mostrarLibro(){
+            return(this.titulo, this.autor, this.anio);
         }
 
     }
@@ -30,8 +28,9 @@ export default function modificarLibro(titulo, autor, anio, btnCrear, btnLimpiar
         const $autor = document.querySelector(autor).value;
         const $anio = document.querySelector(anio).value;
     
+        const instanciaLibro = new Libro($titulo, $autor, $anio);
 
-        
+        console.log(instanciaLibro.mostrarLibro());
 
     });
 
