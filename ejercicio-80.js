@@ -43,10 +43,13 @@ export default function calculadoraClase(input1, input2, btnSuma, btnResta, btnM
             instancaiCalculadora.sumar($input1, $input2);
         }else if(e.target.matches(btnResta)){
             console.log("resta");
+            instancaiCalculadora.restar($input1, $input2);
         }else if(e.target.matches(btnMulti)){
             console.log("multi");
+            instancaiCalculadora.multiplicar($input1, $input2);
         }else if(e.target.matches(btnDivi)){
             console.log("divi");
+            instancaiCalculadora.dividir($input1, $input2);
         }
 
 
