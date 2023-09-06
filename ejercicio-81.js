@@ -7,6 +7,7 @@ export default function modificarLibro(titulo, autor, anio, btnCrear, btnLimpiar
 
     const $btnCrear = document.querySelector(btnCrear);
     const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $resultado = document.querySelector(resultado);
 
     class Libro{
         constructor(titulo, autor, anio){
@@ -15,9 +16,10 @@ export default function modificarLibro(titulo, autor, anio, btnCrear, btnLimpiar
             this.anio = anio;
         }
 
+        /*
         mostrarLibro(){
-            return(this.titulo, this.autor, this.anio);
-        }
+            return($resultado.textContent = `Titulo: ${this.titulo} \nAutor: ${this.autor} \nAño: ${this.anio}`);
+        }*/
 
     }
 
@@ -30,7 +32,9 @@ export default function modificarLibro(titulo, autor, anio, btnCrear, btnLimpiar
     
         const instanciaLibro = new Libro($titulo, $autor, $anio);
 
-        console.log(instanciaLibro.mostrarLibro());
+        $resultado.textContent = `Titulo: ${instanciaLibro.titulo} \nAutor: ${instanciaLibro.autor} \nAño: ${instanciaLibro.anio}`;
+        
+        //console.log(instanciaLibro.mostrarLibro());
 
     });
 
