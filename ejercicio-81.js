@@ -38,6 +38,12 @@ export default function modificarLibro(titulo, autor, anio, btnCrear, btnLimpiar
 
     });
 
+    $btnLimpiar.addEventListener("click", () => {
+        $resultado.textContent = "";
+        document.querySelector(titulo).value = "";
+        document.querySelector(autor).value = "";
+        document.querySelector(anio).value = "";
+    });
 
 
 }
