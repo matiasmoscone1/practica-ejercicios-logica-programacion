@@ -11,15 +11,18 @@ export default function tiendaOnline(nombre, precio, btnAgregar, lista, btnCalcu
     const $btnLimpiar = document.querySelector(btnLimpiar);
     const $resultado = document.querySelector(resultado);
 
+
     class TiendaOnline{
         constructor(){
             this.carrito = [];
         }
+
+        agregarCarrito(producto){
+            this.carrito.push(producto);
+        }
+
     }
-    /*
-    agregarCarrito(producto){
-        this.carrito = 
-    }*/
+
 
     const instanciaTienda = new TiendaOnline;
 
@@ -31,6 +34,7 @@ export default function tiendaOnline(nombre, precio, btnAgregar, lista, btnCalcu
 
         instanciaTienda.agregarCarrito(nuevoProducto);
     
+        console.log(instanciaTienda.carrito);
     });
 
 
