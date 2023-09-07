@@ -6,6 +6,21 @@
 
 export default function tiendaOnline(nombre, precio, btnAgregar, lista, btnCalcular, resultado, btnLimpiar){
 
+    const $btnCalcular = document.querySelector(btnCalcular);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $resultado = document.querySelector(resultado);
+    
+    class TiendaOnline{
+        constructor(carrito){
+            this.carrito = carrito;
+        }
+    }
+
+    agregarCarrito(producto){
+
+    }
+
+
 
 
 }
