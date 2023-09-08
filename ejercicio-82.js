@@ -34,7 +34,6 @@ export default function tiendaOnline(nombre, precio, btnAgregar, lista, btnCalcu
     }
 
 
-
     const instanciaTienda = new TiendaOnline;
 
     $btnAgregar.addEventListener("click", () => {
@@ -52,12 +51,20 @@ export default function tiendaOnline(nombre, precio, btnAgregar, lista, btnCalcu
     });
 
     $btnCalcular.addEventListener("click", () => {
-  
+
         instanciaTienda.calcularTotal();
         $resultado.textContent = `Total: $${instanciaTienda.total}`;
-
-
+    
     });
+
+    $btnLimpiar.addEventListener("click", () => {
+        
+        $lista.innerHTML = "";
+        $resultado.textContent = "";
+        document.querySelector(nombre).value = "";
+        document.querySelector(precio).value = "";
+    });
+
 
 }
 
