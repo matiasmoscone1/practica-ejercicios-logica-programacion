@@ -4,7 +4,7 @@
 //calcular el total y realizar un pedido.
 
 
-export default function tiendaOnline(nombre, precio, btnAgregar, lista, btnCalcular, resultado, btnLimpiar){
+export default function tiendaOnline(nombre, precio, btnAgregar, lista, btnCalcular, btnLimpiar, resultado){
 
     const $btnAgregar = document.querySelector(btnAgregar);
     const $btnCalcular = document.querySelector(btnCalcular);
@@ -16,6 +16,7 @@ export default function tiendaOnline(nombre, precio, btnAgregar, lista, btnCalcu
     class TiendaOnline{
         constructor(){
             this.carrito = [];
+            this.total = 0;
         }
 
         agregarCarrito(producto){
@@ -24,10 +25,9 @@ export default function tiendaOnline(nombre, precio, btnAgregar, lista, btnCalcu
 
         calcularTotal(){
             this.carrito.map((producto) => {
-                let acumulador = new Number(0);
-                acumulador += parseFloat(producto.precio);
-                console.log(acumulador);
-                return(acumulador);
+                this.total += parseFloat(producto.precio);
+                console.log(this.total);
+                return(this.total);
             })
         }
 
@@ -52,9 +52,9 @@ export default function tiendaOnline(nombre, precio, btnAgregar, lista, btnCalcu
     });
 
     $btnCalcular.addEventListener("click", () => {
+  
+        $resultado.textContent = `Total: ${instanciaTienda.calcularTotal()}`;
 
-        
-        console.log(instanciaTienda.calcularTotal());
 
     });
 
