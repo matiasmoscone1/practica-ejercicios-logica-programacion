@@ -37,8 +37,9 @@ export default function tiendaOnline(nombre, precio, btnAgregar, lista, btnCalcu
         let nuevoProducto = {nombre: $nombre, precio: $precio};
 
         instanciaTienda.agregarCarrito(nuevoProducto);
-    
-        $lista.innerHTML = `${instanciaTienda.carrito.map((producto) => {producto.nombre, producto.precio})}`
+
+        
+        $lista.innerHTML = `${instanciaTienda.carrito.map((producto) => `<div>Precio: ${producto.nombre} Precio: ${producto.precio}`).join("")}`;
 
         console.log(instanciaTienda.carrito);
     });
