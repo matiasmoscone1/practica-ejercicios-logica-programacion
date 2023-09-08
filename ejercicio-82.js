@@ -46,14 +46,15 @@ export default function tiendaOnline(nombre, precio, btnAgregar, lista, btnCalcu
         instanciaTienda.agregarCarrito(nuevoProducto);
 
         
-        $lista.innerHTML = `${instanciaTienda.carrito.map((producto) => `<div>Precio: ${producto.nombre} Precio: ${producto.precio}`).join("")}`;
+        $lista.innerHTML = `${instanciaTienda.carrito.map((producto) => `<div>Nombre: ${producto.nombre} - Precio: $${producto.precio}`).join("")}`;
 
         console.log(instanciaTienda.carrito);
     });
 
     $btnCalcular.addEventListener("click", () => {
   
-        $resultado.textContent = `Total: ${instanciaTienda.calcularTotal()}`;
+        instanciaTienda.calcularTotal();
+        $resultado.textContent = `Total: $${instanciaTienda.total}`;
 
 
     });
