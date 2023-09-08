@@ -31,6 +31,14 @@ export default function tiendaOnline(nombre, precio, btnAgregar, lista, btnCalcu
             })
         }
 
+        limpiarCarrito(){
+            this.carrito.map((producto) => {
+                this.carrito.splice(producto);
+            });
+            this.total = 0;
+        }
+
+
     }
 
 
@@ -63,6 +71,9 @@ export default function tiendaOnline(nombre, precio, btnAgregar, lista, btnCalcu
         $resultado.textContent = "";
         document.querySelector(nombre).value = "";
         document.querySelector(precio).value = "";
+        instanciaTienda.limpiarCarrito();
+
+
     });
 
 
