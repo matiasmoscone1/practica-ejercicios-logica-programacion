@@ -22,10 +22,17 @@ export default function tiendaOnline(nombre, precio, btnAgregar, lista, btnCalcu
             this.carrito.push(producto);
         }
 
-
-
+        calcularTotal(){
+            this.carrito.map((producto) => {
+                let acumulador = new Number(0);
+                acumulador += parseFloat(producto.precio);
+                console.log(acumulador);
+                return(acumulador);
+            })
+        }
 
     }
+
 
 
     const instanciaTienda = new TiendaOnline;
@@ -44,7 +51,12 @@ export default function tiendaOnline(nombre, precio, btnAgregar, lista, btnCalcu
         console.log(instanciaTienda.carrito);
     });
 
+    $btnCalcular.addEventListener("click", () => {
 
+        
+        console.log(instanciaTienda.calcularTotal());
+
+    });
 
 }
 
