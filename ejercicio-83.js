@@ -11,7 +11,12 @@ export default function muestraScroll(btnMostrar, btnOcultar, resultado){
     const $resultado = document.querySelector(resultado);
 
 
-    
+    $btnMostrar.addEventListener("click", () => {
+        let posicionScroll = window.scrollY;
+
+        console.log(posicionScroll);
+    });
+
 
 }
 
