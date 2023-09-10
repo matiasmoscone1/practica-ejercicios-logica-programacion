@@ -167,6 +167,6 @@ document.addEventListener("DOMContentLoaded", () => {
     calculadoraClase(".input1-ej-80", ".input2-ej-80", ".btn-sumar-ej-80", ".btn-restar-ej-80", ".btn-multiplicar-ej-80", ".btn-dividir-ej-80", ".resultado-ej-80");
     modificarLibro(".titulo-ej-81", ".autor-ej-81", ".anio-ej-81", ".btn-crear-ej-81", ".btn-limpiar-ej-81", ".resultado-ej-81");
     tiendaOnline(".nombre-ej-82", ".precio-ej-82", ".btn-agregar-ej-82", ".lista-productos-ej-82", ".btn-calcular-ej-82",".btn-limpiar-ej-82", ".resultado-ej-82");
-    muestraScroll();
+    muestraScroll(".btn-mostrar-ej-83", ".btn-ocultar-ej-83", ".resultado-ej-83");
 
 });
