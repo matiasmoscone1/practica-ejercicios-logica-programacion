@@ -16,7 +16,9 @@ export default function muestraScroll(btnMostrar, btnOcultar, resultado){
         document.addEventListener("scroll", (e) => {
             let posicionScroll = window.scrollY;
 
-            console.log(posicionScroll);
+            //console.log(posicionScroll);
+
+            $resultado.textContent = `La posicion del scroll es: ${Math.floor(posicionScroll)}`;
 
         });
     });
