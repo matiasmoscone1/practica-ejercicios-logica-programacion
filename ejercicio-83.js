@@ -11,16 +11,31 @@ export default function muestraScroll(btnMostrar, btnOcultar, resultado){
     const $resultado = document.querySelector(resultado);
 
 
+    let eventoScrollActvo = false;
+    let src;
+
     $btnMostrar.addEventListener("click", () => {
-        
-        document.addEventListener("scroll", (e) => {
-            let posicionScroll = window.scrollY;
+  
+        if(!eventoScrollActvo){
+           
+            src = () => {
+                let posicionScroll = window.scrollY;
+                //console.log(posicionScroll);
+                $resultado.textContent = `La posicion del scroll es: ${Math.floor(posicionScroll)}`;
 
-            //console.log(posicionScroll);
+            }        
+            document.addEventListener("scroll", src);
+            eventoScrollActvo = true;
+        }
 
-            $resultado.textContent = `La posicion del scroll es: ${Math.floor(posicionScroll)}`;
+    });
 
-        });
+    $btnOcultar.addEventListener("click", () => {
+        if(eventoScrollActvo){          
+            $resultado.textContent = "";
+            document.removeEventListener("scroll", src);
+            eventoScrollActvo = false;
+        }   
     });
 
 
