@@ -22,12 +22,13 @@ export default function estudiantes(btnAgregar, btnLimpiar, lista, resultado){
     
     }
 
-    $btnAgregar.addEventListener("click", () => {
-        const nombre = document.querySelector(".input-nombre-ej-84");
-        const edad = document.querySelector(".input-edad-ej-84");
-        const matematicas = document.querySelector(".input-cal-uno-ej-84");
-        const historia = document.querySelector(".input-cal-dos-ej-84");
-        const lengua = document.querySelector(".input-cal-tres-ej-84");
+    $btnAgregar.addEventListener("click", (e) => {
+        e.preventDefault();
+        const nombre = document.querySelector(".input-nombre-ej-84").value;
+        const edad = document.querySelector(".input-edad-ej-84").value;
+        const matematicas = document.querySelector(".input-cal-uno-ej-84").value;
+        const historia = document.querySelector(".input-cal-dos-ej-84").value;
+        const lengua = document.querySelector(".input-cal-tres-ej-84").value;
 
         const nuevasCalificaciones = [];
         nuevasCalificaciones.push(matematicas);
@@ -38,10 +39,16 @@ export default function estudiantes(btnAgregar, btnLimpiar, lista, resultado){
 
         console.log(instanciaEstudiante);
 
+        $lista.innerHTML = `Nombre: ${instanciaEstudiante.nombre}<br> Edad: ${instanciaEstudiante.edad}
+        <br> Matematicas: ${instanciaEstudiante.calificaciones[0]} Historia: ${instanciaEstudiante.calificaciones[1]}
+        Lengua: ${instanciaEstudiante.calificaciones[2]}`;
+
 
     });
 
-
+    $btnLimpiar.addEventListener("click", () => {
+        console.log("asd");
+    });
     
 }
 
