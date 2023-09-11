@@ -4,11 +4,12 @@
 //de calificaciones, y un método para calcular el promedio de calificaciones.
 
 
-export default function estudiantes(btnAgregar, btnLimpiar, lista, resultado){
+export default function estudiantes(btnAgregar, btnLimpiar,  lista, btnCalcular, resultado){
 
 
     const $btnAgregar = document.querySelector(btnAgregar);
     const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $btnCalcular = document.querySelector(btnCalcular);
     const $lista = document.querySelector(lista);
     const $resultado = document.querySelector(resultado);
 
@@ -19,6 +20,14 @@ export default function estudiantes(btnAgregar, btnLimpiar, lista, resultado){
             this.edad = edad;
             this.calificaciones = calificaciones;
         }
+
+        calcularPromedio(calificaciones){
+            let res = 0;
+            this.calificaciones.map((nota) => {
+                res += parseFloat(nota);
+            });
+            return(res / 3);
+       }
     
     }
 
@@ -43,8 +52,15 @@ export default function estudiantes(btnAgregar, btnLimpiar, lista, resultado){
         <br> Matematicas: ${instanciaEstudiante.calificaciones[0]} Historia: ${instanciaEstudiante.calificaciones[1]}
         Lengua: ${instanciaEstudiante.calificaciones[2]}`;
 
+        $btnCalcular.addEventListener("click", () => {
+        
+            $resultado.textContent = `${instanciaEstudiante.calcularPromedio()}`;
+
+        });
 
     });
+
+
 
     $btnLimpiar.addEventListener("click", () => {
         console.log("asd");
