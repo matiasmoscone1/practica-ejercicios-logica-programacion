@@ -15,11 +15,10 @@ export default function estudiantes(btnAgregar, btnLimpiar, lista, resultado){
 
     class Estudiante{
         constructor(nombre, edad, calificaciones){
-            this.nombre = "";
-            this.edad = "";
-            this.calificaciones = [];
+            this.nombre = nombre;
+            this.edad = edad;
+            this.calificaciones = calificaciones;
         }
-    
     
     }
 
@@ -30,9 +29,16 @@ export default function estudiantes(btnAgregar, btnLimpiar, lista, resultado){
         const historia = document.querySelector(".input-cal-dos-ej-84");
         const lengua = document.querySelector(".input-cal-tres-ej-84");
 
+        const nuevasCalificaciones = [];
+        nuevasCalificaciones.push(matematicas);
+        nuevasCalificaciones.push(historia);
+        nuevasCalificaciones.push(lengua);
+
+        const instanciaEstudiante = new Estudiante(nombre, edad, nuevasCalificaciones)
+
+        console.log(instanciaEstudiante);
 
 
-        
     });
 
 
