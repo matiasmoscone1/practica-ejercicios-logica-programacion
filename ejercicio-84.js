@@ -54,7 +54,7 @@ export default function estudiantes(btnAgregar, btnLimpiar,  lista, btnCalcular,
 
         $btnCalcular.addEventListener("click", () => {
         
-            $resultado.textContent = `${instanciaEstudiante.calcularPromedio()}`;
+            $resultado.textContent = `El promedio es: ${instanciaEstudiante.calcularPromedio().toFixed(2)}`;
 
         });
 
@@ -62,7 +62,8 @@ export default function estudiantes(btnAgregar, btnLimpiar,  lista, btnCalcular,
 
 
 
-    $btnLimpiar.addEventListener("click", () => {
+    $btnLimpiar.addEventListener("click", (e) => {
+        e.preventDefault();
         console.log("asd");
     });
     
