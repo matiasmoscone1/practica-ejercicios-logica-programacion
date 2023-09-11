@@ -64,7 +64,13 @@ export default function estudiantes(btnAgregar, btnLimpiar,  lista, btnCalcular,
 
     $btnLimpiar.addEventListener("click", (e) => {
         e.preventDefault();
-        console.log("asd");
+        document.querySelector(".input-nombre-ej-84").value = "";
+        document.querySelector(".input-edad-ej-84").value = "";
+        document.querySelector(".input-cal-uno-ej-84").value = "";
+        document.querySelector(".input-cal-dos-ej-84").value = "";
+        document.querySelector(".input-cal-tres-ej-84").value = "";
+        $lista.innerHTML = "";
+        $resultado.textContent = "";
     });
     
 }
