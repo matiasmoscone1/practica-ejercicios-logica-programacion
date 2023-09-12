@@ -17,7 +17,9 @@ export default function ejercicioPlaylist(playlist, btnReproducir, btnParar, res
             }
         }
 
+        borrarCancion(id){
 
+        }
 
     }
 
@@ -30,6 +32,12 @@ export default function ejercicioPlaylist(playlist, btnReproducir, btnParar, res
             instanciaPlaylist.agregarCancion("Cancion 2");
         }else if(e.target.matches(btnAgregarTres)){
             instanciaPlaylist.agregarCancion("Cancion 3");
+        }else if(e.target.matches(".btn-borrar-uno-ej-85")){
+            instanciaPlaylist.borrarCancion("Cancion 1");
+        }else if(e.target.matches(".btn-borrar-dos-ej-85")){
+            instanciaPlaylist.borrarCancion("Cancion 2");
+        }else if(e.target.matches(".btn-borrar-tres-ej-85")){
+            instanciaPlaylist.borrarCancion("Cancion 3");
         }
 
         $lista.innerHTML = `[${instanciaPlaylist.canciones.map((cancion) => {
