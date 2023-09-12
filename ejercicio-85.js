@@ -17,8 +17,10 @@ export default function ejercicioPlaylist(playlist, btnReproducir, btnParar, res
             }
         }
 
-        borrarCancion(id){
-
+        borrarCancion(cancion){
+            this.canciones = this.canciones.filter((c) => {
+                return c !== cancion;
+            });
         }
 
     }
