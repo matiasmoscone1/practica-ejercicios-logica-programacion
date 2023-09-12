@@ -5,6 +5,9 @@
 export default function ejercicioPlaylist(playlist, btnReproducir, btnParar, resultado, btnAgregarUno, btnAgregarDos, btnAgregarTres){
 
     const $lista = document.querySelector(playlist);
+    const $btnReproducir = document.querySelector(btnReproducir);
+    const $btnParar = document.querySelector(btnParar);
+    const $resultado = document.querySelector(resultado);
 
     class Playlist{
         constructor(){
