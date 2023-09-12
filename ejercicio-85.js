@@ -12,9 +12,8 @@ export default function ejercicioPlaylist(playlist, btnReproducir, btnParar, res
         }
 
         agregarCancion(cancion){
-            this.canciones.push(cancion);
-            if(this.canciones.length > 3){
-                return;
+            if(this.canciones.length < 3){
+                this.canciones.push(cancion);
             }
         }
 
