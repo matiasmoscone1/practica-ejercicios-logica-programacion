@@ -82,6 +82,7 @@ import modificarLibro from "./ejercicio-81.js";
 import tiendaOnline from "./ejercicio-82.js";
 import muestraScroll from "./ejercicio-83.js";
 import estudiantes from "./ejercicio-84.js";
+import ejercicioPlaylist from "./ejercicio-85.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -170,6 +171,6 @@ document.addEventListener("DOMContentLoaded", () => {
     tiendaOnline(".nombre-ej-82", ".precio-ej-82", ".btn-agregar-ej-82", ".lista-productos-ej-82", ".btn-calcular-ej-82",".btn-limpiar-ej-82", ".resultado-ej-82");
     muestraScroll(".btn-mostrar-ej-83", ".btn-ocultar-ej-83", ".resultado-ej-83");
     estudiantes(".btn-agregar-ej-84", ".btn-limpiar-ej-84", ".lista-alumnos-ej-84", ".btn-calcular-ej-84",".resultado-ej-84");
-    
+    ejercicioPlaylist(".div-playlist-ej-85", ".btn-reproducir-ej-85", ".btn-parar-ej-85", ".resultado-reproducir-ej-85", ".btn-agregar-uno-ej-85", ".btn-agregar-dos-ej-85", ".btn-agregar-tres-ej-85")
 
 });
