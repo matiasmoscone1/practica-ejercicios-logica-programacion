@@ -54,6 +54,15 @@ export default function ejercicioPlaylist(playlist, btnReproducir, btnParar, res
         console.log(instanciaPlaylist.canciones);
     });
 
+    $btnReproducir.addEventListener("click", () => {
+
+        const random = Math.random() * 3;
+
+        $resultado.textContent = `Se esta reproduciendo la cancion: ${instanciaPlaylist.canciones[random]}`;
+
+
+
+    });
 
 
 
