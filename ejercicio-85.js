@@ -21,9 +21,10 @@ export default function ejercicioPlaylist(playlist, btnReproducir, btnParar, res
         }
 
         borrarCancion(cancion){
-            this.canciones = this.canciones.filter((c) => {
-                return c !== cancion;
-            });
+            const index = this.canciones.indexOf(cancion)
+            if(index !== -1){
+                this.canciones.splice(index, 1);
+            }
         }
 
     }
