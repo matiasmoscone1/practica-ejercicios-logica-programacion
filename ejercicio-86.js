@@ -1,6 +1,6 @@
 
 
-//86. Desarrolla una clase Vehículo con propiedades para marca, modelo y año, y un método para 
+//86. Desarrolla una clase Vehículo con propiedades para marca, modelo, color y un método para 
 //calcular la antigüedad del vehículo.
 
 export default function calculaVehiculo(){
@@ -8,7 +8,7 @@ export default function calculaVehiculo(){
 
 
 
-    
+
 
 }
 
