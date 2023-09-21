@@ -42,17 +42,22 @@ export default function calculaVehiculo(marca, modelo, color, btnCalcular, btnLi
         const mod = document.querySelector(modelo).value;
         const col = document.querySelector(color).value;
 
+        //crea la instancia de la clase y le pasa por parametros el valor de los inputs
         const instanciaVehiculo = new Vehiculo(mar, mod, col);
 
         //console.log(instanciaVehiculo);
 
+        //crea una variable res que almacenara el resultado del metodo llamado 
         const res = instanciaVehiculo.calcularAntiguedad(instanciaVehiculo.modelo);
 
+        //muestra en el DOM el resultado del metodo
         $resultado.textContent = `El vehiculo posee una antiguedad de: ${res} años.`;
 
     });
 
+    //captando evento click del boton Limpiar
     $btnLimpiar.addEventListener("click", () => {
+        //limipa los inputs del usuario y el resultado del DOM
         document.querySelector(marca).value = "";
         document.querySelector(modelo).value = "";
         document.querySelector(color).value = "";
