@@ -45,9 +45,15 @@ export default function calculaVehiculo(marca, modelo, color, btnCalcular, btnLi
 
         $resultado.textContent = `El vehiculo posee una antiguedad de: ${res} años.`;
 
-
     });
 
+    $btnLimpiar.addEventListener("click", () => {
+        document.querySelector(marca).value = "";
+        document.querySelector(modelo).value = "";
+        document.querySelector(color).value = "";
+        $resultado.textContent = "";
+
+    });
 
 
 
