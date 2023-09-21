@@ -27,7 +27,17 @@ export default function calculaVehiculo(marca, modelo, color, btnCalcular, btnLi
 
 
     $btnCalcular.addEventListener("click", () => {
-        
+
+
+        const mar = document.querySelector(marca).value;
+        const mod = document.querySelector(modelo).value;
+        const col = document.querySelector(color).value;
+
+        const instanciaVehiculo = new Vehiculo(mar, mod, col);
+
+        console.log(instanciaVehiculo);
+
+
     });
 
 
