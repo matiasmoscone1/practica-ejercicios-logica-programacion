@@ -6,33 +6,38 @@
 export default function calculaVehiculo(marca, modelo, color, btnCalcular, btnLimpiar, resultado){
 
 
+    //creando variables referenciales al DOM
     const $btnCalcular = document.querySelector(btnCalcular);
     const $btnLimpiar = document.querySelector(btnLimpiar);
     const $resultado = document.querySelector(resultado);
 
 
+    //creando clase Vehiculo
     class Vehiculo{
+        //construyendo la clase con los atributos, marca, modelo y color
         constructor(marca, modelo, color){
             this.marca = marca;
             this.modelo = modelo;
             this.color = color;
         }
 
+        //creando metodo que calcula la antiguedad del auto, pasa por parametro el modelo del auto
         calcularAntiguedad(anio){
+            //crea una nueva fecha para sacar los años actuales
             const fecha = new Date();
+            //realiza un calculo de los años actuales menos el modelo y da la antiguedad del auto
             const resultado = fecha.getFullYear() - anio;
             return(resultado);
         }
-
-
 
     }
 
 
 
+    //captando evento click del boton Calcular
     $btnCalcular.addEventListener("click", () => {
 
-
+        //toma los valores del input escrito por el usuario
         const mar = document.querySelector(marca).value;
         const mod = document.querySelector(modelo).value;
         const col = document.querySelector(color).value;
