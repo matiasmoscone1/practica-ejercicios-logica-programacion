@@ -18,7 +18,11 @@ export default function calculaVehiculo(marca, modelo, color, btnCalcular, btnLi
             this.color = color;
         }
 
-
+        calcularAntiguedad(anio){
+            const fecha = new Date();
+            const resultado = fecha.getFullYear() - anio;
+            return(console.log(resultado));
+        }
 
 
 
@@ -35,8 +39,9 @@ export default function calculaVehiculo(marca, modelo, color, btnCalcular, btnLi
 
         const instanciaVehiculo = new Vehiculo(mar, mod, col);
 
-        console.log(instanciaVehiculo);
+        //console.log(instanciaVehiculo);
 
+        instanciaVehiculo.calcularAntiguedad(instanciaVehiculo.modelo);
 
     });
 
