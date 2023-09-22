@@ -35,7 +35,7 @@ export default function datosUsuarios(btnIniciar, btnParar, resultado){
         await callAPI();
         console.log(datos);
         
-        $resultado.innerHTML = `${datos.map((usuario) => `Usuario: ${usuario} <br>`)}`;
+        $resultado.innerHTML = `${datos.map((usuario) => `Nombre: ${usuario.firstname} - Apellido: ${usuario.lastname} - Email: ${usuario.email} <br>`).join("")}`;
 
 
     });
