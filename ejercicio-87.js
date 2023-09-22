@@ -15,15 +15,18 @@ export default function datosUsuarios(btnIniciar, btnParar, resultado){
 
     let datos = [];
 
-    const callAPI = () => {
+    const callAPI = async () => {
         
-        fetch(URL)
+        await fetch(URL)
         .then((response) => response.json())
-        .then((data) => datos.push(data));
+        .then((data) => {datos = [...data]});
 
-        console.log(datos);
+     
+        console.log(datos)
 
     };
+
+
 
     $btnIniciar.addEventListener("click", () => {
         
