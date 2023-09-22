@@ -17,6 +17,9 @@ export default function datosUsuarios(btnIniciar, btnParar, resultado){
 
     //Creando array vacio donde se almacenaran todos los datos de la API
     let datos = [];
+    //se crea una bandera donde se pondra en true cuando exista un error
+    let error = false;
+    let err = {};
 
     //Creando funcion llamadora de la API, Es una funcion asincrona
     const callAPI = async () => {
@@ -31,7 +34,11 @@ export default function datosUsuarios(btnIniciar, btnParar, resultado){
             .then((data) => {datos = [...data]});
             //manipula el error
         }catch(e){
-            console.log({e});
+            //$resultado.innerHTML = `Ha ocurrido el error: ${e.message} en ${e.stack}`;
+            error = true;
+            //console.log(e);
+            err = e;
+           
         }
         //console.log(datos)
 
@@ -47,6 +54,14 @@ export default function datosUsuarios(btnIniciar, btnParar, resultado){
 
         //Muestra todo el resultado de los usuarios en el DOM
         $resultado.innerHTML = `${datos.map((usuario) => `Nombre: ${usuario.firstname} - Apellido: ${usuario.lastname} - Email: ${usuario.email} <br>`).join("")}`;
+        
+
+        //si existe el error, que lo muestre en el DOM
+        if(error){
+            $resultado.innerHTML = `Error: ${err.message} <br> Stack: ${err.stack}`;
+            //console.log(err);
+        }
+    
     });
 
     //captando el evento click del boton Limpiar
