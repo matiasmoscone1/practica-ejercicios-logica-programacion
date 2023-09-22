@@ -13,20 +13,23 @@ export default function datosUsuarios(btnIniciar, btnParar, resultado){
     const $btnParar = document.querySelector(btnParar);
     const $resultado = document.querySelector(resultado);
 
+    let datos = [];
+
     const callAPI = () => {
         
-        let datos = "";
-
         fetch(URL)
-        .then((response) => response.json)
-        .then((data) => datos = data);
+        .then((response) => response.json())
+        .then((data) => datos.push(data));
 
         console.log(datos);
+
     };
 
-   
-    callAPI();
+    $btnIniciar.addEventListener("click", () => {
+        
+        callAPI();
 
+    });
 
 
 
