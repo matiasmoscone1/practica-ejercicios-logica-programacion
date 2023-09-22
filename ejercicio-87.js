@@ -7,7 +7,7 @@
 
 export default function datosUsuarios(btnIniciar, btnParar, resultado){
 
-    const URL = "https://jsonplaceholder.org/users";
+    const URL = "https://jsonplacehlder.org/users";
 
     const $btnIniciar = document.querySelector(btnIniciar);
     const $btnParar = document.querySelector(btnParar);
@@ -17,12 +17,14 @@ export default function datosUsuarios(btnIniciar, btnParar, resultado){
 
     const callAPI = async () => {
         
-        await fetch(URL)
-        .then((response) => response.json())
-        .then((data) => {datos = [...data]});
-
-     
-        console.log(datos)
+        try{            
+            await fetch(URL)
+            .then((response) => response.json())
+            .then((data) => {datos = [...data]});
+        }catch(e){
+            console.log(e);
+        }
+        //console.log(datos)
 
     };
 
