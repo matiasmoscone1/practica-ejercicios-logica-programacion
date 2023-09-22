@@ -29,16 +29,19 @@ export default function datosUsuarios(btnIniciar, btnParar, resultado){
     };
 
 
-
     $btnIniciar.addEventListener("click", async () => {
         
         await callAPI();
-        console.log(datos);
-        
+        //console.log(datos);
+
         $resultado.innerHTML = `${datos.map((usuario) => `Nombre: ${usuario.firstname} - Apellido: ${usuario.lastname} - Email: ${usuario.email} <br>`).join("")}`;
-
-
     });
+
+
+    $btnParar.addEventListener("click", () => {
+        $resultado.innerHTML = "";
+    });
+
 
 }
 
