@@ -85,6 +85,7 @@ import estudiantes from "./ejercicio-84.js";
 import ejercicioPlaylist from "./ejercicio-85.js";
 import calculaVehiculo from "./ejercicio-86.js";
 import datosUsuarios from "./ejercicio-87.js";
+import crudAPI from "./ejercicio-88.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -176,6 +177,6 @@ document.addEventListener("DOMContentLoaded", () => {
     ejercicioPlaylist(".div-playlist-ej-85", ".btn-reproducir-ej-85", ".btn-parar-ej-85", ".resultado-reproducir-ej-85", ".btn-agregar-uno-ej-85", ".btn-agregar-dos-ej-85", ".btn-agregar-tres-ej-85")
     calculaVehiculo(".input-marca-ej-86", ".input-modelo-ej-86", ".input-color-ej-86", ".btn-calcular-ej-86", ".btn-limpiar-ej-86", ".resultado-ej-86");
     datosUsuarios(".btn-iniciar-ej-87", ".btn-parar-ej-87", ".resultado-ej-87");
-
+    crudAPI();
 
 });
