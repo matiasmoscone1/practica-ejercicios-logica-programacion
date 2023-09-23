@@ -11,6 +11,18 @@ export default function crudAPI(inputId, inputNombre, inputApellido, inputEmail,
     let usuarios = [];
 
     const $resultado = document.querySelector(resultado);
+    const $btnAgregar = document.querySelector(btnAgregar);
+
+
+    const callApi = async() => {
+
+        await fetch(url)
+        .then((response) => response.json())
+        .then((data) => {usuarios = [...data]});
+
+        //console.log(usuarios);
+
+    }
 
 
     const reutilizar = () => {
@@ -25,20 +37,8 @@ export default function crudAPI(inputId, inputNombre, inputApellido, inputEmail,
             <td><button>Borrar</button></td>
             </tr>`;    
         }
-        return filas;
-      
-    }
 
-    const callApi = async() => {
-
-        await fetch(url)
-        .then((response) => response.json())
-        .then((data) => {usuarios = [...data]});
-
-        //console.log(usuarios);
-
-        
-        $resultado.innerHTML = `<table border="1" class="resultado-ej-88">
+        $resultado.innerHTML = `<table border="1">
         <tr>
             <th>Id</th>
             <th>Nombre</th>
@@ -46,12 +46,34 @@ export default function crudAPI(inputId, inputNombre, inputApellido, inputEmail,
             <th>Email</th>
             <th>Acciones</th>
         </tr>
-        ${reutilizar()}
-                
-        
-    </table>`;
-
+        ${filas}
+        </table>`;
+        console.log(filas);
+      
     }
+
+    $btnAgregar.addEventListener("click", (e) => {
+        e.preventDefault();
+        const $inputId = document.querySelector(inputId).value;
+        const $inputNombre = document.querySelector(inputNombre).value;
+        const $inputApellido = document.querySelector(inputApellido).value;
+        const $inputEmail = document.querySelector(inputEmail).value;
+        
+        const nuevoUsuario = {
+            id: $inputId,
+            name: $inputNombre,
+            username: $inputApellido,
+            email: $inputEmail,
+        };
+
+        usuarios.push(nuevoUsuario);
+
+        reutilizar();
+    });
+
+
+    
+
 
     callApi();
     
