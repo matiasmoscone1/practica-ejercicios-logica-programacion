@@ -21,6 +21,8 @@ export default function crudAPI(inputId, inputNombre, inputApellido, inputEmail,
             <td>${usuarios[i].firstname}</td>
             <td>${usuarios[i].lastname}</td>
             <td>${usuarios[i].email}</td>
+            <td><button>Modificar</button></td>
+            <td><button>Borrar</button></td>
             </tr>`;    
         }
         return filas;
@@ -45,9 +47,7 @@ export default function crudAPI(inputId, inputNombre, inputApellido, inputEmail,
             <th>Acciones</th>
         </tr>
         ${reutilizar()}
-        
-
-        
+                
         
     </table>`;
 
