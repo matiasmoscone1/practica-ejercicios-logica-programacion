@@ -61,12 +61,14 @@ export default function crudAPI(inputId, inputNombre, inputApellido, inputEmail,
         
         const nuevoUsuario = {
             id: $inputId,
-            name: $inputNombre,
-            username: $inputApellido,
+            firstname: $inputNombre,
+            lastname: $inputApellido,
             email: $inputEmail,
         };
 
-        usuarios.push(nuevoUsuario);
+        usuarios.unshift(nuevoUsuario);
+
+        console.log(usuarios);
 
         reutilizar();
     });
