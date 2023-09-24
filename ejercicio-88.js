@@ -33,7 +33,7 @@ export default function crudAPI(inputId, inputNombre, inputApellido, inputEmail,
             <td>${usuarios[i].firstname}</td>
             <td>${usuarios[i].lastname}</td>
             <td>${usuarios[i].email}</td>
-            <td><button>Modificar</button></td>
+            <td><button class="btn-borrar" data-id="${usuarios[i].id}">Modificar</button></td>
             <td><button>Borrar</button></td>
             </tr>`;    
         }
@@ -48,9 +48,13 @@ export default function crudAPI(inputId, inputNombre, inputApellido, inputEmail,
         </tr>
         ${filas}
         </table>`;
-        console.log(filas);
-      
+        //console.log(filas);
     }
+
+    const borrarUsuario = (idUsuario) => {
+        usuarios = usuarios.filter((usuario) => usuario.id !== idUsuario);
+    }
+
 
     $btnAgregar.addEventListener("click", (e) => {
         e.preventDefault();
@@ -73,8 +77,15 @@ export default function crudAPI(inputId, inputNombre, inputApellido, inputEmail,
         reutilizar();
     });
 
+    const $btnBorrar = document.querySelectorAll(".btn-borrar");
 
-    
+    $btnBorrar.forEach(($boton) => {
+        $boton.addEventListener("click", () => {
+            const idUsu = $boton.getAttribute("data-id");
+            borrarUsuario(idUsu);
+        });
+    })
+
 
 
     callApi();
