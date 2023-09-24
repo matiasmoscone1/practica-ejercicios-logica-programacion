@@ -49,10 +49,23 @@ export default function crudAPI(inputId, inputNombre, inputApellido, inputEmail,
         ${filas}
         </table>`;
         //console.log(filas);
+        const $btnBorrar = document.querySelectorAll(".btn-borrar");
+
+        $btnBorrar.forEach(($boton) => {
+            $boton.addEventListener("click", () => {
+                const idUsu = $boton.getAttribute("data-id");
+                borrarUsuario(idUsu);
+                reutilizar();
+                
+            });
+        })
+
+
     }
 
     const borrarUsuario = (idUsuario) => {
         usuarios = usuarios.filter((usuario) => usuario.id !== idUsuario);
+        console.log(usuarios);
     }
 
 
@@ -77,14 +90,7 @@ export default function crudAPI(inputId, inputNombre, inputApellido, inputEmail,
         reutilizar();
     });
 
-    const $btnBorrar = document.querySelectorAll(".btn-borrar");
-
-    $btnBorrar.forEach(($boton) => {
-        $boton.addEventListener("click", () => {
-            const idUsu = $boton.getAttribute("data-id");
-            borrarUsuario(idUsu);
-        });
-    })
+    
 
 
 
