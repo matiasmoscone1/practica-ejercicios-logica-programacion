@@ -24,7 +24,6 @@ export default function crudAPI(inputId, inputNombre, inputApellido, inputEmail,
 
     }
 
-
     const reutilizar = () => {
         let filas = "";
         for(let i = 0; i < 10; i++){
@@ -33,8 +32,8 @@ export default function crudAPI(inputId, inputNombre, inputApellido, inputEmail,
             <td>${usuarios[i].firstname}</td>
             <td>${usuarios[i].lastname}</td>
             <td>${usuarios[i].email}</td>
-            <td><button class="btn-borrar" data-id="${usuarios[i].id}">Modificar</button></td>
-            <td><button>Borrar</button></td>
+            <td><button>Modificar</button></td>
+            <td><button class="btn-borrar" data-id="${usuarios[i].id}">Borrar</button></td>
             </tr>`;    
         }
 
@@ -50,20 +49,21 @@ export default function crudAPI(inputId, inputNombre, inputApellido, inputEmail,
         </table>`;
         //console.log(filas);
         
+        const $btnBorrar = document.querySelectorAll(".btn-borrar");
+
+        $btnBorrar.forEach(($boton) => {
+            $boton.addEventListener("click", () => { 
+                const idUsu = $boton.getAttribute("data-id");
+                borrarUsuario(idUsu);
+                reutilizar();
+                console.log(usuarios);
+            });
+        })
 
     }
 
     
-    const $btnBorrar = document.querySelectorAll(".btn-borrar");
-
-    $btnBorrar.forEach(($boton) => {
-        $boton.addEventListener("click", () => {        
-            const idUsu = $boton.getAttribute("data-id");
-            borrarUsuario(idUsu);
-            reutilizar();
-            console.log(usuarios);
-        });
-    })
+    
 /*
     $resultado.addEventListener("click", (e) => {
         if(e.target.classList.contains("btn-borrar")){    
