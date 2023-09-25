@@ -32,7 +32,7 @@ export default function crudAPI(inputId, inputNombre, inputApellido, inputEmail,
             <td>${usuarios[i].firstname}</td>
             <td>${usuarios[i].lastname}</td>
             <td>${usuarios[i].email}</td>
-            <td><button>Modificar</button></td>
+            <td><button class="btn-modificar" data-id="${usuarios[i].id}">Modificar</button></td>
             <td><button class="btn-borrar" data-id="${usuarios[i].id}">Borrar</button></td>
             </tr>`;    
         }
@@ -59,21 +59,31 @@ export default function crudAPI(inputId, inputNombre, inputApellido, inputEmail,
                 console.log(usuarios);
             });
         })
+        const $btnModificar = document.querySelectorAll(".btn-modificar");
+
+        $btnModificar.forEach(($boton) => {
+            $boton.addEventListener("click", () => { 
+                const idUsu = $boton.getAttribute("data-id");
+                modificarUsuario(idUsu);
+                reutilizar();
+                console.log(usuarios);
+            });
+        })
+
 
     }
 
-    
-    
-/*
-    $resultado.addEventListener("click", (e) => {
-        if(e.target.classList.contains("btn-borrar")){    
-            const idUsu = e.target.getAttribute("data-id");
-            borrarUsuario(idUsu);
-            reutilizar();
-            console.log(usuarios);
-        }
-    });*/
+    const modificarUsuario = (idUsuario) => {
 
+        usuarios.find((usuario) => {
+            if(usuario.id === idUsuario){         
+                document.querySelector(inputId).value = usuario.id;
+                document.querySelector(inputNombre).value = usuario.firstname;
+                document.querySelector(inputApellido).value = usuario.lastname;
+                document.querySelector(inputEmail).value = usuario.email;
+    
+            }})  
+    }
 
     const borrarUsuario = (idUsuario) => {
         usuarios = usuarios.filter((usuario) => usuario.id !== idUsuario);
