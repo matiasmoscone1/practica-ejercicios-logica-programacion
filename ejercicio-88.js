@@ -82,7 +82,9 @@ export default function crudAPI(inputId, inputNombre, inputApellido, inputEmail,
                 document.querySelector(inputApellido).value = usuario.lastname;
                 document.querySelector(inputEmail).value = usuario.email;
     
-            }})  
+            }}) 
+           
+            
     }
 
     const borrarUsuario = (idUsuario) => {
