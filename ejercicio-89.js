@@ -13,10 +13,17 @@ export default function dobleNumerosPares(matriz, btnFiltrar, btnLimpiar, result
 
     $matriz.textContent = `[${arrayNumeros}]`;
 
+    const filtrarMatriz = (mat) => {
+        const nuevoArray = mat.filter((valor) => (valor % 2) === 0);
+        return nuevoArray;
+    }
+
+
     $btnFiltrar.addEventListener("click", () => {
-
-
-
+        const res = filtrarMatriz(arrayNumeros);
+       
+        $resultado.textContent = res;
+        
     });
 
 }
