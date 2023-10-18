@@ -14,7 +14,7 @@ export default function dobleNumerosPares(matriz, btnFiltrar, btnLimpiar, result
     $matriz.textContent = `[${arrayNumeros}]`;
 
     const filtrarMatriz = (mat) => {
-        return mat.filter((valor) => ((valor % 2) === 0).map((val) => val * 2));
+        return mat.filter((valor) => ((valor % 2) === 0)).map((val) => val * 2);
     }
 
 
