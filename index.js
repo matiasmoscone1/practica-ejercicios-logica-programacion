@@ -86,6 +86,7 @@ import ejercicioPlaylist from "./ejercicio-85.js";
 import calculaVehiculo from "./ejercicio-86.js";
 import datosUsuarios from "./ejercicio-87.js";
 import crudAPI from "./ejercicio-88.js";
+import dobleNumerosPares from "./ejercicio-89.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -178,5 +179,9 @@ document.addEventListener("DOMContentLoaded", () => {
     calculaVehiculo(".input-marca-ej-86", ".input-modelo-ej-86", ".input-color-ej-86", ".btn-calcular-ej-86", ".btn-limpiar-ej-86", ".resultado-ej-86");
     datosUsuarios(".btn-iniciar-ej-87", ".btn-parar-ej-87", ".resultado-ej-87");
     crudAPI(".input-id-ej-88", ".input-nombre-ej-88", ".input-apellido-ej-88", ".input-email-ej-88", ".btn-agregar-ej-88", ".resultado-ej-88");
+    dobleNumerosPares(".matriz-principal-ej-89", ".btn-filtrar-ej-89", ".btn-limpiar-ej-89");
+
+
+    
 
 });
