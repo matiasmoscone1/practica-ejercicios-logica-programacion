@@ -22,8 +22,12 @@ export default function dobleNumerosPares(matriz, btnFiltrar, btnLimpiar, result
     $btnFiltrar.addEventListener("click", () => {
         const res = filtrarMatriz(arrayNumeros);
        
-        $resultado.textContent = res;
+        $resultado.textContent = `[${res}]`;
         
     });
+
+    $btnLimpiar.addEventListener("click", () => {
+        $resultado.textContent = "";
+    })
 
 }
