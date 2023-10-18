@@ -22,15 +22,20 @@ export default function dobleNumerosPares(matriz, btnFiltrar, btnLimpiar, result
         return mat.filter((valor) => ((valor % 2) === 0)).map((val) => val * 2);
     }
 
-
+    //captando evento click del boton Filtrar
     $btnFiltrar.addEventListener("click", () => {
+        //crea una variable q llama a la funcion filtradora y le pasa por parametro el valor 
+        //de la matriz principal
         const res = filtrarMatriz(arrayNumeros);
        
+        //mostrando el resultado en pantalla
         $resultado.textContent = `[${res}]`;
         
     });
 
+    //captando evento click del boton Limpiar
     $btnLimpiar.addEventListener("click", () => {
+        //Limpia el DOM
         $resultado.textContent = "";
     })
 
