@@ -179,9 +179,9 @@ document.addEventListener("DOMContentLoaded", () => {
     calculaVehiculo(".input-marca-ej-86", ".input-modelo-ej-86", ".input-color-ej-86", ".btn-calcular-ej-86", ".btn-limpiar-ej-86", ".resultado-ej-86");
     datosUsuarios(".btn-iniciar-ej-87", ".btn-parar-ej-87", ".resultado-ej-87");
     crudAPI(".input-id-ej-88", ".input-nombre-ej-88", ".input-apellido-ej-88", ".input-email-ej-88", ".btn-agregar-ej-88", ".resultado-ej-88");
-    dobleNumerosPares(".matriz-principal-ej-89", ".btn-filtrar-ej-89", ".btn-limpiar-ej-89");
+    dobleNumerosPares(".matriz-principal-ej-89", ".btn-filtrar-ej-89", ".btn-limpiar-ej-89", ".resultado-ej-89");
 
 
-    
+
 
 });
