@@ -10,10 +10,18 @@ export default function factorialRecursivo(inputNum, btnCalcular, btnLimpiar, re
     const $btnLimpiar = document.querySelector(btnLimpiar);
     const $resultado = document.querySelector(resultado);
     
-    $btnCalcular.addEventListener("click", () => {
-        const $inputNum = document.querySelector(inputNum);
 
-        
+    const calcularFact = (num) => {
+            
+    
+    }
+
+
+    $btnCalcular.addEventListener("click", () => {
+        const $inputNum = document.querySelector(inputNum).value;
+        console.log($inputNum);
+        calcularFact($inputNum);
+
     });
 
 
