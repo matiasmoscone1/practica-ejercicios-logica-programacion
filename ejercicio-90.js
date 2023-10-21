@@ -3,7 +3,7 @@
 //use reduce para sumar todos los elementos.
 
 
-export default function sumarNumerosPares(arrayPrincipal, btnSuma, btnLimpiar, resultado){
+export default function sumarNumeros(arrayPrincipal, btnSuma, btnLimpiar, resultado){
 
     const arrayNumeros = [2, 5, 3, 12, 18, 15, 33, 25, 24, 37];
 
@@ -15,7 +15,11 @@ export default function sumarNumerosPares(arrayPrincipal, btnSuma, btnLimpiar, r
     $arrayPrincipal.textContent = `[${arrayNumeros.join(",")}]`;
 
     $btnSuma.addEventListener("click", () => {
-
+        
+        const arrayResultado = arrayNumeros.reduce((acc, val) => {
+            acc += val;
+            return acc;
+        }, 0);
 
 
     });
