@@ -16,14 +16,17 @@ export default function sumarNumeros(arrayPrincipal, btnSuma, btnLimpiar, result
 
     $btnSuma.addEventListener("click", () => {
         
-        const arrayResultado = arrayNumeros.reduce((acc, val) => {
+        const res = arrayNumeros.reduce((acc, val) => {
             acc += val;
             return acc;
         }, 0);
 
-
+        $resultado.textContent = `La suma de los numeros del array es: ${res}`;
     });
 
+    $btnLimpiar.addEventListener("click", () => {
+        $resultado.textContent = "";
+    });
 
 }
 
