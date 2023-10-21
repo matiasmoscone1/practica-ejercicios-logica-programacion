@@ -12,8 +12,13 @@ export default function sumarNumerosPares(arrayPrincipal, btnSuma, btnLimpiar, r
     const $btnLimpiar = document.querySelector(btnLimpiar);
     const $resultado = document.querySelector(resultado);
 
+    $arrayPrincipal.textContent = `[${arrayNumeros.join(",")}]`;
+
+    $btnSuma.addEventListener("click", () => {
 
 
+
+    });
 
 
 }
