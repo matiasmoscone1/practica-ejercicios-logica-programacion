@@ -3,9 +3,16 @@
 //use reduce para sumar todos los elementos.
 
 
-export default function sumarNumerosPares(){
+export default function sumarNumerosPares(arrayPrincipal, btnSuma, btnLimpiar, resultado){
 
-    
+    const arrayNumeros = [2, 5, 3, 12, 18, 15, 33, 25, 24, 37];
+
+    const $arrayPrincipal = document.querySelector(arrayPrincipal);
+    const $btnSuma = document.querySelector(btnSuma);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $resultado = document.querySelector(resultado);
+
+
 
 
 
