@@ -23,10 +23,14 @@ export default function factorialRecursivo(inputNum, btnCalcular, btnLimpiar, re
     $btnCalcular.addEventListener("click", () => {
         const $inputNum = document.querySelector(inputNum).value;
         console.log($inputNum);
-        console.log(calcularFact($inputNum));
+        $resultado.textContent = `El factorial es: ${calcularFact($inputNum)}`;
 
     });
 
+    $btnLimpiar.addEventListener("click", () => {
+        $resultado.textContent = "";
+        document.querySelector(inputNum).value = "";
+    });
 
 }
 
