@@ -12,8 +12,9 @@ export default function factorialRecursivo(inputNum, btnCalcular, btnLimpiar, re
     
 
     const calcularFact = (num) => {
-            
-    
+        let res;
+        res = num * num - 1;
+        
     }
 
 
