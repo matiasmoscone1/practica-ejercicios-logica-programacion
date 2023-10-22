@@ -12,11 +12,13 @@ export default function factorialRecursivo(inputNum, btnCalcular, btnLimpiar, re
     
 
     const calcularFact = (num) => {
-        let res;
-        res = num * num - 1;
+        if(num === 0 || num === 1){
+            return 1;
+        }
+        return num * calcularFact(num - 1);
         
     }
-
+    
 
     $btnCalcular.addEventListener("click", () => {
         const $inputNum = document.querySelector(inputNum).value;
