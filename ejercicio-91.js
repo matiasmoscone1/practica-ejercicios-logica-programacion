@@ -14,16 +14,16 @@ export default function factorialRecursivo(inputNum, btnCalcular, btnLimpiar, re
     const calcularFact = (num) => {
         if(num === 0 || num === 1){
             return 1;
-        }
-        return num * calcularFact(num - 1);
-        
+        }else{        
+            return num * calcularFact(num - 1);
+        }        
     }
     
 
     $btnCalcular.addEventListener("click", () => {
         const $inputNum = document.querySelector(inputNum).value;
         console.log($inputNum);
-        calcularFact($inputNum);
+        console.log(calcularFact($inputNum));
 
     });
 
