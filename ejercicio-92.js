@@ -10,7 +10,6 @@ export default function composicionFunciones(inputNum, btnCalcular, btnLimpiar, 
 
 
 
-
     const sumarNum = (num) => {
         num + 5;
     }
@@ -27,9 +26,14 @@ export default function composicionFunciones(inputNum, btnCalcular, btnLimpiar, 
         num / 2;
     }
 
+    $btnCalcular.addEventListener("click", () => {
+        const $inputNum = document.querySelector(inputNum).value;
+
+        console.log($inputNum);
+
+    });
 
 
-    
 
 }
 
