@@ -9,12 +9,10 @@ export default function composicionFunciones(inputNum, btnCalcular, btnLimpiar, 
     const $resultado = document.querySelector(resultado);
 
     const funcionComp = (...funcion) => {
-        //console.log(funcion);
-        return (arg) => {
-            return funcion.reduce((result, func) => {
-                func(result), arg; 
-            });
-        }
+        console.log(funcion);
+        funcion.map((valor) => funcion(valor));
+        
+        
     }
 
     const sumarNum = (num) => {
@@ -38,9 +36,10 @@ export default function composicionFunciones(inputNum, btnCalcular, btnLimpiar, 
     $btnCalcular.addEventListener("click", () => {
         const $inputNum = document.querySelector(inputNum).value;
 
-        const res = funcionComp(sumarNum($inputNum), restarNum($inputNum), multNum($inputNum), divNum($inputNum));
+        const res = funcionComp(sumarNum, restarNum, multNum, divNum);
 
-        console.log(res);
+        const resultado = res($inputNum);
+        console.log(resultado);
         //console.log($inputNum);
 
     });
