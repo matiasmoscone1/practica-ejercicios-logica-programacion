@@ -9,11 +9,14 @@ export default function composicionFunciones(inputNum, btnCalcular, btnLimpiar, 
     const $resultado = document.querySelector(resultado);
 
     const funcionComp = (...funcion) => {
-        console.log(funcion);
-        funcion.map((valor) => funcion(valor));
-        
-        
-    }
+        return(input) => {
+            let result = input;
+            for(const func of funcion){
+                result = func(result);
+            }
+            return result;
+        }
+    } 
 
     const sumarNum = (num) => {
         return num + 5;
