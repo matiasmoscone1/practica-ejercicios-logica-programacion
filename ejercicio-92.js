@@ -9,16 +9,8 @@ export default function composicionFunciones(inputNum, btnCalcular, btnLimpiar, 
     const $resultado = document.querySelector(resultado);
 
     const funcionComp = (...funcion) => {
-        /*return(input) => {
-            let result = input;
-            for(const func of funcion){
-                result = func(result);
-            }
-            return result;
-        }*/
-
         return(input) => {
-            return funcion.reduce((acc, func) => func(acc), input)
+            return funcion.reduce((acc, func) => func(acc), input);
         }
     } 
 
@@ -51,6 +43,10 @@ export default function composicionFunciones(inputNum, btnCalcular, btnLimpiar, 
 
     });
 
+    $btnLimpiar.addEventListener("click", () => {
+        document.querySelector(inputNum).value = "";
+        $resultado.textContent = "";
+    });
 
 
 }
