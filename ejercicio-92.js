@@ -39,21 +39,28 @@ export default function composicionFunciones(inputNum, btnCalcular, btnLimpiar, 
     }
 
 
-
+    //captando evento click del boton Calcular
     $btnCalcular.addEventListener("click", () => {
+        //tomando el valor escrito por el usuario en una variable referencial al DOM
         const $inputNum = document.querySelector(inputNum).value;
 
         //const res = funcionComp(sumarNum, restarNum, multNum, divNum);
+
+        //Orden de composicion de funciones
         const res = funcionComp(divNum, multNum, restarNum, sumarNum);
 
+        //guarda en una constante el resultado de la funcion superior, se le pasa como input el valor
+        //ingresado por el usuario 
         const resultado = res($inputNum);
-        //console.log(resultado);
+
+        //muestra el resultado en el DOM
         $resultado.textContent = `El resultado es: ${resultado}`;
-        //console.log($inputNum);
 
     });
 
+    //captando evento click del boton Limpiar
     $btnLimpiar.addEventListener("click", () => {
+        //limpiando el DOM
         document.querySelector(inputNum).value = "";
         $resultado.textContent = "";
     });
