@@ -16,19 +16,19 @@ export default function composicionFunciones(inputNum, btnCalcular, btnLimpiar, 
     } 
 
     const sumarNum = (num) => {
-        return num + 5;
+        return (num + 5);
     }
 
     const restarNum = (num) => {
-        return num - 2;
+        return (num - 2);
     }
 
     const multNum = (num) => {
-        return num * 10;
+        return (num * 10);
     }
 
     const divNum = (num) => {
-        return num / 2;
+        return (num / 2);
     }
 
 
