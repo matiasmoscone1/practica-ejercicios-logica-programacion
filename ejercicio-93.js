@@ -9,7 +9,7 @@ export default function currying(inputNum, btnCalcular, btnLimpiar, resultado){
     const $resultado = document.querySelector(resultado);
 
     const curry = (func) => {
-        return curried = (...argumentos) => {
+        return function curried(...argumentos){
             if(argumentos.length >= func.length){
                 return func(...argumentos);
             }else{
@@ -20,7 +20,7 @@ export default function currying(inputNum, btnCalcular, btnLimpiar, resultado){
     }
 
     const suma = (a, b, c) => {
-        return a + b + c;
+        return parseInt(a) + parseInt(b) + parseInt(c);
     }
 
 
