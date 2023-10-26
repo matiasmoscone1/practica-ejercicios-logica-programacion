@@ -25,8 +25,14 @@ export default function currying(inputNum, btnCalcular, btnLimpiar, resultado){
 
 
     $btnCalcular.addEventListener("click", () => {
+        const $inputNum = document.querySelector(inputNum).value;
 
+        const currySuma = curry(suma);
 
+        const suma1 = currySuma($inputNum);
+        const suma2 = suma1(10);
+        const resultado = suma2(10);
+        console.log(resultado);
 
     });
 
