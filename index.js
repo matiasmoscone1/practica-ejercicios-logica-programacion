@@ -90,6 +90,7 @@ import dobleNumerosPares from "./ejercicio-89.js";
 import sumarNumeros from "./ejercicio-90.js";
 import factorialRecursivo from "./ejercicio-91.js";
 import composicionFunciones from "./ejercicio-92.js";
+import currying from "./ejercicio-93.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -186,7 +187,8 @@ document.addEventListener("DOMContentLoaded", () => {
     sumarNumeros(".array-principal-ej-90", ".btn-suma-ej-90", ".btn-limpiar-ej-90", ".resultado-ej-90");
     factorialRecursivo(".input-ej-91", ".btn-calcular-ej-91", ".btn-limpiar-ej-91", ".resultado-ej-91");
     composicionFunciones(".input-ej-92", ".btn-calcular-ej-92", ".btn-limpiar-ej-92", ".resultado-ej-92");
+    currying(".input-ej-93", ".btn-calcular-ej-93", ".btn-limpiar-ej-93", ".resultado-ej-93")
 
-
+    
 
 });
