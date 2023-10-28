@@ -4,6 +4,7 @@
 
 export default function currying(inputNum, btnCalcular, btnLimpiar, resultado){
 
+    //creando variables referneciales al DOM
     const $btnCalcular = document.querySelector(btnCalcular);
     const $btnLimpiar = document.querySelector(btnLimpiar);
     const $resultado = document.querySelector(resultado);
@@ -19,6 +20,7 @@ export default function currying(inputNum, btnCalcular, btnLimpiar, resultado){
         }
     }
 
+    //creando una funcion de suma, que se le pasa por paraemtro 3 argumentos, y devuelve el resultado
     const suma = (a, b, c) => {
         return parseInt(a) + parseInt(b) + parseInt(c);
     }
