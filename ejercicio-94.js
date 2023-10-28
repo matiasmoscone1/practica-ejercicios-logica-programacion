@@ -13,8 +13,9 @@ export default function filtrarPalabrasLargas(textArea, input, btnFiltrar, btnLi
 
     const filtraPalabras = (texto, num) => {
 
-        return texto, num;
+        const arrayNuevo = texto.map((pal) => pal > num);
 
+        return arrayNuevo;
     }
 
 
