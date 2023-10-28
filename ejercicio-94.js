@@ -13,11 +13,12 @@ export default function filtrarPalabrasLargas(textArea, input, btnFiltrar, btnLi
 
     const filtraPalabras = (texto, num) => {
 
-        const arrayNuevo = texto.map((pal) => pal > num);
+        const nuevoArray = texto.split(" ");
+        //console.log(nuevoArray);
 
-        return arrayNuevo;
+        return nuevoArray.map((pal) => pal > num);
+        
     }
-
 
 
     $btnFiltrar.addEventListener("click", () => {
@@ -29,6 +30,9 @@ export default function filtrarPalabrasLargas(textArea, input, btnFiltrar, btnLi
 
         console.log(res);
     });
+
+
+
 
 
 
