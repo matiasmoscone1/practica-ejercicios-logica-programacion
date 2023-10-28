@@ -38,21 +38,25 @@ export default function currying(inputNum, btnCalcular, btnLimpiar, resultado){
         //se crea constante que llama a la funcion curry pasandole la funcion de suma
         const currySuma = curry(suma);
 
-        //
+        //crea constante que llama a la constante anterior creada
         const suma1 = currySuma($inputNum);
+        //crea nueva constante que llama a la constante creada recien y se le pasa por parametro un numero
         const suma2 = suma1(10);
+        //crea la constnte resultado y repite el mismo paso
         const resultado = suma2(10);
         //console.log(resultado);
-
+      
+        //muestra el resultado en el DOM
         $resultado.textContent = `El resultado es: ${resultado}`;
 
     });
 
+    //capta evento click del boton Limpiar
     $btnLimpiar.addEventListener("click", () => {
+        //limpia el DOM
         document.querySelector(inputNum).value = "";
         $resultado.textContent = "";
     });
-
 
 
 }
