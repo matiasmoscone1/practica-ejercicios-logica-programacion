@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
     factorialRecursivo(".input-ej-91", ".btn-calcular-ej-91", ".btn-limpiar-ej-91", ".resultado-ej-91");
     composicionFunciones(".input-ej-92", ".btn-calcular-ej-92", ".btn-limpiar-ej-92", ".resultado-ej-92");
     currying(".input-ej-93", ".btn-calcular-ej-93", ".btn-limpiar-ej-93", ".resultado-ej-93")
-
+    filtrarPalabrasCincoLetras();
     
 
 });
