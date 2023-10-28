@@ -91,6 +91,7 @@ import sumarNumeros from "./ejercicio-90.js";
 import factorialRecursivo from "./ejercicio-91.js";
 import composicionFunciones from "./ejercicio-92.js";
 import currying from "./ejercicio-93.js";
+import filtrarPalabrasLargas from "./ejercicio-94.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -188,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
     factorialRecursivo(".input-ej-91", ".btn-calcular-ej-91", ".btn-limpiar-ej-91", ".resultado-ej-91");
     composicionFunciones(".input-ej-92", ".btn-calcular-ej-92", ".btn-limpiar-ej-92", ".resultado-ej-92");
     currying(".input-ej-93", ".btn-calcular-ej-93", ".btn-limpiar-ej-93", ".resultado-ej-93")
-    filtrarPalabrasCincoLetras(".textarea-ej-94", ".input-ej-94", ".btn-filtrar-ej-94", ".btn-limpiar-ej-94" ,".resultado-ej-94");
+    filtrarPalabrasLargas(".textarea-ej-94", ".input-ej-94", ".btn-filtrar-ej-94", ".btn-limpiar-ej-94", ".resultado-ej-94");
     
 
 });

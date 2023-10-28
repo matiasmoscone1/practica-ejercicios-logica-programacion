@@ -5,6 +5,18 @@
 export default function filtrarPalabrasLargas(textArea, input, btnFiltrar, btnLimpiar, resultado){
 
     const $textArea = document.querySelector(textArea);
+    const $btnFiltrar = document.querySelector(btnFiltrar);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $resultado = document.querySelector(resultado);
+
+    const $inputNum = document.querySelector(input).value;
+  
+    
+    $btnFiltrar.addEventListener("click", () => {
+
+
+    });
+
 
 
 }
