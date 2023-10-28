@@ -36,6 +36,11 @@ export default function currying(inputNum, btnCalcular, btnLimpiar, resultado){
 
     });
 
+    $btnLimpiar.addEventListener("click", () => {
+        document.querySelector(inputNum).value = "";
+        $resultado.textContent = "";
+    });
+
 
 
 }
