@@ -9,10 +9,14 @@ export default function currying(inputNum, btnCalcular, btnLimpiar, resultado){
     const $btnLimpiar = document.querySelector(btnLimpiar);
     const $resultado = document.querySelector(resultado);
 
+    //toma una funcion llamada func y devuelve una nueva funcion llamada curried
     const curry = (func) => {
         return function curried(...argumentos){
+            //si el numero de argumentos es mayor o igual al numero de argumentos esperados, se llama
+            //a func con esos argumentos        
             if(argumentos.length >= func.length){
                 return func(...argumentos);
+            //sino se devuelve una funcion que recibe mas argumentos y se acumula hasta q se cumpla la condicion
             }else{
                 return (...masArgumentos) => curried(...argumentos, ...masArgumentos);
             }
@@ -26,15 +30,21 @@ export default function currying(inputNum, btnCalcular, btnLimpiar, resultado){
     }
 
 
+    //captando evento click del boton Calcular
     $btnCalcular.addEventListener("click", () => {
+        //tomando el valor del input escrito por el usuario
         const $inputNum = document.querySelector(inputNum).value;
 
+        //se crea constante que llama a la funcion curry pasandole la funcion de suma
         const currySuma = curry(suma);
 
+        //
         const suma1 = currySuma($inputNum);
         const suma2 = suma1(10);
         const resultado = suma2(10);
-        console.log(resultado);
+        //console.log(resultado);
+
+        $resultado.textContent = `El resultado es: ${resultado}`;
 
     });
 
