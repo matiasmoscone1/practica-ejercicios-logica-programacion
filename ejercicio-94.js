@@ -23,7 +23,7 @@ export default function filtrarPalabrasLargas(textArea, input, btnFiltrar, btnLi
             }
         });
         
-        console.log(arrayResultado);
+        return arrayResultado;
         
     }
 
@@ -35,7 +35,8 @@ export default function filtrarPalabrasLargas(textArea, input, btnFiltrar, btnLi
             
         const res = filtraPalabras($textArea, $inputNum);
 
-        console.log(res);
+        $resultado.textContent = `El array filtrado es: [${res}]`;
+        //console.log(res);
     });
 
 
