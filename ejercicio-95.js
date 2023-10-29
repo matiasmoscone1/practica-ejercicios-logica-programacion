@@ -11,7 +11,20 @@ export default function mapRecursivo(arrayPrincipal, btnFuncion, btnLimpiar, res
     const $resultado = document.querySelector(resultado);
 
 
-    
+    const arrayNumeros = [2, 5, 10, 20];
+
+    $arrayPrincipal.textContent = `[${arrayNumeros}]`;
+
+    const funcionRecursiva = (arr, func) => {
+        return arr.map((valor) => func(valor));  
+    }
+
+    $btnFuncion.addEventListener("click", () => {
+
+        const res = funcionRecursiva(arrayNumeros, (x) => x * 2);
+
+        console.log(res);
+    });
 
 
 
