@@ -23,9 +23,14 @@ export default function mapRecursivo(arrayPrincipal, btnFuncion, btnLimpiar, res
 
         const res = funcionRecursiva(arrayNumeros, (x) => x * 2);
 
-        console.log(res);
+        //console.log(res);
+        
+        $resultado.textContent = `El resultado del array es: [${res}]`;
     });
 
+    $btnLimpiar.addEventListener("click", () => {
+        $resultado.textContent = "";
+    });
 
 
 }
