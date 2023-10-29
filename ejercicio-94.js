@@ -40,7 +40,11 @@ export default function filtrarPalabrasLargas(textArea, input, btnFiltrar, btnLi
     });
 
 
-
+    $btnLimpiar.addEventListener("click", () => {
+        document.querySelector(input).value = "";
+        document.querySelector(textArea).value = "";
+        $resultado.textContent = "";
+    });
 
 
 
