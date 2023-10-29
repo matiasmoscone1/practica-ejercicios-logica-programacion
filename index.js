@@ -92,6 +92,7 @@ import factorialRecursivo from "./ejercicio-91.js";
 import composicionFunciones from "./ejercicio-92.js";
 import currying from "./ejercicio-93.js";
 import filtrarPalabrasLargas from "./ejercicio-94.js";
+import mapRecursivo from "./ejercicio-95.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -190,6 +191,6 @@ document.addEventListener("DOMContentLoaded", () => {
     composicionFunciones(".input-ej-92", ".btn-calcular-ej-92", ".btn-limpiar-ej-92", ".resultado-ej-92");
     currying(".input-ej-93", ".btn-calcular-ej-93", ".btn-limpiar-ej-93", ".resultado-ej-93")
     filtrarPalabrasLargas(".textarea-ej-94", ".input-ej-94", ".btn-filtrar-ej-94", ".btn-limpiar-ej-94", ".resultado-ej-94");
-    
+    mapRecursivo();
 
 });
