@@ -16,7 +16,12 @@ export default function filtrarPalabrasLargas(textArea, input, btnFiltrar, btnLi
         const nuevoArray = texto.split(" ");
         //console.log(nuevoArray);
         
-        const arrayResultado = nuevoArray.map((pal) => pal.length > num);
+        const arrayResultado = [];
+        nuevoArray.map((pal) => {
+            if(pal.length > num){
+                arrayResultado.push(pal);
+            }
+        });
         
         console.log(arrayResultado);
         
