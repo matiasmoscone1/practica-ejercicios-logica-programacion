@@ -35,6 +35,25 @@ export default function arbolRecursivo(arbol, btnCalcular, btnLimpiar, resultado
 
     console.log(nodoPrincipal);
 
+    const $arbol = document.querySelector(arbol);
+    const $btnCalcular = document.querySelector(arbol);
+    const $btnLimpiar = document.querySelector(arbol);
+    const $resultado = document.querySelector(arbol);
+
+    const recorrerNodo = (nodo) => {
+        console.log(nodo.valor);
+        for(const nod of nodo.hijo){
+            recorrerNodo(nod);
+            return(nodo.valor);
+        }
+    }
+
+
+    $arbol.textContent = `El arbol es: ${recorrerNodo(nodoPrincipal)}`;
+
+
+
+
 
 }
 
