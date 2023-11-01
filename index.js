@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
     currying(".input-ej-93", ".btn-calcular-ej-93", ".btn-limpiar-ej-93", ".resultado-ej-93")
     filtrarPalabrasLargas(".textarea-ej-94", ".input-ej-94", ".btn-filtrar-ej-94", ".btn-limpiar-ej-94", ".resultado-ej-94");
     mapRecursivo(".array-principal-ej-95", ".btn-funcion-ej-95", ".btn-limpiar-ej-95", ".resultado-ej-95");
-    arbolRecursivo();
+    arbolRecursivo(".arbol-ej-96", ".btn-calcular-ej-96", ".btn-limpiar-ej-96", ".resultado-ej-96");
 
     
 });
