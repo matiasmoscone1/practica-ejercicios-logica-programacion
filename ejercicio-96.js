@@ -44,12 +44,13 @@ export default function arbolRecursivo(arbol, btnCalcular, btnLimpiar, resultado
         console.log(nodo.valor);
         for(const nod of nodo.hijo){
             recorrerNodo(nod);
-            return(nodo.valor);
+            //return(nodo.valor);
         }
     }
 
+    recorrerNodo(nodoPrincipal);
 
-    $arbol.textContent = `El arbol es: ${recorrerNodo(nodoPrincipal)}`;
+    //$arbol.textContent = `El arbol es: ${recorrerNodo(nodoPrincipal)}`;
 
 
 
