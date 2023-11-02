@@ -1,7 +1,7 @@
 
 //97. Escribe una función que tome una matriz de palabras y una palabra como argumento. 
 //Utiliza filter para devolver una nueva matriz que solo contenga palabras sean iguales 
-//al argumento.
+//al argumento. CON REDUCE
 
 
 export default function filtraPalabraConcreta(textArea, input, btnFiltrar, btnLimpiar, resultado){
@@ -12,12 +12,17 @@ export default function filtraPalabraConcreta(textArea, input, btnFiltrar, btnLi
 
 
     const filtrarMatriz = (arr, palabra) => {
+        
         const arrayReducido = arr.reduce((acc, pal) => {
             if(pal === palabra){
                 acc.push(pal);
             }
+            return acc;
         }, []);
         return arrayReducido;
+
+        //return arr.map((pal) => pal === palabra);
+            
     }
 
     $btnFiltrar.addEventListener("click", () => {
