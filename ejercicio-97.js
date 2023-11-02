@@ -6,11 +6,27 @@
 
 export default function filtraPalabraConcreta(textArea, input, btnFiltrar, btnLimpiar, resultado){
 
-    const $textArea = document.querySelector(textArea);
-    const $input = document.querySelector(input);
     const $btnFiltrar = document.querySelector(btnFiltrar);
     const $btnLimpiar = document.querySelector(btnLimpiar);
     const $resultado = document.querySelector(resultado);
+
+
+    const filtrarMatriz = (arr, palabra) => {
+        return arr.reduce((acc, pal) => {
+            if(pal === palabra){
+                acc.push(pal);
+            }
+        }, []);
+    }
+
+    $btnFiltrar.addEventListener("click", () => {
+        const $textArea = document.querySelector(textArea);
+        const $input = document.querySelector(input);
+    
+        
+
+    });
+
 
 }
 
