@@ -57,11 +57,12 @@ export default function arbolRecursivo(arbol, btnCalcular, btnLimpiar, resultado
     mostrarNodo(nodoPrincipal);
     
     const recorrerNodo = (nodo) => {
+        
         arrayNodos.push("Nodo" + nodo.valor);
            
         $resultado.textContent = `El arbol completo es: ${arrayNodos}`;
         
-        console.log(nodo.valor);
+        //console.log(nodo.valor);
 
         for(const nod of nodo.hijo){
             recorrerNodo(nod);
@@ -75,7 +76,7 @@ export default function arbolRecursivo(arbol, btnCalcular, btnLimpiar, resultado
     });
 
     $btnLimpiar.addEventListener("click", () => {
-        //$arbol.textContent = "";
+        $resultado.textContent = "";
     });
     
 
