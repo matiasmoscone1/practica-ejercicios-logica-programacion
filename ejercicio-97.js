@@ -20,10 +20,12 @@ export default function filtraPalabraConcreta(textArea, input, btnFiltrar, btnLi
     }
 
     $btnFiltrar.addEventListener("click", () => {
-        const $textArea = document.querySelector(textArea);
-        const $input = document.querySelector(input);
+        const $textArea = document.querySelector(textArea).value;
+        const $input = document.querySelector(input).value;
     
-        
+        const arrayTexto = $textArea.split(" ");
+
+        filtrarMatriz(arrayTexto, $input);
 
     });
 
