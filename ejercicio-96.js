@@ -36,15 +36,30 @@ export default function arbolRecursivo(arbol, btnCalcular, btnLimpiar, resultado
     console.log(nodoPrincipal);
 
     const $arbol = document.querySelector(arbol);
-    const $btnCalcular = document.querySelector(arbol);
-    const $btnLimpiar = document.querySelector(arbol);
-    const $resultado = document.querySelector(arbol);
+    const $btnCalcular = document.querySelector(btnCalcular);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $resultado = document.querySelector(resultado);
 
     const arrayNodos = [];
-   
+  
+    const mostrarNodo = (nodo) => {
+        arrayNodos.push(nodo.valor);
+        $arbol.textContent = `El arbol completo es: ${arrayNodos}`;
+        
+        //console.log(nodo.valor);
+
+        for(const nod of nodo.hijo){
+            mostrarNodo(nod);
+            //return(nodo.valor);
+        }
+    } 
+
+    mostrarNodo(nodoPrincipal);
+    
     const recorrerNodo = (nodo) => {
         arrayNodos.push("Nodo" + nodo.valor);
-        $arbol.textContent = `El arbol completo es: ${arrayNodos}`;
+           
+        $resultado.textContent = `El arbol completo es: ${arrayNodos}`;
         
         console.log(nodo.valor);
 
@@ -54,11 +69,13 @@ export default function arbolRecursivo(arbol, btnCalcular, btnLimpiar, resultado
         }
     }
 
-    recorrerNodo(nodoPrincipal);
-
+   
     $btnCalcular.addEventListener("click", () => {
+        recorrerNodo(nodoPrincipal); 
+    });
 
-
+    $btnLimpiar.addEventListener("click", () => {
+        //$arbol.textContent = "";
     });
     
 
