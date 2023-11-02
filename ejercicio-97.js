@@ -4,11 +4,14 @@
 //al argumento.
 
 
-export default function filtraPalabraConcreta(){
+export default function filtraPalabraConcreta(textArea, input, btnFiltrar, btnLimpiar, resultado){
 
+    const $textArea = document.querySelector(textArea);
+    const $input = document.querySelector(input);
+    const $btnFiltrar = document.querySelector(btnFiltrar);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $resultado = document.querySelector(resultado);
 
-
-    
 }
 
 
