@@ -12,11 +12,12 @@ export default function filtraPalabraConcreta(textArea, input, btnFiltrar, btnLi
 
 
     const filtrarMatriz = (arr, palabra) => {
-        return arr.reduce((acc, pal) => {
+        const arrayReducido = arr.reduce((acc, pal) => {
             if(pal === palabra){
                 acc.push(pal);
             }
         }, []);
+        return arrayReducido;
     }
 
     $btnFiltrar.addEventListener("click", () => {
@@ -25,8 +26,9 @@ export default function filtraPalabraConcreta(textArea, input, btnFiltrar, btnLi
     
         const arrayTexto = $textArea.split(" ");
 
-        filtrarMatriz(arrayTexto, $input);
+        const res = filtrarMatriz(arrayTexto, $input);
 
+        console.log(res);
     });
 
 
