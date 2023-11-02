@@ -54,20 +54,26 @@ export default function arbolRecursivo(arbol, btnCalcular, btnLimpiar, resultado
     //se crea un array de nodos vacio
     const arrayNodos = [];
   
+    //muestra el nodo completo en el DOM
     const mostrarNodo = (nodo) => {
+        //se agrega al arrayNodos vacio, el valor de cada nodo
         arrayNodos.push(nodo.valor);
+        //se muestra en el DOM
         $arbol.textContent = `El arbol completo es: ${arrayNodos}`;
         
         //console.log(nodo.valor);
 
+        //se llama recursivamente a la funcion para que recorra todo el arbol
         for(const nod of nodo.hijo){
             mostrarNodo(nod);
             //return(nodo.valor);
         }
     } 
 
+    //se invoca a la funcion con el nodo princiapl para que recorra todo el arbol completo
     mostrarNodo(nodoPrincipal);
     
+    //hace lo mismo que la funcion anterior pero le agrega la palabra Nodo antes de cada valor de nodo
     const recorrerNodo = (nodo) => {
         
         arrayNodos.push("Nodo" + nodo.valor);
@@ -82,12 +88,16 @@ export default function arbolRecursivo(arbol, btnCalcular, btnLimpiar, resultado
         }
     }
 
-   
+
+    //capta evento click del boton Calcular
     $btnCalcular.addEventListener("click", () => {
+        //llama a la funcion que recorre el arbol y se le agrega a cada nodo la palabra Nodo
         recorrerNodo(nodoPrincipal); 
     });
 
+    //capta el evento click del boton Limpiar
     $btnLimpiar.addEventListener("click", () => {
+        //limpia el DOM
         $resultado.textContent = "";
     });
     
