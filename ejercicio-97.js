@@ -38,6 +38,8 @@ export default function filtraPalabraConcreta(textArea, input, btnFiltrar, btnLi
 
     $btnLimpiar.addEventListener("click", () => {
         $resultado.textContent = "";
+        document.querySelector(input).value = "";
+        document.querySelector(textArea).value = "";
     })
 
 }
