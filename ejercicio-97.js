@@ -36,6 +36,9 @@ export default function filtraPalabraConcreta(textArea, input, btnFiltrar, btnLi
         console.log(res);
     });
 
+    $btnLimpiar.addEventListener("click", () => {
+        $resultado.textContent = "";
+    })
 
 }
 
