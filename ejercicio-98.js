@@ -21,10 +21,10 @@ export default function devolverPromesa(input, btnComenzar, btnLimpiar, resultad
         }
 
 
-    $btnComenzar.addEventListener("click", () => {
+    $btnComenzar.addEventListener("click", async () => {
         const $inputText = document.querySelector(input).value;
 
-        creaPromesa($inputText)
+        await creaPromesa($inputText)
             .then((resultado) => $resultado.textContent = resultado)
             .catch((err) => $resultado.textContent = `Hubo un error: ${err}`);
 
