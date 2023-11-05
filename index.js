@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
     mapRecursivo(".array-principal-ej-95", ".btn-funcion-ej-95", ".btn-limpiar-ej-95", ".resultado-ej-95");
     arbolRecursivo(".arbol-ej-96", ".btn-calcular-ej-96", ".btn-limpiar-ej-96", ".resultado-ej-96");
     filtraPalabraConcreta(".textarea-ej-97", ".input-ej-97", ".btn-filtrar-ej-97", ".btn-limpiar-ej-97", ".resultado-ej-97");
-    devolverPromesa();
+    devolverPromesa(".input-ej-98", ".btn-comenzar-ej-98", ".btn-limpiar-ej-98", ".resultado-ej-98");
 
     
 });
