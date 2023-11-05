@@ -33,7 +33,8 @@ export default function filtraPalabraConcreta(textArea, input, btnFiltrar, btnLi
 
         const res = filtrarMatriz(arrayTexto, $input);
 
-        console.log(res);
+        $resultado.textContent = `El array con palabras filtradas es: ${res}`;
+        //console.log(res);
     });
 
     $btnLimpiar.addEventListener("click", () => {
@@ -41,6 +42,10 @@ export default function filtraPalabraConcreta(textArea, input, btnFiltrar, btnLi
         document.querySelector(input).value = "";
         document.querySelector(textArea).value = "";
     })
+
+
+
+
 
 }
 
