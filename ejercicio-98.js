@@ -9,14 +9,16 @@ export default function devolverPromesa(input, btnComenzar, btnLimpiar, resultad
 
     const $btnComenzar = document.querySelector(btnComenzar);
     const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $resultado = document.querySelector(resultado);
+
+
+    const creaPromesa = (texto) => {$resultado.textContent = `El resultado es: ${texto}`}
 
 
     $btnComenzar.addEventListener("click", () => {
         const $inputText = document.querySelector(input).value;
 
-        
-
-
+        creaPromesa($inputText);
 
     });
 
