@@ -24,7 +24,10 @@ export default function devolverPromesa(input, btnComenzar, btnLimpiar, resultad
     $btnComenzar.addEventListener("click", () => {
         const $inputText = document.querySelector(input).value;
 
-        creaPromesa($inputText);
+        creaPromesa($inputText)
+            .then((resultado) => $resultado.textContent = resultado)
+            .catch((err) => $resultado.textContent = `Hubo un error: ${err}`);
+
 
     
     });
