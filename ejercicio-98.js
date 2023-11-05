@@ -15,7 +15,7 @@ export default function devolverPromesa(input, btnComenzar, btnLimpiar, resultad
     const creaPromesa = (texto) => {
         return new Promise((res) => {
             setTimeout(() => {
-                res(`El resultado es: ${texto}`);
+                res($resultado.textContent = `El resultado es: ${texto}`);
             }, 2000);
         });
         }
