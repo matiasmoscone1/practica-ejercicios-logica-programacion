@@ -12,7 +12,13 @@ export default function devolverPromesa(input, btnComenzar, btnLimpiar, resultad
     const $resultado = document.querySelector(resultado);
 
 
-    const creaPromesa = (texto) => {$resultado.textContent = `El resultado es: ${texto}`}
+    const creaPromesa = (texto) => {
+        return new Promise((res) => {
+            setTimeout(() => {
+                res(`El resultado es: ${texto}`);
+            }, 2000);
+        });
+        }
 
 
     $btnComenzar.addEventListener("click", () => {
@@ -20,6 +26,7 @@ export default function devolverPromesa(input, btnComenzar, btnLimpiar, resultad
 
         creaPromesa($inputText);
 
+    
     });
 
 
