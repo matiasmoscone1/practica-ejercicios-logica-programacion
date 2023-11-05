@@ -27,11 +27,13 @@ export default function devolverPromesa(input, btnComenzar, btnLimpiar, resultad
         await creaPromesa($inputText)
             .then((resultado) => $resultado.textContent = resultado)
             .catch((err) => $resultado.textContent = `Hubo un error: ${err}`);
-
-
     
     });
 
+    $btnLimpiar.addEventListener("click", () => {
+        $resultado.textContent = "";
+        document.querySelector(input).value = "";
+    });
 
 }
 
