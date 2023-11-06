@@ -14,11 +14,15 @@ export default function generadorPrimos(numeros, input, btnGenerar, btnFiltrar, 
 
 
     const generaNumeros = (num) => {
+        let acc = 0;
         for(let i = 0; i <= num.length; i++){
-
+            acc = i;
         }
+        return acc;
     }
 
+    const $inputNum = document.querySelector(input).value;
+    generaNumeros($inputNum);
 
 }
 
