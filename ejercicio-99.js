@@ -4,12 +4,20 @@
 //secuencia infinita de números y luego use filter para encontrar los números primos.
 
 
-export default function generadorPrimos(numeros, btnFiltrar, btnLimpiar, resultado){
+export default function generadorPrimos(numeros, input, btnGenerar, btnFiltrar, btnLimpiar, resultado){
 
     const $btnFiltrar = document.querySelector(btnFiltrar);
     const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $btnGenerar = document.querySelector(btnGenerar);
     const $numeros = document.querySelector(numeros);
     const $resultado = document.querySelector(resultado);
+
+
+    const generaNumeros = (num) => {
+        for(let i = 0; i <= num.length; i++){
+
+        }
+    }
 
 
 }

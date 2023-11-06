@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
     arbolRecursivo(".arbol-ej-96", ".btn-calcular-ej-96", ".btn-limpiar-ej-96", ".resultado-ej-96");
     filtraPalabraConcreta(".textarea-ej-97", ".input-ej-97", ".btn-filtrar-ej-97", ".btn-limpiar-ej-97", ".resultado-ej-97");
     devolverPromesa(".input-ej-98", ".btn-comenzar-ej-98", ".btn-limpiar-ej-98", ".resultado-ej-98");
-    generadorPrimos(".muestra-nros-primos", ".btn-filtrar-ej-99", ".btn-limpiar-ej-99", ".resultado-ej-99");
+    generadorPrimos(".muestra-nros-primos", ".input-ej-99", ".btn-generar-ej-99", ".btn-filtrar-ej-99", ".btn-limpiar-ej-99", ".resultado-ej-99");
 
     
 });
