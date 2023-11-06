@@ -25,7 +25,7 @@ export default function generadorPrimos(numeros, input, btnGenerar, btnFiltrar, 
         if(num === 0 || num === 1){
             return false;
         }
-
+        //se utiliza i * i para optimizar el calculo de si un nro es primo o no
         for(let i = 2; i * i <= num; i++){
             if(num % i === 0){
                 return false;
@@ -47,13 +47,25 @@ export default function generadorPrimos(numeros, input, btnGenerar, btnFiltrar, 
     $btnGenerar.addEventListener("click", () => {        
         const $inputNum = document.querySelector(input).value;
         const res = generaNumeros($inputNum);
-        console.log(res);
+        //console.log(res);
 
         $numeros.textContent = `${res.join(", ")}`;
 
-        const respuesta = filtraPrimos(res);
-        console.log(respuesta);
+        $btnFiltrar.addEventListener("click", () => {
+            const respuesta = filtraPrimos(res);
+            $resultado.textContent = `El resultado es: ${respuesta.join(", ")}`;
+        }) 
+       
+        
+        //console.log(respuesta);
     });
+
+    $btnLimpiar.addEventListener("click", () => {
+        document.querySelector(input).value = "";
+        $numeros.textContent = "";
+        $resultado.textContent = "";
+    });
+
 
 }
 
