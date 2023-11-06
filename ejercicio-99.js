@@ -22,7 +22,7 @@ export default function generadorPrimos(numeros, input, btnGenerar, btnFiltrar, 
     }
 
     const esPrimo = (num) => {
-        if(num === 1){
+        if(num === 0 || num === 1){
             return false;
         }
 
@@ -51,6 +51,8 @@ export default function generadorPrimos(numeros, input, btnGenerar, btnFiltrar, 
 
         $numeros.textContent = `${res.join(", ")}`;
 
+        const respuesta = filtraPrimos(res);
+        console.log(respuesta);
     });
 
 }
