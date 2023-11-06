@@ -6,6 +6,8 @@
 
 export default function generadorPrimos(numeros, input, btnGenerar, btnFiltrar, btnLimpiar, resultado){
 
+
+    //creando variables referenciales al DOM
     const $btnFiltrar = document.querySelector(btnFiltrar);
     const $btnLimpiar = document.querySelector(btnLimpiar);
     const $btnGenerar = document.querySelector(btnGenerar);
@@ -13,11 +15,16 @@ export default function generadorPrimos(numeros, input, btnGenerar, btnFiltrar, 
     const $resultado = document.querySelector(resultado);
 
 
+    //funcion que genera numeros sucesivos, se pasa por parametro el limite de numeros
     const generaNumeros = (num) => {
+        //se crea un array vacio donde se almacenaran los numeros
         let acc = [];
+        //bucle for que itera desde 0 hasta el limite de numeros
         for(let i = 0; i <= num; i++){
+            //se agrega al array vacio todos los numeros iterados
             acc.push(i);
         }
+        //se devuelve el array con todos los numeros
         return acc;
     }
 
