@@ -21,6 +21,28 @@ export default function generadorPrimos(numeros, input, btnGenerar, btnFiltrar, 
         return acc;
     }
 
+    const esPrimo = (num) => {
+        if(num === 1){
+            return false;
+        }
+
+        for(let i = 2; i * i <= num; i++){
+            if(num % i === 0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    const filtraPrimos = (arr) => {
+        const arrayReducido = arr.reduce((acc, val) => {
+            if(esPrimo(val)){
+                acc.push(val);
+            }
+            return acc;
+        }, []);
+        return arrayReducido;
+    }
     
     $btnGenerar.addEventListener("click", () => {        
         const $inputNum = document.querySelector(input).value;
