@@ -14,15 +14,22 @@ export default function generadorPrimos(numeros, input, btnGenerar, btnFiltrar, 
 
 
     const generaNumeros = (num) => {
-        let acc = 0;
-        for(let i = 0; i <= num.length; i++){
-            acc = i;
+        let acc = [];
+        for(let i = 0; i <= num; i++){
+            acc.push(i);
         }
         return acc;
     }
 
-    const $inputNum = document.querySelector(input).value;
-    generaNumeros($inputNum);
+    
+    $btnGenerar.addEventListener("click", () => {        
+        const $inputNum = document.querySelector(input).value;
+        const res = generaNumeros($inputNum);
+        console.log(res);
+
+        $numeros.textContent = `${res.join(", ")}`;
+
+    });
 
 }
 
