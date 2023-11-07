@@ -73,9 +73,12 @@ export default function generadorPrimos(numeros, input, btnGenerar, btnFiltrar, 
         //muestra los numeros generados en pantalla
         $numeros.textContent = `${res.join(", ")}`;
 
-        
+        //captando evento click del boton Filtrar
         $btnFiltrar.addEventListener("click", () => {
+            //constante que llama a la funcion filtrar primos y se le pasa por parametro el array
+            //de numeros generado anteriormente
             const respuesta = filtraPrimos(res);
+            //muestra el resultado en el DOM
             $resultado.textContent = `El resultado es: ${respuesta.join(", ")}`;
         }) 
        
@@ -83,7 +86,9 @@ export default function generadorPrimos(numeros, input, btnGenerar, btnFiltrar, 
         //console.log(respuesta);
     });
 
+    //captando evento click del boton Limpiar
     $btnLimpiar.addEventListener("click", () => {
+        //limpia el valor del input, el resultado y el array de numeros generado
         document.querySelector(input).value = "";
         $numeros.textContent = "";
         $resultado.textContent = "";
