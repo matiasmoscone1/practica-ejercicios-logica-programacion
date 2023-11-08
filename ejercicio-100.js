@@ -11,23 +11,24 @@ export default function gestionErrores(btnLlamar, btnLimpiar, resultado, error){
     const $resultado = document.querySelector(resultado);
     const $error = document.querySelector(error);
  
-    const URL = "https://jsonplaceholder.org/users";
+    const URL = "https://jsonplaceholder.org/uses";
     let datos = [];
 
     const callAPI = () => {
-        fetch(URL)
-        .then((response) => response.json())
-        .then((data) => datos.push(data))
-        
+        try{    
+            fetch(URL)
+            .then((response) => response.json())
+            .then((data) => datos.push(data))
+        }catch(err){
+            console.log(`El error es: ${err}`);
+        }
     }
 
-    
-    callAPI();
-
-    console.log(datos);
-
-
     $btnLlamar.addEventListener("click", () => {
+        callAPI();
+        console.log(datos);
+
+
 
     })
 
