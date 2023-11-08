@@ -25,5 +25,11 @@ export default function gestionErrores(btnLlamar, btnLimpiar, resultado, error){
     callAPI();
 
     console.log(datos);
+
+
+    $btnLlamar.addEventListener("click", () => {
+        
+    })
+
 }
 
