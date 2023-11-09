@@ -15,9 +15,9 @@ export default function gestionErrores(btnLlamar, btnError, btnLimpiar, resultad
     const URL = "https://jsonplaceholder.org/users";
     let datos = [];
 
-    const callAPI = () => {
+    const callAPI = (url) => {
         try{    
-            fetch(URL)
+            fetch(url)
             .then((response) => response.json())
             .then((data) => datos.push(data))
         }catch(err){
@@ -36,10 +36,20 @@ export default function gestionErrores(btnLlamar, btnError, btnLimpiar, resultad
             </tr>
             `
         }
+        $resultado.innerHTML = `<table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Acciones</th>
+        </tr>
+        ${filas}
+        </table>`;
     }
 
     $btnLlamar.addEventListener("click", () => {
-        callAPI();
+        callAPI(URL);
         console.log(datos);
 
 
