@@ -13,6 +13,7 @@ export default function gestionErrores(btnLlamar, btnError, btnLimpiar, resultad
     const $error = document.querySelector(error);
  
     const URL = "https://jsonplaceholder.org/users";
+    const URLError = "https://jsonplaceholder.org/uses";
     let datos = [];
 
     const callAPI = async(url) => {
@@ -22,7 +23,9 @@ export default function gestionErrores(btnLlamar, btnError, btnLimpiar, resultad
             .then((data) => datos.push(data))
             mostrarDatos();
         }catch(err){
-            console.log(`Error al obtener los datos ${err}`);
+            //console.log(`Error al obtener los datos ${err}`);
+            console.log(err);
+            $error.textContent = `Error: "${err}"`;
         }
     }
 
@@ -51,9 +54,12 @@ export default function gestionErrores(btnLlamar, btnError, btnLimpiar, resultad
 
     $btnLlamar.addEventListener("click", () => {
         callAPI(URL);
-        console.log(datos);
+        //console.log(datos);
+    })
 
-    
+    $btnError.addEventListener("click", () => {
+        callAPI(URLError);
+        //console.log(datos);
     })
 
     $btnLimpiar.addEventListener("click", () => {
