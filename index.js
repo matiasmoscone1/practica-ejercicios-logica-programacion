@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
     filtraPalabraConcreta(".textarea-ej-97", ".input-ej-97", ".btn-filtrar-ej-97", ".btn-limpiar-ej-97", ".resultado-ej-97");
     devolverPromesa(".input-ej-98", ".btn-comenzar-ej-98", ".btn-limpiar-ej-98", ".resultado-ej-98");
     generadorPrimos(".muestra-nros-primos", ".input-ej-99", ".btn-generar-ej-99", ".btn-filtrar-ej-99", ".btn-limpiar-ej-99", ".resultado-ej-99");
-    gestionErrores(".btn-llamar-ej-100", ".btn-limpiar-ej-100", ".resultado-ej-100", ".error-ej-100");
+    gestionErrores(".btn-llamar-ej-100", ".btn-error-ej-100",".btn-limpiar-ej-100", ".resultado-ej-100", ".error-ej-100");
     
     
 });
