@@ -98,6 +98,7 @@ import filtraPalabraConcreta from "./ejercicio-97.js";
 import devolverPromesa from "./ejercicio-98.js";
 import generadorPrimos from "./ejercicio-99.js";
 import gestionErrores from "./ejercicio-100.js";
+import matrizOrdenada from "./ejercicio-101.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -202,6 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
     devolverPromesa(".input-ej-98", ".btn-comenzar-ej-98", ".btn-limpiar-ej-98", ".resultado-ej-98");
     generadorPrimos(".muestra-nros-primos", ".input-ej-99", ".btn-generar-ej-99", ".btn-filtrar-ej-99", ".btn-limpiar-ej-99", ".resultado-ej-99");
     gestionErrores(".btn-llamar-ej-100", ".btn-error-ej-100",".btn-limpiar-ej-100", ".resultado-ej-100", ".error-ej-100");
-    
+    matrizOrdenada(".matriz-principal-ej-101", ".btn-ordenar-ej-101", ".btn-limpiar-ej-101", ".matriz-resultado-ej-101");
+
     
 });
