@@ -24,9 +24,25 @@ export default function gestionErrores(btnLlamar, btnLimpiar, resultado, error){
         }
     }
 
+    const mostrarDatos = () => {
+        let filas = "";
+        for(let i = 0; i <= 10; i++){
+            filas += `<tr>
+            <td>${usuarios[i].id}</td>
+            <td>${usuarios[i].firstname}</td>
+            <td>${usuarios[i].lastname}</td>
+            <td>${usuarios[i].email}</td>
+            </tr>
+            `
+        }
+    }
+
     $btnLlamar.addEventListener("click", () => {
         callAPI();
         console.log(datos);
+
+
+
     
     })
 
