@@ -15,11 +15,12 @@ export default function gestionErrores(btnLlamar, btnError, btnLimpiar, resultad
     const URL = "https://jsonplaceholder.org/users";
     let datos = [];
 
-    const callAPI = (url) => {
+    const callAPI = async(url) => {
         try{    
-            fetch(url)
+            await fetch(url)
             .then((response) => response.json())
             .then((data) => datos.push(data))
+            mostrarDatos();
         }catch(err){
             console.log(`Error al obtener los datos ${err}`);
         }
@@ -27,12 +28,13 @@ export default function gestionErrores(btnLlamar, btnError, btnLimpiar, resultad
 
     const mostrarDatos = () => {
         let filas = "";
+        
         for(let i = 0; i <= 10; i++){
             filas += `<tr>
-            <td>${usuarios[i].id}</td>
-            <td>${usuarios[i].firstname}</td>
-            <td>${usuarios[i].lastname}</td>
-            <td>${usuarios[i].email}</td>
+            <td>${datos[0][i].id}</td>
+            <td>${datos[0][i].firstname}</td>
+            <td>${datos[0][i].lastname}</td>
+            <td>${datos[0][i].email}</td>
             </tr>
             `
         }
@@ -42,7 +44,6 @@ export default function gestionErrores(btnLlamar, btnError, btnLimpiar, resultad
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Email</th>
-            <th>Acciones</th>
         </tr>
         ${filas}
         </table>`;
@@ -51,8 +52,6 @@ export default function gestionErrores(btnLlamar, btnError, btnLimpiar, resultad
     $btnLlamar.addEventListener("click", () => {
         callAPI(URL);
         console.log(datos);
-
-
 
     
     })
