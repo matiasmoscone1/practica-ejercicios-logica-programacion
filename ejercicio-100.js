@@ -37,10 +37,14 @@ export default function gestionErrores(btnLlamar, btnError, btnLimpiar, resultad
         }
     }
 
+    //funcion que muestra todos los datos obtenidos en el DOM
     const mostrarDatos = () => {
+        //crea una variable filas que se ira actualizando
         let filas = "";
         
+        //ciclo for que itera las primeras 10 personas
         for(let i = 0; i <= 10; i++){
+            //a la variable fila se le agrega por cada persona iterada, los datos de la misma
             filas += `<tr>
             <td>${datos[0][i].id}</td>
             <td>${datos[0][i].firstname}</td>
@@ -49,6 +53,7 @@ export default function gestionErrores(btnLlamar, btnError, btnLimpiar, resultad
             </tr>
             `
         }
+        //crea la tabla y la refleja en el DOM, luego agrega todas las personas dentro de la tabla
         $resultado.innerHTML = `<table border="1">
         <tr>
             <th>Id</th>
@@ -60,17 +65,23 @@ export default function gestionErrores(btnLlamar, btnError, btnLimpiar, resultad
         </table>`;
     }
 
+    //capta el evento click del boton Llamar
     $btnLlamar.addEventListener("click", () => {
+        //llama a callAPI con el parametro de URL correcto
         callAPI(URL);
         //console.log(datos);
     })
 
+    //capta el evento click del boton Error
     $btnError.addEventListener("click", () => {
+        //llama a callAPI con el parametro de URLError que tiene una falla a proposito
         callAPI(URLError);
         //console.log(datos);
     })
 
+    //capta el evento click del boton Limpiar
     $btnLimpiar.addEventListener("click", () => {
+        //Limpia el DOM
         $resultado.textContent = "";
         $error.textContent = "";
     })
