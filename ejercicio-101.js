@@ -15,9 +15,17 @@ export default function matrizOrdenada(matriz, btnOrdenar, btnLimpiar, resultado
 
     $matriz.textContent = `[${matrizPrincipal}]`;
 
+
+    const funcionOrdenadora = (arr) => {
+        const pivot = arr[0];
+        const menores = arr.slice(1).filter((elemento) => elemento <= pivot);
+        const mayores = arr.slice(1).filter((elemento) => elemento > pivot);
+        return [...funcionOrdenadora(menores), pivot, ...funcionOrdenadora(mayores)];
+    }
+
     $btnOrdenar.addEventListener("clcik", () => {
 
-        
+
 
     });
 
