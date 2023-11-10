@@ -13,6 +13,13 @@ export default function matrizOrdenada(matriz, btnOrdenar, btnLimpiar, resultado
 
     const matrizPrincipal = [2, 6, 1, 15, 8, 7, 12];    
 
+    $matriz.textContent = `[${matrizPrincipal}]`;
+
+    $btnOrdenar.addEventListener("clcik", () => {
+
+        
+
+    });
 
 
 }
