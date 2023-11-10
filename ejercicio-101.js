@@ -36,19 +36,29 @@ export default function matrizOrdenada(matriz, btnOrdenar, btnOrdenarDescendente
         }
     }
 
+    //captando evento click del boton Ordenar
     $btnOrdenar.addEventListener("click", () => {
+        //crea constante que llama a la funcion ordenadora y le pasa la matriz de numeros principal
+        //como parametro y el metodo slice
         const ordenamientoAscendente = funcionOrdenadora(matrizPrincipal.slice());
         //console.log(ordenamientoAscendente);
+        //muestra el resultado en el DOM
         $resultado.textContent = `[${ordenamientoAscendente}]`;
     });
 
+    //capta evento click del boton OrdenarDescendente 
     $btnOrdenarDescendente.addEventListener("click", () => {
+        //realiza lo mismo que en el ascendente, pero le agrega el reverse al final para que
+        //sea de forma descendente
         const ordenamientoDescendente = funcionOrdenadora(matrizPrincipal.slice()).reverse();
         //console.log(ordenamientoDescendente);
+        //muestra el resultado en el DOM
         $resultado.textContent = `[${ordenamientoDescendente}]`;
     });
 
+    //captando evento click del boton Limpiar
     $btnLimpiar.addEventListener("click", () => {
+        //muestra el resultado en el DOM
         $resultado.textContent = "";
     })
 
