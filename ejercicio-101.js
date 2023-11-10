@@ -38,6 +38,10 @@ export default function matrizOrdenada(matriz, btnOrdenar, btnOrdenarDescendente
         console.log(ordenamientoDescendente);
     });
 
+    $btnLimpiar.addEventListener("click", () => {
+        $resultado.textContent = "";
+    })
+
 }
 
 
