@@ -17,14 +17,21 @@ export default function matrizOrdenada(matriz, btnOrdenar, btnLimpiar, resultado
 
 
     const funcionOrdenadora = (arr) => {
-        const pivot = arr[0];
-        const menores = arr.slice(1).filter((elemento) => elemento <= pivot);
-        const mayores = arr.slice(1).filter((elemento) => elemento > pivot);
-        return [...funcionOrdenadora(menores), pivot, ...funcionOrdenadora(mayores)];
+        if(arr.length <= 1){
+            return arr;
+        }else{           
+            const pivot = arr[0];
+            const menores = arr.slice(1).filter((elemento) => elemento <= pivot);
+            const mayores = arr.slice(1).filter((elemento) => elemento > pivot);
+            return [...funcionOrdenadora(menores), pivot, ...funcionOrdenadora(mayores)];
+        }
     }
 
-    $btnOrdenar.addEventListener("clcik", () => {
+    $btnOrdenar.addEventListener("click", () => {
+        
+        const ordenamientoAscendente = funcionOrdenadora(matrizPrincipal.slice());
 
+        console.log(ordenamientoAscendente);
 
 
     });
