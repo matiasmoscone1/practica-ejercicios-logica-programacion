@@ -5,7 +5,13 @@
 
 export default function matrizOrdenada(matriz, btnOrdenar, btnLimpiar, resultado){
 
-    
+
+    const $matriz = document.querySelector(matriz);
+    const $btnOrdenar = document.querySelector(btnOrdenar);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $resultado = document.querySelector(resultado);
+
+    const matrizPrincipal = [2, 6, 1, 15, 8, 7, 12];    
 
 
 
