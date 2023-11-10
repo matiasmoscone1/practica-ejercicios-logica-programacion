@@ -8,6 +8,7 @@ export default function matrizOrdenada(matriz, btnOrdenar, btnOrdenarDescendente
 
     const $matriz = document.querySelector(matriz);
     const $btnOrdenar = document.querySelector(btnOrdenar);
+    const $btnOrdenarDescendente = document.querySelector(btnOrdenarDescendente);
     const $btnLimpiar = document.querySelector(btnLimpiar);
     const $resultado = document.querySelector(resultado);
 
@@ -28,14 +29,14 @@ export default function matrizOrdenada(matriz, btnOrdenar, btnOrdenarDescendente
     }
 
     $btnOrdenar.addEventListener("click", () => {
-        
         const ordenamientoAscendente = funcionOrdenadora(matrizPrincipal.slice());
-
         console.log(ordenamientoAscendente);
-
-
     });
 
+    $btnOrdenarDescendente.addEventListener("click", () => {
+        const ordenamientoDescendente = funcionOrdenadora(matrizPrincipal.slice()).reverse();
+        console.log(ordenamientoDescendente);
+    });
 
 }
 
