@@ -30,12 +30,14 @@ export default function matrizOrdenada(matriz, btnOrdenar, btnOrdenarDescendente
 
     $btnOrdenar.addEventListener("click", () => {
         const ordenamientoAscendente = funcionOrdenadora(matrizPrincipal.slice());
-        console.log(ordenamientoAscendente);
+        //console.log(ordenamientoAscendente);
+        $resultado.textContent = `[${ordenamientoAscendente}]`;
     });
 
     $btnOrdenarDescendente.addEventListener("click", () => {
         const ordenamientoDescendente = funcionOrdenadora(matrizPrincipal.slice()).reverse();
-        console.log(ordenamientoDescendente);
+        //console.log(ordenamientoDescendente);
+        $resultado.textContent = `[${ordenamientoDescendente}]`;
     });
 
     $btnLimpiar.addEventListener("click", () => {
