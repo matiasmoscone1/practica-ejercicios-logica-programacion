@@ -3,7 +3,7 @@
 //números ordenados de menor a mayor, sin usar el método sort.
 
 
-export default function matrizOrdenada(matriz, btnOrdenar, btnLimpiar, resultado){
+export default function matrizOrdenada(matriz, btnOrdenar, btnOrdenarDescendente, btnLimpiar, resultado){
 
 
     const $matriz = document.querySelector(matriz);
