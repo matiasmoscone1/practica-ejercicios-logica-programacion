@@ -13,9 +13,8 @@ export default function informacionNavegador(btnVer, btnLimpiar, resultado){
     $btnVer.addEventListener("click", () => {
 
         console.log(navigator);
-
         
-
+        $resultado.textContent = `Nombre: ${navigator.appName}`;
 
     });
 
