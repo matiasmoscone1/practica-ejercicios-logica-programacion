@@ -18,7 +18,11 @@ export default function informacionNavegador(btnVer, btnLimpiar, resultado){
 
     });
 
-
+    
+    $btnLimpiar.addEventListener("click", () => {
+        $resultado.textContent = "";
+    });
+    
 }
 
 
