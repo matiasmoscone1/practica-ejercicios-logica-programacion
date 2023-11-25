@@ -4,15 +4,17 @@
 //Nombre del navegador. Versión del navegador. Idioma del navegador.
 
 
-export default function informacionNavegador(btnVer, btnLimpiar){
+export default function informacionNavegador(btnVer, btnLimpiar, resultado){
 
     const $btnVer = document.querySelector(btnVer);
     const $btnLimpiar = document.querySelector(btnLimpiar);
-
+    const $resultado = document.querySelector(resultado);
 
     $btnVer.addEventListener("click", () => {
 
-        console.log(Navigator);
+        console.log(navigator);
+
+        
 
 
     });
