@@ -6,10 +6,16 @@
 
 export default function informacionNavegador(btnVer, btnLimpiar){
 
+    const $btnVer = document.querySelector(btnVer);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
 
-    
+
+    $btnVer.addEventListener("click", () => {
+
+        console.log(Navigator);
 
 
+    });
 
 
 }
