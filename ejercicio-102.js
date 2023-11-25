@@ -14,7 +14,7 @@ export default function informacionNavegador(btnVer, btnLimpiar, resultado){
 
         console.log(navigator);
         
-        $resultado.textContent = `Nombre: ${navigator.appName}`;
+        $resultado.textContent = `Nombre: ${navigator.appName} \n Version: ${navigator.appVersion} \n Idioma: ${navigator.language}`;
 
     });
 
