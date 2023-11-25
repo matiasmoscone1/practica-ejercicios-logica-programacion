@@ -4,13 +4,14 @@
 //Nombre del navegador. Versión del navegador. Idioma del navegador.
 
 
-export default function informacionNavegador(){
-
-
-
+export default function informacionNavegador(btnVer, btnLimpiar){
 
 
     
+
+
+
+
 }
 
 
