@@ -10,10 +10,15 @@ export default function botonesInicioFin(btnInicio, btnFin){
 
 
     $btnInicio.addEventListener("click", () => {
-
         console.log(window);
-
+        window.scrollTo({top: top, behavior: "smooth"});
     });
+
+    $btnFin.addEventListener("click", () => {
+        window.scrollTo({top: document.body.scrollHeight, behavior: "smooth"});
+    });
+
+    //console.log(document.body.scrollHeight);
 
 
 }
