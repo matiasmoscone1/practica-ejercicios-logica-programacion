@@ -66,12 +66,15 @@
 
 
 .btn-inicio-ej-103{
-    position: relative;
-    margin-top: 10px;
+    position: fixed;
+    top: 10px;
+    right: 50px;
 }
 
 .btn-fin-ej-103{
-
+    position: fixed;
+    top: 10px;
+    right: 10px;
 }
 
 
