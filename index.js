@@ -100,6 +100,7 @@ import generadorPrimos from "./ejercicio-99.js";
 import gestionErrores from "./ejercicio-100.js";
 import matrizOrdenada from "./ejercicio-101.js";
 import informacionNavegador from "./ejercicio-102.js";
+import botonesInicioFin from "./ejercicio-103.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -206,6 +207,6 @@ document.addEventListener("DOMContentLoaded", () => {
     gestionErrores(".btn-llamar-ej-100", ".btn-error-ej-100",".btn-limpiar-ej-100", ".resultado-ej-100", ".error-ej-100");
     matrizOrdenada(".matriz-principal-ej-101", ".btn-ordenar-ej-101", ".btn-ordenar-descendente-ej-101", ".btn-limpiar-ej-101", ".matriz-resultado-ej-101");
     informacionNavegador(".btn-info-ej-102", ".btn-limpiar-ej-102", ".resultado-ej-102");
-
+    botonesInicioFin(".btn-inicio-ej-103", ".btn-fin-ej-103");
     
 });
