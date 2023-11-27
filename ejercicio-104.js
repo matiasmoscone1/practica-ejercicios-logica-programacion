@@ -8,8 +8,18 @@
 export default function almacenamientoLocalStorage(inputNombre, inputApellido, inputEmail, btnEnviar, btnTraerInfo, btnLimpiar){
 
 
-
+    const $btnEnviar = document.querySelector(btnEnviar);
+    const $btnTraerInfo = document.querySelector(btnTraerInfo);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
     
+
+    $btnEnviar.addEventListener("click", () => {
+
+        console.log("asd");
+
+    });
+
+
 
 }
 
