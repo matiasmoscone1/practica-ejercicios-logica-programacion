@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
     matrizOrdenada(".matriz-principal-ej-101", ".btn-ordenar-ej-101", ".btn-ordenar-descendente-ej-101", ".btn-limpiar-ej-101", ".matriz-resultado-ej-101");
     informacionNavegador(".btn-info-ej-102", ".btn-limpiar-ej-102", ".resultado-ej-102");
     botonesInicioFin(".btn-inicio-ej-103", ".btn-fin-ej-103");
-    almacenamientoLocalStorage();
+    almacenamientoLocalStorage(".input-nombre-ej-104", ".input-apellido-ej-104", ".input-email-ej-104", ".btn-enviar-ej-104", ".btn-traerinfo-ej-104", ".btn-limpiar-ej-104", ".resultado-ej-104");
 
     
 

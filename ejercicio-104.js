@@ -5,19 +5,31 @@
 //clic en el botón, los datos se almacenen en localStorage. Luego, al recargar la página, muestra los datos almacenados.
 
 
-export default function almacenamientoLocalStorage(inputNombre, inputApellido, inputEmail, btnEnviar, btnTraerInfo, btnLimpiar){
+export default function almacenamientoLocalStorage(inputNombre, inputApellido, inputEmail, btnEnviar, btnTraerInfo, btnLimpiar, resultado){
 
 
     const $btnEnviar = document.querySelector(btnEnviar);
     const $btnTraerInfo = document.querySelector(btnTraerInfo);
     const $btnLimpiar = document.querySelector(btnLimpiar);
-    
+    const $resultado = document.querySelector(resultado);
+
 
     $btnEnviar.addEventListener("click", () => {
 
         console.log("asd");
 
     });
+
+
+    $btnTraerInfo.addEventListener("click", () => {
+
+    });
+
+    $btnLimpiar.addEventListener("click", () => {
+
+    });
+
+
 
 
 
