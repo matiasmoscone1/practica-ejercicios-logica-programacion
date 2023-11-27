@@ -5,7 +5,7 @@
 //clic en el botón, los datos se almacenen en localStorage. Luego, al recargar la página, muestra los datos almacenados.
 
 
-export default function almacenamientoLocalStorage(){
+export default function almacenamientoLocalStorage(inputNombre, inputApellido, inputEmail, btnEnviar, btnTraerInfo, btnLimpiar){
 
 
 
