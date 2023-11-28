@@ -20,19 +20,21 @@ export default function almacenamientoLocalStorage(inputNombre, inputApellido, i
         const $inputApellido = document.querySelector(inputApellido).value;
         const $inputEmail = document.querySelector(inputEmail).value;
         
-        //localStorage.clear();
-
-        localStorage.setItem("Usuario", [`Nombre: ${$inputNombre}, Apellido: ${$inputApellido}, Email: ${$inputEmail}`]);
         
-        console.log(localStorage.getItem("Usuario"));
 
-        //console.log(localStorage);
+        const usuarios = JSON.parse(localStorage.getItem("Usuarios") || []);
 
-        //console.log($inputNombre, $inputApellido, $inputEmail);
+        //console.log(usuarios);
+        usuarios.push({
+            Nombre: $inputNombre,
+            Apellido: $inputApellido,
+            Email: $inputEmail
+        });
 
+        localStorage.setItem("Usuarios", JSON.stringify(usuarios))
+        
+        console.log(JSON.parse(localStorage.getItem("Usuario")));
 
-
-        //console.log(nuevosNombres);
 
     });
 
