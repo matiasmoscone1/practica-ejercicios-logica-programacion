@@ -48,7 +48,7 @@ export default function almacenamientoLocalStorage(inputNombre, inputApellido, i
     });
 
     $btnLimpiar.addEventListener("click", () => {
-
+        localStorage.clear();
     });
 
 
