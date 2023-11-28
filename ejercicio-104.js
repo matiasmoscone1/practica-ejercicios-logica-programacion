@@ -22,7 +22,7 @@ export default function almacenamientoLocalStorage(inputNombre, inputApellido, i
         
         //localStorage.clear();
         
-        localStorage.setItem("Usuario", {Nombre: $inputNombre, Apellido: $inputApellido, Email: $inputEmail});
+        localStorage.setItem("Usuario", [`Nombre: ${$inputNombre}, Apellido: ${$inputApellido}, Email: ${$inputEmail}`]);
         
         localStorage.getItem("Usuario");
 
