@@ -20,6 +20,9 @@ export default function almacenamientoLocalStorage(inputNombre, inputApellido, i
         const $inputApellido = document.querySelector(inputApellido).value;
         const $inputEmail = document.querySelector(inputEmail).value;
 
+        localStorage.setItem("Nombre", $inputNombre);
+
+        console.log(localStorage);
 
         console.log($inputNombre, $inputApellido, $inputEmail);
 
