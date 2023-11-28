@@ -14,9 +14,14 @@ export default function almacenamientoLocalStorage(inputNombre, inputApellido, i
     const $resultado = document.querySelector(resultado);
 
 
-    $btnEnviar.addEventListener("click", () => {
+    $btnEnviar.addEventListener("click", (e) => {
+        e.preventDefault();
+        const $inputNombre = document.querySelector(inputNombre).value;
+        const $inputApellido = document.querySelector(inputApellido).value;
+        const $inputEmail = document.querySelector(inputEmail).value;
 
-        console.log("asd");
+
+        console.log($inputNombre, $inputApellido, $inputEmail);
 
     });
 
