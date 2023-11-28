@@ -36,6 +36,9 @@ export default function almacenamientoLocalStorage(inputNombre, inputApellido, i
         
         console.log(JSON.parse(localStorage.getItem("Usuarios")));
 
+        document.querySelector(inputNombre).value = "";
+        document.querySelector(inputApellido).value = "";
+        document.querySelector(inputEmail).value = "";
 
     });
 
