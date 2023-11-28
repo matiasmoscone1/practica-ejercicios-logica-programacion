@@ -22,7 +22,8 @@ export default function almacenamientoLocalStorage(inputNombre, inputApellido, i
         
         
 
-        const usuarios = JSON.parse(localStorage.getItem("Usuarios") || []);
+        const usuarios = JSON.parse(localStorage.getItem("Usuarios")) || [];
+
 
         //console.log(usuarios);
         usuarios.push({
@@ -33,7 +34,7 @@ export default function almacenamientoLocalStorage(inputNombre, inputApellido, i
 
         localStorage.setItem("Usuarios", JSON.stringify(usuarios))
         
-        console.log(JSON.parse(localStorage.getItem("Usuario")));
+        console.log(JSON.parse(localStorage.getItem("Usuarios")));
 
 
     });
