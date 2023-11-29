@@ -49,20 +49,26 @@ export default function almacenamientoLocalStorage(inputNombre, inputApellido, i
 
         console.log(listaUsuarios);
 
+        const tablaUsuarios = `<table border={1}>
+        <thead>
+            <td>Nombre</td>
+            <td>Apellido</td>
+            <td>Email</td>
+        </thead>
+        <tbody>`
+        ;
+
+
         for(let i = 0; i <= listaUsuarios.length; i++){
-        $resultado.innerHTML = `
-            <table border={1}>
-                <thead>
-                    <td>Nombre</td>
-                    <td>Apellido</td>
-                    <td>Email</td>
-                </thead>
-                <tbody>
-                    <td>${listaUsuarios[i].Nombre}</td>
-                    <td>${listaUsuarios[i].Apellido}</td>
-                    <td>${listaUsuarios[i].Email}</td>
-                </tbody>
-            </table>
+        tablaUsuarios += `
+            
+            <tr>
+                <td>${listaUsuarios[i].Nombre}</td>
+                <td>${listaUsuarios[i].Apellido}</td>
+                <td>${listaUsuarios[i].Email}</td>
+                
+            </tr>
+        </table>
         `;
 
         }
