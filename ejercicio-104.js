@@ -48,7 +48,20 @@ export default function almacenamientoLocalStorage(inputNombre, inputApellido, i
         const listaUsuarios = JSON.parse(localStorage.getItem("Usuarios"));
 
         console.log(listaUsuarios);
-        $resultado.innerHTML = `Los usuarios son: ${listaUsuarios[0].Nombre}`;
+        $resultado.innerHTML = `
+            <table border={1}>
+                <thead>
+                    <td>Nombre</td>
+                    <td>Apellido</td>
+                    <td>Email</td>
+                </thead>
+                <tbody>
+                
+                </tbody>
+            </table>
+        
+        ${listaUsuarios[0].Nombre}`;
+
 
     });
 
