@@ -40,10 +40,15 @@ export default function almacenamientoLocalStorage(inputNombre, inputApellido, i
         document.querySelector(inputApellido).value = "";
         document.querySelector(inputEmail).value = "";
 
+        
     });
 
 
     $btnTraerInfo.addEventListener("click", () => {
+        const listaUsuarios = JSON.parse(localStorage.getItem("Usuarios"));
+
+        console.log(listaUsuarios);
+        $resultado.innerHTML = `Los usuarios son: ${listaUsuarios[0].Nombre}`;
 
     });
 
