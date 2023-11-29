@@ -65,7 +65,6 @@ export default function almacenamientoLocalStorage(inputNombre, inputApellido, i
                 <td>${listaUsuarios[i].Nombre}</td>
                 <td>${listaUsuarios[i].Apellido}</td>
                 <td>${listaUsuarios[i].Email}</td>
-                
             </tr>
         
         `;
@@ -83,6 +82,7 @@ export default function almacenamientoLocalStorage(inputNombre, inputApellido, i
 
     $btnLimpiar.addEventListener("click", () => {
         localStorage.clear();
+        $resultado.textContent = "";
     });
 
 
