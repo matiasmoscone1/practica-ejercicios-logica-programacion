@@ -49,7 +49,7 @@ export default function almacenamientoLocalStorage(inputNombre, inputApellido, i
 
         console.log(listaUsuarios);
 
-        const tablaUsuarios = `<table border={1}>
+        let tablaUsuarios = `<table border={1}>
         <thead>
             <td>Nombre</td>
             <td>Apellido</td>
@@ -59,19 +59,26 @@ export default function almacenamientoLocalStorage(inputNombre, inputApellido, i
         ;
 
 
-        for(let i = 0; i <= listaUsuarios.length; i++){
-        tablaUsuarios += `
-            
+        for(let i = 0; i < listaUsuarios.length; i++){
+        tablaUsuarios += ` 
             <tr>
                 <td>${listaUsuarios[i].Nombre}</td>
                 <td>${listaUsuarios[i].Apellido}</td>
                 <td>${listaUsuarios[i].Email}</td>
                 
             </tr>
+        
+        `;
+        }
+
+        tablaUsuarios += `
+            </tbody>
         </table>
         `;
 
-        }
+
+        $resultado.innerHTML = tablaUsuarios;
+
     });
 
     $btnLimpiar.addEventListener("click", () => {
