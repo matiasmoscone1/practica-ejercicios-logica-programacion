@@ -48,6 +48,8 @@ export default function almacenamientoLocalStorage(inputNombre, inputApellido, i
         const listaUsuarios = JSON.parse(localStorage.getItem("Usuarios"));
 
         console.log(listaUsuarios);
+
+        for(let i = 0; i <= listaUsuarios.length; i++){
         $resultado.innerHTML = `
             <table border={1}>
                 <thead>
@@ -56,13 +58,14 @@ export default function almacenamientoLocalStorage(inputNombre, inputApellido, i
                     <td>Email</td>
                 </thead>
                 <tbody>
-                
+                    <td>${listaUsuarios[i].Nombre}</td>
+                    <td>${listaUsuarios[i].Apellido}</td>
+                    <td>${listaUsuarios[i].Email}</td>
                 </tbody>
             </table>
-        
-        ${listaUsuarios[0].Nombre}`;
+        `;
 
-
+        }
     });
 
     $btnLimpiar.addEventListener("click", () => {
