@@ -10,15 +10,13 @@ export default function contadorVisitas(resultado, btnLimpiar){
     const $btnLimpiar = document.querySelector(btnLimpiar);
 
     let count = 1;
+    
+    //localStorage.clear();
 
 
     window.addEventListener("beforeunload", () => {
 
-        //count++;
-        
-        const contador = (localStorage.getItem("Contador") + 1)  || (count + 1);
-        
-        
+        const contador = (parseInt(localStorage.getItem("Contador")) + 1)  || (parseInt(count) + 1);
 
         localStorage.setItem("Contador", contador);
 
