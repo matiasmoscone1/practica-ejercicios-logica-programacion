@@ -14,11 +14,13 @@ export default function contadorVisitas(resultado, btnLimpiar){
 
     window.addEventListener("beforeunload", () => {
 
-        //const contador = localStorage.getItem("Contador") || count;
+        //count++;
+        
+        const contador = (localStorage.getItem("Contador") + 1)  || (count + 1);
+        
+        
 
-        count++;
-
-        localStorage.setItem("Contador", count);
+        localStorage.setItem("Contador", contador);
 
         
         //console.log("SE RECARGO 1 VEZ");
