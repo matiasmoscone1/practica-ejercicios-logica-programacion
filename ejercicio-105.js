@@ -4,11 +4,15 @@
 //en localStorage. Si no existe, inicializa el contador en 1; si existe, 
 //incrementa el contador. Muestra el contador en la página.
 
-export default function contadorVisitas(){
+export default function contadorVisitas(resultado, btnLimpiar){
 
-
+    const $resultado = document.querySelector(resultado);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
 
     
+
+
+
 }
 
 
