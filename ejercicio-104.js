@@ -8,14 +8,19 @@
 export default function almacenamientoLocalStorage(inputNombre, inputApellido, inputEmail, btnEnviar, btnTraerInfo, btnLimpiar, resultado){
 
 
+    //creando variables referenciales al DOM
     const $btnEnviar = document.querySelector(btnEnviar);
     const $btnTraerInfo = document.querySelector(btnTraerInfo);
     const $btnLimpiar = document.querySelector(btnLimpiar);
     const $resultado = document.querySelector(resultado);
 
 
+    //captando evento click del boton Enviar
     $btnEnviar.addEventListener("click", (e) => {
+        //previene el comportamiento por default al enviar dentro de un form, ya que sino se envia
+        //la info y se recarga el navegador por el "submit"
         e.preventDefault();
+        //tomando valores escritos por el usuario en los inputs
         const $inputNombre = document.querySelector(inputNombre).value;
         const $inputApellido = document.querySelector(inputApellido).value;
         const $inputEmail = document.querySelector(inputEmail).value;
