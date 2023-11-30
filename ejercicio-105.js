@@ -12,16 +12,22 @@ export default function contadorVisitas(resultado, btnLimpiar){
     let count = 1;
 
 
-    document.addEventListener("beforeunload", () => {
+    window.addEventListener("beforeunload", () => {
+
+        //const contador = localStorage.getItem("Contador") || count;
 
         count++;
 
         localStorage.setItem("Contador", count);
 
-        console.log(localStorage.getItem("Contador"));
-
+        
         //console.log("SE RECARGO 1 VEZ");
     });
+
+    const contador = localStorage.getItem("Contador");
+
+    console.log(contador);
+
 
 
 }
