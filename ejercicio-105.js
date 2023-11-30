@@ -9,8 +9,19 @@ export default function contadorVisitas(resultado, btnLimpiar){
     const $resultado = document.querySelector(resultado);
     const $btnLimpiar = document.querySelector(btnLimpiar);
 
-    
+    let count = 1;
 
+
+    document.addEventListener("beforeunload", () => {
+
+        count++;
+
+        localStorage.setItem("Contador", count);
+
+        console.log(localStorage.getItem("Contador"));
+
+        //console.log("SE RECARGO 1 VEZ");
+    });
 
 
 }
