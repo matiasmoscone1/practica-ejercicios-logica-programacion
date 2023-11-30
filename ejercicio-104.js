@@ -101,6 +101,9 @@ export default function almacenamientoLocalStorage(inputNombre, inputApellido, i
         //limpia el localStorage y el resultado en el DOM
         localStorage.clear();
         $resultado.textContent = "";
+        document.querySelector(inputNombre).value = "";
+        document.querySelector(inputApellido).value = "";
+        document.querySelector(inputEmail).value = "";
     });
 
 
