@@ -102,6 +102,7 @@ import matrizOrdenada from "./ejercicio-101.js";
 import informacionNavegador from "./ejercicio-102.js";
 import botonesInicioFin from "./ejercicio-103.js";
 import almacenamientoLocalStorage from "./ejercicio-104.js";
+import contadorVisitas from "./ejercicio-105.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -210,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
     informacionNavegador(".btn-info-ej-102", ".btn-limpiar-ej-102", ".resultado-ej-102");
     botonesInicioFin(".btn-inicio-ej-103", ".btn-fin-ej-103");
     almacenamientoLocalStorage(".input-nombre-ej-104", ".input-apellido-ej-104", ".input-email-ej-104", ".btn-enviar-ej-104", ".btn-traerinfo-ej-104", ".btn-limpiar-ej-104", ".resultado-ej-104");
-
+    contadorVisitas();
     
 
 });
