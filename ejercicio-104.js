@@ -26,34 +26,41 @@ export default function almacenamientoLocalStorage(inputNombre, inputApellido, i
         const $inputEmail = document.querySelector(inputEmail).value;
         
         
-
+        //creando/obteniendo lista de usuarios que se almacenara en localstorage
         const usuarios = JSON.parse(localStorage.getItem("Usuarios")) || [];
 
 
         //console.log(usuarios);
+        //agrega un objeto usuario a la lista de usuarios, y le pasa las propiedades caracteristicas
         usuarios.push({
             Nombre: $inputNombre,
             Apellido: $inputApellido,
             Email: $inputEmail
         });
 
+        //guarda la lista de usuarios como "Usuarios" en el localStorage
         localStorage.setItem("Usuarios", JSON.stringify(usuarios))
         
-        console.log(JSON.parse(localStorage.getItem("Usuarios")));
 
+        //console.log(JSON.parse(localStorage.getItem("Usuarios")));
+
+        //limpia el valor de los inputs una vez que se haya guardado en el localStorage la info
         document.querySelector(inputNombre).value = "";
         document.querySelector(inputApellido).value = "";
         document.querySelector(inputEmail).value = "";
-
         
     });
 
 
+    //captando evento click del boton TraerInfo
     $btnTraerInfo.addEventListener("click", () => {
+        //crea una variable que almacena la lista de usuarios
         const listaUsuarios = JSON.parse(localStorage.getItem("Usuarios"));
 
-        console.log(listaUsuarios);
 
+        //console.log(listaUsuarios);
+
+        //crea otra variable que genera una tabla en el DOM
         let tablaUsuarios = `<table border={1}>
         <thead>
             <td>Nombre</td>
@@ -64,6 +71,8 @@ export default function almacenamientoLocalStorage(inputNombre, inputApellido, i
         ;
 
 
+        //ciclo for que por cada usuario se le agregue a la tabla creada anteriormente la informacion
+        //de dicho usuario 
         for(let i = 0; i < listaUsuarios.length; i++){
         tablaUsuarios += ` 
             <tr>
@@ -75,23 +84,24 @@ export default function almacenamientoLocalStorage(inputNombre, inputApellido, i
         `;
         }
 
+        //se cierra la tabla correspondientemente
         tablaUsuarios += `
             </tbody>
         </table>
         `;
 
-
+        //se muestra en el DOM toda la tabla de usuarios creada - se hace con innerHTML para que
+        //se agreguen las etiquetas correctamente
         $resultado.innerHTML = tablaUsuarios;
 
     });
 
+    //captando evento click del boton Limpiar
     $btnLimpiar.addEventListener("click", () => {
+        //limpia el localStorage y el resultado en el DOM
         localStorage.clear();
         $resultado.textContent = "";
     });
-
-
-
 
 
 }
