@@ -26,7 +26,12 @@ export default function contadorVisitas(resultado, btnLimpiar){
 
     const contador = localStorage.getItem("Contador");
 
-    console.log(contador);
+    $resultado.textContent = `Visitas: ${contador}`;
+    
+
+    //console.log(contador);
+
+
 
 
 
