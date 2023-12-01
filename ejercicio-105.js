@@ -33,7 +33,7 @@ export default function contadorVisitas(resultado, btnLimpiar){
 
     $btnLimpiar.addEventListener("click", () => {
         localStorage.clear();
-        $resultado.textContent = `Visitas: ${contador}`;
+        location.reload();
     })
 
 
