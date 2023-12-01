@@ -9,7 +9,7 @@ export default function contadorVisitas(resultado, btnLimpiar){
     const $resultado = document.querySelector(resultado);
     const $btnLimpiar = document.querySelector(btnLimpiar);
 
-    let count = 1;
+    let count = 0;
     
     //localStorage.clear();
 
@@ -27,11 +27,14 @@ export default function contadorVisitas(resultado, btnLimpiar){
     const contador = localStorage.getItem("Contador");
 
     $resultado.textContent = `Visitas: ${contador}`;
-    
+
 
     //console.log(contador);
 
-
+    $btnLimpiar.addEventListener("click", () => {
+        localStorage.clear();
+        $resultado.textContent = `Visitas: ${contador}`;
+    })
 
 
 
