@@ -36,7 +36,7 @@ export default function contadorVisitas(resultado, btnLimpiar){
         location.reload();
     })
 
-
+    //console.log(location);
 
 }
 
