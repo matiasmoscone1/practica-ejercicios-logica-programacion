@@ -7,10 +7,12 @@ export default function cambiarFondo(btnOscuro, btnClaro){
 
     const colorFondo = localStorage.setItem("color", "white");
 
-
-
-
     console.log(localStorage.getItem("color"));
+
+    document.body.style.backgroundColor = "#000000";
+    document.body.style.color = "#FFFFFF";
+
+
 
 
 }
