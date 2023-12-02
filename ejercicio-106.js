@@ -3,14 +3,11 @@
 // es decir modo oscuro y claro.
 
 
-export default function cambiarFondo(btnOscuro, btnClaro){
+export default function cambiarFondo(btnFondo){
 
-    const $btnOscuro = document.querySelector(btnOscuro);
-    const $btnClaro = document.querySelector(btnClaro);
-
+    const $btnFondo = document.querySelector(btnFondo);
+  
     let flag = true;
-
-
 
     console.log(localStorage.getItem("color"));
 
@@ -20,7 +17,7 @@ export default function cambiarFondo(btnOscuro, btnClaro){
         localStorage.setItem("color", "black");
     }
 
-    $btnOscuro.addEventListener("click", () => {
+    $btnFondo.addEventListener("click", () => {
         
     
         const colorFondo = localStorage.getItem("color");
@@ -38,12 +35,6 @@ export default function cambiarFondo(btnOscuro, btnClaro){
     
     
     });
-
-    /*
-    $btnClaro.addEventListener("click", () => {
-        document.body.style.backgroundColor = "#FFFFFF";
-        document.body.style.color = "#000000";     
-    });*/
 
 
 

@@ -213,8 +213,8 @@ document.addEventListener("DOMContentLoaded", () => {
     botonesInicioFin(".btn-inicio-ej-103", ".btn-fin-ej-103");
     almacenamientoLocalStorage(".input-nombre-ej-104", ".input-apellido-ej-104", ".input-email-ej-104", ".btn-enviar-ej-104", ".btn-traerinfo-ej-104", ".btn-limpiar-ej-104", ".resultado-ej-104");
     contadorVisitas(".resultado-ejercicio-105", ".btn-limpiar-ej-105");
-    cambiarFondo(".btn-oscuro-ej-106", ".btn-claro-ej-106");
-    
+    cambiarFondo(".btn-fondo-ej-106");
+
 
 
 
