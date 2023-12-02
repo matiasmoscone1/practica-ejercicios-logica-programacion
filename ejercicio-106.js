@@ -3,11 +3,11 @@
 // es decir modo oscuro y claro.
 
 
-export default function cambiarFondo(){
-
-
+export default function cambiarFondo(btnOscuro, btnClaro){
 
     
+
+
 }
 
 
