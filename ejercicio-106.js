@@ -11,14 +11,9 @@ export default function cambiarFondo(btnFondo){
 
     console.log(localStorage.getItem("color"));
 
-    if(flag){
-        localStorage.setItem("color", "white");
-    }else{
-        localStorage.setItem("color", "black");
-    }
+    flag ? localStorage.setItem("color", "white") : localStorage.setItem("color", "black");
 
     $btnFondo.addEventListener("click", () => {
-        
     
         const colorFondo = localStorage.getItem("color");
 
