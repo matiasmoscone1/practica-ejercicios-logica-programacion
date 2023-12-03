@@ -13,13 +13,24 @@ export default function cambiaFondoPorHora(btnIniciar, btnFinalizar){
     const $btnIniciar = document.querySelector(btnIniciar);
     const $btnFinalizar = document.querySelector(btnFinalizar);
 
-    const hora = Date();
+    const hora = new Date;
     
-    console.log();
+    console.log(hora.getHours());
+
+
 
     $btnIniciar.addEventListener("click", () => {
 
-
+        if(hora > 6 && hora < 12){
+            document.body.style.backgroundColor = "#FFFFFF";
+            document.body.style.color = "#000000";
+        }else if(hora > 12 && hora < 18){
+            document.body.style.backgroundColor = "#808080";
+            document.body.style.color = "#FFFFFF";    
+        }else{
+            document.body.style.backgroundColor = "#000000";
+            document.body.style.color = "#FFFFFF";
+        }
 
 
     });
