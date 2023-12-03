@@ -105,6 +105,7 @@ import almacenamientoLocalStorage from "./ejercicio-104.js";
 import contadorVisitas from "./ejercicio-105.js";
 import cambiarFondo from "./ejercicio-106.js";
 import cambiaFondoPorHora from "./ejercicio-107.js";
+import validacionGeolocalizacion from "./ejercicio-108.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -216,7 +217,9 @@ document.addEventListener("DOMContentLoaded", () => {
     contadorVisitas(".resultado-ejercicio-105", ".btn-limpiar-ej-105");
     cambiarFondo(".btn-fondo-ej-106");
     cambiaFondoPorHora(".btn-iniciar-ej-107", ".btn-finalizar-ej-107");
+    validacionGeolocalizacion();
 
+    
 
 
 });
