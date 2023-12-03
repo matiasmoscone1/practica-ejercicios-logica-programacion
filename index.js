@@ -104,6 +104,7 @@ import botonesInicioFin from "./ejercicio-103.js";
 import almacenamientoLocalStorage from "./ejercicio-104.js";
 import contadorVisitas from "./ejercicio-105.js";
 import cambiarFondo from "./ejercicio-106.js";
+import cambiaFondoPorHora from "./ejercicio-107.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -214,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
     almacenamientoLocalStorage(".input-nombre-ej-104", ".input-apellido-ej-104", ".input-email-ej-104", ".btn-enviar-ej-104", ".btn-traerinfo-ej-104", ".btn-limpiar-ej-104", ".resultado-ej-104");
     contadorVisitas(".resultado-ejercicio-105", ".btn-limpiar-ej-105");
     cambiarFondo(".btn-fondo-ej-106");
-
+    cambiaFondoPorHora();
 
 
 
