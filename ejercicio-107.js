@@ -7,10 +7,22 @@
 //Noche (6:00 PM - 6:00 AM): Fondo oscuro.
 
 
-export default function cambiaFondoPorHora(){
+export default function cambiaFondoPorHora(btnIniciar, btnFinalizar){
 
+
+    const $btnIniciar = document.querySelector(btnIniciar);
+    const $btnFinalizar = document.querySelector(btnFinalizar);
+
+    const hora = Date();
     
+    console.log();
 
+    $btnIniciar.addEventListener("click", () => {
+
+
+
+
+    });
 
 
 }
