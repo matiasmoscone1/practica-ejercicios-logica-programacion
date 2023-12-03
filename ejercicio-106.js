@@ -5,14 +5,17 @@
 
 export default function cambiarFondo(btnFondo){
 
+    //Creando variables referenciales al DOM
     const $btnFondo = document.querySelector(btnFondo);
-  
-    let flag = true;
 
-    console.log(localStorage.getItem("color"));
+    //console.log(localStorage.getItem("color"));
 
-    flag ? localStorage.setItem("color", "white") : localStorage.setItem("color", "black");
 
+    //seteando primer color en el localstorage
+    localStorage.setItem("color", "white");
+
+
+    
     $btnFondo.addEventListener("click", () => {
     
         const colorFondo = localStorage.getItem("color");
