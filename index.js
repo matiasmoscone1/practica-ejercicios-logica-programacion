@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
     almacenamientoLocalStorage(".input-nombre-ej-104", ".input-apellido-ej-104", ".input-email-ej-104", ".btn-enviar-ej-104", ".btn-traerinfo-ej-104", ".btn-limpiar-ej-104", ".resultado-ej-104");
     contadorVisitas(".resultado-ejercicio-105", ".btn-limpiar-ej-105");
     cambiarFondo(".btn-fondo-ej-106");
-    cambiaFondoPorHora();
+    cambiaFondoPorHora(".btn-iniciar-ej-107", ".btn-finalizar-ej-107");
 
 
 

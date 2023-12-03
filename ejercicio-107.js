@@ -27,7 +27,7 @@ export default function cambiaFondoPorHora(btnIniciar, btnFinalizar){
         }else if(hora > 12 && hora < 18){
             document.body.style.backgroundColor = "#808080";
             document.body.style.color = "#FFFFFF";    
-        }else{
+        }else if(hora > 18 && hora < 6){
             document.body.style.backgroundColor = "#000000";
             document.body.style.color = "#FFFFFF";
         }
