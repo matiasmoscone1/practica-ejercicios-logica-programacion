@@ -9,17 +9,15 @@
 
 export default function cambiaFondoPorHora(btnIniciar, btnFinalizar){
 
-
+    //
     const $btnIniciar = document.querySelector(btnIniciar);
     const $btnFinalizar = document.querySelector(btnFinalizar);
 
     const hora = new Date;
     
-    console.log(hora.getHours());
-
-
-
     $btnIniciar.addEventListener("click", () => {
+
+        console.log(hora.getHours());
 
         if(hora.getHours() > 6 && hora.getHours() < 12){
             document.body.style.backgroundColor = "#FFFFFF";
@@ -32,9 +30,12 @@ export default function cambiaFondoPorHora(btnIniciar, btnFinalizar){
             document.body.style.color = "#FFFFFF";
         }
 
-
     });
 
+    $btnFinalizar.addEventListener("click", () => {
+        document.body.style.backgroundColor = "#FFFFFF";
+        document.body.style.color = "#000000";
+    });
 
 }
 
