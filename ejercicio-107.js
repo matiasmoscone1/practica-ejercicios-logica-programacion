@@ -21,10 +21,10 @@ export default function cambiaFondoPorHora(btnIniciar, btnFinalizar){
 
     $btnIniciar.addEventListener("click", () => {
 
-        if(hora > 6 && hora < 12){
+        if(hora.getHours() > 6 && hora.getHours() < 12){
             document.body.style.backgroundColor = "#FFFFFF";
             document.body.style.color = "#000000";
-        }else if(hora > 12 && hora < 18){
+        }else if(hora.getHours() > 12 && hora.getHours() < 18){
             document.body.style.backgroundColor = "#808080";
             document.body.style.color = "#FFFFFF";    
         }else if(hora > 18 && hora < 6){
