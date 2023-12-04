@@ -12,7 +12,13 @@ export default function validacionGeolocalizacion(){
 
     //console.log(locacion);
 
-    console.log(location);
+    // TODAVIA NO HICE EL GIT INIT DE ESTE CODIGO, HACERLO ANTES DE MODIFICARLO
+
+    const geo = navigator.geolocation.getCurrentPosition((position) => {
+        const latitud = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        console.log(latitud,longitude);
+    });
 
 }
 
