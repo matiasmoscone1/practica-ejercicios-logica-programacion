@@ -12,12 +12,22 @@ export default function validacionGeolocalizacion(btnCoords, btnLimpiar, resulta
 
     //console.log(locacion);
 
-    
-    const geo = navigator.geolocation.getCurrentPosition((position) => {
-        const latitud = position.coords.latitude;
-        const longitude = position.coords.longitude;
-        console.log(latitud,longitude);
+    const $btnCoords = document.querySelector(btnCoords);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $resultado = document.querySelector(resultado);
+
+    $btnCoords.addEventListener("click", () => {
+        
+        navigator.geolocation.getCurrentPosition((position) => {
+            const latitud = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            console.log(latitud,longitude);
+        });
     });
+
+
+
+
 
 }
 
