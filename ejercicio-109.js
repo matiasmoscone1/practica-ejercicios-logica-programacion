@@ -5,10 +5,12 @@
 //para reflejar la hora actualizada.
 
 
-export default function cronometro(){
+export default function cronometro(resultado, btnIniciar, btnParar, btnLimpiar){
 
 
+    const $resultado = document.querySelector(resultado);
 
 
+    $resultado.textContent = "0:00:00";
 
 }
