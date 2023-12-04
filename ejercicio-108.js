@@ -20,8 +20,9 @@ export default function validacionGeolocalizacion(btnCoords, btnLimpiar, resulta
         
         navigator.geolocation.getCurrentPosition((position) => {
             const latitud = position.coords.latitude;
-            const longitude = position.coords.longitude;
-            console.log(latitud,longitude);
+            const longitud = position.coords.longitude;
+            //console.log(latitud,longitud);
+            $resultado.innerHTML = `<p>Latitud: ${latitud}</p><p>Longitud: ${longitud}</p>`
         });
     });
 
