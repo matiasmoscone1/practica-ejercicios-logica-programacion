@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
     contadorVisitas(".resultado-ejercicio-105", ".btn-limpiar-ej-105");
     cambiarFondo(".btn-fondo-ej-106");
     cambiaFondoPorHora(".btn-iniciar-ej-107", ".btn-finalizar-ej-107");
-    validacionGeolocalizacion();
+    validacionGeolocalizacion(".btn-coords-ej-108", ".btn-limpiar-ej-108", ".resultado-ej-108");
 
     
 
