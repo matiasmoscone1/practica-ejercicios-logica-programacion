@@ -26,7 +26,9 @@ export default function validacionGeolocalizacion(btnCoords, btnLimpiar, resulta
         });
     });
 
-
+    $btnLimpiar.addEventListener("click", () => {
+        $resultado.textContent = "";
+    })
 
 
 
