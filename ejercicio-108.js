@@ -18,12 +18,16 @@ export default function validacionGeolocalizacion(btnCoords, btnLimpiar, resulta
 
     $btnCoords.addEventListener("click", () => {
         
-        navigator.geolocation.getCurrentPosition((position) => {
-            const latitud = position.coords.latitude;
-            const longitud = position.coords.longitude;
-            //console.log(latitud,longitud);
-            $resultado.innerHTML = `<p>Latitud: ${latitud}</p><p>Longitud: ${longitud}</p>`
-        });
+        if(navigator.geolocation){        
+            navigator.geolocation.getCurrentPosition((position) => {
+                const latitud = position.coords.latitude;
+                const longitud = position.coords.longitude;
+                //console.log(latitud,longitud);
+                $resultado.innerHTML = `<p>Latitud: ${latitud}</p><p>Longitud: ${longitud}</p>`
+            });
+        }else{
+            $resultado.textContent = "La Geolocalizacion no es compatible con este navegador...";
+        }
     });
 
     $btnLimpiar.addEventListener("click", () => {
