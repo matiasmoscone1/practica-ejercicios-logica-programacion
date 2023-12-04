@@ -106,6 +106,7 @@ import contadorVisitas from "./ejercicio-105.js";
 import cambiarFondo from "./ejercicio-106.js";
 import cambiaFondoPorHora from "./ejercicio-107.js";
 import validacionGeolocalizacion from "./ejercicio-108.js";
+import cronometro from "./ejercicio-109.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -218,7 +219,8 @@ document.addEventListener("DOMContentLoaded", () => {
     cambiarFondo(".btn-fondo-ej-106");
     cambiaFondoPorHora(".btn-iniciar-ej-107", ".btn-finalizar-ej-107");
     validacionGeolocalizacion(".btn-coords-ej-108", ".btn-limpiar-ej-108", ".resultado-ej-108");
-
+    cronometro();
+    
     
 
 
