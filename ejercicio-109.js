@@ -9,8 +9,16 @@ export default function cronometro(resultado, btnIniciar, btnParar, btnLimpiar){
 
 
     const $resultado = document.querySelector(resultado);
+    const $btnIniciar = document.querySelector(btnIniciar);
+    const $btnParar = document.querySelector(btnParar);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
 
 
-    $resultado.textContent = "0:00:00";
+    $btnIniciar.addEventListener("click", () => {
+        
+        $resultado.textContent = "0:00:00";
+
+    });
+
 
 }
