@@ -25,10 +25,11 @@ export default function cronometro(resultado, btnIniciar, btnParar, btnLimpiar){
         
         intervalo = setInterval(() => {        
             
-            milisegundos+10;
+            milisegundos++;
 
             if(milisegundos === 100){
                 segundos++;
+                milisegundos = 0;
                 if(segundos === 60){
                     segundos = 0;
                     minutos++;
@@ -38,7 +39,7 @@ export default function cronometro(resultado, btnIniciar, btnParar, btnLimpiar){
             console.log(`${minutos}:${segundos}:${milisegundos}`);
             
 
-        }, 100); 
+        }, 10); 
 
 
     }
