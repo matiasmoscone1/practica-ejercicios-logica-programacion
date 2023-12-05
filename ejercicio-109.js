@@ -36,7 +36,9 @@ export default function cronometro(resultado, btnIniciar, btnParar, btnLimpiar){
                 };
             }            
         
-            console.log(`${minutos}:${segundos}:${milisegundos}`);
+            $resultado.textContent = `${minutos}:${segundos}:${milisegundos}`;
+            
+            //console.log(`${minutos}:${segundos}:${milisegundos}`);
             
 
         }, 10); 
