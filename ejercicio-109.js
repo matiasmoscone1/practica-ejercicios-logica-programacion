@@ -50,13 +50,19 @@ export default function cronometro(resultado, btnIniciar, btnParar, btnLimpiar){
     $btnIniciar.addEventListener("click", () => {
         
         $resultado.textContent = "0:00:00";
-        obtenerReloj();
-
+        if(!intervalo){
+            obtenerReloj();
+        }else{
+            return;
+        }
     });
 
     $btnParar.addEventListener("click", () => {
         clearInterval(intervalo);
     })
 
+    $btnLimpiar.addEventListener("click", () => {
+        $resultado.textContent = "";
+    });
 
 }
