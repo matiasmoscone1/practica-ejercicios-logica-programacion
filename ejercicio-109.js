@@ -14,9 +14,22 @@ export default function cronometro(resultado, btnIniciar, btnParar, btnLimpiar){
     const $btnLimpiar = document.querySelector(btnLimpiar);
 
 
+    const obtenerReloj = () => {
+
+        setInterval(() => {
+            const fecha = new Date;
+
+            console.log(fecha);
+        }, 1000); 
+
+
+    }
+
+
     $btnIniciar.addEventListener("click", () => {
         
         $resultado.textContent = "0:00:00";
+        //obtenerReloj();
 
     });
 
