@@ -14,12 +14,16 @@ export default function cronometro(resultado, btnIniciar, btnParar, btnLimpiar){
     const $btnLimpiar = document.querySelector(btnLimpiar);
 
 
+    let intervalo;
+    
     const obtenerReloj = () => {
 
-        setInterval(() => {
+        
+        intervalo = setInterval(() => {
             const fecha = new Date;
 
             console.log(fecha);
+            console.log(fecha.getMilliseconds());
         }, 1000); 
 
 
@@ -29,9 +33,13 @@ export default function cronometro(resultado, btnIniciar, btnParar, btnLimpiar){
     $btnIniciar.addEventListener("click", () => {
         
         $resultado.textContent = "0:00:00";
-        //obtenerReloj();
+        obtenerReloj();
 
     });
+
+    $btnParar.addEventListener("click", () => {
+        clearInterval(intervalo);
+    })
 
 
 }
