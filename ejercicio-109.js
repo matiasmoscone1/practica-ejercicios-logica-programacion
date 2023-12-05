@@ -22,8 +22,13 @@ export default function cronometro(resultado, btnIniciar, btnParar, btnLimpiar){
         intervalo = setInterval(() => {
             const fecha = new Date;
 
-            console.log(fecha);
-            console.log(fecha.getMilliseconds());
+            let minutos = fecha.getMinutes();
+            let segundos = fecha.getSeconds();
+            let milisegundos = fecha.getMilliseconds();
+            //console.log(fecha);
+            console.log(`${minutos}:${segundos}:${milisegundos}`);
+        
+        
         }, 1000); 
 
 
