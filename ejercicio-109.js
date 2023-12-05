@@ -18,18 +18,27 @@ export default function cronometro(resultado, btnIniciar, btnParar, btnLimpiar){
     
     const obtenerReloj = () => {
 
+        let minutos = 0;
+        let segundos = 0;
+        let milisegundos = 0;
+            
         
-        intervalo = setInterval(() => {
-            const fecha = new Date;
+        intervalo = setInterval(() => {        
+            
+            milisegundos+10;
 
-            let minutos = fecha.getMinutes();
-            let segundos = fecha.getSeconds();
-            let milisegundos = fecha.getMilliseconds();
-            //console.log(fecha);
+            if(milisegundos === 100){
+                segundos++;
+                if(segundos === 60){
+                    segundos = 0;
+                    minutos++;
+                };
+            }            
+        
             console.log(`${minutos}:${segundos}:${milisegundos}`);
-        
-        
-        }, 1000); 
+            
+
+        }, 100); 
 
 
     }
