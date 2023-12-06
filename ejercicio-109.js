@@ -34,7 +34,6 @@ export default function cronometro(resultado, btnIniciar, btnContinuar, btnParar
     
     const obtenerReloj = () => {
 
-        
         intervalo = setInterval(() => {        
             
             milisegundos++;
@@ -54,14 +53,14 @@ export default function cronometro(resultado, btnIniciar, btnContinuar, btnParar
             
         }, 10);
 
-
     }
 
 
     $btnIniciar.addEventListener("click", () => {
         
-        $resultado.textContent = "0:00:00";
+        
         if(!intervalo){
+            $resultado.textContent = "0:00:00";
             obtenerReloj();
         }else{
             return;
