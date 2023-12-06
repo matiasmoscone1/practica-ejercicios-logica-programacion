@@ -7,57 +7,66 @@
 
 export default function cronometro(resultado, btnIniciar, btnContinuar, btnParar, btnLimpiar){
 
-
+    //creando variables referenciales al DOM
     const $resultado = document.querySelector(resultado);
     const $btnIniciar = document.querySelector(btnIniciar);
     const $btnContinuar = document.querySelector(btnContinuar);
     const $btnParar = document.querySelector(btnParar);
     const $btnLimpiar = document.querySelector(btnLimpiar);
 
-
+    //creando variable intervalo que almacenara el setInterval del cronometro
     let intervalo;
-    
+
+    //variables basicas del cronometro
     let minutos = 0;
     let segundos = 0;
     let milisegundos = 0;
-        
-    const corrigeCrono = (num) => {
 
+    //funcion que corrige la representacion de los minutos y segundos en el DOM
+    const corrigeCrono = (num) => {
+        //si es menor a 10, se la agrega un 0 adelante
         if(num < 10){
             return(`0${num}`);
         }else{
+            //sino, devuelve el numero tal cual
             return num;
         }
-
     }
 
     
+    //funcion general que contiene el setInterval
     const obtenerReloj = () => {
 
+        //almacenando el setInterval en la variable intervalo creada anteriormente
         intervalo = setInterval(() => {        
-            
+
+            //aumenta milisegundo en 1
             milisegundos++;
 
+            //si milisegundos es igual a 100, agrega un segundo y vuelve milisegundos a 0
             if(milisegundos === 100){
                 segundos++;
                 milisegundos = 0;
+                //misma secuencia con los segundos, si llegan a 60, se agrega un minuto y vuelve
+                //los segundos a 0
                 if(segundos === 60){
                     segundos = 0;
                     minutos++;
                 };
             }            
         
+            //muestra el resultado en el DOM
             $resultado.textContent = `${corrigeCrono(minutos)}:${corrigeCrono(segundos)}:${milisegundos}`;
             
             //console.log(`${minutos}:${segundos}:${milisegundos}`);
-            
+        //se ejecuta el intervalo cada 10 milisegundos
         }, 10);
 
     }
 
 
-    $btnIniciar.addEventListener("click", () => {
-        
+    
+    $btnIniciar.addEventListener("click", () => {    
         
         if(!intervalo){
             $resultado.textContent = "0:00:00";
