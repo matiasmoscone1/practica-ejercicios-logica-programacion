@@ -5,17 +5,22 @@
 //para reflejar la hora actualizada.
 
 
-export default function cronometro(resultado, btnIniciar, btnParar, btnLimpiar){
+export default function cronometro(resultado, btnIniciar, btnContinuar, btnParar, btnLimpiar){
 
 
     const $resultado = document.querySelector(resultado);
     const $btnIniciar = document.querySelector(btnIniciar);
+    const $btnContinuar = document.querySelector(btnContinuar);
     const $btnParar = document.querySelector(btnParar);
     const $btnLimpiar = document.querySelector(btnLimpiar);
 
 
     let intervalo;
     
+    let minutos = 0;
+    let segundos = 0;
+    let milisegundos = 0;
+        
     const corrigeCrono = (num) => {
 
         if(num < 10){
@@ -26,12 +31,9 @@ export default function cronometro(resultado, btnIniciar, btnParar, btnLimpiar){
 
     }
 
+    
     const obtenerReloj = () => {
 
-        let minutos = 0;
-        let segundos = 0;
-        let milisegundos = 0;
-            
         
         intervalo = setInterval(() => {        
             
@@ -50,8 +52,7 @@ export default function cronometro(resultado, btnIniciar, btnParar, btnLimpiar){
             
             //console.log(`${minutos}:${segundos}:${milisegundos}`);
             
-
-        }, 10); 
+        }, 10);
 
 
     }
@@ -66,6 +67,15 @@ export default function cronometro(resultado, btnIniciar, btnParar, btnLimpiar){
             return;
         }
     });
+
+    $btnContinuar.addEventListener("click", () => {
+        if(intervalo){
+            obtenerReloj();
+        }else{
+            return;
+        }
+    });
+
 
     $btnParar.addEventListener("click", () => {
         clearInterval(intervalo);
