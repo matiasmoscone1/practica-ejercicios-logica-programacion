@@ -65,31 +65,39 @@ export default function cronometro(resultado, btnIniciar, btnContinuar, btnParar
     }
 
 
-    
+    //captando evento click del boton Iniciar
     $btnIniciar.addEventListener("click", () => {    
-        
+
+        //si no existe intervalo llama a la funcion general del setInterval
         if(!intervalo){
-            $resultado.textContent = "0:00:00";
             obtenerReloj();
         }else{
+            //sino, devuelve nada
             return;
         }
     });
 
+    //capta evento click del boton Continuar
     $btnContinuar.addEventListener("click", () => {
+        //si existe el intervalo, sigue donde se freno el intervalo, es decir, con los mismos
+        //valores de las variables, minutos, segundos, milisegundos
         if(intervalo){
             obtenerReloj();
+        //sino, devuelve nada
         }else{
             return;
         }
     });
 
-
+    //captando evento click del boton Parar
     $btnParar.addEventListener("click", () => {
+        //detiene el intervalo
         clearInterval(intervalo);
     })
 
+    //captando evento click del boton Limpiar
     $btnLimpiar.addEventListener("click", () => {
+        //limpia el DOM
         $resultado.textContent = "";
     });
 
