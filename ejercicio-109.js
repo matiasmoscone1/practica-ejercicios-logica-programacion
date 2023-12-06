@@ -16,6 +16,16 @@ export default function cronometro(resultado, btnIniciar, btnParar, btnLimpiar){
 
     let intervalo;
     
+    const corrigeCrono = (num) => {
+
+        if(num < 10){
+            return(`0${num}`);
+        }else{
+            return num;
+        }
+
+    }
+
     const obtenerReloj = () => {
 
         let minutos = 0;
@@ -36,7 +46,7 @@ export default function cronometro(resultado, btnIniciar, btnParar, btnLimpiar){
                 };
             }            
         
-            $resultado.textContent = `${minutos}:${segundos}:${milisegundos}`;
+            $resultado.textContent = `${corrigeCrono(minutos)}:${corrigeCrono(segundos)}:${milisegundos}`;
             
             //console.log(`${minutos}:${segundos}:${milisegundos}`);
             
