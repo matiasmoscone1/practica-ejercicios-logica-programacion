@@ -12,7 +12,12 @@ export default function distanciaGeolocalizacion(ubicacion, btnCalcular, btnLimp
 
     $btnCalcular.addEventListener("click", () => {
 
-        console.log(window.navigator.geolocation.getCurrentPosition());
+        console.log(navigator.geolocation.getCurrentPosition());
+
+        const ubi = navigator.geolocation.getCurrentPosition((position) => {
+            const latitud = position.coords.latitude;
+            const longitud = position.coords.longitude;
+        });
 
     })
     
