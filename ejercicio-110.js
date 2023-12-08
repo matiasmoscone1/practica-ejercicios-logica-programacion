@@ -14,12 +14,18 @@ export default function distanciaGeolocalizacion(ubicacion, btnCalcular, btnLimp
 
         console.log(navigator.geolocation.getCurrentPosition());
 
-        const ubi = navigator.geolocation.getCurrentPosition((position) => {
-            const latitud = position.coords.latitude;
-            const longitud = position.coords.longitude;
-        });
+        if(navigator.geolocation){            
+            navigator.geolocation.getCurrentPosition((position) => {
+                const latitud = position.coords.latitude;
+                const longitud = position.coords.longitude;
+                console.log(latitud, longitud);
+            });
+        }
 
+        
     })
+
+
     
 
 
