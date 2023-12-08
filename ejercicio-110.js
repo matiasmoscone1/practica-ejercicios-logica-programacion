@@ -10,6 +10,11 @@ export default function distanciaGeolocalizacion(ubicacion, btnCalcular, btnLimp
     const $resultado = document.querySelector(resultado);
 
 
+    $btnCalcular.addEventListener("click", () => {
+
+        console.log(window.navigator.geolocation.getCurrentPosition());
+
+    })
     
 
 
