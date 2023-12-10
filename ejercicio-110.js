@@ -21,10 +21,13 @@ export default function distanciaGeolocalizacion(ubicacion, btnCalcular, btnLimp
                 console.log(latitud, longitud);
             });
         }
-
         
     })
 
+    $btnLimpiar.addEventListener("click", () => {
+        $ubicacion.textContent = "";
+        $resultado.textContent = "";
+    });
 
     
 
