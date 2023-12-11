@@ -14,6 +14,15 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
         latitud: -31.428716737115753, 
         longitud: -64.21243706160108
     };
+    const kempesEstadio = {
+        latitud: -31.369144434400507, 
+        longitud: -64.24594464171038
+    };
+    const shoppingJockey = {
+        latitud: -31.45128947638176, 
+        longitud: -64.18208437543036
+    }
+
 
     $btnCalcular.addEventListener("click", () => {
 
@@ -21,14 +30,14 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
 
         if(navigator.geolocation){            
             navigator.geolocation.getCurrentPosition((position) => {
-                const latitud = position.coords.latitude;
-                const longitud = position.coords.longitude;
+                const lat = position.coords.latitude;
+                const lon = position.coords.longitude;
                 console.log(latitud, longitud);
-                $ubicacion.innerHTML = `Latitud: ${latitud} <br> Longitud: ${longitud}`;
+                $ubicacion.innerHTML = `Latitud: ${lat} <br> Longitud: ${lon}`;
             });
         }
-
     })
+
 
     $btnLimpiar.addEventListener("click", () => {
         $ubicacion.textContent = "";
