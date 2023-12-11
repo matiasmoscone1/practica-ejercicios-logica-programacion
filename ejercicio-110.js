@@ -36,22 +36,22 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
 
         if(navigator.geolocation){            
             navigator.geolocation.getCurrentPosition((position) => {
-                let lat = position.coords.latitude;
-                let lon = position.coords.longitude;
-                console.log(lat, lon);
-                $ubicacion.innerHTML = `Latitud: ${lat} <br> Longitud: ${lon}`;
+                let latUsuario = position.coords.latitude;
+                let lonUsuario = position.coords.longitude;
+                console.log(latUsuario, lonUsuario);
+                $ubicacion.innerHTML = `Latitud: ${latUsuario} <br> Longitud: ${lonUsuario}`;
     
 
-                lat = toRadians(lat);
-                lon = toRadians(lon);
-                let lat2 = toRadians(dinoMall.latitud);
-                let lon2 = toRadians(dinoMall.longitud);
+                latUsuario = toRadians(latUsuario);
+                lonUsuario = toRadians(lonUsuario);
+                let latDinoMall = toRadians(dinoMall.latitud);
+                let lonDinoMall = toRadians(dinoMall.longitud);
             
-                const difLatitud = lat2 - lat;
-                const difLongitud = lon2 - lon;
+                const difLatitud = latDinoMall - latUsuario;
+                const difLongitud = lonDinoMall - lonUsuario;
 
                 let a = Math.sin(difLatitud / 2) * Math.sin(difLatitud / 2) +
-                Math.cos(lat) * Math.cos(lat2) *
+                Math.cos(latUsuario) * Math.cos(latDinoMall) *
                 Math.sin(difLongitud / 2) * Math.sin(difLongitud / 2);
     
                 let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
