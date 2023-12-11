@@ -23,6 +23,8 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
         longitud: -64.18208437543036
     }
 
+    const radioTierra = 6371000;
+
 
     $btnCalcular.addEventListener("click", () => {
 
@@ -30,10 +32,16 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
 
         if(navigator.geolocation){            
             navigator.geolocation.getCurrentPosition((position) => {
-                const lat = position.coords.latitude;
-                const lon = position.coords.longitude;
+                let lat = position.coords.latitude;
+                let lon = position.coords.longitude;
                 console.log(latitud, longitud);
                 $ubicacion.innerHTML = `Latitud: ${lat} <br> Longitud: ${lon}`;
+            
+                lat = toRadians(lat);
+                lon = toRadians(lon);
+                dinoMall.latitud = toRadians(lat);
+                dinoMall.longitud = toRadians(lon);
+            
             });
         }
     })
