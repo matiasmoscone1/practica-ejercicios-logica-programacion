@@ -12,7 +12,7 @@ export default function distanciaGeolocalizacion(ubicacion, btnCalcular, btnLimp
 
     $btnCalcular.addEventListener("click", () => {
 
-        console.log(navigator.geolocation.getCurrentPosition());
+        //console.log(navigator.geolocation.getCurrentPosition());
 
         if(navigator.geolocation){            
             navigator.geolocation.getCurrentPosition((position) => {
@@ -21,6 +21,8 @@ export default function distanciaGeolocalizacion(ubicacion, btnCalcular, btnLimp
                 console.log(latitud, longitud);
             });
         }
+
+        $ubicacion.innerHTML = `Latitud: ${latitud} <br> Longitud: ${longitud}`;
         
     })
 
