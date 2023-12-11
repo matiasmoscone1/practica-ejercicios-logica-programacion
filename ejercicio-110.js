@@ -11,16 +11,16 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
 
 
     const dinoMall = {
-        latitud: -31.428716737115753, 
-        longitud: -64.21243706160108
+        latitud: -31.4287167, 
+        longitud: -64.212437
     };
     const kempesEstadio = {
-        latitud: -31.369144434400507, 
-        longitud: -64.24594464171038
+        latitud: -31.3691444, 
+        longitud: -64.245944
     };
     const shoppingJockey = {
-        latitud: -31.45128947638176, 
-        longitud: -64.18208437543036
+        latitud: -31.4512894, 
+        longitud: -64.182084
     }
 
     const radioTierra = 6371000;
@@ -38,16 +38,17 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
             navigator.geolocation.getCurrentPosition((position) => {
                 let lat = position.coords.latitude;
                 let lon = position.coords.longitude;
-                //console.log(latitud, longitud);
+                console.log(lat, lon);
                 $ubicacion.innerHTML = `Latitud: ${lat} <br> Longitud: ${lon}`;
-            
+    
+
                 lat = toRadians(lat);
                 lon = toRadians(lon);
-                dinoMall.latitud = toRadians(lat);
-                dinoMall.longitud = toRadians(lon);
+                let lat2 = toRadians(dinoMall.latitud);
+                let lon2 = toRadians(dinoMall.longitud);
             
-                const difLatitud = dinoMall.latitud - lat;
-                const difLongitud = dinoMall.longitud - lon;
+                const difLatitud = lat2 - lat;
+                const difLongitud = lon2 - lon;
 
                 let a = Math.sin(difLatitud / 2) * Math.sin(difLatitud / 2) +
                 Math.cos(dinoMall.latitud) * Math.cos(lat) *
