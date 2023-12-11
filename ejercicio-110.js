@@ -26,6 +26,10 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
     const radioTierra = 6371000;
 
 
+    const toRadians = (grados) => {
+        return grados * (Math.PI / 180);
+    }    
+
     $btnCalcular.addEventListener("click", () => {
 
         //console.log(navigator.geolocation.getCurrentPosition());
@@ -34,7 +38,7 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
             navigator.geolocation.getCurrentPosition((position) => {
                 let lat = position.coords.latitude;
                 let lon = position.coords.longitude;
-                console.log(latitud, longitud);
+                //console.log(latitud, longitud);
                 $ubicacion.innerHTML = `Latitud: ${lat} <br> Longitud: ${lon}`;
             
                 lat = toRadians(lat);
@@ -51,9 +55,9 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
     
                 let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 
-                
+                let distancia = radioTierra * c;
 
-
+                $resultado.textContent = `La distancia entre el shopping DinoMall y el usuario es de: ${distancia}mts`;
 
             });
         }
