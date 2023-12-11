@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cambiaFondoPorHora(".btn-iniciar-ej-107", ".btn-finalizar-ej-107");
     validacionGeolocalizacion(".btn-coords-ej-108", ".btn-limpiar-ej-108", ".resultado-ej-108");
     cronometro(".resultado-cronometro-ej-109", ".btn-iniciar-ej-109", ".btn-continuar-ej-109", ".btn-parar-ej-109", ".btn-limpiar-ej-109");
-    distanciaGeolocalizacion(".ubicacion-usuario-ej-110", ".btn-calcular-ej-110", ".btn-limpiar-ej-110", ".resultado-ej-110");
+    distanciaGeolocalizacion(".btn-calcular-ej-110", ".btn-limpiar-ej-110", ".ubicacion-usuario-ej-110", ".resultado-ej-110");
     
 
     

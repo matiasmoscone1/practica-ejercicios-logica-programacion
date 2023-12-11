@@ -2,7 +2,7 @@
 //110. Geolocation API: Implementa una función que calcule la distancia entre 
 //la ubicacion del usuario y otros puntos de referencia (3 puntos de referencia de Córdoba)
 
-export default function distanciaGeolocalizacion(ubicacion, btnCalcular, btnLimpiar, resultado){
+export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicacion, resultado){
 
     const $ubicacion = document.querySelector(ubicacion);
     const $btnCalcular = document.querySelector(btnCalcular);
@@ -28,7 +28,6 @@ export default function distanciaGeolocalizacion(ubicacion, btnCalcular, btnLimp
             });
         }
 
-        
     })
 
     $btnLimpiar.addEventListener("click", () => {
