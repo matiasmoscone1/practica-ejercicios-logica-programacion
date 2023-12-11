@@ -11,8 +11,8 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
 
 
     const dinoMall = {
-        latitud: -31.4287167, 
-        longitud: -64.212437
+        longitud: -31.4287519, 
+        latitud: -64.2124859
     };
     const kempesEstadio = {
         latitud: -31.3691444, 
@@ -51,7 +51,7 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
                 const difLongitud = lon2 - lon;
 
                 let a = Math.sin(difLatitud / 2) * Math.sin(difLatitud / 2) +
-                Math.cos(dinoMall.latitud) * Math.cos(lat) *
+                Math.cos(lat) * Math.cos(lat2) *
                 Math.sin(difLongitud / 2) * Math.sin(difLongitud / 2);
     
                 let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
