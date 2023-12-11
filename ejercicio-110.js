@@ -2,6 +2,8 @@
 //110. Geolocation API: Implementa una función que calcule la distancia entre 
 //la ubicacion del usuario y otros puntos de referencia (3 puntos de referencia de Córdoba)
 
+//import getDistance from "/geolib/es/getPreciseDistance";
+
 export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicacion, resultado){
 
     const $ubicacion = document.querySelector(ubicacion);
@@ -11,8 +13,8 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
 
 
     const dinoMall = {
-        longitud: -31.4287519, 
-        latitud: -64.2124859
+        latitud: -64.2124859,
+        longitud: -31.4287519        
     };
     const kempesEstadio = {
         latitud: -31.3691444, 
@@ -38,7 +40,9 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
             navigator.geolocation.getCurrentPosition((position) => {
                 let latUsuario = position.coords.latitude;
                 let lonUsuario = position.coords.longitude;
+                
                 console.log(latUsuario, lonUsuario);
+                
                 $ubicacion.innerHTML = `Latitud: ${latUsuario} <br> Longitud: ${lonUsuario}`;
     
 
@@ -59,6 +63,10 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
                 let distancia = radioTierra * c;
 
                 $resultado.textContent = `La distancia entre el shopping DinoMall y el usuario es de: ${distancia}mts`;
+                
+                
+                //getDistance({latitude: -31.4287519, longitude: -64.2124859}, {latitude: -31.4173294, longitude: -64.2022430}, accuracy = 1);
+
 
             });
         }
