@@ -42,6 +42,19 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
                 dinoMall.latitud = toRadians(lat);
                 dinoMall.longitud = toRadians(lon);
             
+                const difLatitud = dinoMall.latitud - lat;
+                const difLongitud = dinoMall.longitud - lon;
+
+                let a = Math.sin(difLatitud / 2) * Math.sin(difLatitud / 2) +
+                Math.cos(dinoMall.latitud) * Math.cos(lat) *
+                Math.sin(difLongitud / 2) * Math.sin(difLongitud / 2);
+    
+                let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+                
+
+
+
             });
         }
     })
