@@ -10,6 +10,11 @@ export default function distanciaGeolocalizacion(ubicacion, btnCalcular, btnLimp
     const $resultado = document.querySelector(resultado);
 
 
+    const dinoMall = {
+        latitud: -31.428716737115753, 
+        longitud: -64.21243706160108
+    };
+
     $btnCalcular.addEventListener("click", () => {
 
         //console.log(navigator.geolocation.getCurrentPosition());
@@ -20,7 +25,6 @@ export default function distanciaGeolocalizacion(ubicacion, btnCalcular, btnLimp
                 const longitud = position.coords.longitude;
                 console.log(latitud, longitud);
                 $ubicacion.innerHTML = `Latitud: ${latitud} <br> Longitud: ${longitud}`;
-        
             });
         }
 
