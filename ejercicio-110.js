@@ -19,10 +19,11 @@ export default function distanciaGeolocalizacion(ubicacion, btnCalcular, btnLimp
                 const latitud = position.coords.latitude;
                 const longitud = position.coords.longitude;
                 console.log(latitud, longitud);
+                $ubicacion.innerHTML = `Latitud: ${latitud} <br> Longitud: ${longitud}`;
+        
             });
         }
 
-        $ubicacion.innerHTML = `Latitud: ${latitud} <br> Longitud: ${longitud}`;
         
     })
 
