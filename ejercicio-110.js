@@ -5,12 +5,14 @@
 
 export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicacion, resultado){
 
+    //creando variables referenciales al DOM
     const $ubicacion = document.querySelector(ubicacion);
     const $btnCalcular = document.querySelector(btnCalcular);
     const $btnLimpiar = document.querySelector(btnLimpiar);
     const $resultado = document.querySelector(resultado);
 
 
+    //creando puntos de referencia con sus latitudes y longitudes
     const dinoMall = {
         latitud: -31.4288499154311, 
         longitud: -64.21260008903296
@@ -25,58 +27,69 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
     }
 
     
-    
+
+    //funcion general que calcula la distancia, se le pasan las latitudes y longitudes de los dos puntos
     function calcularDistancia(lat1, lon1, lat2, lon2) {
-        //Radio de la Tierra en kilómetros
-        var radioTierra = 6371;
+
+        //radio de la Tierra en kilómetros
+        let radioTierra = 6371;
     
-        //Convertir grados a radianes
-        var latitud1 = toRadians(lat1);
-        var longitud1 = toRadians(lon1);
-        var latitud2 = toRadians(lat2);
-        var longitud2 = toRadians(lon2);
+        //convertir grados a radianes
+        let latitud1 = toRadians(lat1);
+        let longitud1 = toRadians(lon1);
+        let latitud2 = toRadians(lat2);
+        let longitud2 = toRadians(lon2);
     
-        //Diferencias de coordenadas
-        var deltaLatitud = latitud2 - latitud1;
-        var deltaLongitud = longitud2 - longitud1;
+        //diferencias de coordenadas
+        const deltaLatitud = latitud2 - latitud1;
+        const deltaLongitud = longitud2 - longitud1;
     
-        //Fórmula de la distancia haversine
-        var a = Math.sin(deltaLatitud / 2) * Math.sin(deltaLatitud / 2) +
+        //formula de la distancia haversine
+        let a = Math.sin(deltaLatitud / 2) * Math.sin(deltaLatitud / 2) +
                 Math.cos(latitud1) * Math.cos(latitud2) *
                 Math.sin(deltaLongitud / 2) * Math.sin(deltaLongitud / 2);
-        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     
         //Distancia en kilómetros
-        var distancia = radioTierra * c;
+        let distancia = radioTierra * c;
     
+        //retorna la distancia
         return distancia;
     }
     
+
+    //funcion que convierte los grados a radianes
     function toRadians(grados) {
         return grados * Math.PI / 180;
     }
 
         
+    //captando evento click del boton Calcular
     $btnCalcular.addEventListener("click", () => {
-        
+    
+        //si el navigator.geolocation no esta bloqueado en el navegador 
         if(navigator.geolocation){
+            //toma la posicion del usuario
             navigator.geolocation.getCurrentPosition((posicion) => {
+                //con su respectiva latitud y longitud
                 const latitud = posicion.coords.latitude;
                 const longitud = posicion.coords.longitude;
 
+                //muestra en el DOM la ubicacion del usuario
                 $ubicacion.innerHTML = `Latitud: ${latitud} <br> Longitud: ${longitud}`;
-                
-                console.log(latitud, longitud);
-                console.log(dinoMall.latitud, dinoMall.longitud);
+
+                //console.log(latitud, longitud);
+                //console.log(dinoMall.latitud, dinoMall.longitud);
             });
         }
         
         //se usan coordenadas correctas del punto de inicio, el navigator.geolocation da muy defasada
         //las coordenadas
-        var distancia1 = calcularDistancia(-31.417278209791338, -64.20233074855635, dinoMall.latitud, dinoMall.longitud);        
-        var distancia2 = calcularDistancia(-31.417278209791338, -64.20233074855635, kempesEstadio.latitud, kempesEstadio.longitud);        
-        var distancia3 = calcularDistancia(-31.417278209791338, -64.20233074855635, shoppingJockey.latitud, shoppingJockey.longitud);        
+        let distancia1 = calcularDistancia(-31.417278209791338, -64.20233074855635, dinoMall.latitud, dinoMall.longitud);        
+        let distancia2 = calcularDistancia(-31.417278209791338, -64.20233074855635, kempesEstadio.latitud, kempesEstadio.longitud);        
+        let distancia3 = calcularDistancia(-31.417278209791338, -64.20233074855635, shoppingJockey.latitud, shoppingJockey.longitud);        
         
+        //muestra el resultado final en el DOM
         $resultado.innerHTML = `Distancia entre el Shopping Dino Mall y mi casa es: ${distancia1.toFixed(2)}mts <br>
             Distancia entre el Estadio Kempes y mi casa es: ${distancia2.toFixed(2)}mts <br>
             Distancia entre el Shopping Jockey y mi casa es ${distancia3.toFixed(2)}mts`;
