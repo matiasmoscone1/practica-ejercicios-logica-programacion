@@ -2,8 +2,9 @@
 //110. Geolocation API: Implementa una función que calcule la distancia entre 
 //la ubicacion del usuario y otros puntos de referencia (3 puntos de referencia de Córdoba)
 
-export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicacion, resultado){
 
+export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicacion, resultado){
+/*
     const $ubicacion = document.querySelector(ubicacion);
     const $btnCalcular = document.querySelector(btnCalcular);
     const $btnLimpiar = document.querySelector(btnLimpiar);
@@ -62,8 +63,6 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
 
                 $resultado.textContent = `La distancia entre el shopping DinoMall y el usuario es de: ${distancia}mts`;
                 
-                
-
             });
         }
     })
@@ -74,7 +73,43 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
         $resultado.textContent = "";
     });
 
+    */
+
+    function calcularDistancia(lat1, lon1, lat2, lon2) {
+        // Radio de la Tierra en kilómetros
+        var radioTierra = 6371;
     
+        // Convertir grados a radianes
+        var latitud1 = toRadians(lat1);
+        var longitud1 = toRadians(lon1);
+        var latitud2 = toRadians(lat2);
+        var longitud2 = toRadians(lon2);
+    
+        // Diferencias de coordenadas
+        var deltaLatitud = latitud2 - latitud1;
+        var deltaLongitud = longitud2 - longitud1;
+    
+        // Fórmula de la distancia haversine
+        var a = Math.sin(deltaLatitud / 2) * Math.sin(deltaLatitud / 2) +
+                Math.cos(latitud1) * Math.cos(latitud2) *
+                Math.sin(deltaLongitud / 2) * Math.sin(deltaLongitud / 2);
+        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    
+        // Distancia en kilómetros
+        var distancia = radioTierra * c;
+    
+        return distancia;
+    }
+    
+    function toRadians(grados) {
+        return grados * Math.PI / 180;
+    }
+    
+    // Ejemplo de uso
+    var distancia = calcularDistancia(-31.417360613037857, -64.20233074855635, -31.42878583187493, -64.21263227554054);
+    console.log("La distancia entre los dos puntos es: " + distancia + " kilómetros");
+
+
 
 
 
