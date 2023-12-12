@@ -4,7 +4,7 @@
 
 
 export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicacion, resultado){
-/*
+
     const $ubicacion = document.querySelector(ubicacion);
     const $btnCalcular = document.querySelector(btnCalcular);
     const $btnLimpiar = document.querySelector(btnLimpiar);
@@ -24,57 +24,7 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
         longitud: -64.182084
     }
 
-    const radioTierra = 6371000;
-
-
-    const toRadians = (grados) => {
-        return grados * (Math.PI / 180);
-    }    
-
-    $btnCalcular.addEventListener("click", () => {
-
-        //console.log(navigator.geolocation.getCurrentPosition());
-
-        if(navigator.geolocation){            
-            navigator.geolocation.getCurrentPosition((position) => {
-                let latUsuario = position.coords.latitude;
-                let lonUsuario = position.coords.longitude;
-                
-                console.log(latUsuario, lonUsuario);
-                
-                $ubicacion.innerHTML = `Latitud: ${latUsuario} <br> Longitud: ${lonUsuario}`;
     
-
-                latUsuario = toRadians(latUsuario);
-                lonUsuario = toRadians(lonUsuario);
-                let latDinoMall = toRadians(dinoMall.latitud);
-                let lonDinoMall = toRadians(dinoMall.longitud);
-            
-                const difLatitud = latDinoMall - latUsuario;
-                const difLongitud = lonDinoMall - lonUsuario;
-
-                let a = Math.sin(difLatitud / 2) * Math.sin(difLatitud / 2) +
-                Math.cos(latUsuario) * Math.cos(latDinoMall) *
-                Math.sin(difLongitud / 2) * Math.sin(difLongitud / 2);
-    
-                let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-
-                let distancia = radioTierra * c;
-
-                $resultado.textContent = `La distancia entre el shopping DinoMall y el usuario es de: ${distancia}mts`;
-                
-            });
-        }
-    })
-
-
-    $btnLimpiar.addEventListener("click", () => {
-        $ubicacion.textContent = "";
-        $resultado.textContent = "";
-    });
-
-    */
-
     function calcularDistancia(lat1, lon1, lat2, lon2) {
         // Radio de la Tierra en kilómetros
         var radioTierra = 6371;
@@ -104,11 +54,20 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
     function toRadians(grados) {
         return grados * Math.PI / 180;
     }
-    
-    // Ejemplo de uso
-    var distancia = calcularDistancia(-31.417360613037857, -64.20233074855635, -31.42878583187493, -64.21263227554054);
-    console.log("La distancia entre los dos puntos es: " + distancia + " kilómetros");
 
+    
+    $btnCalcular.addEventListener("click", () => {
+        // Ejemplo de uso
+        var distancia = calcularDistancia(-31.417360613037857, -64.20233074855635, -31.42878583187493, -64.21263227554054);
+        console.log("La distancia entre los dos puntos es: " + distancia + " kilómetros");
+
+    });
+
+
+    $btnLimpiar.addEventListener("click", () => {
+        $ubicacion.textContent = "";
+        $resultado.textContent = "";
+    });
 
 
 
