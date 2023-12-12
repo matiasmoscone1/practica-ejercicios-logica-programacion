@@ -12,9 +12,8 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
 
 
     const dinoMall = {
-        latitud: -31.4287519,
-        longitud: -64.2124859
-
+        latitud: -31.4288499154311, 
+        longitud: -64.21260008903296
     };
     const kempesEstadio = {
         latitud: -31.3691444, 
@@ -72,13 +71,12 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
 
                 //var distancia = calcularDistancia(latitud, longitud, dinoMall.latitud, dinoMall.longitud);
                 //console.log("La distancia entre los dos puntos es: " + distancia + " kilómetros");
-    
 
             });
         }
         
-        var distancia = calcularDistancia(-31.417278209791338, -64.20233074855635, -31.4288499154311, -64.21260008903296);
-        console.log("La distancia entre los dos puntos es: " + distancia + " kilómetros");
+        //var distancia = calcularDistancia(-31.417278209791338, -64.20233074855635, -31.4288499154311, -64.21260008903296);
+        //console.log("La distancia entre los dos puntos es: " + distancia + " kilómetros");
     
 
         
