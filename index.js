@@ -108,6 +108,7 @@ import cambiaFondoPorHora from "./ejercicio-107.js";
 import validacionGeolocalizacion from "./ejercicio-108.js";
 import cronometro from "./ejercicio-109.js";
 import distanciaGeolocalizacion from "./ejercicio-110.js";
+import ventanaWindow from "./ejercicio-111.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -222,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
     validacionGeolocalizacion(".btn-coords-ej-108", ".btn-limpiar-ej-108", ".resultado-ej-108");
     cronometro(".resultado-cronometro-ej-109", ".btn-iniciar-ej-109", ".btn-continuar-ej-109", ".btn-parar-ej-109", ".btn-limpiar-ej-109");
     distanciaGeolocalizacion(".btn-calcular-ej-110", ".btn-limpiar-ej-110", ".ubicacion-usuario-ej-110", ".resultado-ej-110");
-    
+    ventanaWindow();
 
     
 
