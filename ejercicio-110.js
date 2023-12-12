@@ -12,8 +12,9 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
 
 
     const dinoMall = {
-        latitud: -64.2124859,
-        longitud: -31.4287519        
+        latitud: -31.4287519,
+        longitud: -64.2124859
+
     };
     const kempesEstadio = {
         latitud: -31.3691444, 
@@ -24,6 +25,7 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
         longitud: -64.182084
     }
 
+    
     
     function calcularDistancia(lat1, lon1, lat2, lon2) {
         //Radio de la Tierra en kilómetros
@@ -55,8 +57,9 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
         return grados * Math.PI / 180;
     }
 
-
+        
     $btnCalcular.addEventListener("click", () => {
+        
         if(navigator.geolocation){
             navigator.geolocation.getCurrentPosition((posicion) => {
                 const latitud = posicion.coords.latitude;
@@ -64,11 +67,17 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
 
                 $ubicacion.innerHTML = `Latitud: ${latitud} <br> Longitud: ${longitud}`;
                 
-                var distancia = calcularDistancia(latitud,longitud,dinoMall.latitud, dinoMall.longitud);
+                console.log(latitud, longitud);
+                console.log(dinoMall.latitud, dinoMall.longitud);
+
+                var distancia = calcularDistancia(latitud, longitud, dinoMall.latitud, dinoMall.longitud);
                 console.log("La distancia entre los dos puntos es: " + distancia + " kilómetros");
-            
+    
+
             });
         }
+        
+        
 
         
     });
