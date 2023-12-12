@@ -70,14 +70,16 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
                 console.log(latitud, longitud);
                 console.log(dinoMall.latitud, dinoMall.longitud);
 
-                var distancia = calcularDistancia(latitud, longitud, dinoMall.latitud, dinoMall.longitud);
-                console.log("La distancia entre los dos puntos es: " + distancia + " kilómetros");
+                //var distancia = calcularDistancia(latitud, longitud, dinoMall.latitud, dinoMall.longitud);
+                //console.log("La distancia entre los dos puntos es: " + distancia + " kilómetros");
     
 
             });
         }
         
-        
+        var distancia = calcularDistancia(-31.417278209791338, -64.20233074855635, -31.4288499154311, -64.21260008903296);
+        console.log("La distancia entre los dos puntos es: " + distancia + " kilómetros");
+    
 
         
     });
