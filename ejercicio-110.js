@@ -68,15 +68,18 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
                 
                 console.log(latitud, longitud);
                 console.log(dinoMall.latitud, dinoMall.longitud);
-
-                //var distancia = calcularDistancia(latitud, longitud, dinoMall.latitud, dinoMall.longitud);
-                //console.log("La distancia entre los dos puntos es: " + distancia + " kilómetros");
-
             });
         }
         
-        //var distancia = calcularDistancia(-31.417278209791338, -64.20233074855635, -31.4288499154311, -64.21260008903296);
-        //console.log("La distancia entre los dos puntos es: " + distancia + " kilómetros");
+        //se usan coordenadas correctas del punto de inicio, el navigator.geolocation da muy defasada
+        //las coordenadas
+        var distancia1 = calcularDistancia(-31.417278209791338, -64.20233074855635, dinoMall.latitud, dinoMall.longitud);        
+        var distancia2 = calcularDistancia(-31.417278209791338, -64.20233074855635, kempesEstadio.latitud, kempesEstadio.longitud);        
+        var distancia3 = calcularDistancia(-31.417278209791338, -64.20233074855635, shoppingJockey.latitud, shoppingJockey.longitud);        
+        
+        $resultado.innerHTML = `Distancia entre el Shopping Dino Mall y mi casa es: ${distancia1.toFixed(2)}mts <br>
+            Distancia entre el Estadio Kempes y mi casa es: ${distancia2.toFixed(2)}mts <br>
+            Distancia entre el Shopping Jockey y mi casa es ${distancia3.toFixed(2)}mts`;
     
 
         
