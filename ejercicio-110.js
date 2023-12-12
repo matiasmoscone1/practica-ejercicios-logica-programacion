@@ -80,13 +80,13 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
         $resultado.innerHTML = `Distancia entre el Shopping Dino Mall y mi casa es: ${distancia1.toFixed(2)}mts <br>
             Distancia entre el Estadio Kempes y mi casa es: ${distancia2.toFixed(2)}mts <br>
             Distancia entre el Shopping Jockey y mi casa es ${distancia3.toFixed(2)}mts`;
-    
 
-        
     });
 
 
+    //captando evento click del boton Limpiar
     $btnLimpiar.addEventListener("click", () => {
+        //limpiando el resultado y la ubicacion en el DOM
         $ubicacion.textContent = "";
         $resultado.textContent = "";
     });
