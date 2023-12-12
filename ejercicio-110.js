@@ -26,26 +26,26 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
 
     
     function calcularDistancia(lat1, lon1, lat2, lon2) {
-        // Radio de la Tierra en kilómetros
+        //Radio de la Tierra en kilómetros
         var radioTierra = 6371;
     
-        // Convertir grados a radianes
+        //Convertir grados a radianes
         var latitud1 = toRadians(lat1);
         var longitud1 = toRadians(lon1);
         var latitud2 = toRadians(lat2);
         var longitud2 = toRadians(lon2);
     
-        // Diferencias de coordenadas
+        //Diferencias de coordenadas
         var deltaLatitud = latitud2 - latitud1;
         var deltaLongitud = longitud2 - longitud1;
     
-        // Fórmula de la distancia haversine
+        //Fórmula de la distancia haversine
         var a = Math.sin(deltaLatitud / 2) * Math.sin(deltaLatitud / 2) +
                 Math.cos(latitud1) * Math.cos(latitud2) *
                 Math.sin(deltaLongitud / 2) * Math.sin(deltaLongitud / 2);
         var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     
-        // Distancia en kilómetros
+        //Distancia en kilómetros
         var distancia = radioTierra * c;
     
         return distancia;
@@ -55,12 +55,22 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
         return grados * Math.PI / 180;
     }
 
-    
-    $btnCalcular.addEventListener("click", () => {
-        // Ejemplo de uso
-        var distancia = calcularDistancia(-31.417360613037857, -64.20233074855635, -31.42878583187493, -64.21263227554054);
-        console.log("La distancia entre los dos puntos es: " + distancia + " kilómetros");
 
+    $btnCalcular.addEventListener("click", () => {
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition((posicion) => {
+                const latitud = posicion.coords.latitude;
+                const longitud = posicion.coords.longitude;
+
+                $ubicacion.innerHTML = `Latitud: ${latitud} <br> Longitud: ${longitud}`;
+                
+                var distancia = calcularDistancia(latitud,longitud,dinoMall.latitud, dinoMall.longitud);
+                console.log("La distancia entre los dos puntos es: " + distancia + " kilómetros");
+            
+            });
+        }
+
+        
     });
 
 
