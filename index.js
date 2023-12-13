@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
     validacionGeolocalizacion(".btn-coords-ej-108", ".btn-limpiar-ej-108", ".resultado-ej-108");
     cronometro(".resultado-cronometro-ej-109", ".btn-iniciar-ej-109", ".btn-continuar-ej-109", ".btn-parar-ej-109", ".btn-limpiar-ej-109");
     distanciaGeolocalizacion(".btn-calcular-ej-110", ".btn-limpiar-ej-110", ".ubicacion-usuario-ej-110", ".resultado-ej-110");
-    ventanaWindow();
+    ventanaWindow(".abrir-ventana-ej-111", ".cerrar-ventana-ej-111");
 
     
 
