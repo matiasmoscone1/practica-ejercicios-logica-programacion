@@ -4,11 +4,18 @@
 //b. Detecta cuando la ventana del navegador está siendo redimensionada.
 
 
-export default function ventanaWindow(){
+export default function ventanaWindow(btnAbrir, btnCerrar){
 
-
+    const $btnAbrir = document.querySelector(btnAbrir);
+    const $btnCerrar = document.querySelector(btnCerrar);
+    
 
     
+
+
+
+
+
 }
 
 
