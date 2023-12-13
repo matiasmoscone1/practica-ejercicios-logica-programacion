@@ -14,9 +14,10 @@ export default function ventanaWindow(btnAbrir, btnCerrar){
 
         const ventana = window.open();
 
-        ventana.innerHeight = 600;
-        ventana.innerWidth = 600;
-        
+        ventana.onload(() => {
+            ventana.innerHeight = 600;
+            ventana.innerWidth = 600;
+        });
 
     });
 
