@@ -12,12 +12,7 @@ export default function ventanaWindow(btnAbrir, btnCerrar){
 
     $btnAbrir.addEventListener("click", () => {
 
-        const ventana = window.open();
-
-        ventana.onload(() => {
-            ventana.innerHeight = 600;
-            ventana.innerWidth = 600;
-        });
+        const ventana = window.open("https://www.facebook.com/", "_blank", "width=600,height=600");
 
     });
 
