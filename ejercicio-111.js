@@ -14,10 +14,14 @@ export default function ventanaWindow(btnAbrir, btnCerrar){
 
         const ventana = window.open();
 
-        ventana;
+        ventana.innerHeight = 600;
+        ventana.innerWidth = 600;
+        
 
     });
 
+
+    
 
 }
 
