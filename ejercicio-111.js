@@ -10,10 +10,13 @@ export default function ventanaWindow(btnAbrir, btnCerrar){
     const $btnCerrar = document.querySelector(btnCerrar);
     
 
-    
+    $btnAbrir.addEventListener("click", () => {
 
+        const ventana = window.open();
 
+        ventana;
 
+    });
 
 
 }
