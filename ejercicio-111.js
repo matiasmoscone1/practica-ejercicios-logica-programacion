@@ -18,8 +18,13 @@ export default function ventanaWindow(btnAbrir, btnCerrar){
         console.log(ventana.outerWidth, ventana.outerHeight);
         
         window.addEventListener("resize", () => {
-            console.log(ventana.outerWidth, ventana.outerHeight);
+            ventana.postMessage({
+                type: "resize",
+                width: window.width,
+                height: window.height
+            }, "*");
         })
+
 
     });
 
@@ -29,6 +34,12 @@ export default function ventanaWindow(btnAbrir, btnCerrar){
         };
     });
     
+
+    window.addEventListener("message", (e) => {
+        if(e.data.type === "resize"){
+            console.log(e.data.width, e.data.height);
+        }
+    });
     
 
 }
