@@ -15,9 +15,9 @@ export default function ventanaWindow(btnAbrir, btnCerrar){
 
         ventana = window.open("https://www.facebook.com/", "_blank", "width=600,height=600");
 
-        if(ventana){
-            console.log(ventana.innerWidth, ventana.innerHeight);
-        }
+        
+        console.log(ventana.outerWidth, ventana.outerHeight);
+        
     });
 
     $btnCerrar.addEventListener("click", () => {
