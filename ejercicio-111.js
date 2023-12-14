@@ -20,7 +20,7 @@ export default function ventanaWindow(btnAbrir, btnCerrar){
 
     $btnCerrar.addEventListener("click", () => {
 
-        ventana = window.close();
+        ventana.close();
 
     });
     
