@@ -15,15 +15,19 @@ export default function ventanaWindow(btnAbrir, btnCerrar){
 
         ventana = window.open("https://www.facebook.com/", "_blank", "width=600,height=600");
 
-    
     });
 
     $btnCerrar.addEventListener("click", () => {
-
-        ventana.close();
-
+        if(ventana){       
+            ventana.close();
+        };
     });
     
+    ventana.addEventListener("onresize", () => {
+
+        console.log(ventana.width, ventana.height);
+    
+    });
 
 }
 
