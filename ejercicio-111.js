@@ -9,14 +9,20 @@ export default function ventanaWindow(btnAbrir, btnCerrar){
     const $btnAbrir = document.querySelector(btnAbrir);
     const $btnCerrar = document.querySelector(btnCerrar);
     
+    let ventana;
 
     $btnAbrir.addEventListener("click", () => {
 
-        const ventana = window.open("https://www.facebook.com/", "_blank", "width=600,height=600");
+        ventana = window.open("https://www.facebook.com/", "_blank", "width=600,height=600");
 
+    
     });
 
+    $btnCerrar.addEventListener("click", () => {
 
+        ventana = window.close();
+
+    });
     
 
 }
