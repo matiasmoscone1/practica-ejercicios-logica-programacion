@@ -13,17 +13,13 @@ export default function ventanaWindow(btnAbrir, btnCerrar){
 
     $btnAbrir.addEventListener("click", () => {
 
-        ventana = window.open("https://www.facebook.com/", "_blank", "width=600,height=600");
+        ventana = window.open('https://www.facebook.com/', "_blank", 'width=600,height=600');
 
-        console.log(ventana.outerWidth, ventana.outerHeight);
-        
-        window.addEventListener("message", (event) => {
-            console.log(event.data.width, event.data.height);
-            if (event.data.type === "resize" && event.source === ventana) {
-                // Muestra las dimensiones actualizadas recibidas desde la ventana emergente
-                console.log(event.data.width, event.data.height);
-            }
-        })
+        //console.log(ventana.outerWidth, ventana.outerHeight);
+    
+        window.addEventListener("resize", (e) => {
+            console.log(e);
+        });
 
     });
 
@@ -34,18 +30,7 @@ export default function ventanaWindow(btnAbrir, btnCerrar){
     });
 
     
-    window.addEventListener("resize", () => {
-        // Envía las dimensiones actualizadas a la ventana emergente
-        if (ventana) {
-            ventana.postMessage({
-                type: "resize",
-                width: window.outerWidth,
-                height: window.outerHeight
-            }, "*");
-        }
-    });
-
-    
+  
 
 }
 
