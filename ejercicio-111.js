@@ -17,10 +17,8 @@ export default function ventanaWindow(btnAbrir, btnCerrar){
 
         //console.log(ventana.outerWidth, ventana.outerHeight);
     
-        window.addEventListener("resize", (e) => {
-            console.log(e.target.innerWidth, e.target.innerHeight);
-        });
-
+        window.addEventListener("resize", handleResize);
+           
     });
 
     $btnCerrar.addEventListener("click", () => {
@@ -29,7 +27,22 @@ export default function ventanaWindow(btnAbrir, btnCerrar){
         };
     });
 
-    
+    function handleResize() {
+        // Obtener las dimensiones de la ventana principal
+        const dimensions = {
+            width: window.innerWidth,
+            height: window.innerHeight
+        };
+
+        // Enviar las dimensiones a la ventana emergente mediante postMessage
+        ventana.postMessage({
+            type: 'resize',
+            dimensions: dimensions
+        }, '*'); // '*' permite enviar mensajes a cualquier origen
+
+        // Imprimir las dimensiones en la consola
+        console.log('Dimensiones redimensionadas:', dimensions);
+    }
   
 
 }
