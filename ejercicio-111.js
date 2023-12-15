@@ -17,17 +17,13 @@ export default function ventanaWindow(btnAbrir, btnCerrar){
 
         console.log(ventana.outerWidth, ventana.outerHeight);
         
-        ventana.addEventListener("resize", (e) => {
-            console.log(e);
-        });
-
-        /*
         window.addEventListener("message", (event) => {
+            console.log(event.data.width, event.data.height);
             if (event.data.type === "resize" && event.source === ventana) {
                 // Muestra las dimensiones actualizadas recibidas desde la ventana emergente
                 console.log(event.data.width, event.data.height);
             }
-        })*/
+        })
 
     });
 
@@ -37,7 +33,7 @@ export default function ventanaWindow(btnAbrir, btnCerrar){
         };
     });
 
-    /*
+    
     window.addEventListener("resize", () => {
         // Envía las dimensiones actualizadas a la ventana emergente
         if (ventana) {
@@ -47,7 +43,7 @@ export default function ventanaWindow(btnAbrir, btnCerrar){
                 height: window.outerHeight
             }, "*");
         }
-    });*/
+    });
 
     
 
