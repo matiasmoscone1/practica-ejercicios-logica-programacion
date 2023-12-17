@@ -21,8 +21,10 @@ export default function ventanaWindow(btnAbrir, btnCerrar){
       
     });
  
-    window.addEventListener("resize", handleResize());
-      
+    window.addEventListener("resize", () => {
+        handleResize();
+        console.log("hola");
+    })
 
     $btnCerrar.addEventListener("click", () => {
         if(ventana){       
