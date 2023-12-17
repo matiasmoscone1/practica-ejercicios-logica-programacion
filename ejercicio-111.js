@@ -37,8 +37,8 @@ export default function ventanaWindow(btnAbrir, btnCerrar){
         };
 
         // Enviar las dimensiones a la ventana emergente mediante postMessage
-        if(ventana){            
-            ventana.postMessage({
+        if(ventana && ventana.opener){            
+            ventana.opener.postMessage({
                 type: 'resize',
                 dimensions: dimensions
             }, '*'); // '*' permite enviar mensajes a cualquier origen
