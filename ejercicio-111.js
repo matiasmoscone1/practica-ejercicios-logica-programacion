@@ -17,14 +17,11 @@ export default function ventanaWindow(btnAbrir, btnCerrar){
 
         //console.log(ventana.outerWidth, ventana.outerHeight);
     
-        window.addEventListener("resize", handleResize());
+        window.addEventListener("resize", handleResize);
       
     });
  
-    window.addEventListener("resize", () => {
-        handleResize();
-        console.log("hola");
-    })
+
 
     $btnCerrar.addEventListener("click", () => {
         if(ventana){       
@@ -40,10 +37,12 @@ export default function ventanaWindow(btnAbrir, btnCerrar){
         };
 
         // Enviar las dimensiones a la ventana emergente mediante postMessage
-        ventana.postMessage({
-            type: 'resize',
-            dimensions: dimensions
-        }, '*'); // '*' permite enviar mensajes a cualquier origen
+        if(ventana){            
+            ventana.postMessage({
+                type: 'resize',
+                dimensions: dimensions
+            }, '*'); // '*' permite enviar mensajes a cualquier origen
+        }
 
         // Imprimir las dimensiones en la consola
         console.log('Dimensiones redimensionadas:', dimensions);
