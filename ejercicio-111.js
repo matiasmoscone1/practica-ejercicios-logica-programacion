@@ -6,17 +6,22 @@
 
 export default function ventanaWindow(btnAbrir, btnCerrar){
 
+    //creando variables referenciales al DOM
     const $btnAbrir = document.querySelector(btnAbrir);
     const $btnCerrar = document.querySelector(btnCerrar);
-    
+
+    //creando variable que contendra la ventana emergente
     let ventana;
 
+    //captando evento click del boton Abrir
     $btnAbrir.addEventListener("click", () => {
 
+        //abre la nueva ventana emergente
         ventana = window.open('https://www.facebook.com/', "_blank", 'width=600,height=600');
 
         //console.log(ventana.outerWidth, ventana.outerHeight);
     
+        
         window.addEventListener("resize", handleResize);
       
     });
