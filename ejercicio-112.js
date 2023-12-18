@@ -7,8 +7,9 @@
 //después de cierto tiempo.
 
 
-export default function locationObject(){
+export default function locationObject(btnFacebook, btnInstagram, btnGmail, btnYoutube){
 
+    
 
 
 

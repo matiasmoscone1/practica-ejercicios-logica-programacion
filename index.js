@@ -109,6 +109,7 @@ import validacionGeolocalizacion from "./ejercicio-108.js";
 import cronometro from "./ejercicio-109.js";
 import distanciaGeolocalizacion from "./ejercicio-110.js";
 import ventanaWindow from "./ejercicio-111.js";
+import locationObject from "./ejercicio-112.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -224,7 +225,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cronometro(".resultado-cronometro-ej-109", ".btn-iniciar-ej-109", ".btn-continuar-ej-109", ".btn-parar-ej-109", ".btn-limpiar-ej-109");
     distanciaGeolocalizacion(".btn-calcular-ej-110", ".btn-limpiar-ej-110", ".ubicacion-usuario-ej-110", ".resultado-ej-110");
     ventanaWindow(".abrir-ventana-ej-111", ".cerrar-ventana-ej-111");
-
+    locationObject(".btn-facebook-ej-112", ".btn-instagram-ej-112", ".btn-gmail-ej-112", ".btn-youtube-ej-112");
     
 
 
