@@ -25,7 +25,9 @@ export default function locationObject(btnFacebook, btnInstagram, btnGmail, btnY
         }
 
         if(ventana){
-            console.log(ventana.location.href);
+            ventana.addEventListener("load", () => {
+                console.log(ventana.location.href);
+            });
         }
 
 
