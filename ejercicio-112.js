@@ -15,7 +15,13 @@ export default function locationObject(btnFacebook, btnInstagram, btnGmail, btnY
     const $btnYoutube = document.querySelector(btnYoutube);
 
 
-    
+    document.addEventListener("click", (e) => {
+
+        if(e.target.matches($btnFacebook)){
+            window.open('https://www.facebook.com/', "_blank", 'width=600,height=600');
+        }
+
+    });
 
 
 
