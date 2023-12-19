@@ -9,16 +9,17 @@
 
 export default function locationObject(btnFacebook, btnInstagram, btnGmail, btnYoutube){
 
-    const $btnFacebook = document.querySelector(btnFacebook);
-    const $btnInstagram = document.querySelector(btnInstagram);
-    const $btnGmail = document.querySelector(btnGmail);
-    const $btnYoutube = document.querySelector(btnYoutube);
-
-
+    
     document.addEventListener("click", (e) => {
 
-        if(e.target.matches($btnFacebook)){
+        if(e.target.matches(btnFacebook)){
             window.open('https://www.facebook.com/', "_blank", 'width=600,height=600');
+        }else if(e.target.matches(btnInstagram)){
+            window.open('https://www.instagram.com/', "_blank", 'width=600,height=600');
+        }else if(e.target.matches(btnGmail)){
+            window.open('https://www.gmail.com/', "_blank", 'width=600,height=600');
+        }else if(e.target.matches(btnYoutube)){
+            window.open('https://www.youtube.com/', "_blank", 'width=600,height=600');
         }
 
     });
