@@ -25,16 +25,17 @@ export default function locationObject(btnFacebook, btnInstagram, btnGmail, btnY
             window.open('https://www.youtube.com/', "_blank", 'width=600,height=600');
         }
 
-        
+        /*
         if(ventana){
             ventana.addEventListener("unload", () => {
                 console.log(ventana.location.href);
             });
-        }
+        }*/
 
-
+        
     });
 
+   
 
 
 }

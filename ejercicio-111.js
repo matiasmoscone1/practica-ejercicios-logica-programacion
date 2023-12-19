@@ -21,7 +21,6 @@ export default function ventanaWindow(btnAbrir, btnCerrar){
 
         //console.log(ventana.outerWidth, ventana.outerHeight);
     
-        
         window.addEventListener("resize", handleResize);
       
     });
