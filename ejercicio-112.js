@@ -9,12 +9,14 @@
 
 export default function locationObject(btnFacebook, btnInstagram, btnGmail, btnYoutube){
 
-    
+   
     document.addEventListener("click", (e) => {
 
+        let ventana;
+
         if(e.target.matches(btnFacebook)){
-            window.open('https://www.facebook.com/', "_blank", 'width=600,height=600');
-            console.log(location);
+            ventana = window.open('https://www.facebook.com/', "_blank", 'width=600,height=600');
+            //console.log(ventana.location);
         }else if(e.target.matches(btnInstagram)){
             window.open('https://www.instagram.com/', "_blank", 'width=600,height=600');
         }else if(e.target.matches(btnGmail)){
@@ -22,6 +24,13 @@ export default function locationObject(btnFacebook, btnInstagram, btnGmail, btnY
         }else if(e.target.matches(btnYoutube)){
             window.open('https://www.youtube.com/', "_blank", 'width=600,height=600');
         }
+
+        /*
+        if(ventana) {
+            ventana.addEventListener("load", () => {
+                console.log(ventana.location.href);
+            });
+        }*/
 
     });
 
