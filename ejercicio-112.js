@@ -14,6 +14,7 @@ export default function locationObject(btnFacebook, btnInstagram, btnGmail, btnY
 
         if(e.target.matches(btnFacebook)){
             window.open('https://www.facebook.com/', "_blank", 'width=600,height=600');
+            console.log(location);
         }else if(e.target.matches(btnInstagram)){
             window.open('https://www.instagram.com/', "_blank", 'width=600,height=600');
         }else if(e.target.matches(btnGmail)){
