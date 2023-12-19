@@ -9,8 +9,13 @@
 
 export default function locationObject(btnFacebook, btnInstagram, btnGmail, btnYoutube){
 
-    
+    const $btnFacebook = document.querySelector(btnFacebook);
+    const $btnInstagram = document.querySelector(btnInstagram);
+    const $btnGmail = document.querySelector(btnGmail);
+    const $btnYoutube = document.querySelector(btnYoutube);
 
+
+    
 
 
 
