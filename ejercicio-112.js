@@ -17,6 +17,11 @@ export default function locationObject(btnFacebook, btnInstagram, btnGmail, btnY
         if(e.target.matches(btnFacebook)){
             ventana = window.open('https://www.facebook.com/', "_blank", 'width=600,height=600');
             //console.log(ventana.location.href);
+            if (ventana) {
+                await new Promise(resolve => ventana.addEventListener("load", resolve)
+                .then(console.log("Ventana cargada:", ventana.location.href)));
+                
+            }
         }else if(e.target.matches(btnInstagram)){
             ventana = window.open('https://www.instagram.com/', "_blank", 'width=600,height=600');
         }else if(e.target.matches(btnGmail)){
