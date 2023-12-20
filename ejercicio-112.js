@@ -17,6 +17,7 @@ export default function locationObject(btnFacebook, btnInstagram, btnGmail, btnY
         if(e.target.matches(btnFacebook)){
             ventana = window.open('https://www.facebook.com/', "_blank", 'width=600,height=600');
             setTimeout(() => {
+                alert(`Se abrira el diario "El Cronista", desea continuar?`);
                 ventana.open("https://www.cronista.com/");
             }, 2000);
             console.log(ventana.location.href); 
