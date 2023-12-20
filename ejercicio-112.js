@@ -12,16 +12,11 @@ export default function locationObject(btnFacebook, btnInstagram, btnGmail, btnY
    
     document.addEventListener("click", async (e) => {
 
-        
 
         if(e.target.matches(btnFacebook)){
             ventana = window.open('https://www.facebook.com/', "_blank", 'width=600,height=600');
-            //console.log(ventana.location.href);
-            if (ventana) {
-                await new Promise(resolve => ventana.addEventListener("load", resolve)
-                .then(console.log("Ventana cargada:", ventana.location.href)));
-                
-            }
+            await waitForLoad(ventana);
+            console.log(ventana.location.href);
         }else if(e.target.matches(btnInstagram)){
             ventana = window.open('https://www.instagram.com/', "_blank", 'width=600,height=600');
         }else if(e.target.matches(btnGmail)){
@@ -30,17 +25,18 @@ export default function locationObject(btnFacebook, btnInstagram, btnGmail, btnY
             ventana = window.open('https://www.youtube.com/', "_blank", 'width=600,height=600');
         }
 
-        /*
-        if (ventana) {
-            await new Promise(resolve => ventana.addEventListener("load", resolve));
-            console.log("Ventana cargada:", ventana.location.href);
-        }*/
+    
     });
     
-    if(ventana){
-        ventana.addEventListener("load", () => {
-            console.log(ventana.location.href);
-        })
+  
+    async function waitForLoad(targetWindow) {
+        return new Promise(resolve => {
+            if (targetWindow && targetWindow.location.href !== "about:blank") {
+                resolve();
+            } else {
+                targetWindow.addEventListener("load", () => resolve());
+            }
+        });
     }
 
 }
