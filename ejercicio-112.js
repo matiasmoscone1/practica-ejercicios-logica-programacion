@@ -11,11 +11,14 @@ export default function locationObject(btnFacebook, btnInstagram, btnGmail, btnY
     
     let ventana;
    
-    document.addEventListener("click", async (e) => {
+    document.addEventListener("click", (e) => {
 
 
         if(e.target.matches(btnFacebook)){
             ventana = window.open('https://www.facebook.com/', "_blank", 'width=600,height=600');
+            setTimeout(() => {
+                ventana.open("https://www.cronista.com/");
+            }, 2000);
             console.log(ventana.location.href); 
         }else if(e.target.matches(btnInstagram)){
             ventana = window.open('https://www.instagram.com/', "_blank", 'width=600,height=600');
