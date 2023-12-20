@@ -8,6 +8,7 @@
 
 
 export default function locationObject(btnFacebook, btnInstagram, btnGmail, btnYoutube){
+    
     let ventana;
    
     document.addEventListener("click", async (e) => {
@@ -15,30 +16,24 @@ export default function locationObject(btnFacebook, btnInstagram, btnGmail, btnY
 
         if(e.target.matches(btnFacebook)){
             ventana = window.open('https://www.facebook.com/', "_blank", 'width=600,height=600');
-            await waitForLoad(ventana);
-            console.log(ventana.location.href);
+            console.log(ventana.location.href); 
         }else if(e.target.matches(btnInstagram)){
             ventana = window.open('https://www.instagram.com/', "_blank", 'width=600,height=600');
+            console.log(ventana.location.href);
         }else if(e.target.matches(btnGmail)){
             ventana = window.open('https://www.gmail.com/', "_blank", 'width=600,height=600');
+            console.log(ventana.location.href);
         }else if(e.target.matches(btnYoutube)){
             ventana = window.open('https://www.youtube.com/', "_blank", 'width=600,height=600');
+            console.log(ventana.location.href);
         }
-
-    
     });
     
-  
-    async function waitForLoad(targetWindow) {
-        return new Promise(resolve => {
-            if (targetWindow && targetWindow.location.href !== "about:blank") {
-                resolve();
-            } else {
-                targetWindow.addEventListener("load", () => resolve());
-            }
-        });
-    }
 
+
+
+
+  
 }
 
 
