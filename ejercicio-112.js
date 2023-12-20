@@ -24,15 +24,19 @@ export default function locationObject(btnFacebook, btnInstagram, btnGmail, btnY
         }else if(e.target.matches(btnYoutube)){
             ventana = window.open('https://www.youtube.com/', "_blank", 'width=600,height=600');
         }
-    
+
+        /*
+        if (ventana) {
+            await new Promise(resolve => ventana.addEventListener("load", resolve));
+            console.log("Ventana cargada:", ventana.location.href);
+        }*/
     });
-
-
-    if (ventana) {
-        await new Promise(resolve => ventana.addEventListener("load", resolve));
-        console.log("Ventana cargada:", ventana.location.href);
+    
+    if(ventana){
+        ventana.addEventListener("load", () => {
+            console.log(ventana.location.href);
+        })
     }
-
 
 }
 
