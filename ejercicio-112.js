@@ -15,10 +15,8 @@ export default function locationObject(btnFacebook, btnInstagram, btnGmail, btnY
         let ventana;
 
         if(e.target.matches(btnFacebook)){
-            ventana = window.open(async () => {
-                return 'https://www.facebook.com/';
-            }, "Facebook", "_blank", 'width=600,height=600');
-            console.log(ventana.location.href);
+            ventana = window.open('https://www.facebook.com/', "_blank", 'width=600,height=600');
+            //console.log(ventana.location.href);
         }else if(e.target.matches(btnInstagram)){
             window.open('https://www.instagram.com/', "_blank", 'width=600,height=600');
         }else if(e.target.matches(btnGmail)){
@@ -27,12 +25,13 @@ export default function locationObject(btnFacebook, btnInstagram, btnGmail, btnY
             window.open('https://www.youtube.com/', "_blank", 'width=600,height=600');
         }
 
-        /*
+        
         if(ventana){
-            ventana.addEventListener("unload", () => {
-                console.log(ventana.location.href);
+            ventana.addEventListener("load", () => {
+                console.log(ventana);
+                //console.log(ventana.location.href);
             });
-        }*/
+        }
 
         
     });
