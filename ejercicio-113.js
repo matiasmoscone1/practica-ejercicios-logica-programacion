@@ -7,9 +7,21 @@
 // la ventana del navegador.
 
 
-export default function sessionStorage(){
+export default function almacenamientoNavegador(btnGuardar, btnLimpiar){
 
-    
+
+    const $btnGuardar = document.querySelector(btnGuardar);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
+
+
+    $btnGuardar.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        console.log(localStorage);
+
+    });
+
+
 
 
 }
