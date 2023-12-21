@@ -14,6 +14,8 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar){
     const $btnLimpiar = document.querySelector(btnLimpiar);
 
 
+    //localStorage.clear();  
+
     $btnGuardar.addEventListener("click", () => {
         
         const $inputNombre = document.querySelector(".input-nombre-ej-113");
@@ -21,7 +23,10 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar){
         const $inputEmail = document.querySelector(".input-email-ej-113");
         const $inputTelefono = document.querySelector(".input-telefono-ej-113");
 
-        let array = [];
+        
+
+        const array = [];
+
 
         array.push({
             nombre: $inputNombre,
@@ -30,7 +35,7 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar){
             telefono: $inputTelefono
         });
 
-        localStorage.setItem("Usuarios", JSON.stringify(array));
+        localStorage.setItem("ListaUsuarios", JSON.stringify(array));
 
         console.log(localStorage);
 
