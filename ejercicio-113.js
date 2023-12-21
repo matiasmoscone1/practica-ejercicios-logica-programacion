@@ -21,8 +21,17 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar){
         const $inputEmail = document.querySelector(".input-email-ej-113");
         const $inputTelefono = document.querySelector(".input-telefono-ej-113");
 
+        let array = [];
 
-        
+        array.push({
+            nombre: $inputNombre,
+            apellido: $inputApellido,
+            email: $inputEmail,
+            telefono: $inputTelefono
+        });
+
+        localStorage.setItem("Usuarios", JSON.stringify(array));
+
         console.log(localStorage);
 
     });
