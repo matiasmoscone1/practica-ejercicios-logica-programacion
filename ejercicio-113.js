@@ -36,9 +36,16 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
 
         localStorage.setItem("ListaUsuarios", JSON.stringify(array));
 
-        console.log(localStorage);
+        //console.log(localStorage);
 
-        $resultado.innerHTML = ``;
+
+        const usuario = JSON.parse(localStorage.getItem("ListaUsuarios"));
+
+        console.log(usuario);
+
+        for(let i = 0; i <= usuario.lenght; i++){        
+            $resultado.innerHTML = `${usuario[i].nombre} - ${usuario[i].apellido} - ${usuario[i].email} - ${usuario[i].telefono}`;
+        }
 
     });
 
