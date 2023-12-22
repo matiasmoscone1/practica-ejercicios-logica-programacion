@@ -70,16 +70,24 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
         </table>` 
 
         $resultado.innerHTML = tabla; 
-
+        
+        limpiaInputs();
+     
     });
 
 
-    $btnLimpiar.addEventListener("click", () => {
-        localStorage.clear();
+    const limpiaInputs = () => {
         document.querySelector(".input-nombre-ej-113").value = "";
         document.querySelector(".input-apellido-ej-113").value = "";
         document.querySelector(".input-email-ej-113").value = "";
         document.querySelector(".input-telefono-ej-113").value = "";
+    }
+
+
+
+    $btnLimpiar.addEventListener("click", () => {
+        localStorage.clear();
+        limpiaInputs();
         $resultado.innerHTML = "";
     });
 
