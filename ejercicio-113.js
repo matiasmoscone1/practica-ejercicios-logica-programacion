@@ -23,8 +23,6 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
         const $inputEmail = document.querySelector(".input-email-ej-113").value;
         const $inputTelefono = document.querySelector(".input-telefono-ej-113").value;
 
-        
-        localStorage.clear();
 
         const array = JSON.parse(localStorage.getItem("ListaUsuarios")) || [];
 
@@ -40,9 +38,14 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
 
         console.log(localStorage);
 
+        $resultado.innerHTML = ``;
+
     });
 
 
+    $btnLimpiar.addEventListener("click", () => {
+        localStorage.clear();
+    });
 
 
 
