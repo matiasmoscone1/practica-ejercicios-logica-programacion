@@ -80,6 +80,7 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
         document.querySelector(".input-apellido-ej-113").value = "";
         document.querySelector(".input-email-ej-113").value = "";
         document.querySelector(".input-telefono-ej-113").value = "";
+        $resultado.innerHTML = "";
     });
 
 
