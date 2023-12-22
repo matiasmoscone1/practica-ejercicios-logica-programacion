@@ -7,12 +7,12 @@
 // la ventana del navegador.
 
 
-export default function almacenamientoNavegador(btnGuardar, btnLimpiar){
+export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultado){
 
 
     const $btnGuardar = document.querySelector(btnGuardar);
     const $btnLimpiar = document.querySelector(btnLimpiar);
-
+    const $resultado = document.querySelector(resultado);
 
     //localStorage.clear();  
 
@@ -41,6 +41,11 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar){
         console.log(localStorage);
 
     });
+
+
+
+
+
 
 
 
