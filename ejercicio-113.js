@@ -45,6 +45,10 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
 
     $btnLimpiar.addEventListener("click", () => {
         localStorage.clear();
+        document.querySelector(".input-nombre-ej-113").value = "";
+        document.querySelector(".input-apellido-ej-113").value = "";
+        document.querySelector(".input-email-ej-113").value = "";
+        document.querySelector(".input-telefono-ej-113").value = "";
     });
 
 
