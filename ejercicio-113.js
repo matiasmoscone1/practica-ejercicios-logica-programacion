@@ -47,27 +47,29 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
 
         let tabla = `<table border={1}>
             <thead>
-                <td>Nombre<td/>
-                <td>Apellido<td/>
-                <td>Email<td/>
-                <td>Telefono<td/>
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>Email</td>
+                <td>Telefono</td>
             </thead>
             <tbody>
         `;
 
-        for(let i = 0; i <= usuario.length; i++){        
+        for(let i = 0; i < usuario.length; i++){        
             tabla += `
-                <td>${usuario[i].nombre}</td>
-                <td>${usuario[i].apellido}</td>
-                <td>${usuario[i].email}</td>
-                <td>${usuario[i].telefono}</td>
-            `      
-            
-        }
+                <tr>
+                    <td>${usuario[i].nombre}</td>
+                    <td>${usuario[i].apellido}</td>
+                    <td>${usuario[i].email}</td>
+                    <td>${usuario[i].telefono}</td>
+                </tr>
+        `}
 
         tabla += `
         </tbody>
         </table>` 
+
+        $resultado.innerHTML = tabla; 
 
     });
 
