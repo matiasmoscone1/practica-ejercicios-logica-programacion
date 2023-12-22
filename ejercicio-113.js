@@ -18,14 +18,15 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar){
 
     $btnGuardar.addEventListener("click", () => {
         
-        const $inputNombre = document.querySelector(".input-nombre-ej-113");
-        const $inputApellido = document.querySelector(".input-apellido-ej-113");
-        const $inputEmail = document.querySelector(".input-email-ej-113");
-        const $inputTelefono = document.querySelector(".input-telefono-ej-113");
+        const $inputNombre = document.querySelector(".input-nombre-ej-113").value;
+        const $inputApellido = document.querySelector(".input-apellido-ej-113").value;
+        const $inputEmail = document.querySelector(".input-email-ej-113").value;
+        const $inputTelefono = document.querySelector(".input-telefono-ej-113").value;
 
         
+        localStorage.clear();
 
-        const array = [];
+        const array = JSON.parse(localStorage.getItem("ListaUsuarios")) || [];
 
 
         array.push({
