@@ -36,6 +36,8 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
 
         localStorage.setItem("ListaUsuarios", JSON.stringify(array));
 
+        sessionStorage.setItem("UsuariosLogueados", JSON.stringify(array));
+
         //console.log(localStorage);
 
 
@@ -90,6 +92,7 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
         limpiaInputs();
         $resultado.innerHTML = "";
     });
+
 
 
 
