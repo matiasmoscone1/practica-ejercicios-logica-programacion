@@ -57,6 +57,13 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
                 telefono: $inputTelefono
             });
     
+            arraySession.push({
+                nombre: $inputNombre,
+                apellido: $inputApellido,
+                email: $inputEmail,
+                telefono: $inputTelefono
+            });
+
             localStorage.setItem("ListaUsuarios", JSON.stringify(array));
     
             sessionStorage.setItem("UsuariosLogueados", JSON.stringify(arraySession));
