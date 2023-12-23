@@ -93,6 +93,8 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
 
 
 
+    console.log(sessionStorage);
+
 
 
 
