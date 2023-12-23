@@ -17,9 +17,20 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
 
     //localStorage.clear();  
 
+    let flag = false;
 
     const validarInpupts = (nombre, apellido, email, telefono) => {
         const regNombreApellido = /^[a-zA-Z]{8,16}$/;
+        const regEmail = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
+        const regTelefono = /^[0-9]{8}$/;
+
+        if(regNombreApellido.match(nombre) && regNombreApellido.match(apellido)
+        && regEmail.match(email) && regTelefono.match(telefono)){
+            flag = true;
+        }else{
+            flag = false;
+        }
+
     }
 
     $btnGuardar.addEventListener("click", () => {
