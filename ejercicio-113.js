@@ -27,6 +27,8 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
 
         const array = JSON.parse(localStorage.getItem("ListaUsuarios")) || [];
 
+        const arraySession = JSON.parse(sessionStorage.getItem("UsuariosLogueados")) || [];
+
 
         array.push({
             nombre: $inputNombre,
@@ -37,7 +39,7 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
 
         localStorage.setItem("ListaUsuarios", JSON.stringify(array));
 
-        sessionStorage.setItem("UsuariosLogueados", JSON.stringify(array));
+        sessionStorage.setItem("UsuariosLogueados", JSON.stringify(arraySession));
 
         //console.log(localStorage);
 
@@ -77,6 +79,8 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
         
         limpiaInputs();
      
+        console.log(sessionStorage);
+
         $session.innerHTML = `Los usuarios logueados son: ${JSON.stringify(usuariosLogeados)}`;
         
     });
@@ -100,7 +104,7 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
 
 
 
-    //console.log(sessionStorage);
+    
 
 
 
