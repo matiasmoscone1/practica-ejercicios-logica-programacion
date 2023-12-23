@@ -17,6 +17,11 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
 
     //localStorage.clear();  
 
+
+    const validarInpupts = (nombre, apellido, email, telefono) => {
+        const regNombreApellido = /^[a-zA-Z]{8,16}$/;
+    }
+
     $btnGuardar.addEventListener("click", () => {
         
         const $inputNombre = document.querySelector(".input-nombre-ej-113").value;
