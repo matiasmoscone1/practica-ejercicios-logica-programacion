@@ -41,6 +41,7 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
 
         //console.log(localStorage);
 
+        const usuariosLogeados = JSON.parse(sessionStorage.getItem("UsuariosLogueados"));
 
         const usuario = JSON.parse(localStorage.getItem("ListaUsuarios"));
 
@@ -76,7 +77,7 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
         
         limpiaInputs();
      
-
+        $session.innerHTML = `Los usuarios logueados son: ${JSON.stringify(usuariosLogeados)}`;
         
     });
 

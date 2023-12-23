@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
     distanciaGeolocalizacion(".btn-calcular-ej-110", ".btn-limpiar-ej-110", ".ubicacion-usuario-ej-110", ".resultado-ej-110");
     ventanaWindow(".abrir-ventana-ej-111", ".cerrar-ventana-ej-111");
     locationObject(".btn-facebook-ej-112", ".btn-instagram-ej-112", ".btn-gmail-ej-112", ".btn-youtube-ej-112");
-    almacenamientoNavegador(".btn-guardar-ej-113", ".btn-limpiar-ej-113", ".resultado-ej-113");
+    almacenamientoNavegador(".btn-guardar-ej-113", ".btn-limpiar-ej-113", ".resultado-ej-113", ".sessionStorage-ej-113");
 
 
 
