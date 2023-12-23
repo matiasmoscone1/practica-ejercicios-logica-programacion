@@ -24,14 +24,14 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
         const regEmail = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
         const regTelefono = /^[0-9]{8}$/;
 
-        if(regNombreApellido.match(nombre) && regNombreApellido.match(apellido)
-        && regEmail.match(email) && regTelefono.match(telefono)){
+        if(regNombreApellido.test(nombre) && regNombreApellido.test(apellido)
+        && regEmail.test(email) && regTelefono.test(telefono)){
             flag = true;
         }else{
             flag = false;
         }
-
     }
+
 
     $btnGuardar.addEventListener("click", () => {
         
@@ -40,6 +40,8 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
         const $inputEmail = document.querySelector(".input-email-ej-113").value;
         const $inputTelefono = document.querySelector(".input-telefono-ej-113").value;
 
+        validarInpupts($inputNombre, $inputApellido, $inputEmail, $inputTelefono);
+        console.log(flag);
 
         const array = JSON.parse(localStorage.getItem("ListaUsuarios")) || [];
 
