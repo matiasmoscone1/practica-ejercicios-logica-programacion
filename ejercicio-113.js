@@ -30,6 +30,7 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
         }else{
             flag = false;
             $resultado.textContent = "Error: Los datos ingresados son incorrectos, verifique que cumplan las condiciones porfavor...";
+            $session.textContent = "Error: Los datos ingresados son incorrectos, verifique que cumplan las condiciones porfavor...";
         }
     }
 
@@ -109,12 +110,6 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
          
             console.log(sessionStorage);
     
-            //$session.innerHTML = `Los usuarios logueados son: ${JSON.stringify(usuariosLogeados)}`;
-            /*
-            $session.innerHTML = `Los usuarios logueados son: <br> Nombre: ${JSON.stringify(usuariosLogeados[0].nombre)} <br>
-            Apellido: ${usuariosLogeados.apellido} <br> Email: ${usuariosLogeados.email}<br>
-            Telefono: ${usuariosLogeados.telefono}}`;*/
-
             let tablaLogueados = `<table border={1}>
                 <thead>
                     <td>Nombre</td>
