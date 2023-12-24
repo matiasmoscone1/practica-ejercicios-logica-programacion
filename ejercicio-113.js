@@ -29,6 +29,7 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
             flag = true;
         }else{
             flag = false;
+            $resultado.textContent = "Error: Los datos ingresados son incorrectos, verifique que cumplan las condiciones porfavor...";
         }
     }
 
