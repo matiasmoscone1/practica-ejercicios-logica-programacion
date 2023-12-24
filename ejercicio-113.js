@@ -110,10 +110,36 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
             console.log(sessionStorage);
     
             //$session.innerHTML = `Los usuarios logueados son: ${JSON.stringify(usuariosLogeados)}`;
-            $session.innerHTML = `Los usuarios logueados son: Nombre: ${JSON.stringify(usuariosLogeados.nombre)} <br>
+            /*
+            $session.innerHTML = `Los usuarios logueados son: <br> Nombre: ${JSON.stringify(usuariosLogeados[0].nombre)} <br>
             Apellido: ${usuariosLogeados.apellido} <br> Email: ${usuariosLogeados.email}<br>
-            Telefono: ${usuariosLogeados.telefono}}`;
+            Telefono: ${usuariosLogeados.telefono}}`;*/
 
+            let tablaLogueados = `<table border={1}>
+                <thead>
+                    <td>Nombre</td>
+                    <td>Apellido</td>
+                    <td>Email</td>
+                    <td>Telefono</td>
+                </thead>
+                <tbody>
+            `;
+
+            for(let i = 0; i < usuariosLogeados.length; i++){
+                tablaLogueados += `
+                    <tr>
+                        <td>${JSON.stringify(usuariosLogeados[i].nombre)}</td>
+                        <td>${JSON.stringify(usuariosLogeados[i].apellido)}</td>
+                        <td>${JSON.stringify(usuariosLogeados[i].email)}</td>
+                        <td>${JSON.stringify(usuariosLogeados[i].telefono)}</td>
+                    </tr>
+                
+                    `}
+
+            tablaLogueados += `</tbody>
+            </table>`;
+
+            session.innerHTML = tablaLogueados;
             
         }
     });
