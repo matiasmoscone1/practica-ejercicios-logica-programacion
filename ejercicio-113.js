@@ -133,13 +133,12 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
                         <td>${JSON.stringify(usuariosLogeados[i].email)}</td>
                         <td>${JSON.stringify(usuariosLogeados[i].telefono)}</td>
                     </tr>
-                
                     `}
 
             tablaLogueados += `</tbody>
             </table>`;
 
-            session.innerHTML = tablaLogueados;
+            $session.innerHTML = tablaLogueados;
             
         }
     });
