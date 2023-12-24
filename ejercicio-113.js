@@ -109,7 +109,11 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
          
             console.log(sessionStorage);
     
-            $session.innerHTML = `Los usuarios logueados son: ${JSON.stringify(usuariosLogeados)}`;
+            //$session.innerHTML = `Los usuarios logueados son: ${JSON.stringify(usuariosLogeados)}`;
+            $session.innerHTML = `Los usuarios logueados son: Nombre: ${JSON.stringify(usuariosLogeados.nombre)} <br>
+            Apellido: ${usuariosLogeados.apellido} <br> Email: ${usuariosLogeados.email}<br>
+            Telefono: ${usuariosLogeados.telefono}}`;
+
             
         }
     });
