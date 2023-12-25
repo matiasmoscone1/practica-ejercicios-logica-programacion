@@ -40,31 +40,38 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
         }
     }
 
-    
+    //captando evento click del boton Guardar
     $btnGuardar.addEventListener("click", () => {
         
+        //tomando los valores de los inputs escritos por el usuario
         const $inputNombre = document.querySelector(".input-nombre-ej-113").value;
         const $inputApellido = document.querySelector(".input-apellido-ej-113").value;
         const $inputEmail = document.querySelector(".input-email-ej-113").value;
         const $inputTelefono = document.querySelector(".input-telefono-ej-113").value;
 
+        //llama a la funcion que valida los inputs
         validarInpupts($inputNombre, $inputApellido, $inputEmail, $inputTelefono);
         //console.log(flag);
 
+        //si flag es true, ejecuta la logica del localStorage y sessionStorage
         if(flag){
 
+            //crea un array en localStorage para almacenar usuarios
             const array = JSON.parse(localStorage.getItem("ListaUsuarios")) || [];
 
+            //crea un array en sessionStorage para almacenar los usuarios que se creen
+            //mientras el navegador este abierto
             const arraySession = JSON.parse(sessionStorage.getItem("UsuariosLogueados")) || [];
     
     
+            //almacena datos en el array creado
             array.push({
                 nombre: $inputNombre,
                 apellido: $inputApellido,
                 email: $inputEmail,
                 telefono: $inputTelefono
             });
-    
+            //almacena datos en el array creado
             arraySession.push({
                 nombre: $inputNombre,
                 apellido: $inputApellido,
@@ -72,20 +79,25 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
                 telefono: $inputTelefono
             });
 
+            //guarda los datos en localStorage
             localStorage.setItem("ListaUsuarios", JSON.stringify(array));
-    
+            //guarda los datos en sessionStorage
             sessionStorage.setItem("UsuariosLogueados", JSON.stringify(arraySession));
     
             //console.log(localStorage);
     
+            //extrae los datos de usuarios del sessionStorage
             const usuariosLogeados = JSON.parse(sessionStorage.getItem("UsuariosLogueados"));
     
+            //extrae los datos de usuarios del localStorage
             const usuario = JSON.parse(localStorage.getItem("ListaUsuarios"));
     
-            console.log(usuario);
+            //console.log(usuario);
     
             //$resultado.innerHTML = `${usuario[i].nombre} - ${usuario[i].apellido} - ${usuario[i].email} - ${usuario[i].telefono}`;
     
+
+            //muestra en el dom la tabla del localStorage
             let tabla = `<table border={1}>
                 <thead>
                     <td>Nombre</td>
@@ -110,12 +122,15 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
             </tbody>
             </table>` 
     
+            //muestra en el DOM la tabla creada
             $resultado.innerHTML = tabla; 
             
+            //llama a la funcion limpiaInputs para vaciar los inputs
             limpiaInputs();
          
-            console.log(sessionStorage);
+            //console.log(sessionStorage);
     
+            //muestra en el dom la tabla del sessionStorage
             let tablaLogueados = `<table border={1}>
                 <thead>
                     <td>Nombre</td>
@@ -139,12 +154,13 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
             tablaLogueados += `</tbody>
             </table>`;
 
+            //muestra en el DOM la tabla creada
             $session.innerHTML = tablaLogueados;
             
         }
     });
 
-
+    //limpia los inputs del usuario
     const limpiaInputs = () => {
         document.querySelector(".input-nombre-ej-113").value = "";
         document.querySelector(".input-apellido-ej-113").value = "";
@@ -153,11 +169,13 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
     }
 
 
-
+    //capta el evento click del boton Limpiar
     $btnLimpiar.addEventListener("click", () => {
+        //vacia el localStorage, limpia los inputs y borra las tablas del DOM 
         localStorage.clear();
         limpiaInputs();
         $resultado.innerHTML = "";
+        $session.innerHTML = "";
     });
 
 
