@@ -9,7 +9,7 @@
 
 export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultado, session){
 
-
+    //creando variables referenciales al DOM
     const $btnGuardar = document.querySelector(btnGuardar);
     const $btnLimpiar = document.querySelector(btnLimpiar);
     const $resultado = document.querySelector(resultado);
@@ -17,13 +17,19 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
 
     //localStorage.clear();  
 
+
+    //creando variable bandera para validar usuarios o no
     let flag = false;
 
+    //funcion que valida los inputs del usuario mediante regex
     const validarInpupts = (nombre, apellido, email, telefono) => {
+        //expresiones regulares para validar datos
         const regNombreApellido = /^[a-zA-Z]{4,16}$/;
         const regEmail = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
         const regTelefono = /^[0-9]{8}$/;
 
+        //si no cumple las 4 validaciones, muestra un error en pantalla hasta que esten 
+        //correctamente los datos ingresados en los inputs
         if(regNombreApellido.test(nombre) && regNombreApellido.test(apellido)
         && regEmail.test(email) && regTelefono.test(telefono)){
             flag = true;
@@ -34,7 +40,7 @@ export default function almacenamientoNavegador(btnGuardar, btnLimpiar, resultad
         }
     }
 
-
+    
     $btnGuardar.addEventListener("click", () => {
         
         const $inputNombre = document.querySelector(".input-nombre-ej-113").value;
