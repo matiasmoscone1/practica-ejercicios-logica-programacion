@@ -6,8 +6,9 @@
 
 export default function webWorker(){
 
+    let worker = new Worker({mensaje: "Hola muy buenos dias!!!"});
 
-
+    console.log(worker);
 
 
 }
