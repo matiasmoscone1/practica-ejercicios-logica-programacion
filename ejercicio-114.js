@@ -6,18 +6,19 @@
 
 export default function webWorker(){
 
-    let worker = new Worker("complemento-114.js");
+    let worker = new Worker("./webWorkers/complemento-114.js");
     worker.postMessage({message: "Hola desde hilo principal"});
         
 
     //console.log(worker);
 
-    self.addEventListener("message", (e) => {
+    window.addEventListener("message", (e) => {
         console.log(`El mensaje es: ${e.data}`);
         
-        self.postMessage("Hola desde el web Worker");
+        window.postMessage({message: "Hola desde el web Worker"});
     });
 
+    console.log(worker);
 
 }
 
