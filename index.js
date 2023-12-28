@@ -112,6 +112,7 @@ import ventanaWindow from "./ejercicio-111.js";
 import locationObject from "./ejercicio-112.js";
 import almacenamientoNavegador from "./ejercicio-113.js";
 import webWorker from "./ejercicio-114.js";
+import devsLeagueReto from "./ejercicio-115.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -230,7 +231,9 @@ document.addEventListener("DOMContentLoaded", () => {
     locationObject(".btn-facebook-ej-112", ".btn-instagram-ej-112", ".btn-gmail-ej-112", ".btn-youtube-ej-112");
     almacenamientoNavegador(".btn-guardar-ej-113", ".btn-limpiar-ej-113", ".resultado-ej-113", ".sessionStorage-ej-113");
     webWorker();
+    devsLeagueReto();
 
+    
 
 
 

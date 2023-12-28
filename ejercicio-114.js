@@ -18,9 +18,9 @@ export default function webWorker(){
         window.postMessage({message: "Hola desde el web Worker"});
     });
 
-    console.log(worker);
+    //console.log(worker);
 
-    console.log(window);
+    //console.log(window);
 
 }
 
