@@ -6,16 +6,19 @@
 //orden: {}, [], (), ([{}])
 
 
-export default function devsLeagueReto(input, btnPrueba, btnFrenar, resultado){
+export default function devsLeagueReto(input, caracter, almacenamiento, btnPrueba, btnFrenar, resultado){
 
 
-    const btnPrueba = document.querySelector(btnPrueba);
-    const btnFrenar = document.querySelector(btnFrenar);
+    const $btnPrueba = document.querySelector(btnPrueba);
+    const $btnFrenar = document.querySelector(btnFrenar);
 
 
-    btnPrueba.addEventListener("click", () => {
+    $btnPrueba.addEventListener("click", () => {
 
-        
+        const $caracter = document.querySelector(caracter).value;
+        const $input = document.querySelector(input).value;
+
+        console.log($caracter);
 
 
     });
