@@ -9,9 +9,16 @@
 export default function devsLeagueReto(input, btnPrueba, btnFrenar, resultado){
 
 
-    
+    const btnPrueba = document.querySelector(btnPrueba);
+    const btnFrenar = document.querySelector(btnFrenar);
 
 
+    btnPrueba.addEventListener("click", () => {
+
+        
+
+
+    });
 
 
 
