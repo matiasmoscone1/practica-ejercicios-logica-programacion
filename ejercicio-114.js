@@ -20,5 +20,7 @@ export default function webWorker(){
 
     console.log(worker);
 
+    console.log(window);
+
 }
 
