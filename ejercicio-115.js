@@ -6,7 +6,7 @@
 //orden: {}, [], (), ([{}])
 
 
-export default function devsLeagueReto(){
+export default function devsLeagueReto(input, btnPrueba, btnFrenar, resultado){
 
 
     
