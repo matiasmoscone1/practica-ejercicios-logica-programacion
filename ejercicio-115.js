@@ -12,6 +12,8 @@ export default function devsLeagueReto(input, btnAgregar, almacenamiento, btnPru
     const $btnPrueba = document.querySelector(btnPrueba);
     const $btnFrenar = document.querySelector(btnFrenar);
     const $almacenamiento = document.querySelector(almacenamiento);
+    const $resutlado = document.querySelector(resultado);
+
 
     $btnPrueba.addEventListener("click", () => {
 
