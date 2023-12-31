@@ -36,8 +36,10 @@ export default function devsLeagueReto(input, btnAgregar, btnLimpiar ,almacenami
     
         if(validaInput.test(cadena)){
             console.log("Input validado con exito!!!");
+            $resutlado.textContent = "Input validado con exito!!!";
         }else{
             console.log("Input invalido...");
+            $resutlado.textContent = "Input invalido...";
         }
 
 
