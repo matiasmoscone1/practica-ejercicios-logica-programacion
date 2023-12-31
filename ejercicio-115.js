@@ -15,6 +15,7 @@ export default function devsLeagueReto(input, btnAgregar, almacenamiento, btnPru
     const $resutlado = document.querySelector(resultado);
 
     const stack = [];
+    const validaInput = /^\(\)|\{\}|\[\]|\(\[\{\}\]\)$/;
 
     $btnPrueba.addEventListener("click", () => {
 
@@ -29,11 +30,15 @@ export default function devsLeagueReto(input, btnAgregar, almacenamiento, btnPru
     $btnAgregar.addEventListener("click", () => {
         const $caracter = document.querySelector(input).value;
 
+
         stack.push($caracter);
 
         const cadena = stack.join("");
     
-        
+        if(validaInput.test(cadena)){
+            console.log("Input validado con exito!!!");
+        }
+
         console.log(cadena);
 
 
