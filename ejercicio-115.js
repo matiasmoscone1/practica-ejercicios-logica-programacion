@@ -30,8 +30,15 @@ export default function devsLeagueReto(input, btnAgregar, almacenamiento, btnPru
         const $caracter = document.querySelector(input).value;
 
         stack.push($caracter);
-        console.log(stack);
 
+        const cadena = stack.split("");
+    
+        
+        console.log(cadena);
+
+
+
+        document.querySelector(input).value = "";
 
     });
 
