@@ -5,7 +5,7 @@
 //b. Implementa la comunicación entre la interfaz de usuario y un Web Worker.
 
 export default function webWorker(){
-
+/*
     let worker = new Worker("./webWorkers/complemento-114.js");
     worker.postMessage({message: "Hola desde hilo principal"});
         
@@ -21,6 +21,6 @@ export default function webWorker(){
     //console.log(worker);
 
     //console.log(window);
-
+*/
 }
 

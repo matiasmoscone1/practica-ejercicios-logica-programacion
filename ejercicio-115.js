@@ -20,9 +20,6 @@ export default function devsLeagueReto(input, btnAgregar, btnLimpiar ,almacenami
 
     $btnPrueba.addEventListener("click", () => {
 
-        
-        
-
         console.log($caracter);
 
 
@@ -42,7 +39,7 @@ export default function devsLeagueReto(input, btnAgregar, btnLimpiar ,almacenami
             console.log("Input invalido...");
         }
 
-        
+
         console.log(cadena);
 
 
