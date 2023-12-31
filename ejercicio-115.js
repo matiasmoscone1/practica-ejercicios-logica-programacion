@@ -6,10 +6,11 @@
 //orden: {}, [], (), ([{}])
 
 
-export default function devsLeagueReto(input, btnAgregar, almacenamiento, btnPrueba, btnFrenar, resultado){
+export default function devsLeagueReto(input, btnAgregar, btnLimpiar ,almacenamiento, btnPrueba, btnFrenar, resultado){
 
     const $btnAgregar = document.querySelector(btnAgregar);
     const $btnPrueba = document.querySelector(btnPrueba);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
     const $btnFrenar = document.querySelector(btnFrenar);
     const $almacenamiento = document.querySelector(almacenamiento);
     const $resutlado = document.querySelector(resultado);
@@ -37,17 +38,20 @@ export default function devsLeagueReto(input, btnAgregar, almacenamiento, btnPru
     
         if(validaInput.test(cadena)){
             console.log("Input validado con exito!!!");
+        }else{
+            console.log("Input invalido...");
         }
 
         console.log(cadena);
-
 
 
         document.querySelector(input).value = "";
 
     });
 
-
+    $btnLimpiar.addEventListener("click", () => {
+        stack = "";
+    });
 
 }
 
