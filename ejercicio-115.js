@@ -50,6 +50,7 @@ export default function devsLeagueReto(input, btnAgregar, btnLimpiar ,almacenami
 
     $btnLimpiar.addEventListener("click", () => {
         cadena = " ";
+        stack.length = 0;
         //console.log("cadena borrada");
     });
 
