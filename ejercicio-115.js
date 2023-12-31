@@ -42,6 +42,7 @@ export default function devsLeagueReto(input, btnAgregar, btnLimpiar ,almacenami
             console.log("Input invalido...");
         }
 
+        
         console.log(cadena);
 
 
