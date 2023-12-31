@@ -31,7 +31,7 @@ export default function devsLeagueReto(input, btnAgregar, almacenamiento, btnPru
 
         stack.push($caracter);
 
-        const cadena = stack.split("");
+        const cadena = stack.join("");
     
         
         console.log(cadena);
