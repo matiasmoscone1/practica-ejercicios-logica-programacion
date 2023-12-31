@@ -14,6 +14,7 @@ export default function devsLeagueReto(input, btnAgregar, almacenamiento, btnPru
     const $almacenamiento = document.querySelector(almacenamiento);
     const $resutlado = document.querySelector(resultado);
 
+    const stack = [];
 
     $btnPrueba.addEventListener("click", () => {
 
@@ -28,7 +29,9 @@ export default function devsLeagueReto(input, btnAgregar, almacenamiento, btnPru
     $btnAgregar.addEventListener("click", () => {
         const $caracter = document.querySelector(input).value;
 
-        console.log($caracter);
+        stack.push($caracter);
+        console.log(stack);
+
 
     });
 
