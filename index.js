@@ -231,7 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
     locationObject(".btn-facebook-ej-112", ".btn-instagram-ej-112", ".btn-gmail-ej-112", ".btn-youtube-ej-112");
     almacenamientoNavegador(".btn-guardar-ej-113", ".btn-limpiar-ej-113", ".resultado-ej-113", ".sessionStorage-ej-113");
     webWorker();
-    devsLeagueReto(".input-orden-ej-115", ".btn-agregar-ej-115", ".btn-limpiar-ej-115", ".almacenamiento-ej-115", ".btn-prueba-ej-115", ".btn-frenar-ej-115", ".resultado-ej-115");
+    devsLeagueReto(".input-orden-ej-115", ".btn-agregar-ej-115", ".btn-limpiar-ej-115", ".almacenamiento-ej-115", ".resultado-ej-115");
 
 
 
