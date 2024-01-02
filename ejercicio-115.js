@@ -6,12 +6,12 @@
 //orden: {}, [], (), ([{}])
 
 
-export default function devsLeagueReto(input, btnAgregar, btnLimpiar ,almacenamiento, btnPrueba, btnFrenar, resultado){
+export default function devsLeagueReto(input, btnAgregar, btnLimpiar ,almacenamiento, resultado){
 
     const $btnAgregar = document.querySelector(btnAgregar);
-    const $btnPrueba = document.querySelector(btnPrueba);
+    
     const $btnLimpiar = document.querySelector(btnLimpiar);
-    const $btnFrenar = document.querySelector(btnFrenar);
+    
     const $almacenamiento = document.querySelector(almacenamiento);
     const $resutlado = document.querySelector(resultado);
 
@@ -19,12 +19,7 @@ export default function devsLeagueReto(input, btnAgregar, btnLimpiar ,almacenami
     let cadena = "";
     const validaInput = /^(\(\)|\{\}|\[\]|\(\[\{\}\]\))*$/;
 
-    $btnPrueba.addEventListener("click", () => {
-
-        console.log($caracter);
-
-
-    });
+    $almacenamiento.textContent = `Cadena: ${cadena}`;
 
     $btnAgregar.addEventListener("click", () => {
         const $caracter = document.querySelector(input).value;
@@ -45,6 +40,7 @@ export default function devsLeagueReto(input, btnAgregar, btnLimpiar ,almacenami
 
         console.log(cadena);
 
+        $almacenamiento.textContent = `Cadena: ${cadena}`;
 
         document.querySelector(input).value = "";
 
@@ -53,7 +49,7 @@ export default function devsLeagueReto(input, btnAgregar, btnLimpiar ,almacenami
     $btnLimpiar.addEventListener("click", () => {
         cadena = " ";
         stack.length = 0;
-        //console.log("cadena borrada");
+        $almacenamiento.textContent = `Cadena: ${cadena}`;
     });
 
 }
