@@ -113,6 +113,7 @@ import locationObject from "./ejercicio-112.js";
 import almacenamientoNavegador from "./ejercicio-113.js";
 import webWorker from "./ejercicio-114.js";
 import devsLeagueReto from "./ejercicio-115.js";
+import combinacionSuma from "./ejercicio-116.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -232,7 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
     almacenamientoNavegador(".btn-guardar-ej-113", ".btn-limpiar-ej-113", ".resultado-ej-113", ".sessionStorage-ej-113");
     webWorker();
     devsLeagueReto(".input-orden-ej-115", ".btn-agregar-ej-115", ".btn-limpiar-ej-115", ".almacenamiento-ej-115", ".resultado-ej-115");
-
+    combinacionSuma();
 
 
 
