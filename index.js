@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
     almacenamientoNavegador(".btn-guardar-ej-113", ".btn-limpiar-ej-113", ".resultado-ej-113", ".sessionStorage-ej-113");
     webWorker();
     devsLeagueReto(".input-orden-ej-115", ".btn-agregar-ej-115", ".btn-limpiar-ej-115", ".almacenamiento-ej-115", ".resultado-ej-115");
-    combinacionSuma();
+    combinacionSuma(".input-numeros-ej-116", ".btn-agregar-ej-116", ".btn-limpiar-ej-116", ".array-ej-116", ".btn-buscar-ej-116", ".resultado-ej-116");
 
 
 
