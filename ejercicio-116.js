@@ -5,9 +5,16 @@
 
 //function combinacionesDeSuma(array, objetivo) {}
 
-export default function combinacionSuma(){
+export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayNum, btnBuscar, resultado){
+
+    const $btnAgregar = document.querySelector(btnAgregar);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $arrayNum = document.querySelector(arrayNum);
+    const $btnBuscar = document.querySelector(btnBuscar);
+    const $resultado = document.querySelector(resultado);
 
 
+    
 
 
 
