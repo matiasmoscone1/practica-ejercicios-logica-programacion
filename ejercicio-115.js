@@ -47,13 +47,17 @@ export default function devsLeagueReto(input, btnAgregar, btnLimpiar ,almacenami
 
         //console.log(cadena);
 
+        //mostrando en el DOM el contenido de la cadena
         $almacenamiento.textContent = `Cadena: ${cadena}`;
 
+        //limpiando el input una vez que se de click al boton Agregar
         document.querySelector(input).value = "";
 
     });
 
+    //captando evento click del boton Limpiar
     $btnLimpiar.addEventListener("click", () => {
+        //limpia la cadena, pone el array stack en 0 y limpia el resultado de la cadena en el DOM
         cadena = " ";
         stack.length = 0;
         $almacenamiento.textContent = `Cadena: ${cadena}`;
