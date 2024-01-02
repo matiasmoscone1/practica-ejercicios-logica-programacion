@@ -17,7 +17,7 @@ export default function devsLeagueReto(input, btnAgregar, btnLimpiar ,almacenami
 
     const stack = [];
     let cadena = "";
-    const validaInput = /^\(\)|\{\}|\[\]|\(\[\{\}\]\)$/;
+    const validaInput = /^(\(\)|\{\}|\[\]|\(\[\{\}\]\))*$/;
 
     $btnPrueba.addEventListener("click", () => {
 
