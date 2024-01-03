@@ -25,6 +25,7 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
 
         $arrayNum.textContent = `[${nuevoArray}]`;
 
+        document.querySelector(inputNum).value = "";
     });
 
 
