@@ -19,6 +19,12 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
 
         console.log($inputNum);
 
+        const nuevoArray = [];
+
+        nuevoArray.push($inputNum);
+
+        $arrayNum.textContent = `[${nuevoArray}]`;
+
     });
 
 
