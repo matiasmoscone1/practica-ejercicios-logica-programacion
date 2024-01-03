@@ -14,12 +14,13 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
     const $resultado = document.querySelector(resultado);
 
 
+    const nuevoArray = [];
+
+
     $btnAgregar.addEventListener("click", () => {
         const $inputNum = document.querySelector(inputNum).value;
 
         console.log($inputNum);
-
-        const nuevoArray = [];
 
         nuevoArray.push($inputNum);
 
