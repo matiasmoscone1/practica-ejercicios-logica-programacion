@@ -29,7 +29,9 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
         document.querySelector(inputNum).value = "";
     });
 
-
+    $btnBuscar.addEventListener("click", () => {
+        console.log(nuevoArray);
+    });
 
 
 }
