@@ -18,6 +18,7 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
 
     const nuevoArray = [];
 
+    const cont = 0;
 
     $btnAgregar.addEventListener("click", () => {
         const $inputNum = document.querySelector(inputNum).value;
@@ -27,6 +28,16 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
         nuevoArray.push($inputNum);
 
         $arrayNum.textContent = `[${nuevoArray}]`;
+
+
+        const cantidadSumas = nuevoArray.map((num, i) => {
+            if((num + num[i]) === 10){
+                cont++; 
+            }
+            i++;
+            return cont;
+        })
+
 
         document.querySelector(inputNum).value = "";
     });
@@ -39,6 +50,8 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
         const $inputCheck = document.querySelector(inputCheck).value;
 
         $resCheck.textContent = `Numero a chequear: ${$inputCheck}`;
+
+        document.querySelector(inputCheck).value = "";
 
     });
 
