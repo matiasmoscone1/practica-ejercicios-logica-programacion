@@ -35,6 +35,13 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
         console.log(nuevoArray);
     });
 
+    $btnCheck.addEventListener("click", () => {
+        const $inputCheck = document.querySelector(inputCheck).value;
+
+        $resCheck.textContent = `Numero a chequear: ${$inputCheck}`;
+
+    });
+
 
 }
 
