@@ -18,7 +18,8 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
 
     const nuevoArray = [];
 
-    const cont = 0;
+    let cont = 0;
+    
 
     $btnAgregar.addEventListener("click", () => {
         const $inputNum = document.querySelector(inputNum).value;
@@ -28,16 +29,19 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
         nuevoArray.push($inputNum);
 
         $arrayNum.textContent = `[${nuevoArray}]`;
+        
+        let i = 0;
 
-
-        const cantidadSumas = nuevoArray.map((num, i) => {
+        const cantidadSumas = nuevoArray.map((num) => {
             if((num + num[i]) === 10){
                 cont++; 
             }
             i++;
             return cont;
         })
-
+        $btnBuscar.addEventListener("click", () => {
+            console.log(cantidadSumas);
+        });
 
         document.querySelector(inputNum).value = "";
     });
@@ -55,6 +59,7 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
 
     });
 
+    
 
 }
 
