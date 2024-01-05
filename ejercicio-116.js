@@ -42,20 +42,20 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
         */
 
         
-        $btnBuscar.addEventListener("click", () => {
-            console.log(cantidadSumas);
-        });
+    
 
         document.querySelector(inputNum).value = "";
     });
 
     $btnBuscar.addEventListener("click", () => {
+        const $inputNum = document.querySelector(inputNum).value;
         console.log(nuevoArray);
         let cont = 0;
         
         for(let i = 0; i <= arrayNum.lenght; i++){
             for(let j = 1; i < arrayNum.lengt; j++){
                 if(arrayNum[i] + arrayNum[j] === $inputNum){
+                    cont++;
                     console.log(cont);
                 }
             }
