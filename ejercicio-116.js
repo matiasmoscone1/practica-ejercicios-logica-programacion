@@ -18,7 +18,7 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
 
     const nuevoArray = [];
 
-    
+    let variableGlobal = 0;
 
     $btnAgregar.addEventListener("click", () => {
         const $inputNum = document.querySelector(inputNum).value;
@@ -29,20 +29,6 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
 
         $arrayNum.textContent = `[${nuevoArray}]`;
        
-        /*
-        let cont = 0;
-
-        for(let i = 0; i <= arrayNum.lenght; i++){
-            for(let j = 1; i < arrayNum.lengt; j++){
-                if(arrayNum[i] + arrayNum[j] === $inputNum){
-                    console.log(cont);
-                }
-            }
-        }
-        */
-
-        
-    
 
         document.querySelector(inputNum).value = "";
     });
@@ -52,9 +38,10 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
         console.log(nuevoArray);
         let cont = 0;
         
+        console.log($inputCheck);
         for(let i = 0; i <= nuevoArray.length; i++){
             for(let j = i + 1; j < nuevoArray.length; j++){
-                if((parseInt(nuevoArray[i]) + parseInt(nuevoArray[j])) === 10){
+                if((parseInt(nuevoArray[i]) + parseInt(nuevoArray[j])) === variableGlobal){
                     cont++;
                 }
             }
@@ -65,6 +52,8 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
 
     $btnCheck.addEventListener("click", () => {
         const $inputCheck = document.querySelector(inputCheck).value;
+
+        variableGlobal = $inputCheck;
 
         $resCheck.textContent = `Numero a chequear: ${$inputCheck}`;
 
