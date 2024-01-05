@@ -48,18 +48,18 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
     });
 
     $btnBuscar.addEventListener("click", () => {
-        const $inputNum = document.querySelector(inputNum).value;
+        
         console.log(nuevoArray);
         let cont = 0;
         
-        for(let i = 0; i <= arrayNum.lenght; i++){
-            for(let j = 1; i < arrayNum.lengt; j++){
-                if(arrayNum[i] + arrayNum[j] === $inputNum){
+        for(let i = 0; i <= nuevoArray.length; i++){
+            for(let j = 1; i < nuevoArray.length; j++){
+                if((nuevoArray[i] + nuevoArray[j]) === 10){
                     cont++;
-                    console.log(cont);
                 }
             }
         }
+        console.log(cont);
 
     });
 
