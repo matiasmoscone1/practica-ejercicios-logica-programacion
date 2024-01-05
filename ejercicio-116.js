@@ -18,7 +18,6 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
 
     const nuevoArray = [];
 
-    let cont = 0;
     
 
     $btnAgregar.addEventListener("click", () => {
@@ -29,16 +28,20 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
         nuevoArray.push($inputNum);
 
         $arrayNum.textContent = `[${nuevoArray}]`;
-        
-        let i = 0;
+       
+        /*
+        let cont = 0;
 
-        const cantidadSumas = nuevoArray.map((num) => {
-            if((num + num[i]) === 10){
-                cont++; 
+        for(let i = 0; i <= arrayNum.lenght; i++){
+            for(let j = 1; i < arrayNum.lengt; j++){
+                if(arrayNum[i] + arrayNum[j] === $inputNum){
+                    console.log(cont);
+                }
             }
-            i++;
-            return cont;
-        })
+        }
+        */
+
+        
         $btnBuscar.addEventListener("click", () => {
             console.log(cantidadSumas);
         });
@@ -48,6 +51,16 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
 
     $btnBuscar.addEventListener("click", () => {
         console.log(nuevoArray);
+        let cont = 0;
+        
+        for(let i = 0; i <= arrayNum.lenght; i++){
+            for(let j = 1; i < arrayNum.lengt; j++){
+                if(arrayNum[i] + arrayNum[j] === $inputNum){
+                    console.log(cont);
+                }
+            }
+        }
+
     });
 
     $btnCheck.addEventListener("click", () => {
