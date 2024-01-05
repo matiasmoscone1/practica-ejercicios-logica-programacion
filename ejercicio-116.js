@@ -35,13 +35,14 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
 
     $btnBuscar.addEventListener("click", () => {
         
+        console.log(variableGlobal);
         console.log(nuevoArray);
         let cont = 0;
         
-        console.log($inputCheck);
+        
         for(let i = 0; i <= nuevoArray.length; i++){
             for(let j = i + 1; j < nuevoArray.length; j++){
-                if((parseInt(nuevoArray[i]) + parseInt(nuevoArray[j])) === variableGlobal){
+                if((parseInt(nuevoArray[i]) + parseInt(nuevoArray[j])) === parseInt(variableGlobal)){
                     cont++;
                 }
             }
