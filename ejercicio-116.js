@@ -53,8 +53,8 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
         let cont = 0;
         
         for(let i = 0; i <= nuevoArray.length; i++){
-            for(let j = 1; i < nuevoArray.length; j++){
-                if((nuevoArray[i] + nuevoArray[j]) === 10){
+            for(let j = i + 1; j < nuevoArray.length; j++){
+                if((parseInt(nuevoArray[i]) + parseInt(nuevoArray[j])) === 10){
                     cont++;
                 }
             }
