@@ -62,7 +62,13 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
 
     });
 
-    
+    $btnLimpiar.addEventListener("click", () => {
+        document.querySelector(inputNum).value = "";
+        document.querySelector(inputCheck).value = "";
+        $resultado.textContent = "";
+        $resCheck.textContent = "";
+    });
+
 
 }
 
