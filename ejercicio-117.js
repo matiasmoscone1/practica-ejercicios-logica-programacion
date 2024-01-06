@@ -16,8 +16,12 @@ export default function buscaSubCadena(textarea, input, btnBuscar, btnLimpiar, r
         const $textArea = document.querySelector(textarea).value;
         const $inputSubCadena = document.querySelector(input).value;
 
-        
+        console.log($textArea);
+        console.log($inputSubCadena);
 
+        const nuevoArray = $textArea.split(" ");
+
+        console.log(nuevoArray);
 
     });
 
