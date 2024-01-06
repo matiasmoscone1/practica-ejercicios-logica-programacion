@@ -7,6 +7,7 @@
 
 export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayNum, inputCheck, btnCheck, resCheck, btnBuscar, resultado){
 
+    //creando variables referenciales al DOM
     const $btnAgregar = document.querySelector(btnAgregar);
     const $btnLimpiar = document.querySelector(btnLimpiar);
     const $arrayNum = document.querySelector(arrayNum);
@@ -15,24 +16,30 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
     const $btnBuscar = document.querySelector(btnBuscar);
     const $resultado = document.querySelector(resultado);
 
-
+    //creando array vacio que almacenara los numeros del array creado por el usuario
     const nuevoArray = [];
 
+    //creando una variable global que almacenara el numero similar al de las busqueda de sumas
     let variableGlobal = 0;
 
+    //captando evento click del boton Agregar
     $btnAgregar.addEventListener("click", () => {
+        //tomando el valor del input escrito por el usuario (el numero de array)
         const $inputNum = document.querySelector(inputNum).value;
 
-        console.log($inputNum);
+        //console.log($inputNum);
 
+        //agrega al array el numero agregado por el usuario en el input
         nuevoArray.push($inputNum);
 
+        //muestra en el DOM el array creado
         $arrayNum.textContent = `[${nuevoArray}]`;
        
-
+        //vacia el input despues de agregar el numero al array asi da pie a agregar otro numero
         document.querySelector(inputNum).value = "";
     });
 
+    //
     $btnBuscar.addEventListener("click", () => {
         
         console.log(variableGlobal);
