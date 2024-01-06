@@ -39,22 +39,28 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
         document.querySelector(inputNum).value = "";
     });
 
-    //
+    //captando evento click del boton Buscar
     $btnBuscar.addEventListener("click", () => {
         
-        console.log(variableGlobal);
-        console.log(nuevoArray);
+        //console.log(variableGlobal);
+        //console.log(nuevoArray);
+        
+        //creando variable contador que almacenara el numero de sumas pares posibles
         let cont = 0;
         
-        
+        //ciclo que recorre una matriz (array) de numeros y va comparando la suma de los numeros
+        //que va iterando a ver si coincide con el numero ingresado en el input del usuario
         for(let i = 0; i <= nuevoArray.length; i++){
             for(let j = i + 1; j < nuevoArray.length; j++){
+                //hace la comparativa de la suma con el numero
                 if((parseInt(nuevoArray[i]) + parseInt(nuevoArray[j])) === parseInt(variableGlobal)){
+                    //si es correcto, suma el contador en 1
                     cont++;
                 }
             }
         }
-        console.log(cont);
+        $resultado.textContent = `Las sumas que hay disponibles son: ${cont}`;
+        //console.log(cont);
 
     });
 
