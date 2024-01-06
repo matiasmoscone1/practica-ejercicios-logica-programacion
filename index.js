@@ -114,6 +114,7 @@ import almacenamientoNavegador from "./ejercicio-113.js";
 import webWorker from "./ejercicio-114.js";
 import devsLeagueReto from "./ejercicio-115.js";
 import combinacionSuma from "./ejercicio-116.js";
+import buscaSubCadena from "./ejercicio-117.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -234,7 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
     webWorker();
     devsLeagueReto(".input-orden-ej-115", ".btn-agregar-ej-115", ".btn-limpiar-ej-115", ".almacenamiento-ej-115", ".resultado-ej-115");
     combinacionSuma(".input-numeros-ej-116", ".btn-agregar-ej-116", ".btn-limpiar-ej-116", ".array-ej-116", ".input-check-ej-116", ".btn-check-ej-116", ".numero-check-ej-116" ,".btn-buscar-ej-116", ".resultado-ej-116");
-
+    buscaSubCadena(".textarea-ej-117", ".input-ej-117", ".btn-buscar-ej-117", ".btn-limpiar-ej-117" ,".resultado-ej-117");
 
 
 

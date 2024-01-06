@@ -4,7 +4,7 @@
 //de una subcadena en una cadena.
 
 
-export default function buscaSubCadena(){
+export default function buscaSubCadena(textarea, input, btnBuscar, btnLimpiar, resultado){
 
 
 
