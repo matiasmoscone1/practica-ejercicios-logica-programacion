@@ -64,18 +64,25 @@ export default function combinacionSuma(inputNum, btnAgregar, btnLimpiar, arrayN
 
     });
 
+    //captando evento click del boton Numero
     $btnCheck.addEventListener("click", () => {
+        //toma el valor del input escrito por el usuario, y lo almacena en la variable creada
         const $inputCheck = document.querySelector(inputCheck).value;
 
+        //copia el valor del input en la variable global
         variableGlobal = $inputCheck;
 
+        //muestra en el DOM cual es el numero al que las sumas deben ser igual
         $resCheck.textContent = `Numero a chequear: ${$inputCheck}`;
 
+        //limpia el input para hacer alguna otra busqueda
         document.querySelector(inputCheck).value = "";
 
     });
 
+    //capta el evento click del boton Limpiar
     $btnLimpiar.addEventListener("click", () => {
+        //limpia todo los inputs y los resultados en el DOM
         document.querySelector(inputNum).value = "";
         document.querySelector(inputCheck).value = "";
         $resultado.textContent = "";
