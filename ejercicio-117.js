@@ -23,6 +23,18 @@ export default function buscaSubCadena(textarea, input, btnBuscar, btnLimpiar, r
 
         console.log(nuevoArray);
 
+        let cont = 0;
+
+        nuevoArray.map((palabra) => {
+            if(palabra.includes($inputSubCadena)){
+                cont++;
+            }
+        });
+
+        console.log(cont);
+
+
+
     });
 
 
