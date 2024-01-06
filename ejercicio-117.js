@@ -32,9 +32,11 @@ export default function buscaSubCadena(textarea, input, btnBuscar, btnLimpiar, r
         });
 
         console.log(cont);
+        $resultado.textContent = `La cantidad de veces que aparece la subcadena ${$inputSubCadena}
+        son: ${cont}`;
 
-
-
+    
+        
     });
 
 
