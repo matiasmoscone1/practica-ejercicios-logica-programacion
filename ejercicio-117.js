@@ -26,7 +26,7 @@ export default function buscaSubCadena(textarea, input, btnBuscar, btnLimpiar, r
         let cont = 0;
 
         nuevoArray.map((palabra) => {
-            if(palabra.includes($inputSubCadena)){
+            if(palabra.includes($inputSubCadena.toString())){
                 cont++;
             }
         });
