@@ -16,12 +16,12 @@ export default function buscaSubCadena(textarea, input, btnBuscar, btnLimpiar, r
         const $textArea = document.querySelector(textarea).value;
         const $inputSubCadena = document.querySelector(input).value;
 
-        console.log($textArea);
-        console.log($inputSubCadena);
+        //console.log($textArea);
+        //console.log($inputSubCadena);
 
         const nuevoArray = $textArea.split(" ");
 
-        console.log(nuevoArray);
+        //console.log(nuevoArray);
 
         let cont = 0;
 
@@ -31,7 +31,7 @@ export default function buscaSubCadena(textarea, input, btnBuscar, btnLimpiar, r
             }
         });
 
-        console.log(cont);
+        //console.log(cont);
         $resultado.textContent = `La cantidad de veces que aparece la subcadena ${$inputSubCadena}
         son: ${cont}`;
  
