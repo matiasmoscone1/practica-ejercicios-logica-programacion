@@ -28,6 +28,7 @@ export default function recorrerGrafoDFS(grafo, btnRecoorer, btnLimpiar){
         imprimirGrafo() {
             for (const nodo in this.nodos) {
                 const vecinos = this.nodos[nodo].join(', ');
+                $grafo.innerHTML = `${nodo} -> [${vecinos}]`;
                 console.log(`${nodo} -> [${vecinos}]`);
             }
         }
