@@ -26,11 +26,13 @@ export default function recorrerGrafoDFS(grafo, btnRecoorer, btnLimpiar){
           }
         
         imprimirGrafo() {
+            let grafoCompleto = "";
             for (const nodo in this.nodos) {
                 const vecinos = this.nodos[nodo].join(', ');
-                $grafo.innerHTML = `${nodo} -> [${vecinos}]`;
+                grafoCompleto += `${nodo} -> [${vecinos}] <br>`;
                 console.log(`${nodo} -> [${vecinos}]`);
             }
+            $grafo.innerHTML = grafoCompleto;
         }
         
     }
