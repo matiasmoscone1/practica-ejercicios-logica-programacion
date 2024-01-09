@@ -30,7 +30,7 @@ export default function recorrerGrafoDFS(grafo, btnRecoorer, btnLimpiar){
             for (const nodo in this.nodos) {
                 const vecinos = this.nodos[nodo].join(', ');
                 grafoCompleto += `${nodo} -> [${vecinos}] <br>`;
-                console.log(`${nodo} -> [${vecinos}]`);
+                //console.log(`${nodo} -> [${vecinos}]`);
             }
             $grafo.innerHTML = grafoCompleto;
         }
@@ -59,6 +59,12 @@ export default function recorrerGrafoDFS(grafo, btnRecoorer, btnLimpiar){
         miGrafo.imprimirGrafo();
     });
 
+    $btnLimpiar.addEventListener("click", () => {
+        $grafo.textContent = "";
+    });
+
 
 }
+
+
 
