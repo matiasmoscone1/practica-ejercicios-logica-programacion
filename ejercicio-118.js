@@ -4,7 +4,12 @@
 //y crear una función que realice el recorrido DFS desde un nodo inicial.
 
 
-export default function recorrerGrafoDFS(){
+export default function recorrerGrafoDFS(grafo, btnRecoorer, btnLimpiar){
+
+    const $grafo = document.querySelector(grafo);
+    const $btnRecorrer = document.querySelector(btnRecoorer);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
+
 
     class Grafo {
         constructor(){
