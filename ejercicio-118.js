@@ -10,43 +10,45 @@ export default function recorrerGrafoDFS(grafo, btnRecoorer, btnLimpiar){
     const $btnRecorrer = document.querySelector(btnRecoorer);
     const $btnLimpiar = document.querySelector(btnLimpiar);
 
+    $btnRecorrer.addEventListener("click", () => {
 
-    class Grafo {
-        constructor(){
-            this.nodos = {};
-        }
-        
-        agregarNodo(valor){
-            this.nodos[valor] = [];
-        }
-
-        agregarArista(nodo1, nodo2) {
-            this.nodos[nodo1].push(nodo2);
-            this.nodos[nodo2].push(nodo1);
-          }
-        
-        imprimirGrafo() {
-            for (const nodo in this.nodos) {
-                const vecinos = this.nodos[nodo].join(', ');
-                console.log(`${nodo} -> [${vecinos}]`);
+        class Grafo {
+            constructor(){
+                this.nodos = {};
             }
-        }
-        
-    }
-
-    const miGrafo = new Grafo;
+            
+            agregarNodo(valor){
+                this.nodos[valor] = [];
+            }
     
-    miGrafo.agregarNodo('A');
-    miGrafo.agregarNodo('B');
-    miGrafo.agregarNodo('C');
-    miGrafo.agregarNodo('D');
-
-    miGrafo.agregarArista('A', 'B');
-    miGrafo.agregarArista('B', 'C');
-    miGrafo.agregarArista('C', 'D');
-    miGrafo.agregarArista('D', 'A');
-
-    miGrafo.imprimirGrafo();
+            agregarArista(nodo1, nodo2) {
+                this.nodos[nodo1].push(nodo2);
+                this.nodos[nodo2].push(nodo1);
+              }
+            
+            imprimirGrafo() {
+                for (const nodo in this.nodos) {
+                    const vecinos = this.nodos[nodo].join(', ');
+                    console.log(`${nodo} -> [${vecinos}]`);
+                }
+            }
+            
+        }
+    
+        const miGrafo = new Grafo;
+        
+        miGrafo.agregarNodo('A');
+        miGrafo.agregarNodo('B');
+        miGrafo.agregarNodo('C');
+        miGrafo.agregarNodo('D');
+    
+        miGrafo.agregarArista('A', 'B');
+        miGrafo.agregarArista('B', 'C');
+        miGrafo.agregarArista('C', 'D');
+        miGrafo.agregarArista('D', 'A');
+    
+        miGrafo.imprimirGrafo();
+    });
 
 
 }
