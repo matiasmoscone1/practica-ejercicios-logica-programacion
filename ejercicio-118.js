@@ -6,6 +6,17 @@
 
 export default function recorrerGrafoDFS(){
 
+    class Grafo {
+        constructor(){
+            this.nodos = {};
+        }
+        
+        agregarNodo(valor){
+            this.nodos[valor] = [];
+        }
+
+
+    }
 
     
 
