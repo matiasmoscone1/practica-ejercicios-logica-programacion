@@ -4,8 +4,9 @@
 //y crear una función que realice el recorrido DFS desde un nodo inicial.
 
 
-export default function recorrerGrafoDFS(grafo, btnRecoorer, btnLimpiar){
+export default function recorrerGrafoDFS(btnMostrar, grafo, btnRecoorer, btnLimpiar){
 
+    const $btnMostrar = document.querySelector(btnMostrar);
     const $grafo = document.querySelector(grafo);
     const $btnRecorrer = document.querySelector(btnRecoorer);
     const $btnLimpiar = document.querySelector(btnLimpiar);
@@ -37,10 +38,8 @@ export default function recorrerGrafoDFS(grafo, btnRecoorer, btnLimpiar){
         
     }
 
+    $btnMostrar.addEventListener("click", () => {
 
-    $btnRecorrer.addEventListener("click", () => {
-
-    
         const miGrafo = new Grafo;
         
         miGrafo.agregarNodo('A');
@@ -55,8 +54,15 @@ export default function recorrerGrafoDFS(grafo, btnRecoorer, btnLimpiar){
         miGrafo.agregarArista('D', 'A');
         miGrafo.agregarArista('D', 'E');
     
-
+    
         miGrafo.imprimirGrafo();
+    })
+
+
+    $btnRecorrer.addEventListener("click", () => {
+
+    
+        
     });
 
     $btnLimpiar.addEventListener("click", () => {

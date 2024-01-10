@@ -237,7 +237,7 @@ document.addEventListener("DOMContentLoaded", () => {
     devsLeagueReto(".input-orden-ej-115", ".btn-agregar-ej-115", ".btn-limpiar-ej-115", ".almacenamiento-ej-115", ".resultado-ej-115");
     combinacionSuma(".input-numeros-ej-116", ".btn-agregar-ej-116", ".btn-limpiar-ej-116", ".array-ej-116", ".input-check-ej-116", ".btn-check-ej-116", ".numero-check-ej-116" ,".btn-buscar-ej-116", ".resultado-ej-116");
     buscaSubCadena(".textarea-ej-117", ".input-ej-117", ".btn-buscar-ej-117", ".btn-limpiar-ej-117" ,".resultado-ej-117");
-    recorrerGrafoDFS(".grafo-ej-118", ".btn-recorrer-ej-118", ".btn-limpiar-ej-118");
+    recorrerGrafoDFS(".btn-mostrar-ej-118", ".grafo-ej-118", ".btn-recorrer-ej-118", ".btn-limpiar-ej-118");
 
     
 
