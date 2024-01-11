@@ -65,7 +65,7 @@ export default function recorrerGrafoDFS(btnMostrar, grafo, nodoInicial ,btnReco
         nodosVisitados.add(nodo);
         console.log(`Visitando el nodo: ${nodo}`);
 
-        for(const vecino of this.nodoS[nodo]){
+        for(const vecino of this.nodos[nodo]){
             if(!nodosVisitados.has(vecino)){
                 this.algoritmoDFS(vecino, nodosVisitados);
             }
@@ -84,7 +84,20 @@ export default function recorrerGrafoDFS(btnMostrar, grafo, nodoInicial ,btnReco
 
         const miGrafo = new Grafo();
         
-        miGrafo.algoritmoDFS($nodoInicial. nodosVisitados);
+        miGrafo.agregarNodo('A');
+        miGrafo.agregarNodo('B');
+        miGrafo.agregarNodo('C');
+        miGrafo.agregarNodo('D');
+        miGrafo.agregarNodo('E');
+    
+        miGrafo.agregarArista('A', 'B');
+        miGrafo.agregarArista('B', 'C');
+        miGrafo.agregarArista('C', 'D');
+        miGrafo.agregarArista('D', 'A');
+        miGrafo.agregarArista('D', 'E');
+
+
+       algoritmoDFS($nodoInicial, nodosVisitados);
 
 
 
