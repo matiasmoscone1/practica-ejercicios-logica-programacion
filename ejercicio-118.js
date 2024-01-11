@@ -71,19 +71,16 @@ export default function recorrerGrafoDFS(btnMostrar, grafo, nodoInicial ,btnReco
             }
         }
 
-
-
-
     }
 
     $btnRecorrer.addEventListener("click", () => {
-        const $nodoInicial = document.querySelector(nodoInicial).value;
+        const $nodoInicial = document.querySelector(nodoInicial).value.toUpperCase();
         
-        console.log($nodoInicial.toUpperCase());
+        //console.log($nodoInicial.toUpperCase());
 
         const nodosVisitados = new Set();
 
-        nodosVisitados.add($nodoInicial.toUpperCase());
+        nodosVisitados.add($nodoInicial);
 
 
         
