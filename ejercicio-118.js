@@ -59,6 +59,17 @@ export default function recorrerGrafoDFS(btnMostrar, grafo, nodoInicial ,btnReco
     })
 
 
+
+    const algoritmoDFS = (nodo, conjunto) => {
+
+        conjunto.add(nodo);
+        console.log(`Visitando el nodo: ${nodo}`);
+
+
+
+
+    }
+
     $btnRecorrer.addEventListener("click", () => {
         const $nodoInicial = document.querySelector(nodoInicial).value;
         
@@ -67,6 +78,11 @@ export default function recorrerGrafoDFS(btnMostrar, grafo, nodoInicial ,btnReco
         const nodosVisitados = new Set();
 
         nodosVisitados.add($nodoInicial.toUpperCase());
+
+
+        
+
+
 
         console.log(nodosVisitados);
     });
