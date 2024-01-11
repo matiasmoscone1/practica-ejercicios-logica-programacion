@@ -80,10 +80,11 @@ export default function recorrerGrafoDFS(btnMostrar, grafo, nodoInicial ,btnReco
 
         const nodosVisitados = new Set();
 
-        nodosVisitados.add($nodoInicial);
+        //nodosVisitados.add($nodoInicial);
 
-
+        const miGrafo = new Grafo();
         
+        miGrafo.algoritmoDFS($nodoInicial. nodosVisitados);
 
 
 
