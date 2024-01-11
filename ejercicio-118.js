@@ -60,10 +60,16 @@ export default function recorrerGrafoDFS(btnMostrar, grafo, nodoInicial ,btnReco
 
 
 
-    const algoritmoDFS = (nodo, conjunto) => {
+    const algoritmoDFS = (nodo, nodosVisitados) => {
 
-        conjunto.add(nodo);
+        nodosVisitados.add(nodo);
         console.log(`Visitando el nodo: ${nodo}`);
+
+        for(const vecino of this.nodoS[nodo]){
+            if(!nodosVisitados.has(vecino)){
+                this.algoritmoDFS(vecino, nodosVisitados);
+            }
+        }
 
 
 
