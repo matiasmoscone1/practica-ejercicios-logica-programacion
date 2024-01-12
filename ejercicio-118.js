@@ -35,6 +35,18 @@ export default function recorrerGrafoDFS(btnMostrar, grafo, nodoInicial ,btnReco
             }
             $grafo.innerHTML = grafoCompleto;
         }
+        algoritmoDFS(nodo, nodosVisitados){
+
+            nodosVisitados.add(nodo);
+            console.log(`Visitando el nodo: ${nodo}`);
+    
+            for(const vecino of this.nodos[nodo]){
+                if(!nodosVisitados.has(vecino)){
+                    this.algoritmoDFS(vecino, nodosVisitados);
+                }
+            }
+    
+        }
         
     }
 
@@ -59,7 +71,7 @@ export default function recorrerGrafoDFS(btnMostrar, grafo, nodoInicial ,btnReco
     })
 
 
-
+/*
     const algoritmoDFS = (nodo, nodosVisitados) => {
 
         nodosVisitados.add(nodo);
@@ -71,7 +83,7 @@ export default function recorrerGrafoDFS(btnMostrar, grafo, nodoInicial ,btnReco
             }
         }
 
-    }
+    }*/
 
     $btnRecorrer.addEventListener("click", () => {
         const $nodoInicial = document.querySelector(nodoInicial).value.toUpperCase();
