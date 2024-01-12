@@ -109,7 +109,7 @@ export default function recorrerGrafoDFS(btnMostrar, grafo, nodoInicial ,btnReco
         miGrafo.agregarArista('D', 'E');
 
 
-       algoritmoDFS($nodoInicial, nodosVisitados);
+       miGrafo.algoritmoDFS($nodoInicial, nodosVisitados);
 
 
 
