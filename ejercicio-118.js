@@ -140,7 +140,11 @@ export default function recorrerGrafoDFS(btnMostrar, grafo, nodoInicial ,btnReco
 
     //captando evento click del boton Limpiar
     $btnLimpiar.addEventListener("click", () => {
+        //limpia el resultado del mostrarGrafo y Recorrido del DOM y tambien el input
+        //del usuario donde ingresa el nodo inicial
         $grafo.textContent = "";
+        document.querySelector(nodoInicial).value = "";
+        $resultado.textContent = "";
     });
 
 
