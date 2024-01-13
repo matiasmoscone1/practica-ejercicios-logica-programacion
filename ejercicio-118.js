@@ -4,7 +4,7 @@
 //y crear una función que realice el recorrido DFS desde un nodo inicial.
 
 
-export default function recorrerGrafoDFS(btnMostrar, grafo, nodoInicial ,btnRecoorer, btnLimpiar){
+export default function recorrerGrafoDFS(btnMostrar, grafo, nodoInicial ,btnRecoorer, btnLimpiar, resultado){
 
     //creando variables referenciales al DOM
     const $btnMostrar = document.querySelector(btnMostrar);
@@ -45,9 +45,13 @@ export default function recorrerGrafoDFS(btnMostrar, grafo, nodoInicial ,btnReco
             $grafo.innerHTML = grafoCompleto;
         }
         
+        //crea el algoritmo de busqueda en profuncidad como metodo del grafo
+        //se le pasa por parametro el nodo y los nodos visitados (que es un SET que almacena los nodos)
         algoritmoDFS(nodo, nodosVisitados){
 
+            //agrega al Set el nodo que se esta recorriendo
             nodosVisitados.add(nodo);
+
             console.log(`Visitando el nodo: ${nodo}`);
     
             for(const vecino of this.nodos[nodo]){
