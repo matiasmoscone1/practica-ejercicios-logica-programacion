@@ -13,6 +13,8 @@ export default function recorrerGrafoDFS(btnMostrar, grafo, nodoInicial ,btnReco
     const $btnLimpiar = document.querySelector(btnLimpiar);
     const $resultado = document.querySelector(resultado);
 
+    let mostrarRecorrido = "";
+
     //creando grafo
     class Grafo {
         //constructor
@@ -48,14 +50,15 @@ export default function recorrerGrafoDFS(btnMostrar, grafo, nodoInicial ,btnReco
         
         //crea el algoritmo de busqueda en profuncidad como metodo del grafo
         //se le pasa por parametro el nodo y los nodos visitados (que es un SET que almacena los nodos)
+        
         algoritmoDFS(nodo, nodosVisitados){
 
-            let mostrarRecorrido = "";
+            
             //agrega al Set el nodo que se esta recorriendo
             nodosVisitados.add(nodo);
 
             //console.log(`Visitando el nodo: ${nodo}`);
-            mostrarRecorrido += `Visitando el nodo: ${nodo}`;
+            mostrarRecorrido += `Visitando el nodo: ${nodo} <br>`;
 
             $resultado.innerHTML = mostrarRecorrido;
 
