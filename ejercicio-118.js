@@ -11,6 +11,7 @@ export default function recorrerGrafoDFS(btnMostrar, grafo, nodoInicial ,btnReco
     const $grafo = document.querySelector(grafo);
     const $btnRecorrer = document.querySelector(btnRecoorer);
     const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $resultado = document.querySelector(resultado);
 
     //creando grafo
     class Grafo {
@@ -49,11 +50,15 @@ export default function recorrerGrafoDFS(btnMostrar, grafo, nodoInicial ,btnReco
         //se le pasa por parametro el nodo y los nodos visitados (que es un SET que almacena los nodos)
         algoritmoDFS(nodo, nodosVisitados){
 
+            let mostrarRecorrido = "";
             //agrega al Set el nodo que se esta recorriendo
             nodosVisitados.add(nodo);
 
-            console.log(`Visitando el nodo: ${nodo}`);
-    
+            //console.log(`Visitando el nodo: ${nodo}`);
+            mostrarRecorrido += `Visitando el nodo: ${nodo}`;
+
+            $resultado.innerHTML = mostrarRecorrido;
+
             for(const vecino of this.nodos[nodo]){
                 if(!nodosVisitados.has(vecino)){
                     this.algoritmoDFS(vecino, nodosVisitados);
