@@ -7,11 +7,11 @@
 
 export default function gestionadorDeEventos(){
 
-
-
-
-
     
+
+
+
+
 }
 
 
