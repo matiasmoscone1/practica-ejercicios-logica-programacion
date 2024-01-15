@@ -13,17 +13,18 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
 
     $section.addEventListener("click", (e) => {
 
-        const muestraDOM = "";
+        let muestraDOM = "";
 
         if(e.target.matches(btn1)){
             muestraDOM += `<div>
                 <h4>Selecciona tu gusto de helado favorito</h4>
-                    <select>        
+                    <select >   
+                        <option value="">Elige un sabor...</option>     
                         <option value="chocolate">Chocolate</option>
                         <option value="vainilla">Vainilla</option>
                         <option value="frutilla">Frutilla</option>
                     </select>
-                </div>`
+                </div>`;
 
         }else if(e.target.matches(btn2)){
             console.log("evento 2");
@@ -33,7 +34,7 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
             console.log("evento 4");
         }
 
-
+        $resultado.innerHTML = `${muestraDOM}`;
 
 
     });
