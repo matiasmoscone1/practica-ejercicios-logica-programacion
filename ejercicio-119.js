@@ -5,7 +5,7 @@
 //Además, implementa algún tipo de propagación de eventos.
 
 
-export default function gestionadorDeEventos(){
+export default function gestionadorDeEventos(btn1, btn2, btn3, btn4){
 
     
 
