@@ -239,7 +239,7 @@ document.addEventListener("DOMContentLoaded", () => {
     combinacionSuma(".input-numeros-ej-116", ".btn-agregar-ej-116", ".btn-limpiar-ej-116", ".array-ej-116", ".input-check-ej-116", ".btn-check-ej-116", ".numero-check-ej-116" ,".btn-buscar-ej-116", ".resultado-ej-116");
     buscaSubCadena(".textarea-ej-117", ".input-ej-117", ".btn-buscar-ej-117", ".btn-limpiar-ej-117" ,".resultado-ej-117");
     recorrerGrafoDFS(".btn-mostrar-ej-118", ".grafo-ej-118",".nodo-ej-118", ".btn-recorrer-ej-118", ".btn-limpiar-ej-118", ".resultado-ej-118");
-    gestionadorDeEventos(".btn1-suscribir-ej-119", ".btn2-suscribir-ej-119", ".btn3-suscribir-ej-119", ".btn4-suscribir-ej-119")
+    gestionadorDeEventos(".section-119", ".btn1-suscribir-ej-119", ".btn2-suscribir-ej-119", ".btn3-suscribir-ej-119", ".btn4-suscribir-ej-119")
     
 
 
