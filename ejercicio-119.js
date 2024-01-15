@@ -18,13 +18,19 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
         if(e.target.matches(btn1)){
             muestraDOM += `<div>
                 <h4>Selecciona tu gusto de helado favorito</h4>
-                    <select >   
+                    <select>   
                         <option value="">Elige un sabor...</option>     
                         <option value="chocolate">Chocolate</option>
                         <option value="vainilla">Vainilla</option>
                         <option value="frutilla">Frutilla</option>
                     </select>
-                </div>`;
+                </div>
+               
+                `
+                document.addEventListener("change", (e) => {
+                    muestraDOM += `<p>El sabor elegido es: ${e.target.value}</p>`
+                });
+                ;
 
         }else if(e.target.matches(btn2)){
             console.log("evento 2");
