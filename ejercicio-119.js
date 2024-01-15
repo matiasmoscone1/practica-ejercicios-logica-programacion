@@ -13,9 +13,18 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
 
     $section.addEventListener("click", (e) => {
 
+        const muestraDOM = "";
 
         if(e.target.matches(btn1)){
-            console.log("evento 1");
+            muestraDOM += `<div>
+                <h4>Selecciona tu gusto de helado favorito</h4>
+                    <select>        
+                        <option value="chocolate">Chocolate</option>
+                        <option value="vainilla">Vainilla</option>
+                        <option value="frutilla">Frutilla</option>
+                    </select>
+                </div>`
+
         }else if(e.target.matches(btn2)){
             console.log("evento 2");
         }else if(e.target.matches(btn3)){
