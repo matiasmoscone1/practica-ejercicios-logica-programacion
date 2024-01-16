@@ -18,7 +18,7 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
         if(e.target.matches(btn1)){
             muestraDOM += `<div>
                 <h4>Selecciona tu gusto de helado favorito</h4>
-                    <select>   
+                    <select class="gusto-helado">   
                         <option value="">Elige un sabor...</option>     
                         <option value="chocolate">Chocolate</option>
                         <option value="vainilla">Vainilla</option>
@@ -27,7 +27,8 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
                 </div>
                
                 `
-                document.addEventListener("change", (e) => {
+                const $gustoHelado = document.querySelector(".gusto-helado");
+                $gustoHelado.addEventListener("change", (e) => {
                     muestraDOM += `<p>El sabor elegido es: ${e.target.value}</p>`
                 });
                 ;
