@@ -26,10 +26,14 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
                     </select>
                 </div>
                
-                `
+                `;
+                $resultado.innerHTML = `${muestraDOM}`;
+
                 const $gustoHelado = document.querySelector(".gusto-helado");
+                console.log($gustoHelado);
                 $gustoHelado.addEventListener("change", (e) => {
-                    muestraDOM += `<p>El sabor elegido es: ${e.target.value}</p>`
+                    const nuevoContenido = `<p>El sabor elegido es: ${e.target.value}</p>`
+                    $resultado.innerHTML += nuevoContenido;
                 });
                 ;
 
@@ -41,8 +45,7 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
             console.log("evento 4");
         }
 
-        $resultado.innerHTML = `${muestraDOM}`;
-
+       
 
     });
 
