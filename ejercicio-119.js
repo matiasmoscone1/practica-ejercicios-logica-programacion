@@ -29,7 +29,7 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
                 </div>
                
                 `;
-                $resultado.innerHTML = `${muestraDOM}`;
+                $resultado.innerHTML = muestraDOM;
 
                 const $gustoHelado = document.querySelector(".gusto-helado");
                 console.log($gustoHelado);
@@ -52,8 +52,8 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
         }
 
         function actualizaResultado(){
-            const resultadoHTML = `<p>El sabor elegido es:${gustoSeleccionado}</p>`;
-            $resultado.innerHTML = resultadoHTML;
+            const resultadoHTML = `<p>El sabor elegido es: ${gustoSeleccionado}</p>`;
+            $resultado.innerHTML = muestraDOM + resultadoHTML;
         }
        
 
