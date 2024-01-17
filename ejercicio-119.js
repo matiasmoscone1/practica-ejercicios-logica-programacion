@@ -35,11 +35,7 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
                 console.log($gustoHelado);
                 $gustoHelado.addEventListener("change", (e) => {
                     gustoSeleccionado = e.target.value;
-                    actualizaResultado();
-                    /*
-                    const nuevoContenido = `<p>El sabor elegido es: ${e.target.value}</p>`
-                    $resultado.innerHTML += nuevoContenido;
-                    */
+                    actualizaResultado(e.target.value);
                 });
                 ;
 
@@ -51,8 +47,8 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
             console.log("evento 4");
         }
 
-        function actualizaResultado(){
-            const resultadoHTML = `<p>El sabor elegido es: ${gustoSeleccionado}</p>`;
+        function actualizaResultado(sabor){
+            const resultadoHTML = `<p>El sabor elegido es: ${sabor}</p>`;
             $resultado.innerHTML = muestraDOM + resultadoHTML;
         }
        
