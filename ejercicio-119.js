@@ -38,8 +38,18 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
                     actualizaResultado(e.target.value);
                 });
                 ;
-
         }else if(e.target.matches(btn2)){
+            let letraPresionada = "";
+            muestraDOM += `<div>
+                <h4>Presiona alguna tecla</h4>
+                <p>La tecla presionada es: ${letraPresionada}</p>
+            </div>`
+            document.addEventListener("keyup", (e) => {
+                console.log(e);
+            });
+
+
+
             console.log("evento 2");
         }else if(e.target.matches(btn3)){
             console.log("evento 3");
