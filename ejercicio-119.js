@@ -32,7 +32,7 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
                 $resultado.innerHTML = muestraDOM;
 
                 const $gustoHelado = document.querySelector(".gusto-helado");
-                console.log($gustoHelado);
+                //console.log($gustoHelado);
                 $gustoHelado.addEventListener("change", (e) => {
                     gustoSeleccionado = e.target.value;
                     actualizaResultado(e.target.value);
@@ -47,7 +47,7 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
             $resultado.innerHTML = muestraDOM;
             document.addEventListener("keyup", (e) => {
                 letraPresionada = e.key;
-                console.log(letraPresionada);
+                //console.log(letraPresionada);
                 muestraDOM = "";
                 $resultado.innerHTML = muestraDOM;
                 muestraDOM += `<div>
@@ -58,8 +58,6 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
             });
 
 
-
-            console.log("evento 2");
         }else if(e.target.matches(btn3)){
             console.log("evento 3");
         }else if(e.target.matches(btn4)){
