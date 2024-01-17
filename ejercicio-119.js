@@ -40,14 +40,15 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
                 ;
         }else if(e.target.matches(btn2)){
             let letraPresionada = "";
+            document.addEventListener("keyup", (e) => {
+                letraPresionada = e.key;
+                console.log(letraPresionada);
+            });
             muestraDOM += `<div>
                 <h4>Presiona alguna tecla</h4>
                 <p>La tecla presionada es: ${letraPresionada}</p>
             </div>`
-            document.addEventListener("keyup", (e) => {
-                console.log(e);
-            });
-
+            $resultado.innerHTML = muestraDOM;
 
 
             console.log("evento 2");
