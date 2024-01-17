@@ -48,6 +48,8 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
             document.addEventListener("keyup", (e) => {
                 letraPresionada = e.key;
                 console.log(letraPresionada);
+                muestraDOM = "";
+                $resultado.innerHTML = muestraDOM;
                 muestraDOM += `<div>
                 <h4>Presiona alguna tecla</h4>
                 <p>La tecla presionada es: ${letraPresionada}</p>
