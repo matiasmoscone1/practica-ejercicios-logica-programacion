@@ -43,7 +43,7 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
             muestraDOM += `<div>
             <h4>Presiona alguna tecla</h4>
             <p>La tecla presionada es: ${letraPresionada}</p>
-            </div>`
+            </div>`;
             $resultado.innerHTML = muestraDOM;
             document.addEventListener("keyup", (e) => {
                 letraPresionada = e.key;
@@ -52,7 +52,7 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
                 $resultado.innerHTML = muestraDOM;
                 muestraDOM += `<div>
                 <h4>Presiona alguna tecla</h4>
-                <p>La tecla presionada es: ${letraPresionada}</p>
+                <p>La tecla presionada es: "${letraPresionada.toUpperCase()}"</p>
                 </div>`
                 $resultado.innerHTML += muestraDOM;
             });
