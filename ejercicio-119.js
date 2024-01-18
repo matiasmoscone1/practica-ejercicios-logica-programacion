@@ -56,9 +56,12 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
                 </div>`
                 $resultado.innerHTML += muestraDOM;
             });
-
-
         }else if(e.target.matches(btn3)){
+            muestraDOM += `<div>
+                <h4>Evento contextmenu</h4>
+                <button class="btn-contextmenu">Click derecho</button>
+            </div>`;
+
             console.log("evento 3");
         }else if(e.target.matches(btn4)){
             console.log("evento 4");
