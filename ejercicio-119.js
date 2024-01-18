@@ -61,6 +61,11 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
                 <h4>Evento contextmenu</h4>
                 <button class="btn-contextmenu">Click derecho</button>
             </div>`;
+            $resultado.innerHTML = muestraDOM;
+
+            const $contextMenuButton = document.querySelector(".btn-contextmenu");
+
+            console.log($contextMenuButton);
 
             console.log("evento 3");
         }else if(e.target.matches(btn4)){
