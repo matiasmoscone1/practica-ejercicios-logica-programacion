@@ -79,6 +79,9 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
             const $areaMouseEnter = document.querySelector(".evento-mouseenter");
 
             $areaMouseEnter.addEventListener("mouseenter", (e) => {
+                $resultado.innerHTML = muestraDOM + `<p>Evento de tipo: "${e.type}"</p>
+                <h6>Coordenadas</h6><p>X: ${e.x}</p><p>Y: ${e.y}</p>
+                `;
                 console.log(e);
             });
            
