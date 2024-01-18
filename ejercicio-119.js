@@ -69,12 +69,13 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
                 $resultado.innerHTML = muestraDOM + `<p>Evento de tipo: "${e.type}"</p>`;
                 //console.log(e);
             });
-
-            //console.log($contextMenuButton);
-
-            console.log("evento 3");
         }else if(e.target.matches(btn4)){
-            console.log("evento 4");
+            muestraDOM += `<div>
+                <h4>Evento mouseenter</h4>
+                <div class="evento-mouseenter">Pasa el mouse por aqui</div>
+            </div>`;
+
+           
         }
 
         function actualizaResultado(sabor){
