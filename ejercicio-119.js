@@ -64,6 +64,11 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
             $resultado.innerHTML = muestraDOM;
 
             const $contextMenuButton = document.querySelector(".btn-contextmenu");
+            $contextMenuButton.addEventListener("contextmenu", (e) => {
+                e.preventDefault();
+                $resultado.innerHTML = muestraDOM + `<p>Evento de tipo: "${e.type}"</p>`;
+                console.log(e);
+            });
 
             console.log($contextMenuButton);
 
