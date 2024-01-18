@@ -74,7 +74,13 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
                 <h4>Evento mouseenter</h4>
                 <div class="evento-mouseenter">Pasa el mouse por aqui</div>
             </div>`;
+            $resultado.innerHTML = muestraDOM;
 
+            const $areaMouseEnter = document.querySelector(".evento-mouseenter");
+
+            $areaMouseEnter.addEventListener("mouseenter", (e) => {
+                console.log(e);
+            });
            
         }
 
