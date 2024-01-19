@@ -82,9 +82,9 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
                 $resultado.innerHTML = muestraDOM + `<p>Evento de tipo: "${e.type}"</p>
                 <h5>Coordenadas</h5><p>X: ${e.x}</p><p>Y: ${e.y}</p>
                 `;
-                
+            });
+            $areaMouseEnter.addEventListener("mouseleave", (e) => {
                 console.log(e);
-            
             });
            
         }
