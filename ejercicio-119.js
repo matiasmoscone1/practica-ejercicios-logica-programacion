@@ -78,29 +78,19 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
 
             const $areaMouseEnter = document.querySelector(".evento-mouseenter");
 
-            /*
-            $areaMouseEnter.addEventListener("mouseenter", (e) => {
+            const eventoManejador = $areaMouseEnter.addEventListener("mouseenter", (e) => {
                 $resultado.innerHTML = muestraDOM + `<p>Evento de tipo: "${e.type}"</p>
                 <h5>Coordenadas</h5><p>X: ${e.x}</p><p>Y: ${e.y}</p>
                 `;
             });
+
             $areaMouseEnter.addEventListener("mouseleave", () => {
-                $areaMouseEnter.removeEventListener("mouseenter");
+                $areaMouseEnter.removeEventListener(eventoManejador);
+                console.log("se borro");
                 $resultado.innerHTML = "";
-            });*/
+            });
 
-            function handleMouseEnter(e){
-                $resultado.innerHTML = muestraDOM + `<p>Evento de tipo: "${e.type}"</p>
-                <h5>Coordenadas</h5><p>X: ${e.x}</p><p>Y: ${e.y}</p>`;
-            }
-
-            function handleMouseLeave(e){
-                $resultado.innerHTML = "";
-                $areaMouseEnter.removeEventListener("mouseenter", handleMouseEnter);
-                $areaMouseEnter.removeEventListener("mouseleave", handleMouseLeave);
-            }
-
-           
+    
         }
 
         function actualizaResultado(sabor){
