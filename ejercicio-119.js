@@ -8,16 +8,21 @@
 
 export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, resultado){
 
+    //creando variables referenciales al DOM
     const $section = document.querySelector(section);
     const $resultado = document.querySelector(resultado);
 
+    //captando evento click de la seccion
     $section.addEventListener("click", (e) => {
 
+        //creando variables que serviran para determinar el transcurso del algoritmo
         let muestraDOM = "";
         let gustoSeleccionado = "";
 
+        //capta si el click fue a un boton especifico de la seccion
         if(e.target.matches(btn1)){
             
+            //muestra en el DOM el evento desencadenado por el boton
             muestraDOM += `<div>
                 <h4>Selecciona tu gusto de helado favorito</h4>
                     <select class="gusto-helado">   
@@ -27,14 +32,18 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
                         <option value="frutilla">Frutilla</option>
                     </select>
                 </div>
-               
                 `;
+                //muestra en el DOM el resultado
                 $resultado.innerHTML = muestraDOM;
 
+                //selecciona el puntero de una etiqueta nueva creada en el DOM
                 const $gustoHelado = document.querySelector(".gusto-helado");
                 //console.log($gustoHelado);
+                //capta el evento change del helado
                 $gustoHelado.addEventListener("change", (e) => {
+                    //guarda en la variable gustoSeleccionado el valor elegido x el usuario
                     gustoSeleccionado = e.target.value;
+                    //llama a la funcion que actualiza el sabor de helado
                     actualizaResultado(e.target.value);
                 });
                 ;
@@ -89,11 +98,11 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
                 console.log("se borro");
                 $resultado.innerHTML = "";
             });
-
-    
         }
 
+        //funcion que se le pasa el valor elegido por el usuario en el evento 1
         function actualizaResultado(sabor){
+            //muestra en el DOM el resultado elegido
             const resultadoHTML = `<p>El sabor elegido es: ${sabor}</p>`;
             $resultado.innerHTML = muestraDOM + resultadoHTML;
         }
