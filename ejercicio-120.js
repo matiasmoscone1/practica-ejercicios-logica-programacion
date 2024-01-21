@@ -87,12 +87,18 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
     </table>
     <br>`;
 
-
-
     $tabla.innerHTML = mostrarTabla;
 
 
+    $btnFiltrar.addEventListener("click", () => {
+        const $input = document.querySelector(input).value;
 
+
+
+        console.log($input);
+
+
+    });
 
 
 
