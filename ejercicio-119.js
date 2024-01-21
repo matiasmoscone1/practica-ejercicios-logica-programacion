@@ -73,35 +73,48 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
                 //se concatena y se muestra el resultado en el DOM
                 $resultado.innerHTML += muestraDOM;
             });
+        //capta evento 3
         }else if(e.target.matches(btn3)){
+            //muestra estructura del evento 3
             muestraDOM += `<div>
                 <h4>Evento contextmenu</h4>
                 <button class="btn-contextmenu">Click derecho</button>
             </div>`;
             $resultado.innerHTML = muestraDOM;
-
+            
+            //crea variable referencial al DOM, segun lo creado en la estructura HTML anterior
             const $contextMenuButton = document.querySelector(".btn-contextmenu");
+            //capta evento contextmenu (hacer click derecho)
             $contextMenuButton.addEventListener("contextmenu", (e) => {
+                //se previene por defecto el evento
                 e.preventDefault();
+                //muestar el resultado en el DOM
                 $resultado.innerHTML = muestraDOM + `<p>Evento de tipo: "${e.type}"</p>`;
                 //console.log(e);
             });
+        //capta evento click del boton 4 
         }else if(e.target.matches(btn4)){
+            //se muestra la estructura del evento 4 en el DOM
             muestraDOM += `<div>
                 <h4>Evento mouseenter</h4>
                 <div class="evento-mouseenter">Pasa el mouse por aqui</div>
             </div>`;
             $resultado.innerHTML = muestraDOM;
 
+            //se crea variable referencial al DOM segun la estructura HTML creada anteriormente
             const $areaMouseEnter = document.querySelector(".evento-mouseenter");
 
+            //se crea una variable donde se almacena el evento cuando ingresa el mouse en el div
             const eventoManejador = $areaMouseEnter.addEventListener("mouseenter", (e) => {
+                //se muestra en el DOM el contenido
                 $resultado.innerHTML = muestraDOM + `<p>Evento de tipo: "${e.type}"</p>
                 <h5>Coordenadas</h5><p>X: ${e.x}</p><p>Y: ${e.y}</p>
                 `;
             });
 
+            //capta el evento cuando el mouse sale del div
             $areaMouseEnter.addEventListener("mouseleave", () => {
+                //se remueve el evento anterior y limpia el resultado del DOM
                 $areaMouseEnter.removeEventListener(eventoManejador);
                 console.log("se borro");
                 $resultado.innerHTML = "";
