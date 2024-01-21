@@ -51,9 +51,9 @@ export default function algoritmoOrdenamientoPersonalizado(){
     }
     ];
 
-
-
     
+
+
 
 
 }
