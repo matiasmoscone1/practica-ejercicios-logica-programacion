@@ -67,7 +67,7 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
                 <td>Precio</td>
                 <td>Marca</td>
             </tr>
-        </thead>`
+        </thead>`;
     
 
     for(let i = 0; i < arrayObjetos.length; i++){
@@ -79,12 +79,13 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
                     <td>${arrayObjetos[i].precio}</td>
                     <td>${arrayObjetos[i].marca}</td>
                 </tr>
-
-            </tbody>    
-            </table>
-
-        `
+        `;
     }
+
+    mostrarTabla += `
+    </tbody>    
+    </table>
+    <br>`;
 
 
 
