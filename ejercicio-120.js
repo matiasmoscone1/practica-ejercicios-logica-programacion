@@ -56,9 +56,39 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
     const $btnLimpiar = document.querySelector(btnLimpiar);
     const $resultado = document.querySelector(resultado);
 
+
+    let mostrarTabla = "";
+
+    mostrarTabla += `<table border="1">
+        <thead>
+            <tr>
+                <td>Articulo</td>
+                <td>Color</td>
+                <td>Precio</td>
+                <td>Marca</td>
+            </tr>
+        </thead>`
     
 
+    for(let i = 0; i < arrayObjetos.length; i++){
+        mostrarTabla += `
+            <tbody>
+                <tr>
+                    <td>${arrayObjetos[i].nombre}</td>
+                    <td>${arrayObjetos[i].color}</td>
+                    <td>${arrayObjetos[i].precio}</td>
+                    <td>${arrayObjetos[i].marca}</td>
+                </tr>
 
+            </tbody>    
+            </table>
+
+        `
+    }
+
+
+
+    $tabla.innerHTML = mostrarTabla;
 
 
 
