@@ -47,22 +47,30 @@ export default function gestionadorDeEventos(section ,btn1, btn2, btn3, btn4, re
                     actualizaResultado(e.target.value);
                 });
                 ;
+        //captando el evento click del boton de suscribirse al 2do evento
         }else if(e.target.matches(btn2)){
+            //creando variable que almacenara la tecla presionada
             let letraPresionada = "";
+            //muestra en el DOM la estructura del evento, la tecla que fue presionada
             muestraDOM += `<div>
             <h4>Presiona alguna tecla</h4>
             <p>La tecla presionada es: ${letraPresionada}</p>
             </div>`;
+            //muestra en el DOM el resultado
             $resultado.innerHTML = muestraDOM;
+            //capta el evento keyup, cuando se presiona una tecla y se suelta
             document.addEventListener("keyup", (e) => {
+                //guarda en la variable previamente creada el valor de la tecla presionada
                 letraPresionada = e.key;
                 //console.log(letraPresionada);
+                //se restablece el DOM 
                 muestraDOM = "";
                 $resultado.innerHTML = muestraDOM;
                 muestraDOM += `<div>
                 <h4>Presiona alguna tecla</h4>
                 <p>La tecla presionada es: "${letraPresionada.toUpperCase()}"</p>
                 </div>`
+                //se concatena y se muestra el resultado en el DOM
                 $resultado.innerHTML += muestraDOM;
             });
         }else if(e.target.matches(btn3)){
