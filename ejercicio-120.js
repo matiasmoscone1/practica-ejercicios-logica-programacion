@@ -5,7 +5,7 @@
 //características particulares de los elementos que estás ordenando.
 
 
-export default function algoritmoOrdenamientoPersonalizado(){
+export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFiltrar, btnLimpiar, resultado){
 
     const arrayObjetos = [{
         nombre: "Teclado",
@@ -51,7 +51,9 @@ export default function algoritmoOrdenamientoPersonalizado(){
     }
     ];
 
-    
+    const $tabla = document.querySelector(tabla);
+
+
 
 
 

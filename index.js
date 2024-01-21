@@ -241,10 +241,10 @@ document.addEventListener("DOMContentLoaded", () => {
     buscaSubCadena(".textarea-ej-117", ".input-ej-117", ".btn-buscar-ej-117", ".btn-limpiar-ej-117" ,".resultado-ej-117");
     recorrerGrafoDFS(".btn-mostrar-ej-118", ".grafo-ej-118",".nodo-ej-118", ".btn-recorrer-ej-118", ".btn-limpiar-ej-118", ".resultado-ej-118");
     gestionadorDeEventos(".section-119", ".btn1-suscribir-ej-119", ".btn2-suscribir-ej-119", ".btn3-suscribir-ej-119", ".btn4-suscribir-ej-119", ".resultado-eventos-ej-119");
-    algoritmoOrdenamientoPersonalizado();
+    algoritmoOrdenamientoPersonalizado(".tabla-objetos-ej-120", ".input-ej-120", ".btn-filtrar-ej-120", ".btn-limpiar-ej-120", ".resultado-ej-120");
 
 
-    
+
 
 
 
