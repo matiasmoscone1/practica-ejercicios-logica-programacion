@@ -52,6 +52,15 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
     ];
 
     const $tabla = document.querySelector(tabla);
+    const $btnFiltrar = document.querySelector(btnFiltrar);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $resultado = document.querySelector(resultado);
+
+    
+
+
+
+
 
 
 
