@@ -100,8 +100,9 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
             }
         })
 
-        console.log($input);
+        //console.log($input);
 
+        document.querySelector(input).value = "";
 
     });
 
