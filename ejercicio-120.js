@@ -93,7 +93,11 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
     $btnFiltrar.addEventListener("click", () => {
         const $input = document.querySelector(input).value;
 
-
+        arrayObjetos.map((objeto) => {
+            if(objeto.nombre === $input || objeto.color === $input || objeto.precio === $input || objeto.marca === $input){
+                console.log(`El objeto es: ${objeto}`);    
+            }
+        })
 
         console.log($input);
 
