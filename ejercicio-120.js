@@ -91,11 +91,11 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
 
 
     $btnFiltrar.addEventListener("click", () => {
-        const $input = document.querySelector(input).value;
+        const $input = document.querySelector(input).value.toLowerCase();
 
         arrayObjetos.map((objeto) => {
             //console.log(objeto);
-            if(objeto.nombre === $input || objeto.color === $input || objeto.precio === $input || objeto.marca === $input){
+            if(objeto.nombre.toLowerCase() === $input || objeto.color.toLowerCase() === $input || objeto.precio.toLowerCase() === $input || objeto.marca.toLowerCase() === $input){
                 console.log(`El objeto es: ${JSON.stringify(objeto)}`);    
             }
         })
