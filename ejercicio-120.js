@@ -95,7 +95,7 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
 
         arrayObjetos.map((objeto) => {
             //console.log(objeto);
-            if(objeto.nombre.toLowerCase() === $input || objeto.color.toLowerCase() === $input || objeto.precio.toLowerCase() === $input || objeto.marca.toLowerCase() === $input){
+            if(objeto.nombre.toLowerCase() === $input || objeto.color.toLowerCase() === $input || objeto.precio == $input || objeto.marca.toLowerCase() === $input){
                 console.log(`El objeto es: ${JSON.stringify(objeto)}`);    
             }
         })
