@@ -76,7 +76,7 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
                 <tr>
                     <td>${arrayObjetos[i].nombre}</td>
                     <td>${arrayObjetos[i].color}</td>
-                    <td>${arrayObjetos[i].precio}</td>
+                    <td>$${arrayObjetos[i].precio}</td>
                     <td>${arrayObjetos[i].marca}</td>
                 </tr>
         `;
@@ -97,7 +97,12 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
             //console.log(objeto);
             if(objeto.nombre.toLowerCase() === $input || objeto.color.toLowerCase() === $input || objeto.precio == $input || objeto.marca.toLowerCase() === $input){
                 //console.log(`El objeto es: ${JSON.stringify(objeto)}`);    
-                $resultado.innerHTML = `El objeto filtrado es: ${JSON.stringify(objeto)}`
+                $resultado.innerHTML = `El objeto filtrado es: <ul>
+                    <li>Nombre: ${objeto.nombre}</li>
+                    <li>Color: ${objeto.color}</li>
+                    <li>Precio: $${objeto.precio}</li>
+                    <li>Marca: ${objeto.marca}</li>
+                </ul>`
             }
         })
 
