@@ -93,12 +93,14 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
     $btnFiltrar.addEventListener("click", () => {
         const $input = document.querySelector(input).value.toLowerCase();
 
+        $resultado.innerHTML = `Los objetos filtrados son: `;
+               
         arrayObjetos.map((objeto) => {
             //console.log(objeto);
-            $resultado.innerHTML = `Los objetos filtrados son: `;
             
             if(objeto.nombre.toLowerCase() === $input || objeto.color.toLowerCase() === $input || objeto.precio == $input || objeto.marca.toLowerCase() === $input){
-                //console.log(`El objeto es: ${JSON.stringify(objeto)}`);    
+                //console.log(`El objeto es: ${JSON.stringify(objeto)}`); 
+               
                 $resultado.innerHTML += ` <ul>
                     <li>Nombre: ${objeto.nombre}</li>
                     <li>Color: ${objeto.color}</li>
