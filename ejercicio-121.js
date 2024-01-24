@@ -7,7 +7,13 @@
 export default function ejercicioPromesa(btnPromesa, btnLimpiar, resultado){
 
 
+    const $btnPromesa = document.querySelector(btnPromesa);
+    const $btnLimpiar = document.querySelector(btnLimpiar);
+    const $resultado = document.querySelector(resultado);
+
+
     
+
 
 
 
