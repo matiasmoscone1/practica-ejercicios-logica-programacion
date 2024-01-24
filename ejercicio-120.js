@@ -97,17 +97,22 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
     $tabla.innerHTML = mostrarTabla;
 
 
+    //captando evento click del boton Filtrar
     $btnFiltrar.addEventListener("click", () => {
+        //tomnando el valor del input 
         const $input = document.querySelector(input).value.toLowerCase();
 
+        //poniendo un titulo donde apareceran todos los objetos
         $resultado.innerHTML = `Los objetos filtrados son: `;
-               
+          
+        //recorre el array de objetos y por cada objeto, compara si existe con alguna propiedad
+        //de los objetos de la tabla con el valor del input ingresado por el usuario
         arrayObjetos.map((objeto) => {
-            
             
             if(objeto.nombre.toLowerCase() === $input || objeto.color.toLowerCase() === $input || objeto.precio == $input || objeto.marca.toLowerCase() === $input){
                 //console.log(`El objeto es: ${JSON.stringify(objeto)}`); 
-               
+                
+                //si existe coincidencia, se crea una lista desordenada con los items de cada objeto
                 $resultado.innerHTML += ` <ul>
                     <li>Nombre: ${objeto.nombre}</li>
                     <li>Color: ${objeto.color}</li>
@@ -115,15 +120,18 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
                     <li>Marca: ${objeto.marca}</li>
                 </ul>`;
             }
-        })
 
+        })
+        //se borra el input del usuario
         document.querySelector(input).value = "";
+
 
 
     });
 
-
+    //captando evento click del boton Limpiar
     $btnLimpiar.addEventListener("click", () => {
+        //borra el input del usuario y el resultado en el DOM
         document.querySelector(input).value = "";
         $resultado.innerHTML = "";
     });
