@@ -96,7 +96,7 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
         $resultado.innerHTML = `Los objetos filtrados son: `;
                
         arrayObjetos.map((objeto) => {
-            //console.log(objeto);
+            
             
             if(objeto.nombre.toLowerCase() === $input || objeto.color.toLowerCase() === $input || objeto.precio == $input || objeto.marca.toLowerCase() === $input){
                 //console.log(`El objeto es: ${JSON.stringify(objeto)}`); 
@@ -110,7 +110,7 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
             }
         })
 
-        //console.log($input);
+        
 
         document.querySelector(input).value = "";
 
@@ -120,8 +120,7 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
 
     $btnLimpiar.addEventListener("click", () => {
         document.querySelector(input).value = "";
-        
-
+        $resultado.innerHTML = "";
     });
 
 
