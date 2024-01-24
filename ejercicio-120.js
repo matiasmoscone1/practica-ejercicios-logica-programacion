@@ -7,6 +7,7 @@
 
 export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFiltrar, btnLimpiar, resultado){
 
+    //creando array de objetos
     const arrayObjetos = [{
         nombre: "Teclado",
         color: "Negro",
@@ -51,14 +52,16 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
     }
     ];
 
+    //creando variables referenciales al DOM
     const $tabla = document.querySelector(tabla);
     const $btnFiltrar = document.querySelector(btnFiltrar);
     const $btnLimpiar = document.querySelector(btnLimpiar);
     const $resultado = document.querySelector(resultado);
 
-
+    //creando variable que mostrara la tabla de objetos en el DOM
     let mostrarTabla = "";
 
+    //creando estructura html en la variable tabla
     mostrarTabla += `<table border="1">
         <thead>
             <tr>
@@ -70,6 +73,8 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
         </thead>`;
     
 
+    //ciclo que a la estructura de la variable de tabla, se le agrega iterando una tabla 
+    //donde muestra cada objeto al detalle
     for(let i = 0; i < arrayObjetos.length; i++){
         mostrarTabla += `
             <tbody>
@@ -82,11 +87,13 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
         `;
     }
 
+    //termina la estructura de la variable tabla
     mostrarTabla += `
     </tbody>    
     </table>
     <br>`;
 
+    //inyecta el html en la variable referencial del DOM
     $tabla.innerHTML = mostrarTabla;
 
 
@@ -110,8 +117,6 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
             }
         })
 
-        
-
         document.querySelector(input).value = "";
 
 
@@ -122,6 +127,9 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
         document.querySelector(input).value = "";
         $resultado.innerHTML = "";
     });
+
+
+
 
 
 }
