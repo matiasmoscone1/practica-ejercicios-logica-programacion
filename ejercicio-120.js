@@ -119,6 +119,7 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
                     <li>Precio: $${objeto.precio}</li>
                     <li>Marca: ${objeto.marca}</li>
                 </ul>`;
+            //si no hay coincidencia, informa en el DOM que no se encontro nada
             }else{
                 $resultado.innerHTML = `<p>No se encontro coincidencia en ningun objeto...</p>`
             }
