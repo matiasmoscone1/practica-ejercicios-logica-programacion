@@ -106,7 +106,7 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
                     <li>Color: ${objeto.color}</li>
                     <li>Precio: $${objeto.precio}</li>
                     <li>Marca: ${objeto.marca}</li>
-                </ul>`
+                </ul>`;
             }
         })
 
@@ -118,7 +118,11 @@ export default function algoritmoOrdenamientoPersonalizado(tabla, input, btnFilt
     });
 
 
+    $btnLimpiar.addEventListener("click", () => {
+        document.querySelector(input).value = "";
+        
 
+    });
 
 
 }
