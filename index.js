@@ -118,6 +118,7 @@ import buscaSubCadena from "./ejercicio-117.js";
 import recorrerGrafoDFS from "./ejercicio-118.js";
 import gestionadorDeEventos from "./ejercicio-119.js";
 import algoritmoOrdenamientoPersonalizado from "./ejercicio-120.js";
+import ejercicioPromesa from "./ejercicio-121.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -242,7 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
     recorrerGrafoDFS(".btn-mostrar-ej-118", ".grafo-ej-118",".nodo-ej-118", ".btn-recorrer-ej-118", ".btn-limpiar-ej-118", ".resultado-ej-118");
     gestionadorDeEventos(".section-119", ".btn1-suscribir-ej-119", ".btn2-suscribir-ej-119", ".btn3-suscribir-ej-119", ".btn4-suscribir-ej-119", ".resultado-eventos-ej-119");
     algoritmoOrdenamientoPersonalizado(".tabla-objetos-ej-120", ".input-ej-120", ".btn-filtrar-ej-120", ".btn-limpiar-ej-120", ".resultado-ej-120");
-
+    ejercicioPromesa(".btn-promesa-ej-121", ".btn-limpiar-ej-121", ".resultado-ej-121");
 
 
 

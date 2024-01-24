@@ -4,10 +4,12 @@
 //en JavaScript. Debería ser capaz de manejar las funciones then, catch y finally.
 
 
-export default function ejercicioPromesa(){
+export default function ejercicioPromesa(btnPromesa, btnLimpiar, resultado){
 
 
     
+
+
 
 
 }
