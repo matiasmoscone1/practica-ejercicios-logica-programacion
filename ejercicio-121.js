@@ -13,21 +13,26 @@ export default function ejercicioPromesa(btnPromesa, btnLimpiar, resultado){
 
     const URL = "https://jsonplaceholder.typicode.com/users";
 
-    const callAPI = () => {
+    let arrayUsuarios = [];
 
-        fetch(URL)
+    const callAPI = async () => {
+
+        await fetch(URL)
         .then((response) => response.json())
-        .then((data) => console.log(data));
+        .then((data) => {arrayUsuarios = [...data]});
 
     };
 
 
     $btnPromesa.addEventListener("click", () => {
 
-        callAPI();
+        console.log(arrayUsuarios);
+
+
     });
 
 
+    callAPI();
 
 
 
