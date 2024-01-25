@@ -25,9 +25,8 @@ export default function ejercicioPromesa(btnPromesa, btnLimpiar, resultado){
             console.error('Nombre:', e.name);
             console.error('Mensaje:', e.message);
             console.error('Seguimiento:', e.stack);
-            
         }finally{
-            //console.log("Sentencia finalizada...");
+            console.log("Sentencia finalizada...");
         }
 
     };
@@ -71,7 +70,10 @@ export default function ejercicioPromesa(btnPromesa, btnLimpiar, resultado){
     });
 
 
-    
+    $btnLimpiar.addEventListener("click", () => {
+        $resultado.innerHTML = "";
+        console.clear();
+    });
 
 
 
