@@ -11,7 +11,7 @@ export default function ejercicioPromesa(btnPromesa, btnLimpiar, resultado){
     const $btnLimpiar = document.querySelector(btnLimpiar);
     const $resultado = document.querySelector(resultado);
 
-    const URL = "https://jsonplaceholder.typicode.com/users";
+    const URL = "https://jsonplacaeholder.typicode.com/users";
 
     let arrayUsuarios = [];
 
@@ -22,7 +22,10 @@ export default function ejercicioPromesa(btnPromesa, btnLimpiar, resultado){
             .then((response) => response.json())
             .then((data) => {arrayUsuarios = [...data]});
         }catch(e){
-            console.log(e);
+            console.error('Nombre:', e.name);
+            console.error('Mensaje:', e.message);
+            console.error('Seguimiento:', e.stack);
+            
         }finally{
             //console.log("Sentencia finalizada...");
         }
