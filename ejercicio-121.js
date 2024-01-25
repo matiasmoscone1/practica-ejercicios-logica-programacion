@@ -17,9 +17,15 @@ export default function ejercicioPromesa(btnPromesa, btnLimpiar, resultado){
 
     const callAPI = async () => {
 
-        await fetch(URL)
-        .then((response) => response.json())
-        .then((data) => {arrayUsuarios = [...data]});
+        try{            
+            await fetch(URL)
+            .then((response) => response.json())
+            .then((data) => {arrayUsuarios = [...data]});
+        }catch(e){
+            console.log(e);
+        }finally{
+            console.log("Sentencia finalizada...");
+        }
 
     };
 
