@@ -28,6 +28,32 @@ export default function ejercicioPromesa(btnPromesa, btnLimpiar, resultado){
 
         console.log(arrayUsuarios);
 
+        let mostrarDOM = "";
+
+        mostrarDOM += `<table>
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Nombre</td>
+                    <td>Apellido</td>
+                    <td>Email</td>
+                </tr>
+            </thead>
+            <tbody>
+        `;
+
+        arrayUsuarios.map((usuario) => {
+            mostrarDOM += `<tr>
+                <td>${usuario.id}</td>
+                <td>${usuario.name}</td>
+                <td>${usuario.username}</td>
+                <td>${usuario.email}</td>
+            </tr>`;
+        });
+
+
+
+
 
     });
 
