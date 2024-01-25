@@ -30,7 +30,7 @@ export default function ejercicioPromesa(btnPromesa, btnLimpiar, resultado){
 
         let mostrarDOM = "";
 
-        mostrarDOM += `<table>
+        mostrarDOM += `<table border=1>
             <thead>
                 <tr>
                     <td>Id</td>
@@ -51,8 +51,10 @@ export default function ejercicioPromesa(btnPromesa, btnLimpiar, resultado){
             </tr>`;
         });
 
+        mostrarDOM += `</tbody>
+        </table>`;
 
-
+        $resultado.innerHTML = mostrarDOM;
 
 
     });
