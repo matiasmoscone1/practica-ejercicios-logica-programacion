@@ -24,13 +24,15 @@ export default function ejercicioPromesa(btnPromesa, btnLimpiar, resultado){
         }catch(e){
             console.log(e);
         }finally{
-            console.log("Sentencia finalizada...");
+            //console.log("Sentencia finalizada...");
         }
 
     };
 
 
-    $btnPromesa.addEventListener("click", () => {
+    $btnPromesa.addEventListener("click", async() => {
+
+        await callAPI();
 
         console.log(arrayUsuarios);
 
@@ -66,7 +68,7 @@ export default function ejercicioPromesa(btnPromesa, btnLimpiar, resultado){
     });
 
 
-    callAPI();
+    
 
 
 
