@@ -39,10 +39,12 @@ export default function ejercicioPromesa(btnPromesa, btnLimpiar, resultado){
             </div>`
             //ejecuta siempre el bloque finally
         }finally{
-            console.log("Sentencia finalizada...");
+            console.log("Sentencia finalizada...");   
         }
 
     };
+
+   
 
 
     $btnPromesa.addEventListener("click", async() => {
