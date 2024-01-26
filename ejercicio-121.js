@@ -32,6 +32,11 @@ export default function ejercicioPromesa(btnPromesa, btnLimpiar, resultado){
             console.error('Nombre:', e.name);
             console.error('Mensaje:', e.message);
             console.error('Seguimiento:', e.stack);
+            $resultado.innerHTML = `<div>
+                <h5>Error ${e.name}</h5>
+                <p>Mensaje: ${e.message}</p>
+                <p>Seguimiento: ${e.stack}</p>
+            </div>`
             //ejecuta siempre el bloque finally
         }finally{
             console.log("Sentencia finalizada...");
