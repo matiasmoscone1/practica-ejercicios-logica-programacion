@@ -46,15 +46,19 @@ export default function ejercicioPromesa(btnPromesa, btnLimpiar, resultado){
 
    
 
-
+    //captando evento click del boton Promesa, la funcion es asincrona para que le de tiempo
+    //a la funcion callAPI de recolectar todos los datos
     $btnPromesa.addEventListener("click", async() => {
 
+        //espera a que callAPI junte todos los datos
         await callAPI();
 
-        console.log(arrayUsuarios);
+        //console.log(arrayUsuarios);
 
+        //crea la variable vacia
         let mostrarDOM = "";
 
+        //le injecta HTML
         mostrarDOM += `<table border=1>
             <thead>
                 <tr>
@@ -67,6 +71,7 @@ export default function ejercicioPromesa(btnPromesa, btnLimpiar, resultado){
             <tbody>
         `;
 
+        //recorre el array de usuarios y por cada usuario, rellena la tabla
         arrayUsuarios.map((usuario) => {
             mostrarDOM += `<tr>
                 <td>${usuario.id}</td>
@@ -76,16 +81,19 @@ export default function ejercicioPromesa(btnPromesa, btnLimpiar, resultado){
             </tr>`;
         });
 
+        //termina la estructura HTML de la variable mostrarDOM
         mostrarDOM += `</tbody>
         </table>`;
 
+        //muestra el resultado en el DOM
         $resultado.innerHTML = mostrarDOM;
-
 
     });
 
 
+    //capta el evento click del boton Limpiar
     $btnLimpiar.addEventListener("click", () => {
+        //borra el resultado del dom y limpia la consola
         $resultado.innerHTML = "";
         console.clear();
     });
