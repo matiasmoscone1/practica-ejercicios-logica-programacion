@@ -77,7 +77,11 @@
     right: 10px;
 }
 
-
+.editor{
+    width: 500px;
+    height: 80px;
+    border: 1px solid black;
+}
 
 
 
