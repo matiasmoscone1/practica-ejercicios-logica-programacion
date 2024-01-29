@@ -13,12 +13,15 @@ export default function editorTexto(editor){
 
     $editor.addEventListener("input", () => {
 
-        const content = editor.innerHTML;
+        const content = $editor.innerHTML;
 
         socket.emit("text-edit", { content });
 
     });
 
+    socket.on("text-update", (data) => {
+        $editor.innerHTML = data.content;
+    });
 
 
 
