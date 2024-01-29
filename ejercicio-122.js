@@ -5,12 +5,16 @@
 //documento simultáneamente.
 
 
-export default function editorTexto(){
+export default function editorTexto(editor){
 
-
+    const $editor = document.querySelector(editor);
 
 
     
+
+
+
+
 }
 
 
