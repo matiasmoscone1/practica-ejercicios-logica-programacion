@@ -9,8 +9,15 @@ export default function editorTexto(editor){
 
     const $editor = document.querySelector(editor);
 
+    const socket = io();
 
-    
+    $editor.addEventListener("input", () => {
+
+        const content = editor.innerHTML;
+
+        socket.emit("text-edit", { content });
+
+    });
 
 
 
