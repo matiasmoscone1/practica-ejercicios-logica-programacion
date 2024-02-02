@@ -90,9 +90,9 @@ export default function distanciaGeolocalizacion(btnCalcular, btnLimpiar, ubicac
         let distancia3 = calcularDistancia(-31.417278209791338, -64.20233074855635, shoppingJockey.latitud, shoppingJockey.longitud);        
         
         //muestra el resultado final en el DOM
-        $resultado.innerHTML = `Distancia entre el Shopping Dino Mall y mi casa es: ${distancia1.toFixed(2)}mts <br>
-            Distancia entre el Estadio Kempes y mi casa es: ${distancia2.toFixed(2)}mts <br>
-            Distancia entre el Shopping Jockey y mi casa es ${distancia3.toFixed(2)}mts`;
+        $resultado.innerHTML = `Distancia entre el Shopping Dino Mall y mi casa es: ${distancia1.toFixed(2)}kmts <br>
+            Distancia entre el Estadio Kempes y mi casa es: ${distancia2.toFixed(2)}kmts <br>
+            Distancia entre el Shopping Jockey y mi casa es ${distancia3.toFixed(2)}kmts`;
 
     });
 
